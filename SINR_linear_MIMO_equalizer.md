@@ -17,11 +17,13 @@ This paper aims to analyze the signal-to-interference-plus-noise ratio (SINR) or
 ## SNR for Zero Forcing Equalizer 
 
 We know that the equalization matrix $G$ of the Zero-Forcing (ZF) algorithm  is：
+
 $$
     G = (H^{\text H} H)^{-1} H^H
 $$
 
 Therefore, the estimated signal $$\hat X$$ after equalization is: 
+
 $$
 \begin{aligned}
     \hat X &= (H^{\text H} H)^{-1} H^H ( HX + N) \\
@@ -36,6 +38,7 @@ $$
 Since the Zero-Forcing algorithm eliminates inter-stream interference, the signal-to-interference-plus-noise ratio (SINR) is effectively equal to the signal-to-noise ratio (SNR).
 
 then $$l\text{-th}$$  noise is：
+
 $$
 \begin{aligned}
     \text E\left [\hat N \hat N^{\text H}\right ]_{ll} &= \text E\left [(H^{\text H} H)^{-1} H^{\text H} N \left ((H^{\text H} H)^{-1} H^H N\right )^{\text H} \right ]_{ll}  \\
@@ -47,11 +50,13 @@ $$
 $$
 
 then SNR is：
+
 $$
     \text{SNR}_{\text{ZF}} = \frac{1}{\sigma^2 \left [(H^{\text H} H)^{-1} \right ]_{ll}}
 $$
 
 Next, we analyze this SNR. Since  $$H^{\text H} H$$ is a Hermitian matrix, its  eigenvalue decomposition is:
+
 $$
 H^{\text H} H = Q \Sigma Q^{\text H}
 $$
@@ -66,6 +71,7 @@ $$
 Let $$q_l$$  be the $$l\text{-th} $$ column of $$Q^{\text H}$$ ，then the $$l\text{-th}$$ row of  $$Q$$ is： $$q_l^{\text H}$$。
 
 then
+
 $$
     \left [(H^{\text H} H)^{-1} \right ]_{ll} = q_l^{\text H} \Lambda^{-1} q_l = \sum_{i} q_{li}\lambda_i^{-1}
 $$
@@ -73,6 +79,7 @@ $$
 where  $$\lambda_i$$ is the $$i\text{-th}$$ eigenvalue of $$ H^{\text H} H$$ .
 
 so the SINR is：
+
 $$
 \text{SNR}_{\text{ZF}} = \frac{1}{\sigma^2  \sum_{i} q_{li}\lambda_i^{-1}}
 $$
@@ -84,11 +91,13 @@ If the matrix $H^{\text{H}} H$ has at least one very small eigenvalue, the SNR o
 ## SINR of MMSE Equalizer
 
 We know，MMSE Equalizer use the matrix G：
+
 $$
 G_{\text {MMSE}} = (H^\text H H + \sigma^2 I ) ^{-1} H^\text H
 $$
 
 then the estimated signal $$\hat X$$  is：
+
 $$
 \begin{aligned}
     \hat X &= G_{\text{MMSE}} Y = (H^\text H H + \sigma^2 I ) ^{-1} H^\text H (HX + N) \\
@@ -101,6 +110,7 @@ Because the MMSE equalizer does not completely eliminate the interference betwee
 
 ### Noise Power 
 First, calculate the covariance matrix of the noise vector:
+
 $$
 \begin{aligned}
 R_N &=\text E\left [ \left ( (H^\text H H + \sigma^2 I ) ^{-1} H^\text H N \right )
@@ -115,6 +125,7 @@ R_N &=\text E\left [ \left ( (H^\text H H + \sigma^2 I ) ^{-1} H^\text H N \righ
 $$
 
 Since $H^\text{H} H$ is a Hermitian matrix, its eigenvalue decomposition can be expressed as：
+
 $$
     H^\text H H = Q^\text H \Lambda Q
 $$
@@ -122,6 +133,7 @@ $$
 where $Q$ is a unitary (orthonormal) complex matrix，so $$Q^{-1}= Q^\text H$$.
 
 Substituting into the noise covariance matrix (2) gives：
+
 $$
     \begin{aligned}
         R_{\text N} &= \sigma^2 (Q^\text H \Lambda Q+ \sigma^2 I)^{-1} Q^\text H \Lambda Q (Q^\text H \Lambda Q+ \sigma^2 I)^{-1} \\
@@ -134,6 +146,7 @@ $$
 Then, the noise power on the $$l\text{-th}$$ signal stream is the $$l\text{-th}$$ column and the $$l\text{-th}$$ row  element of the noise covariance matrix $R_N$.
 
 let：
+
 $$
 Q = \begin{bmatrix} q_1 & q_2 & \cdots & q_l & \cdots & \end{bmatrix}
 $$
@@ -141,13 +154,15 @@ $$
 wheter $$q_l$$  is the column vector of $$Q$$ .
 
 Then, the noise power on the $l$-th signal stream is given by：
+
 $$
 P_{\text{noise}} =R_{\text N}(l,l) = \sigma^2 q_l^\text H  (\Lambda+ \sigma^2 I)^{-1} \Lambda  (\Lambda+ \sigma^2 I)^{-1} q_l
 \tag{3}
 $$
 
 ### Signal Power 
-In equation (1), the coefficient matrix of the signal $X$ is  $(H^\text{H} H + \sigma^2 I)^{-1} H^\text{H} H$. Substituting the eigenvalue decomposition yields:：
+In equation (1), the coefficient matrix of the signal $X$ is  $(H^\text{H} H + \sigma^2 I)^{-1} H^\text{H} H$. Substituting the eigenvalue decomposition yields：
+
 $$
     \begin{aligned}
         (H^\text H H + \sigma^2 I ) ^{-1} H^\text H H 
@@ -157,12 +172,14 @@ $$
 $$
 
 Then, the coefficient for the $l$-th signal stream (excluding interference from other streams) is the $(l, l)$-th element of the above coefficient matrix. Therefore, the signal coefficient is given by：
+
 $$
     q_l^\text H (\Lambda  +   \sigma^2 I ) ^{-1} \Lambda q_l
 \tag{4}
 $$
 
 The power of the $l$-th signal stream is given by：
+
 $$
     P_{\text{sig}} = q_l^\text H (\Lambda +   \sigma^2 I ) ^{-1} \Lambda q_l q_l^\text H \Lambda (\Lambda +   \sigma^2 I ) ^{-1} q_l
 \tag{5}
@@ -172,6 +189,7 @@ $$
 The interference power is not easy to derive directly. However, the total power of the signal plus interference is easier to compute. Therefore, we first derive the total power of signal plus interference, then subtract the signal power to obtain the interference power.
 
 The $l$-th row of the coefficient matrix in equation (4) contains the coefficients of the desired signal $X_l$ as well as the interfering signals. We first derive the corresponding covariance matrix：
+
 $$
     \begin{aligned}
         R_X &= \text E \left [ ((H^\text H H + \sigma^2 I ) ^{-1} H^\text H H X)((H^\text H H + \sigma^2 I ) ^{-1} H^\text H H X)^\text H   \right ]  \\
@@ -182,6 +200,7 @@ $$
 $$
 
 Substituting the eigenvalue decomposition into the above expression gives:
+
 $$
     \begin{aligned}
         R_X &= (Q^\text H \Lambda Q +   \sigma^2 I ) ^{-1}Q^\text H \Lambda Q Q^\text H \Lambda Q  (Q^\text H \Lambda Q +   \sigma^2 I ) ^{-1}  \\
@@ -190,6 +209,7 @@ $$
 $$
 
 Therefore, the total power of the signal plus interference is the $(l, l)$-th element of the signal covariance matrix $R_X$.
+
 $$
 R_X(l,l) = q_l^H (\Lambda +   \sigma^2 I ) ^{-1} \Lambda^2 (\Lambda +   \sigma^2 I ) ^{-1} q_l
 \tag{6}
@@ -232,11 +252,13 @@ Here, $c = q_l^\text{H} \Lambda (\Lambda + \sigma^2 I)^{-1} q_l$ is a complex sc
 ### SINR 
 
 The signal power in equation (5) can be written as：
+
 $$
     P_{\text{sig}} = c^* c
 $$
 
 then MMSE SNIR is：
+
 $$
     \begin{aligned}
     \gamma &= \frac{P_{\text{sig}}}{P_{\text{noise+inter}}} = \frac{c^* c}{c - c^* c} \\
@@ -247,6 +269,7 @@ $$
 $$
 
 Next, we further derive $c^*$：
+
 $$
     \begin{aligned}
         c^* &=  (q_l^\text H\Lambda(\Lambda  +   \sigma^2 I ) ^{-1} q_l)^* \\
@@ -256,6 +279,7 @@ $$
 $$
 
 According to the matrix inverse expansion formula
+
 $$
     \left( \mathbf{A} + \mathbf{U} \mathbf{C} \mathbf{V} \right)^{-1}
 =
@@ -307,11 +331,13 @@ $$
 $$
 
 If the original signal power is 1, and the energy of the Gaussian white noise is $\sigma^2$, then the original SNR is given by：
+
 $$
     \text{SNR} = 1/\sigma^2
 $$
 
 Then, the final signal-to-interference-plus-noise ratio (SINR) after MMSE equalization is:
+
 $$
     \begin{aligned}
         \gamma 
@@ -333,6 +359,7 @@ $$
 where $$R=H H^{\text H} + \sigma^2 I$$.
 
 Because 
+
 $$
     h_l^{\text H} R^{-1} h_l = [H^{\text H} R^{-1} H]_{ll}
 $$
@@ -340,10 +367,13 @@ $$
 Therefore, let's first derive the expression for $H^{\text{H}} R^{-1} H$.
 
 First, perform the singular value decomposition (SVD) of $H$:
+
 $$
     H = U \Lambda^{1/2} Q
 $$
+
 then：
+
 $$
     \begin{aligned}
         H^{\text H} R^{-1} H &= Q^{\text H} \Lambda^{1/2} U^{\text H}\left (U \Lambda^{1/2} Q  (U \Lambda^{1/2} Q)^{\text H}  + \sigma^2 I \right )^{-1} U \Lambda^{1/2} Q \\
@@ -367,6 +397,7 @@ $$
 $$
 
 So：
+
 $$
     h_l^{\text H} R^{-1} h_l = [H^{\text H} R^{-1} H]_{ll} = 1 - \sigma^2 \left [  (  H^{\text H} H + \sigma^2 I)^{-1} \right ]_{ll}
 $$
@@ -374,6 +405,7 @@ $$
 Substituting the above expression into (14) and performing some simplifications also leads to the same result as in equation (12), which is equation (13).
 
 Therefore, the final signal-to-interference-plus-noise ratio (SINR) after MMSE equalization can be expressed in two equivalent forms, namely:
+
 $$
         \gamma 
         =\frac{\text{SNR}}{[ (H^\text H  H + \frac{1}{\text{SNR}} I )^{-1}  ]_{ll}} - 1
