@@ -3,11 +3,13 @@
 #  SINR/SNR of MIMO Equalizor
 
 MIMO system model is：
+
 $$
     Y = HX + N
 $$
 
 MIMO linear equalization is to find a matrix $$G$$，then use this matrix G to estimate the original signals $$X$$ as $$\hat X$$:
+
 $$
     \hat X = GY
 $$
