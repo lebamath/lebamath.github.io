@@ -20,3 +20,5 @@
 [.rootMUSIC](/rootMUSIC.html) 
 
 [.spatial smoothing MUSIC](/spatial_smoothing_MUSIC.html) 
+
+[.SINR after MIMO linear equalizor](/SINR_linear_MIMO_equalizer.html) 
