@@ -44,7 +44,7 @@ then $$l\text{-th}$$  noise is：
 $$
 \begin{aligned}
     \text E\left [\hat N \hat N^{\text H}\right ]_{ll} &= \text E\left [(H^{\text H} H)^{-1} H^{\text H} N \left ((H^{\text H} H)^{-1} H^H N\right )^{\text H} \right ]_{ll}  \\
-     &= \text E\left [(H^{\text H} H)^{-1} H^{\text H} N N^\text H (H^{\text H}H)^{-1} H\right ]_{ll} \\
+     &= \text E\left [(H^{\text H} H)^{-1} H^{\text H} N N^\text H H (H^{\text H}H)^{-1} \right ]_{ll} \\
      &= \left [(H^{\text H} H)^{-1} H^{\text H} E[N N^\text H] H (H^{\text H}H)^{-1} \right ]_{ll} \\
      &= \sigma^2 \left [(H^{\text H} H)^{-1} H^{\text H} H (H^{\text H}H)^{-1} \right ]_{ll} \\
      &= \sigma^2 \left [(H^{\text H} H)^{-1} \right ]_{ll}
@@ -75,7 +75,7 @@ Let $$q_l$$  be the $$l\text{-th} $$ column of $$Q^{\text H}$$ ，then the $$l\t
 then
 
 $$
-    \left [(H^{\text H} H)^{-1} \right ]_{ll} = q_l^{\text H} \Lambda^{-1} q_l = \sum_{i} q_{li}\lambda_i^{-1}
+    \left [(H^{\text H} H)^{-1} \right ]_{ll} = q_l^{\text H} \Lambda^{-1} q_l = \sum_{i} |q_{li}|^2\lambda_i^{-1}
 $$
 
 where  $$\lambda_i$$ is the $$i\text{-th}$$ eigenvalue of $$ H^{\text H} H$$ .
@@ -83,10 +83,10 @@ where  $$\lambda_i$$ is the $$i\text{-th}$$ eigenvalue of $$ H^{\text H} H$$ .
 so the SINR is：
 
 $$
-\text{SNR}_{\text{ZF}} = \frac{1}{\sigma^2  \sum_{i} q_{li}\lambda_i^{-1}}
+\text{SNR}_{\text{ZF}} = \frac{1}{\sigma^2  \sum_{i} |q_{li}|^2\lambda_i^{-1}}
 $$
 
-If the matrix $H^{\text{H}} H$ has at least one very small eigenvalue, the SNR of each stream will degrade significantly. This is because even a single small eigenvalue can cause the term $\sum_{i} q_{li} \lambda_i^{-1}$ to become large, thereby reducing the SNR across all signal streams.
+If the matrix $H^{\text{H}} H$ has at least one very small eigenvalue, the SNR of each stream will degrade significantly. This is because even a single small eigenvalue can cause the term $\sum_{i} |q_{li}|^2 \lambda_i^{-1}$ to become large, thereby reducing the SNR across all signal streams.
 
 
 
