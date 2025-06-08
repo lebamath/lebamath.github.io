@@ -86,7 +86,11 @@ $$
 \text{SNR}_{\text{ZF}} = \frac{1}{\sigma^2  \sum_{i} |q_{li}|^2 \lambda_i^{-1}}
 $$
 
-If the matrix $$H^{\text{H}} H$$ has at least one very small eigenvalue, the SNR of each stream will degrade significantly. This is because even a single small eigenvalue can cause the term $$\sum_{i}|q_{li}|^2 \lambda_i^{-1}$$ to become large, thereby reducing the SNR across all signal streams.
+If the matrix $$H^{\text{H}} H$$ has at least one very small eigenvalue, the SNR of each stream will degrade significantly. This is because even a single small eigenvalue can cause the term 
+
+$$\sum_{i}|q_{li}|^2 \lambda_i^{-1}$$
+
+to become large, thereby reducing the SNR across all signal streams.
 
 
 
