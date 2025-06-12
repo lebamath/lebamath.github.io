@@ -1,6 +1,8 @@
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3E68S0VG4"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-V3E68S0VG4'); </script>
 
-#  SINR/SNR of MIMO Equalizor
+#  SINR/SNR of MIMO Equalizer
+
+[Video: SINR of ZF Equalizer](https://www.youtube.com/watch?v=uFRUvERZHak&t=9s)
 
 MIMO system model is：
 
