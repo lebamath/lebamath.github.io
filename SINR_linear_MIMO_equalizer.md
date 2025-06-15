@@ -435,7 +435,7 @@ $$
 
 We use the equalizer matrix expression on the left to derive the SINR under MMSE equalization, this time from a physical interpretation perspective.
 
-To simplify the derivation and notation, let $ R =  H H^{\text H} + \sigma^2 I$。
+To simplify the derivation and notation, let $$ R =  H H^{\text H} + \sigma^2 I$$。
 
 ### signal power 
 
