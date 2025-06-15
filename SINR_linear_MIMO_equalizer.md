@@ -385,7 +385,7 @@ then：
 $$
     \begin{aligned}
         H^{\text H} R^{-1} H &= Q^{\text H} \Lambda^{1/2} U^{\text H}\left (U \Lambda^{1/2} Q  (U \Lambda^{1/2} Q)^{\text H}  + \sigma^2 I \right )^{-1} U \Lambda^{1/2} Q \\
-        &= Q^{\text H} \Lambda^{1/2} U\left (U \Lambda^{1/2} Q^{\text H}  Q \Lambda^{1/2} U^{\text H}  + \sigma^2 I \right )^{-1} U \Lambda^{1/2} Q \\
+        &= Q^{\text H} \Lambda^{1/2} U^\text H\left (U \Lambda^{1/2} Q^{\text H}  Q \Lambda^{1/2} U^{\text H}  + \sigma^2 I \right )^{-1} U \Lambda^{1/2} Q \\
         &= Q^{\text H} \Lambda^{1/2} (  \Lambda + \sigma^2 I )^{-1} \Lambda^{1/2} Q
         \end{aligned}
 $$
