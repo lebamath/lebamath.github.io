@@ -297,7 +297,7 @@ $$
 \mathbf{V} \mathbf{A}^{-1}
 $$
 
-let $$(\Lambda  +   \sigma^2 I ) ^{-1}$$ 中 $$A = \Lambda, U = \sigma^2 I, C = I,V=I$$，then：
+In $$(\Lambda  +   \sigma^2 I ) ^{-1}$$ let $$A = \Lambda, U = \sigma^2 I, C = I,V=I$$，then：
 
 $$
 \begin{aligned}
