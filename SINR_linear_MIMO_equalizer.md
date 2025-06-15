@@ -20,7 +20,7 @@ This paper aims to analyze the signal-to-interference-plus-noise ratio (SINR) or
 
 ## SNR for Zero Forcing Equalizer 
 
-We know that the equalization matrix $G$ of the Zero-Forcing (ZF) algorithm  is：
+We know that the equalization matrix $$G$$ of the Zero-Forcing (ZF) algorithm  is：
 
 $$
     G = (H^{\text H} H)^{-1} H^H
@@ -132,13 +132,13 @@ R_N &=\text E\left [ \left ( (H^\text H H + \sigma^2 I ) ^{-1} H^\text H N \righ
 \tag{2}
 $$
 
-Since $H^\text{H} H$ is a Hermitian matrix, its eigenvalue decomposition can be expressed as：
+Since $$H^\text{H} H$$ is a Hermitian matrix, its eigenvalue decomposition can be expressed as：
 
 $$
     H^\text H H = Q^\text H \Lambda Q
 $$
 
-where $Q$ is a unitary (orthonormal) complex matrix，so $$Q^{-1}= Q^\text H$$.
+where $$Q$$ is a unitary (orthonormal) complex matrix，so $$Q^{-1}= Q^\text H$$.
 
 Substituting into the noise covariance matrix (2) gives：
 
@@ -151,7 +151,7 @@ $$
     \end{aligned}
 $$
 
-Then, the noise power on the $$l\text{-th}$$ signal stream is the $$l\text{-th}$$ column and the $$l\text{-th}$$ row  element of the noise covariance matrix $R_N$.
+Then, the noise power on the $$l\text{-th}$$ signal stream is the $$l\text{-th}$$ column and the $$l\text{-th}$$ row  element of the noise covariance matrix $$R_N$$.
 
 let：
 
@@ -161,7 +161,7 @@ $$
 
 wheter $$q_l$$  is the column vector of $$Q$$ .
 
-Then, the noise power on the $l$-th signal stream is given by：
+Then, the noise power on the $$l$$-th signal stream is given by：
 
 $$
 P_{\text{noise}} =R_{\text N}(l,l) = \sigma^2 q_l^\text H  (\Lambda+ \sigma^2 I)^{-1} \Lambda  (\Lambda+ \sigma^2 I)^{-1} q_l
@@ -169,7 +169,7 @@ P_{\text{noise}} =R_{\text N}(l,l) = \sigma^2 q_l^\text H  (\Lambda+ \sigma^2 I)
 $$
 
 ### Signal Power 
-In equation (1), the coefficient matrix of the signal $X$ is  $(H^\text{H} H + \sigma^2 I)^{-1} H^\text{H} H$. Substituting the eigenvalue decomposition yields：
+In equation (1), the coefficient matrix of the signal $$X$$ is  $$(H^\text{H} H + \sigma^2 I)^{-1} H^\text{H} H$$. Substituting the eigenvalue decomposition yields：
 
 $$
     \begin{aligned}
@@ -179,14 +179,14 @@ $$
     \end{aligned}
 $$
 
-Then, the coefficient for the $l$-th signal stream (excluding interference from other streams) is the $(l, l)$-th element of the above coefficient matrix. Therefore, the signal coefficient is given by：
+Then, the coefficient for the $$l$$-th signal stream (excluding interference from other streams) is the $$(l, l)$$-th element of the above coefficient matrix. Therefore, the signal coefficient is given by：
 
 $$
     q_l^\text H (\Lambda  +   \sigma^2 I ) ^{-1} \Lambda q_l
 \tag{4}
 $$
 
-The power of the $l$-th signal stream is given by：
+The power of the $$l$$-th signal stream is given by：
 
 $$
     P_{\text{sig}} = q_l^\text H (\Lambda +   \sigma^2 I ) ^{-1} \Lambda q_l q_l^\text H \Lambda (\Lambda +   \sigma^2 I ) ^{-1} q_l
@@ -196,7 +196,7 @@ $$
 ### Interference Power 
 The interference power is not easy to derive directly. However, the total power of the signal plus interference is easier to compute. Therefore, we first derive the total power of signal plus interference, then subtract the signal power to obtain the interference power.
 
-The $l$-th row of the coefficient matrix in equation (4) contains the coefficients of the desired signal $X_l$ as well as the interfering signals. We first derive the corresponding covariance matrix：
+The $$l$$-th row of the coefficient matrix in equation (4) contains the coefficients of the desired signal $$X_l$$ as well as the interfering signals. We first derive the corresponding covariance matrix：
 
 $$
     \begin{aligned}
@@ -216,7 +216,7 @@ $$
     \end{aligned}
 $$
 
-Therefore, the total power of the signal plus interference is the $(l, l)$-th element of the signal covariance matrix $R_X$.
+Therefore, the total power of the signal plus interference is the $$(l, l)$$-th element of the signal covariance matrix $$R_X$$.
 
 $$
 R_X(l,l) = q_l^H (\Lambda +   \sigma^2 I ) ^{-1} \Lambda^2 (\Lambda +   \sigma^2 I ) ^{-1} q_l
@@ -255,7 +255,7 @@ $$
     \end{aligned}
 $$
 
-Here, $c = q_l^\text{H} \Lambda (\Lambda + \sigma^2 I)^{-1} q_l$ is a complex scalar, and $c^*$ denotes the complex conjugate of $c$.
+Here, $$c = q_l^\text{H} \Lambda (\Lambda + \sigma^2 I)^{-1} q_l$$ is a complex scalar, and $$c^*$$ denotes the complex conjugate of $$c$$.
 
 ### SINR 
 
@@ -276,7 +276,7 @@ $$
 \tag{8}
 $$
 
-Next, we further derive $c^*$：
+Next, we further derive $$c^*$$：
 
 $$
     \begin{aligned}
@@ -338,7 +338,7 @@ $$
 \tag{12}
 $$
 
-If the original signal power is 1, and the energy of the Gaussian white noise is $\sigma^2$, then the original SNR is given by：
+If the original signal power is 1, and the energy of the Gaussian white noise is $$\sigma^2$$, then the original SNR is given by：
 
 $$
     \text{SNR} = 1/\sigma^2
@@ -372,9 +372,9 @@ $$
     h_l^{\text H} R^{-1} h_l = [H^{\text H} R^{-1} H]_{ll}
 $$
 
-Therefore, let's first derive the expression for $H^{\text{H}} R^{-1} H$.
+Therefore, let's first derive the expression for $$H^{\text{H}} R^{-1} H$$.
 
-First, perform the singular value decomposition (SVD) of $H$:
+First, perform the singular value decomposition (SVD) of $$H$$:
 
 $$
     H = U \Lambda^{1/2} Q
@@ -443,7 +443,7 @@ $$
     \hat X = H^{\text H} R^{-1} Y = H^{\text H} R^{-1}(HX+N)
      = H^{\text H} R^{-1} H X + H^{\text H} R^{-1} N
 $$
-Accordingly, the coefficient of $x_l$  in the equalized signal corresponding to stream $l$ is $[H^{\text H} R^{-1} H]_{ll}$， i.e., $h^{\text H}_l R^{-1} h_l$。Then, the power of the desired signal after equalization is:
+Accordingly, the coefficient of $$x_l$$  in the equalized signal corresponding to stream $$l$$ is $$[H^{\text H} R^{-1} H]_{ll}$$， i.e., $$h^{\text H}_l R^{-1} h_l$$。Then, the power of the desired signal after equalization is:
 $$
     P_{\text{sig}} = h^{\text H}_l R^{-1} h_l \left (h^{\text H}_l R^{-1} h_l \right )^{H} = h^{\text H}_l R^{-1} h_l h^{\text H}_l R^{-1} h_l
 \tag{1}
@@ -463,7 +463,7 @@ $$
 \end{aligned}
 $$
 
-The element in the $l$-th row and $l$-th column is the energy of the signal plus interference:
+The element in the $$l$$-th row and $$l$$-th column is the energy of the signal plus interference:
 $$
     P_{\text{sig+inter}} = h^{\text H}_l R^{-1} H H^{\text H} R^{-1} h_l
 $$
@@ -490,7 +490,7 @@ $$
 \end{aligned}
 $$
 
-Taking the element at the $l$-th row and $l$-th column of the above matrix gives the noise energy:
+Taking the element at the $$l$$-th row and $$l$$-th column of the above matrix gives the noise energy:
 $$
     P_{\text{noise}} =  \sigma^2 h^{\text H}_l R^{-1} R^{-1} h_l
 \tag{3}
@@ -515,7 +515,7 @@ $$
 $$
 
 ### Signal-to-Interference-plus-Noise Ratio (SINR) 
-The signal power in formula (1) is given by $P_{\text{sig}} = c^2$, Then, the signal-to-interference-plus-Noise ratio (SINR) is:
+The signal power in formula (1) is given by $$P_{\text{sig}} = c^2$$, Then, the signal-to-interference-plus-Noise ratio (SINR) is:
 
 $$
     \begin{aligned}
