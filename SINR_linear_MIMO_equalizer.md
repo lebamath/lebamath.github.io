@@ -509,7 +509,7 @@ $$
     \end{aligned}
 $$
 
-let $c = h^{\text H}_l R^{-1} h_l$, Then the above expression becomes:
+let $$c = h^{\text H}_l R^{-1} h_l$$, Then the above expression becomes:
 $$
     P_{\text{inter+noise}} = c - c^2
 $$
