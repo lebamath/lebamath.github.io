@@ -424,3 +424,106 @@ and
 $$
 \gamma = \frac{h_l^{\text H} R^{-1} h_l}{1-h_l^{\text H} R^{-1} h_l}
 $$
+
+## An alternative expression SINR-from physical perspective 
+
+As mentioned earlier in the discussion of the MMSE equalizer algorithm
+$$
+    H^{\text H}\left ( H H^{\text H} + \sigma^2 I  \right )^{-1}  = \left ( H^{\text H} H + \sigma^2 I  \right )^{-1}H^{\text H}
+$$
+
+We use the equalizer matrix expression on the left to derive the SINR under MMSE equalization, this time from a physical interpretation perspective.
+
+To simplify the derivation and notation, let $ R =  H H^{\text H} + \sigma^2 I$。
+
+### signal power 
+
+The signal after equalization is given by:
+$$
+    \hat X = H^{\text H} R^{-1} Y = H^{\text H} R^{-1}(HX+N)
+     = H^{\text H} R^{-1} H X + H^{\text H} R^{-1} N
+$$
+Accordingly, the coefficient of $x_l$  in the equalized signal corresponding to stream $l$ is $[H^{\text H} R^{-1} H]_{ll}$， i.e., $h^{\text H}_l R^{-1} h_l$。Then, the power of the desired signal after equalization is:
+$$
+    P_{\text{sig}} = h^{\text H}_l R^{-1} h_l \left (h^{\text H}_l R^{-1} h_l \right )^{H} = h^{\text H}_l R^{-1} h_l h^{\text H}_l R^{-1} h_l
+\tag{1}
+$$
+
+### The power of interference 
+
+Similarly, we calculate the total power of the signal plus interference, and then subtract the power of the signal to obtain the interference power.
+The total power of the signal plus interference corresponds to the elements on the diagonal of the following covariance matrix:
+$$
+\begin{aligned}
+    &E\left [\left ( H^{\text H} R^{-1} H X \right )\left ( H^{\text H} R^{-1} H X \right )^{\text H} \right ] \\
+    &= 
+     E\left [ H^{\text H} R^{-1} H X X^H H^{\text H} R^{-1}   H \right ]  \\[8pt]
+     & = H^{\text H} R^{-1} H E[X X^H] H^{\text H} R^{-1} H \\[8pt]
+     & =  H^{\text H} R^{-1} H H^{\text H} R^{-1} H
+\end{aligned}
+$$
+
+The element in the $l$-th row and $l$-th column is the energy of the signal plus interference:
+$$
+    P_{\text{sig+inter}} = h^{\text H}_l R^{-1} H H^{\text H} R^{-1} h_l
+$$
+
+Then, the interference power is:
+$$
+\begin{aligned}
+    P_{\text{inter}} &= P_{\text{sig+inter}} -  P_{\text{sig}} \\
+    &= h^{\text H}_l R^{-1} H H^{\text H} R^{-1} h_l - h^{\text H}_l R^{-1} h_l h^{\text H}_l R^{-1} h_l
+    \end{aligned}
+\tag{2}
+$$
+
+### noise power 
+
+Noise power corresponds to the elements on the diagonal of the noise vector’s covariance matrix.
+The covariance matrix of the noise vector is:
+$$
+\begin{aligned}
+    &E\left [ H^{\text H} R^{-1} N \left ( H^{\text H} R^{-1} N \right )^{\text H}   \right ] \\
+    &=E\left [ H^{\text H} R^{-1} N  N^{\text H} R^{-1} H \right ]   \\
+    &= H^{\text H} R^{-1} E\left [N  N^{\text H} \right ] R^{-1} H  \\
+    &= \sigma^2 H^{\text H} R^{-1} R^{-1} H
+\end{aligned}
+$$
+
+Taking the element at the $l$-th row and $l$-th column of the above matrix gives the noise energy:
+$$
+    P_{\text{noise}} =  \sigma^2 h^{\text H}_l R^{-1} R^{-1} h_l
+\tag{3}
+$$
+
+### The energy of interference plus noise 
+Then, add the interference energy from formula (2) and the noise energy from formula (3) together:
+$$
+    \begin{aligned}
+        P_{\text{inter+noise}} &= P_{\text{inter}} + P_{\text{noise}} \\[8pt]
+        &= h^{\text H}_l R^{-1} H H^{\text H} R^{-1} h_l  - h^{\text H}_l R^{-1} h_l h^{\text H}_l R^{-1} h_l + \sigma^2 h^{\text H}_l R^{-1} R^{-1} h_l  \\[8pt]
+        & = h^{\text H}_l R^{-1} H H^{\text H} R^{-1} h_l +  \sigma^2 h^{\text H}_l R^{-1} R^{-1} h_l  - h^{\text H}_l R^{-1} h_l h^{\text H}_l R^{-1} h_l \\[8pt]
+        &=h^{\text H}_l R^{-1} \left ( H H^{\text H} + \sigma^2 I \right ) R^{-1} h_l - h^{\text H}_l R^{-1} h_l h^{\text H}_l R^{-1} h_l \\[8pt]
+        &= h^{\text H}_l R^{-1} R R^{-1} h_l - h^{\text H}_l R^{-1} h_l h^{\text H}_l R^{-1} h_l \\[8pt]
+        &= h^{\text H}_l R^{-1} h_l - h^{\text H}_l R^{-1} h_l h^{\text H}_l R^{-1} h_l
+    \end{aligned}
+$$
+
+let $c = h^{\text H}_l R^{-1} h_l$, Then the above expression becomes:
+$$
+    P_{\text{inter+noise}} = c - c^2
+$$
+
+### Signal-to-Interference-plus-Noise Ratio (SINR) 
+The signal power in formula (1) is given by $P_{\text{sig}} = c^2$, Then, the signal-to-interference-plus-Noise ratio (SINR) is:
+
+$$
+    \begin{aligned}
+    \text{SINR}_{\text{MMSE}} &= \frac{P_{\text{sig}}}{ P_{\text{inter+noise}}}  \\[8pt]
+    &= \frac{c^2}{c - c^2}  \\[8pt]
+    &= \frac{c}{1 - c} \\[8pt]
+    &= \frac{h^{\text H}_l R^{-1} h_l}{1-h^{\text H}_l R^{-1} h_l}
+    \end{aligned}
+$$
+
+Proof completed.
