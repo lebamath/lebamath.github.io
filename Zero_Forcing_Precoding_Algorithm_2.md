@@ -14,7 +14,7 @@ $$
 
 Since the transmitted signal $$\mathbf x$$ is a random variable, we need to calculate the mathematical expectation of the error. Assuming the signals are uncorrelated and have a normalized power of 1, i.e., $$\mathbb{E}\{ \mathbf x \mathbf x^{\text H} \} = \mathbf I$$, the objective function becomes:
 
-$$
+\begin{equation}
 \begin{aligned}
     J(\mathbf F) &= \mathbb{E} \left\{ \text{tr}\left[ (\mathbf H \mathbf F \mathbf x - \mathbf x)(\mathbf H \mathbf F \mathbf x - \mathbf x)^{\text H} \right] \right\}  \\
     &= \mathbb{E} \left\{ \text{tr}\left[ (\mathbf H \mathbf F - \mathbf I) \mathbf x \mathbf x^{\text H} (\mathbf H \mathbf F - \mathbf I)^{\text H} \right] \right\} \\
@@ -23,7 +23,7 @@ $$
     &=  ||\mathbf H \mathbf F - \mathbf I||_F^2 \\
     &=  \text{tr}\{(\mathbf H \mathbf F - \mathbf I)(\mathbf H \mathbf F - \mathbf I)^{\text H}\}
 \end{aligned}
-$$
+\end{equation}
 
 Obviously, to minimize the above mean square error (i.e., to make it zero), the condition $$\mathbf H \mathbf F = \mathbf I$$ must be satisfied. Since the number of transmit antennas is usually larger than the number of users, this system of equations is under-determined. A solution satisfying the condition can be found, but it is not unique. To implement the Zero-Forcing algorithm with minimum transmit power, we seek the **minimum norm solution** of this system, i.e., employing the Moore-Penrose Right Pseudo-inverse:
 
