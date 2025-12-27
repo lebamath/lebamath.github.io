@@ -175,7 +175,7 @@ $$
     C_2 = \text{tr}(\mathbf \Lambda^{\text H} (\mathbf H \mathbf F - \mathbf I))
 $$
 
-Note that this term **only contains $$\mathbf F$$ and does not contain $$\mathbf F^*$$\textbf{. According to Wirtinger derivative rules, the partial derivative of a term without $$\mathbf F^*$$ with respect to $$\mathbf F^*$$ is }0**.
+Note that this term **only contains $$\mathbf F$$ and does not contain $$\mathbf F^*$$ ( According to Wirtinger derivative rules, the partial derivative of a term without $$\mathbf F^*$$ with respect to $$\mathbf F^*$$ is 0).
 The result of differentiation is:
 
 $$
