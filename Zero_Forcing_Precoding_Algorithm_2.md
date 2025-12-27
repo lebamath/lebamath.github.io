@@ -4,10 +4,13 @@
 # Zero-Forcing Precoding Algorithm 
 
 The Zero-Forcing (ZF) algorithm can also be derived from the perspective of making the received signal as close as possible to the transmitted signal. That is, the goal is to minimize the Mean Square Error (MSE):
+
 $$
     J(\mathbf F) = \mathbb{E}  || \mathbf H \mathbf F \mathbf x - \mathbf x ||^2  
 $$
+
 Find the optimal $$\tilde{\mathbf F}$$:
+
 $$
      \tilde{\mathbf F} = \min_{\mathbf F}J(\mathbf F) 
 $$
@@ -47,6 +50,7 @@ $$
 ###  Constructing the Lagrangian Function
 
 To solve this problem, we introduce the Lagrange multiplier matrix $$\mathbf \Lambda \in \mathbb{C}^{K \times K}$$. Considering the constraints in the complex domain, the Lagrangian function $$\mathcal{L}(\mathbf F, \mathbf \Lambda)$$ is constructed as follows:
+
 $$
     \mathcal{L}(\mathbf F, \mathbf \Lambda) = \underbrace{\text{tr}(\mathbf F \mathbf F^{\text H})}_{\text{Objective Function}} - \underbrace{\text{tr}\left( \mathbf \Lambda (\mathbf H \mathbf F - \mathbf I)^{\text H} \right) - \text{tr}\left( \mathbf \Lambda^{\text H} (\mathbf H \mathbf F - \mathbf I) \right)}_{\text{Constraint Terms (Ensuring real result)}}
 $$
@@ -57,19 +61,25 @@ We take the partial derivative of the Lagrangian function $$\mathcal{L}$$ with r
 1. Differentiating the first term $$\text{tr}(\mathbf F \mathbf F^{\text H})$$ yields $$\mathbf F$$.
 
 2. Expanding the constraint term:
+3. 
 $$
    \text{tr}\left( \mathbf \Lambda (\mathbf F^{\text H} \mathbf H^{\text H} - \mathbf I) \right) = \text{tr}(\mathbf \Lambda \mathbf F^{\text H} \mathbf H^{\text H}) - \text{tr}(\mathbf \Lambda) 
-$$
-   Using the cyclic property of the trace $$\text{tr}(\mathbf A \mathbf B \mathbf C) = \text{tr}(\mathbf B \mathbf C \mathbf A)$$, this transforms into $$\text{tr}(\mathbf H^{\text H} \mathbf \Lambda \mathbf F^{\text H})$$. The derivative with respect to $$\mathbf F^*$$ is the coefficient matrix $$\mathbf H^{\text H} \mathbf \Lambda$$.
 
-3. The remaining terms do not contain $$\mathbf F^{\text H}$$ (i.e., do not contain $$\mathbf F^*$$), so their derivatives are 0.
+$$
+   Using the cyclic property of the trace 
+   
+   $$\text{tr}(\mathbf A \mathbf B \mathbf C) = \text{tr}(\mathbf B \mathbf C \mathbf A)$$, this transforms into $$\text{tr}(\mathbf H^{\text H} \mathbf \Lambda \mathbf F^{\text H})$$. The derivative with respect to $$\mathbf F^*$$ is the coefficient matrix $$\mathbf H^{\text H} \mathbf \Lambda$$.
+
+4. The remaining terms do not contain $$\mathbf F^{\text H}$$ (i.e., do not contain $$\mathbf F^*$$), so their derivatives are 0.
 
 Combining the above steps, we obtain the gradient equation:
+
 $$
     \frac{\partial \mathcal{L}}{\partial \mathbf F^*} = \mathbf F - \mathbf H^{\text H} \mathbf \Lambda = \mathbf 0
 $$
 
 From this, we get the structural form of the optimal solution:
+
 $$
     \mathbf F = \mathbf H^{\text H} \mathbf \Lambda
 \tag{1}
@@ -80,16 +90,19 @@ Finally, we need to determine the multiplier $$\mathbf \Lambda$$. Substituting E
 $$
     \mathbf H (\mathbf H^{\text H} \mathbf \Lambda) = \mathbf I
 $$
+
 $$
     (\mathbf H \mathbf H^{\text H}) \mathbf \Lambda = \mathbf I
 $$
 
 Since $$\mathbf H$$ is row-full-rank, $$(\mathbf H \mathbf H^{\text H})$$ is invertible, therefore:
+
 $$
     \mathbf \Lambda = (\mathbf H \mathbf H^{\text H})^{-1}
 $$
 
 Substituting $$\mathbf \Lambda$$ back into Eq. (1), we obtain the final formula for the Zero-Forcing precoding matrix:
+
 $$
     \mathbf F = \mathbf H^{\text H} (\mathbf H \mathbf H^{\text H})^{-1}
 $$
@@ -118,16 +131,20 @@ Let us observe the consequences of using only a single constraint term:
 2) The single constraint term $$\text{tr}(\mathbf \Lambda (\mathbf H \mathbf F - \mathbf I)^{\text H})$$ is usually a **Complex Number**.
 
 If the Lagrangian function $$\mathcal{L}$$ contains only a single constraint term:
+
 $$
     \mathcal{L} = \text{Real} - \text{Complex} = \text{Complex}
 $$
+
 This renders the mathematical statement "minimize $$\mathcal{L}$$" meaningless, as we cannot search for the "minimum value" of a complex function.
 
 **Mathematical Significance of Paired Appearance:**
 Using the complex identity: The sum of any complex number $$Z$$ and its conjugate $$Z^*$$ is a real number.
+
 $$
     Z + Z^* = 2\text{Re}\{Z\} \quad (\in \mathbb{R})
 $$
+
 Therefore, the function of constructing $$\text{tr}(\mathbf \Lambda \mathbf G^{\text H}) + \text{tr}(\mathbf \Lambda^{\text H} \mathbf G)$$ is precisely to create a **real-valued** constraint term, thereby making the optimization problem valid.
 
 ### 2. Completeness of Gradient: Avoiding the "Vanishing" Trap During Differentiation
@@ -138,25 +155,33 @@ Let the constraint part be $$C(\mathbf F, \mathbf F^*)$$. We analyze two single-
 
 \subparagraph{Case A: Using only the term containing $$\mathbf F^*$$}
 Assume the constraint term is:
+
 $$
     C_1 = \text{tr}(\mathbf \Lambda (\mathbf H \mathbf F - \mathbf I)^{\text H}) = \text{tr}(\mathbf \Lambda (\mathbf F^{\text H} \mathbf H^{\text H} - \mathbf I^{\text H}))
 $$
+
 This term explicitly contains $$\mathbf F^{\text H}$$ (i.e., $$\mathbf F^*$$). Differentiating with respect to $$\mathbf F^*$$ yields $$\mathbf H^{\text H} \mathbf \Lambda$$.
+
 $$
     \frac{\partial \mathcal{L}}{\partial \mathbf F^*} = \mathbf F - \mathbf H^{\text H} \mathbf \Lambda = \mathbf 0
 $$
+
 Comment: Although the definition is not rigorous (complex numbers cannot be minimized), it accidentally works out, and the derived structure happens to be correct.
 
 ### Case B: Using only the term containing $$\mathbf F$$
 Assume the constraint term is:
+
 $$
     C_2 = \text{tr}(\mathbf \Lambda^{\text H} (\mathbf H \mathbf F - \mathbf I))
 $$
+
 Note that this term **only contains $$\mathbf F$$ and does not contain $$\mathbf F^*$$\textbf{. According to Wirtinger derivative rules, the partial derivative of a term without $$\mathbf F^*$$ with respect to $$\mathbf F^*$$ is }0**.
 The result of differentiation is:
+
 $$
     \frac{\partial \mathcal{L}}{\partial \mathbf F^*} = \mathbf F - 0 = \mathbf 0 \implies \mathbf F = \mathbf 0
 $$
+
 Comment: Completely wrong! It derives an all-zero matrix, which is obviously not the solution for Zero-Forcing precoding.
 
 ### Summary
@@ -171,11 +196,13 @@ Adopting the paired form $$\text{tr}(\mathbf \Lambda \mathbf G^{\text H}) + \tex
 If we disregard the physical constraint of minimizing transmit power and attempt to directly differentiate the Mean Square Error objective function without constraints, we encounter a mathematical dilemma. The analysis of this derivation path is as follows:
 
 Set the objective function as:
+
 $$
     J(\mathbf F) = \text{tr}\{(\mathbf H \mathbf F - \mathbf I)(\mathbf H \mathbf F - \mathbf I)^{\text H}\}
 $$
 
 Expanding the above equation using the linear properties of the matrix trace and conjugate transpose rules:
+
 $$
 \begin{aligned}
     J(\mathbf F) &= \text{tr}\left( (\mathbf H \mathbf F - \mathbf I)(\mathbf F^{\text H} \mathbf H^{\text H} - \mathbf I) \right) \\
@@ -184,11 +211,13 @@ $$
 $$
 
 To find the extremum point, we take the partial derivative with respect to the conjugate matrix $$\mathbf F^*$$ and set it to zero:
+
 $$
     \frac{\partial J}{\partial \mathbf F^*} = \mathbf H^{\text H} \mathbf H \mathbf F - \mathbf H^{\text H} = \mathbf 0
 $$
 
 Rearranging the above equation, we obtain the so-called Normal Equation:
+
 $$
     \mathbf H^{\text H} \mathbf H \mathbf F = \mathbf H^{\text H}
 \tag{2}
@@ -205,18 +234,24 @@ To find the extremum, we need to take the partial derivative with respect to the
 In the derivation, we need to use the following two key differentiation formulas for the matrix Trace:
 
   **Rule 1 (differentiation of energy term):** 
+  
 $$
         \frac{\partial \text{tr}(\mathbf X \mathbf X^{\text H})}{\partial \mathbf X^*} = \mathbf X
 $$
+
 Explanation: This is similar to scalar differentiation where $$\frac{d}{dx^*} (x x^*) = x$$.
 
 **Rule 2 (differentiation of linear term):**
+
 $$
         \frac{\partial \text{tr}(\mathbf A \mathbf X^{\text H})}{\partial \mathbf X^*} = \mathbf A
 $$
+
 and
+
 $$
         \frac{\partial \text{tr}(\mathbf A \mathbf X)}{\partial \mathbf X^*} = \mathbf 0
 $$
+
 Explanation: Terms containing $$\mathbf X^{\text H}$$ can be viewed as containing the variable $$\mathbf X^*$$, so the derivative is the coefficient matrix $$\mathbf A$$; whereas terms not containing $$\mathbf X^{\text H}$$ (containing only $$\mathbf X$$) are constants with respect to $$\mathbf X^*$$, so the derivative is 0.
 
