@@ -75,7 +75,7 @@ $$
 \tag{1}
 $$
 
-Finally, we need to determine the multiplier $$\mathbf \Lambda$$. Substituting Eq. (\ref{eq:structure}) into the original constraint condition $$\mathbf H \mathbf F = \mathbf I$$:
+Finally, we need to determine the multiplier $$\mathbf \Lambda$$. Substituting Eq. (1) into the original constraint condition $$\mathbf H \mathbf F = \mathbf I$$:
 
 $$
     \mathbf H (\mathbf H^{\text H} \mathbf \Lambda) = \mathbf I
@@ -89,7 +89,7 @@ $$
     \mathbf \Lambda = (\mathbf H \mathbf H^{\text H})^{-1}
 $$
 
-Substituting $$\mathbf \Lambda$$ back into Eq. (\ref{eq:structure}), we obtain the final formula for the Zero-Forcing precoding matrix:
+Substituting $$\mathbf \Lambda$$ back into Eq. (1), we obtain the final formula for the Zero-Forcing precoding matrix:
 $$
     \mathbf F = \mathbf H^{\text H} (\mathbf H \mathbf H^{\text H})^{-1}
 $$
@@ -194,7 +194,7 @@ $$
 \tag{2}
 $$
 
-When attempting to solve for $$\mathbf F$$ from Eq. (\ref{eq:normal_eqn}), we would typically try to left-multiply by $$(\mathbf H^{\text H} \mathbf H)^{-1}$$. However, in the downlink precoding scenario, the number of transmit antennas $$N_t$$ is usually greater than the number of users $$K$$. The dimension of the channel matrix $$\mathbf H$$ is $$K \times N_t$$, which means the product matrix $$\mathbf H^{\text H} \mathbf H$$ is a large square matrix of size $$N_t \times N_t$$. Since the rank of $$\mathbf H$$ is limited by the number of users $$K$$ (i.e., $$\text{rank}(\mathbf H) \le K$$), and $$K < N_t$$, $$\mathbf H^{\text H} \mathbf H$$ is inevitably a **Rank Deficient** matrix. In other words, it is a singular matrix, and its inverse $$(\mathbf H^{\text H} \mathbf H)^{-1}$$ does not exist at all.
+When attempting to solve for $$\mathbf F$$ from Eq. (2), we would typically try to left-multiply by $$(\mathbf H^{\text H} \mathbf H)^{-1}$$. However, in the downlink precoding scenario, the number of transmit antennas $$N_t$$ is usually greater than the number of users $$K$$. The dimension of the channel matrix $$\mathbf H$$ is $$K \times N_t$$, which means the product matrix $$\mathbf H^{\text H} \mathbf H$$ is a large square matrix of size $$N_t \times N_t$$. Since the rank of $$\mathbf H$$ is limited by the number of users $$K$$ (i.e., $$\text{rank}(\mathbf H) \le K$$), and $$K < N_t$$, $$\mathbf H^{\text H} \mathbf H$$ is inevitably a **Rank Deficient** matrix. In other words, it is a singular matrix, and its inverse $$(\mathbf H^{\text H} \mathbf H)^{-1}$$ does not exist at all.
 
 Therefore, we cannot obtain a unique precoding matrix $$\mathbf F$$ through direct inversion. This mathematically confirms that the problem is an Under-determined Problem, and a minimum norm solution must be found by introducing power constraints.
 
