@@ -34,7 +34,7 @@ $$
     \mathbf F = \mathbf H^{\text H} (\mathbf H \mathbf H^{\text H})^{-1}
 $$
 
-\paragraph{Detailed Derivation of the Minimum Norm Solution}
+### Detailed Derivation of the Minimum Norm Solution
 
 Although there are infinitely many solutions satisfying the zero-forcing condition $$\mathbf H \mathbf F = \mathbf I$$ (because $$N_t > K$$, and $$\mathbf H$$ is a row-full-rank "fat" matrix), in practical systems, we wish to minimize the total transmit power while eliminating interference.
 
