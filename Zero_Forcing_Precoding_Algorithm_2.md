@@ -1,3 +1,6 @@
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3E68S0VG4"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-V3E68S0VG4'); </script>
+.back to index
+
 # Zero-Forcing Precoding Algorithm 
 
 The Zero-Forcing (ZF) algorithm can also be derived from the perspective of making the received signal as close as possible to the transmitted signal. That is, the goal is to minimize the Mean Square Error (MSE):
