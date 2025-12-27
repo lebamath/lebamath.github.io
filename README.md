@@ -22,3 +22,5 @@
 [.spatial smoothing MUSIC](/spatial_smoothing_MUSIC.html) 
 
 [.SINR after MIMO linear equalizor](/SINR_linear_MIMO_equalizer.html) 
+
+[.Zero Forcing Precoding Algorithm](/Zero_Forcing_Precoding_Algorithm_2.html) 
