@@ -64,8 +64,8 @@ We take the partial derivative of the Lagrangian function $$\mathcal{L}$$ with r
 3. 
 $$
    \text{tr}\left( \mathbf \Lambda (\mathbf F^{\text H} \mathbf H^{\text H} - \mathbf I) \right) = \text{tr}(\mathbf \Lambda \mathbf F^{\text H} \mathbf H^{\text H}) - \text{tr}(\mathbf \Lambda) 
-
 $$
+
    Using the cyclic property of the trace 
    
    $$\text{tr}(\mathbf A \mathbf B \mathbf C) = \text{tr}(\mathbf B \mathbf C \mathbf A)$$, this transforms into $$\text{tr}(\mathbf H^{\text H} \mathbf \Lambda \mathbf F^{\text H})$$. The derivative with respect to $$\mathbf F^*$$ is the coefficient matrix $$\mathbf H^{\text H} \mathbf \Lambda$$.
