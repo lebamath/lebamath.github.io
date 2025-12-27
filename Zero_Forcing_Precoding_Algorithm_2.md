@@ -61,10 +61,7 @@ We take the partial derivative of the Lagrangian function $$\mathcal{L}$$ with r
 1. Differentiating the first term $$\text{tr}(\mathbf F \mathbf F^{\text H})$$ yields $$\mathbf F$$.
 
 2. Expanding the constraint term:
-3. 
-$$
-   \text{tr}\left( \mathbf \Lambda (\mathbf F^{\text H} \mathbf H^{\text H} - \mathbf I) \right) = \text{tr}(\mathbf \Lambda \mathbf F^{\text H} \mathbf H^{\text H}) - \text{tr}(\mathbf \Lambda) 
-$$
+3. $$\text{tr}\left( \mathbf \Lambda (\mathbf F^{\text H} \mathbf H^{\text H} - \mathbf I) \right) = \text{tr}(\mathbf \Lambda \mathbf F^{\text H} \mathbf H^{\text H}) - \text{tr}(\mathbf \Lambda)$$
 
    Using the cyclic property of the trace 
    
