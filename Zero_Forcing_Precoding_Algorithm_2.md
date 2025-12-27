@@ -153,7 +153,7 @@ Even if we ignore the issue of real number definition and force a mathematical d
 The core of Wirtinger derivatives is that the matrix $$\mathbf F$$ and its conjugate $$\mathbf F^*$$ are treated as two independent variables.
 Let the constraint part be $$C(\mathbf F, \mathbf F^*)$$. We analyze two single-term cases:
 
-\subparagraph{Case A: Using only the term containing $$\mathbf F^*$$}
+### Case A: Using only the term containing $$\mathbf F^*$$
 Assume the constraint term is:
 
 $$
