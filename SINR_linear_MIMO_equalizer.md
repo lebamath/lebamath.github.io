@@ -14,6 +14,7 @@
   </script>
 </head>
 
+[.back to index](/index.html) 
 
 #  SINR/SNR of MIMO Equalizer
 
