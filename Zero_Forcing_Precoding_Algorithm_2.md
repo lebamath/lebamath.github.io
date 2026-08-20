@@ -14,7 +14,7 @@
   </script>
 </head>
 
-.back to index
+[.back to index](/index.html) 
 
 # Zero-Forcing Precoding Algorithm 
 
