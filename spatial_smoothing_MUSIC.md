@@ -14,6 +14,7 @@
   </script>
 </head>
 
+
 ## Spatial Smoothing MUSIC Algorithm 
 
 In the **MUSIC (Multiple Signal Classification)** algorithm, **spatial smoothing** is commonly used to improve signal estimation accuracy and reduce the impact of noise.
