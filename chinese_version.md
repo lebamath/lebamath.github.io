@@ -8,8 +8,5 @@
   gtag('config', 'G-NG8FFW7RR5');
 </script>
 
-[english version](/english_version.html)
 
-[中文版本](chinese_version.html)
-
-
+待更新
