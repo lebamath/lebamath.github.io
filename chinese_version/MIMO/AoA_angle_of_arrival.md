@@ -10,7 +10,7 @@ $$
 \tag{1}
 $$
 
-![图1：距离向射频波方向投影](img//MIMO浅析//AoA/AoA_distance_projection.png)
+![图1：距离向射频波方向投影](/figure//mimo//AoA/AoA_distance_projection.png)
 
 *图1：距离向射频波方向投影*
 
@@ -41,7 +41,7 @@ $$
 
 这个投影的示意图如图 2 所示。
 
-![图2：空间角速度向天线阵列方向上投影](img//MIMO浅析//AoA//AoA_angle_space_velocity_projection.png)
+![图2：空间角速度向天线阵列方向上投影](/figure//mimo//AoA//AoA_angle_space_velocity_projection.png)
 
 *图2：空间角速度向天线阵列方向上投影*
 
@@ -52,7 +52,7 @@ $$
 
 在平面阵列情况下计算 AoA 角度的时候，一般是使用天平角(方位角，Azimuth)和天顶角(Zenith)，如图 3 所示。
 
-![图3：平面阵列上的空间角速度投影/方位角/天顶角](img//MIMO浅析//AoA//AoA_3D_projection.png)
+![图3：平面阵列上的空间角速度投影/方位角/天顶角](/figure//mimo//AoA//AoA_3D_projection.png)
 
 *图3：平面阵列上的空间角速度投影/方位角/天顶角*
 
