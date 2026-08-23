@@ -15,7 +15,7 @@
 </head>
 
 
-[.返回主目录](/chinese_version.md) 
+[.返回主目录](/chinese_version.html) 
 
 
 # AoA: Angle of Arrival
