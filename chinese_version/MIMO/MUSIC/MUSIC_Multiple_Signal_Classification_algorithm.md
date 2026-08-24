@@ -737,7 +737,7 @@ $$
 = \| \boldsymbol{s}\boldsymbol{A}^H \boldsymbol{x}\|^2 \ge 0
 $$
 
-由于这两项相加的结果始终大于等于 0， 所以 $$\boldsymbol R_y$$ 是正定或半正定矩阵。 \\
+由于这两项相加的结果始终大于等于 0， 所以 $$\boldsymbol R_y$$ 是正定或半正定矩阵。 
 
 从矩阵理论角度来看：
 
