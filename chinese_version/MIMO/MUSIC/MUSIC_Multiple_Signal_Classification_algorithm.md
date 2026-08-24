@@ -453,7 +453,7 @@ $$k_i < n \times Q$$, 其中 $$Q$$ 是任意的正整数，表示 oversampling �
 代码在 github 上，https://github.com/taichiorange/leba\_math,目录为：leba\_math/MIMO/MIMO-beam-detection/beam-MUSIC-algorithm.py
 
 
-![MUSIC 伪谱](/figure//mimo//music//MUSIC.png)
+![MUSIC 伪谱](/figure//mimo//music//music.png)
 
 *MUSIC 伪谱*
 
