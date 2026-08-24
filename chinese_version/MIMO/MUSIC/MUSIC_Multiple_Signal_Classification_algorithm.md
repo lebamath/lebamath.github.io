@@ -731,10 +731,11 @@ $$
 
 $$\boldsymbol{x}^H  \sigma^2 \boldsymbol{I} \boldsymbol{x} = \sigma^2 \| \boldsymbol{x} \|^2 \ge 0$$
 
-$\boldsymbol{x}^H  \boldsymbol{A} \boldsymbol{R}_s \boldsymbol{A}^H \boldsymbol{x} = 
+$$
+\boldsymbol{x}^H  \boldsymbol{A} \boldsymbol{R}_s \boldsymbol{A}^H \boldsymbol{x} = 
 \boldsymbol{x}^H  \boldsymbol{A} \boldsymbol{s}^H \boldsymbol{s}\boldsymbol{A}^H \boldsymbol{x}
 = \| \boldsymbol{s}\boldsymbol{A}^H \boldsymbol{x}\|^2 \ge 0
-$
+$$
 
 由于这两项相加的结果始终大于等于 0， 所以 $$\boldsymbol R_y$$ 是正定或半正定矩阵。 \\
 
