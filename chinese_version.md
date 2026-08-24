@@ -23,4 +23,4 @@
 
 [.MUSIC(Multiple Signal Classification)算法](/chinese_version/MIMO/MUSIC/MUSIC_Multiple_Signal_Classification_algorithm)
 
-[.root_MUSIC_algorithm.md](/chinese_version/MIMO/MUSIC/root_MUSIC_algorithm)
+[.root MUSIC 算法](/chinese_version/MIMO/MUSIC/root_MUSIC_algorithm)
