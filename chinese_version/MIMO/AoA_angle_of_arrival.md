@@ -18,7 +18,7 @@
 [.返回主目录](/chinese_version.html) 
 
 
-# AoA: Angle of Arrival
+# 天线阵列的射频波入射角公式 AoA: Angle of Arrival
 
 ## 传统方法分析相位差
 
