@@ -453,7 +453,7 @@ $$k_i < n \times Q$$, 其中 $$Q$$ 是任意的正整数，表示 oversampling �
 代码在 github 上，https://github.com/taichiorange/leba\_math,目录为：leba\_math/MIMO/MIMO-beam-detection/beam-MUSIC-algorithm.py
 
 
-![MUSIC 伪谱](/figure//mimomusic//MUSIC.png)
+![MUSIC 伪谱](/figure//mimo//music//MUSIC.png)
 
 *MUSIC 伪谱*
 
@@ -693,7 +693,7 @@ $$\mathbf{a}_{k+1},\quad \cdots,\quad \mathbf{a}_M$$ 这些流形向量。其它
 
 在前面的例子中，有 5 个 beam，现在假如前 3 个 beam 对应的信号 s 是相同的，即完全相关，则得到如下的伪谱：
 
-![信号有相关情况下的伪谱](/figure//mimomusic//MUSIC_rankReduced.png)
+![信号有相关情况下的伪谱](/figure//mimo//music//MUSIC_rankReduced.png)
 
 *信号有相关情况下的伪谱*
 

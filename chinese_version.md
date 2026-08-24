@@ -20,3 +20,7 @@
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
+
+## MUSIC 算法
+
+[.MUSIC(Multiple Signal Classification)算法](/chinese_version/MIMO/MUSIC/MUSIC_Multiple_Signal_Classification_algorithm)
