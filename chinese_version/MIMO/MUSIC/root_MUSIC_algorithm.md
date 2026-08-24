@@ -162,7 +162,7 @@ $$
 
 对公式 (9) 求根，可以得到 $$2N-2$$ 个根，因为我们要求流形向量中每个元素的模长为 1，所以，在这些根中，找 $$N-M$$ 个模长最接近 1 的根，就是对应的流形向量中的 $$z$$. 如果把根画在复平面上，则是最接近单位圆的 $$N-M$$ 个根。
 
-![root MUSIC 根分布](/figure//mimo//music//rootMUSIC.png)
+![root MUSIC 根分布](/figure//mimo//music//rootmusic.png)
 
 *root MUSIC 根分布*
 
