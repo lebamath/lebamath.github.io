@@ -16,5 +16,10 @@
   （那边已经留了 TODO 注释）。
 -->
 <div class="ad-slot">
+  {% assign ad_lang = page.ad_lang | default: page.lang | default: "zh" %}
+  {% if ad_lang == "en" %}
+  <span class="ad-slot__label">Ad space available. Contact: <a href="mailto:wirelessShareNotes@foxmail.com">wirelessShareNotes@foxmail.com</a></span>
+  {% else %}
   <span class="ad-slot__label">广告位招租，邮件：<a href="mailto:wirelessShareNotes@foxmail.com">wirelessShareNotes@foxmail.com</a></span>
+  {% endif %}
 </div>
