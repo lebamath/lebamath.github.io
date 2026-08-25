@@ -1,0 +1,234 @@
+/* ------------------------------------------------------------------
+   乐吧的数学 - 站点样式
+   两栏布局：左栏（正文，80%）+ 右栏（广告，20%）
+   宽度小于 900px 时改为单栏，广告栏移到正文下方
+------------------------------------------------------------------ */
+
+:root {
+  --content-width: 80%;
+  --ad-width: 20%;
+  --max-page-width: 1400px;
+  --gap: 32px;
+  --top-ad-height: 60px;
+
+  --color-text: #24292e;
+  --color-bg: #ffffff;
+  --color-muted: #6a737d;
+  --color-link: #0969da;
+  --color-border: #e1e4e8;
+  --color-code-bg: #f6f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* 给顶部吸顶广告条让出空间，避免正文一开始就被盖住 */
+  padding-top: var(--top-ad-height);
+  font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei",
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.75;
+}
+
+/* 顶部吸顶广告条：固定在视口最上方，页面滚动时不动 */
+.top-ad-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--top-ad-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-code-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.top-ad-bar__label {
+  color: var(--color-muted);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+.page-wrap {
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+/* 正文栏：80% */
+.content-col {
+  flex: 0 0 var(--content-width);
+  max-width: var(--content-width);
+  min-width: 0; /* 防止长公式/长链接把栏撑爆 */
+}
+
+/* 广告栏：20% */
+.ad-col {
+  flex: 0 0 var(--ad-width);
+  max-width: var(--ad-width);
+  position: sticky;
+  /* 吸顶广告条 + 原本的 24px 间距，避免侧栏吸顶后被顶部广告条遮住 */
+  top: calc(var(--top-ad-height) + 24px);
+}
+
+.ad-slot {
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  font-size: 14px;
+  background: var(--color-code-bg);
+  padding: 16px;
+  text-align: center;
+}
+
+.ad-slot__label {
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.ad-slot__label a {
+  color: var(--color-link);
+}
+
+/* 正文排版 */
+.content-col h1,
+.content-col h2,
+.content-col h3,
+.content-col h4 {
+  line-height: 1.4;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+.content-col h1 {
+  font-size: 1.9em;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.3em;
+}
+
+.content-col h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.25em;
+}
+
+.content-col h3 {
+  font-size: 1.25em;
+}
+
+.content-col p {
+  margin: 1em 0;
+}
+
+.content-col a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.content-col a:hover {
+  text-decoration: underline;
+}
+
+.content-col img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+/* 图片标题（斜体那一行） */
+.content-col em {
+  color: var(--color-muted);
+}
+
+.content-col pre,
+.content-col code {
+  background: var(--color-code-bg);
+  border-radius: 4px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9em;
+}
+
+.content-col code {
+  padding: 0.15em 0.4em;
+}
+
+.content-col pre {
+  padding: 12px 16px;
+  overflow-x: auto;
+}
+
+.content-col pre code {
+  padding: 0;
+  background: none;
+}
+
+.content-col table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  overflow-x: auto;
+  display: block;
+}
+
+.content-col th,
+.content-col td {
+  border: 1px solid var(--color-border);
+  padding: 6px 12px;
+}
+
+.back-link {
+  margin-bottom: 0.5em;
+  font-size: 0.95em;
+}
+
+.back-link a {
+  color: var(--color-muted);
+}
+
+/* 小屏幕：改为单栏，广告移动到正文下方 */
+@media (max-width: 900px) {
+  :root {
+    /* 手机屏幕上吸顶广告条矮一点，省空间 */
+    --top-ad-height: 44px;
+  }
+
+  .top-ad-bar__label {
+    font-size: 12px;
+  }
+
+  .page-wrap {
+    flex-direction: column;
+    /* flex-direction 变成 column 后，横轴（宽度）改由 align-items 控制，
+       必须用 stretch 才能让内容栏和广告栏撑满宽度，否则会收缩到内容大小 */
+    align-items: stretch;
+  }
+
+  .content-col,
+  .ad-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .ad-col {
+    position: static;
+  }
+
+  .ad-slot {
+    min-height: 100px;
+  }
+}

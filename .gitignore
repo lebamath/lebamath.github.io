@@ -1,0 +1,8 @@
+# Jekyll 构建产物 / 本地缓存，不需要进 git（GitHub Pages 会自己构建）
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# 如果以后用 `bundle install --path vendor/bundle` 把 gem 装到项目里
+vendor/

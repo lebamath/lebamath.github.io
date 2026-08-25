@@ -1,16 +1,9 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NG8FFW7RR5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NG8FFW7RR5');
-</script>
-
+---
+layout: default
+title: 首页
+---
 
 这是 B 站博主 "乐吧的数学" 的官方网页。视频对应的文章都将发表在这里。已经在 B 站和 知乎上发表的文章，将逐步归集到这个网站中。
-
 
 
 

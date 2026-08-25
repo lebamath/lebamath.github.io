@@ -1,0 +1,20 @@
+title: 乐吧的数学 LebaMath
+description: "B 站博主「乐吧的数学」的官方笔记网站，视频对应的文章都发表在这里"
+url: "https://www.wirelesssharenotes.com"
+lang: zh
+
+markdown: kramdown
+
+# 显式禁用 GitHub Pages 的默认主题（github-pages gem 在没写 theme 时会
+# 自动套用 jekyll-theme-primer，它自带的 assets/css/style.css 会跟我们
+# 自己写的样式文件路径冲突并覆盖掉后者）。我们用的是自己写的 _layouts/_includes，
+# 不需要任何官方主题。
+theme: null
+
+# 不改变现有 .md -> .html 的默认输出路径，避免破坏已发布文章的链接
+# （不设置 permalink，沿用 Jekyll 默认行为）
+
+# 这些目录/文件不需要被 Jekyll 处理或拷贝到最终站点里
+exclude:
+  - README.md
+  - "*.gitignore"

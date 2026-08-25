@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'zh' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- MathJax：文章正文里的行内公式和块级公式统一用 $$...$$ 表示 -->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google tag (gtag.js)
+       全站统一用 G-V3E68S0VG4 这一个 GA 跟踪 ID。
+       如果某篇文章确实需要用别的 ID，可以在 front matter 里写 `ga_id: xxx` 覆盖。 -->
+  {% assign ga_id = page.ga_id | default: "G-V3E68S0VG4" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ ga_id }}');
+  </script>
+
+  <!-- TODO: 申请通过 Google AdSense 后，在这里加上 AdSense 校验/加载脚本，例如：
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+</head>
+<body>
+  <div class="top-ad-bar">
+    {% include top_ad.html %}
+  </div>
+
+  <div class="page-wrap">
+    <main class="content-col">
+      {% if page.back_url %}
+      <p class="back-link"><a href="{{ page.back_url | relative_url }}">.返回主目录</a></p>
+      {% endif %}
+
+      {{ content }}
+    </main>
+
+    <aside class="ad-col">
+      {% include ads.html %}
+    </aside>
+  </div>
+</body>
+</html>
