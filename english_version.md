@@ -1,3 +1,6 @@
+---
+layout: none
+---
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3E68S0VG4"></script>
 <script>
