@@ -11,12 +11,12 @@ layout: none
   gtag('config', 'G-V3E68S0VG4');
 </script>
 
-[.MUSIC:Multiple Signal Classification algorithm](/MUSIC-Multiple-Signal-Classification.html) 
+[.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
 
-[.rootMUSIC](/rootMUSIC.html) 
+[.rootMUSIC](/english_version/MIMO/MUSIC/rootMUSIC.html) 
 
-[.spatial smoothing MUSIC](/spatial_smoothing_MUSIC.html) 
+[.spatial smoothing MUSIC](/english_version/MIMO/MUSIC/spatial_smoothing_MUSIC.html) 
 
-[.SINR after MIMO linear equalizor](/SINR_linear_MIMO_equalizer.html) 
+[.SINR after MIMO linear equalizor](/english_version/MIMO/SINR_linear_MIMO_equalizer.html) 
 
-[.Zero Forcing Precoding Algorithm](/Zero_Forcing_Precoding_Algorithm_2.html) 
+[.Zero Forcing Precoding Algorithm](/english_version/MIMO/Zero_Forcing_Precoding_Algorithm_2.html) 
