@@ -200,6 +200,41 @@ body {
   color: var(--color-muted);
 }
 
+/* 底部 Footer：跨越整页宽度，不受两栏布局限制，每个页面都会显示
+   （Google AdSense 审核要求：Privacy Policy / Terms of Service / About Us 三个页面
+   要能从网站导航/footer 里访问到） */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  margin-top: 40px;
+  padding: 24px 20px 32px;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.site-footer__links a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.site-footer__links a:hover {
+  text-decoration: underline;
+  color: var(--color-link);
+}
+
+.site-footer__sep {
+  margin: 0 10px;
+  color: var(--color-border);
+}
+
+.site-footer__copy {
+  margin: 12px 0 0;
+}
+
+.site-footer__copy a {
+  color: var(--color-muted);
+}
+
 /* 小屏幕：改为单栏，广告移动到正文下方 */
 @media (max-width: 900px) {
   :root {
