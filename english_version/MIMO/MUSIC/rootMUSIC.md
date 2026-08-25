@@ -1,24 +1,9 @@
 ---
-layout: none
+layout: default
+title: "Root MUSIC (Multiple Signal Classification) Algorithm"
+lang: en
+back_url: /english_version.html
 ---
-<head>
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3E68S0VG4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-V3E68S0VG4');
-  </script>
-</head>
-
-
-[.back to index](/index.html) 
 
 # Root MUSIC (Multiple Signal Classification) Algorithm
 
@@ -98,7 +83,7 @@ $$
 $$
 
 
-Multiplying both sides by $ z^{-(N-1)} $ gives:
+Multiplying both sides by $$ z^{-(N-1)} $$ gives:
 
 $$
 \sum c_i z^{(2N-2-i)} = 0 \tag{10}
@@ -115,7 +100,7 @@ $$
 
 where $$ d $$ is the antenna spacing, and $$\lambda $$ is the wavelength.
 
-For example, if $ d $ is half the wavelength and $$ \theta = 20^\circ $$, then:
+For example, if $$ d $$ is half the wavelength and $$ \theta = 20^\circ $$, then:
 
 $$
 \varphi = 61.6^\circ \times \frac{\pi}{180}

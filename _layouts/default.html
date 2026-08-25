@@ -38,7 +38,9 @@
   <div class="page-wrap">
     <main class="content-col">
       {% if page.back_url %}
-      <p class="back-link"><a href="{{ page.back_url | relative_url }}">.返回主目录</a></p>
+      {% assign back_label = page.back_label | default: ".返回主目录" %}
+      {% if page.lang == "en" and page.back_label == nil %}{% assign back_label = ".back to index" %}{% endif %}
+      <p class="back-link"><a href="{{ page.back_url | relative_url }}">{{ back_label }}</a></p>
       {% endif %}
 
       {{ content }}

@@ -1,23 +1,9 @@
 ---
-layout: none
+layout: default
+title: "Spatial Smoothing MUSIC Algorithm"
+lang: en
+back_url: /english_version.html
 ---
-<head>
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3E68S0VG4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-V3E68S0VG4');
-  </script>
-</head>
-
-[.back to index](/index.html) 
 
 ## Spatial Smoothing MUSIC Algorithm 
 
@@ -54,7 +40,7 @@ $$
 \tag{4}
 $$
 
-where $M$ is the actual number of beams.
+where $$M$$ is the actual number of beams.
 
 To address this issue, **spatial smoothing** [3] is applied. This technique partitions the array antenna into multiple subarrays and computes the average of their covariance matrices. By doing so, it reduces the impact of signal correlation, allowing the MUSIC algorithm to remain effective.
 
@@ -348,7 +334,7 @@ $$
 \tag{25}
 $$
 
-Next, we only need to prove that matrix $G$ is full rank.
+Next, we only need to prove that matrix $$G$$ is full rank.
 
 Now, further derive equation (24):
 $$
@@ -359,7 +345,7 @@ $$
 \tag{26}
 $$
 
-Substitute equation (15) into (26), and also write out the coefficients of the $C$ matrix, then:
+Substitute equation (15) into (26), and also write out the coefficients of the $$C$$ matrix, then:
 $$
     \boldsymbol{G} = 
     \begin{bmatrix}
@@ -370,7 +356,7 @@ $$
 \tag{27}
 $$
 
-Rearranging the columns of equation (27) does not affect the rank of matrix $G$. Take every Mth column and group them together:
+Rearranging the columns of equation (27) does not affect the rank of matrix $$G$$. Take every Mth column and group them together:
 $$
     \boldsymbol{G} = 
     \begin{bmatrix}
@@ -401,9 +387,9 @@ $$
 \tag{30}
 $$
 
-First, if these row vectors form a matrix, it is a Vandermonde matrix. Therefore, as long as the number of vectors $M$ is less than or equal to the dimension $B$ of the vector, these $M$ vectors are linearly independent, and the matrix they form is full rank, i.e., the rank is $M$.
+First, if these row vectors form a matrix, it is a Vandermonde matrix. Therefore, as long as the number of vectors $$M$$ is less than or equal to the dimension $$B$$ of the vector, these $$M$$ vectors are linearly independent, and the matrix they form is full rank, i.e., the rank is $$M$$.
 
-Second, no row in matrix $C$ can be all zeros, because if it were, it would mean the energy of a transmitted signal is zero. Therefore, in matrix $G$, every row must have at least one non-zero row vector $b$. In the extreme case, if only the first subcolumn is left in matrix $G$, and the coefficients $c$ are all 1, then the matrix $G$ is full rank.
+Second, no row in matrix $$C$$ can be all zeros, because if it were, it would mean the energy of a transmitted signal is zero. Therefore, in matrix $$G$$, every row must have at least one non-zero row vector $$b$$. In the extreme case, if only the first subcolumn is left in matrix $$G$$, and the coefficients $$c$$ are all 1, then the matrix $$G$$ is full rank.
 $$
     \boldsymbol{G} = 
     \begin{bmatrix}
@@ -416,15 +402,15 @@ $$
 
 It is also full rank.
 
-Thus, matrix $G$ is full rank, i.e., its rank is $M$.
+Thus, matrix $$G$$ is full rank, i.e., its rank is $$M$$.
 
 ### Intuitive Understanding from the Perspective of Column Vector Correlation
 
-In equation (30), the rank of matrix $G$ might be misinterpreted as not being full rank because $C$ is not full rank (since we are considering signals with correlation). However, this is not the case. If we assume all transmitted signals are perfectly correlated, then the rank of $C$ is 1, and each column vector of $C$ is proportional to the others.
+In equation (30), the rank of matrix $$G$$ might be misinterpreted as not being full rank because $$C$$ is not full rank (since we are considering signals with correlation). However, this is not the case. If we assume all transmitted signals are perfectly correlated, then the rank of $$C$$ is 1, and each column vector of $$C$$ is proportional to the others.
 
-The first subcolumn of $G$ consists of the same column vector. The second subcolumn, however, is a linear combination of $D$ column vectors. Therefore, we cannot directly conclude that it is necessarily correlated with $C$. If the second subcolumn is $C$ multiplied by $D$, then $CD$ is also a linear combination of the column vectors of $C$, in which case $G$ would not be full rank.
+The first subcolumn of $$G$$ consists of the same column vector. The second subcolumn, however, is a linear combination of $$D$$ column vectors. Therefore, we cannot directly conclude that it is necessarily correlated with $$C$$. If the second subcolumn is $$C$$ multiplied by $$D$$, then $$CD$$ is also a linear combination of the column vectors of $$C$$, in which case $$G$$ would not be full rank.
 
-Additionally, $DC$ can be seen as a linear combination of the row vectors of $C$. However, when combined with the first subcolumn of $C$, they are not aligned in rows but placed consecutively. This breaks the correlation between the vectors that are placed together. For example:
+Additionally, $$DC$$ can be seen as a linear combination of the row vectors of $$C$$. However, when combined with the first subcolumn of $$C$$, they are not aligned in rows but placed consecutively. This breaks the correlation between the vectors that are placed together. For example:
 $$
     \boldsymbol{C} = 
     \begin{bmatrix}
@@ -455,9 +441,9 @@ $$
 \tag{34}
 $$
 
-As long as the two angles are not equal, the rank of matrix $G$ is 2.
+As long as the two angles are not equal, the rank of matrix $$G$$ is 2.
 
-If $DC$ in $G$ is replaced by $CD$, then:
+If $$DC$$ in $$G$$ is replaced by $$CD$$, then:
 $$
     \boldsymbol{G} = 
     \begin{bmatrix}
@@ -467,7 +453,7 @@ $$
 \tag{35}
 $$
 
-Then, the rank of matrix $G$ becomes 1, and it is no longer full rank.
+Then, the rank of matrix $$G$$ becomes 1, and it is no longer full rank.
 
 ### An Example of Spatial Smoothing
 
@@ -735,7 +721,7 @@ $$
     \tilde{\boldsymbol{R}}_s = \boldsymbol{R}_s +  D \boldsymbol{R}_s D^H + D^2 \boldsymbol{R}_s (D^2)^H
 \tag{51}
 $$
-We can decompose $R_s$ as:
+We can decompose $$R_s$$ as:
 
 $$
     \boldsymbol{R}_s = 
@@ -785,7 +771,7 @@ $$
 \tag{53}
 $$
 
-Then, the matrix $G$ is:
+Then, the matrix $$G$$ is:
 $$
 \begin{aligned}
     \boldsymbol{G} &= \boldsymbol{R}_s^{1/2} (\boldsymbol{R}_s^{1/2})^H
@@ -842,8 +828,8 @@ Based on the previous proof of the Vandermonde matrix, b0 and b1 are uncorrelate
 
 In the MUSIC algorithm, both Singular Value Decomposition (SVD) and Eigenvalue Decomposition (EVD) can be used to obtain the noise subspace. This is because, for conjugate symmetric matrices, the results of SVD and EVD are identical. However, SVD has several advantages, particularly in terms of numerical stability in practical calculations.
 
-SVD directly decomposes the original covariance matrix $R$, whereas EVD relies on computing eigenvalues and eigenvectors, which can be affected by numerical errors, especially when the signal-to-noise ratio (SNR) is low.
+SVD directly decomposes the original covariance matrix $$R$$, whereas EVD relies on computing eigenvalues and eigenvectors, which can be affected by numerical errors, especially when the signal-to-noise ratio (SNR) is low.
 
 During the computation, SVD reduces the impact of small numerical errors by decomposing through orthogonal matrices, improving stability. It is particularly suitable for low-rank or degenerate matrices.
 
-In certain cases (such as covariance matrices after spatial smoothing), $R$ might be a degenerate matrix (i.e., some eigenvalues are zero). SVD can still compute an effective noise subspace, while EVD might be affected by these degeneracies.
+In certain cases (such as covariance matrices after spatial smoothing), $$R$$ might be a degenerate matrix (i.e., some eigenvalues are zero). SVD can still compute an effective noise subspace, while EVD might be affected by these degeneracies.
