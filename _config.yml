@@ -16,5 +16,4 @@ theme: null
 
 # 这些目录/文件不需要被 Jekyll 处理或拷贝到最终站点里
 exclude:
-  - README.md
   - "*.gitignore"
