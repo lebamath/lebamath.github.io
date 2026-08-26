@@ -17,3 +17,5 @@ title: 首页
 [.MUSIC(Multiple Signal Classification)算法](/chinese_version/MIMO/MUSIC/MUSIC_Multiple_Signal_Classification_algorithm)
 
 [.root MUSIC 算法](/chinese_version/MIMO/MUSIC/root_MUSIC_algorithm)
+
+[.空域平滑 MUSIC 算法](/chinese_version/MIMO/MUSIC/spatial_smoothing_music.md)
