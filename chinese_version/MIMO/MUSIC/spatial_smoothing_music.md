@@ -1,3 +1,9 @@
+---
+layout: default
+title: "root MUSIC（Multiple Signal Classification）算法"
+back_url: /chinese_version.html
+---
+
 # 空域平滑 MUSIC 算法
 
 [录制的视频在 B 站课程](https://www.bilibili.com/cheese/play/ep1486051)
