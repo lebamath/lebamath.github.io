@@ -18,4 +18,8 @@ title: 首页
 
 [.root MUSIC 算法](/chinese_version/MIMO/MUSIC/root_MUSIC_algorithm)
 
-[.空域平滑 MUSIC 算法](/chinese_version/MIMO/MUSIC/spatial_smoothing_music.md)
+[.空域平滑 MUSIC 算法](/chinese_version/MIMO/MUSIC/spatial_smoothing_music)
+
+# GPU 
+
+[.GPU编程初步](/chinese_version/GPU/gpu_introduction_1)
