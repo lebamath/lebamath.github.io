@@ -35,13 +35,17 @@ body {
   line-height: 1.75;
 }
 
-/* 顶部吸顶广告条：固定在视口最上方，页面滚动时不动 */
+/* 顶部吸顶广告条：固定在视口最上方，页面滚动时不动。
+   用 min-height 而不是固定 height —— AdSense 的响应式横幅（data-ad-format="auto"）
+   实际渲染高度由 Google 根据屏幕宽度决定，不一定正好等于 --top-ad-height，
+   min-height 保证广告变高时不会被裁切。真实高度由 _layouts/default.html 里
+   的一小段脚本实时测量后写回 --top-ad-height，同步撑开下面正文的留白。 */
 .top-ad-bar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: var(--top-ad-height);
+  min-height: var(--top-ad-height);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -81,18 +85,14 @@ body {
   top: calc(var(--top-ad-height) + 24px);
 }
 
+/* 每个广告单元的外层容器，Sidebar_A / Sidebar_B 之间靠 margin-bottom 隔开；
+   最后一个不需要下边距 */
 .ad-slot {
-  border: 1px dashed var(--color-border);
-  border-radius: 6px;
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-muted);
-  font-size: 14px;
-  background: var(--color-code-bg);
-  padding: 16px;
-  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ad-slot:last-child {
+  margin-bottom: 0;
 }
 
 .ad-slot__label {
@@ -261,9 +261,5 @@ body {
 
   .ad-col {
     position: static;
-  }
-
-  .ad-slot {
-    min-height: 100px;
   }
 }

@@ -31,9 +31,23 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="top-ad-bar">
+  <div class="top-ad-bar" id="top-ad-bar">
     {% include top_ad.html %}
   </div>
+  <script>
+    // AdSense 顶部横幅是响应式的，真实高度要等广告加载完才知道，
+    // 用 ResizeObserver 实时把测到的高度写回 --top-ad-height，
+    // 这样正文顶部留白和右侧栏吸顶偏移量会跟着自动同步，不会被广告盖住。
+    (function () {
+      var bar = document.getElementById('top-ad-bar');
+      if (!bar || typeof ResizeObserver === 'undefined') return;
+      var root = document.documentElement;
+      new ResizeObserver(function (entries) {
+        var h = entries[0].contentRect.height;
+        if (h > 0) root.style.setProperty('--top-ad-height', h + 'px');
+      }).observe(bar);
+    })();
+  </script>
 
   <div class="page-wrap">
     <main class="content-col">
