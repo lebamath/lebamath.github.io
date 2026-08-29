@@ -17,7 +17,7 @@ $$
 \tag{1}
 $$
 
-![图1：Projection onto the RF wave direction in terms of distance](/figure/MIMO/AoA/AoA_distance_projection.png)
+![图1：Projection onto the RF wave direction in terms of distance](/figure/mimo/AoA/AoA_distance_projection.png)
 
 *图1：Projection onto the RF wave direction in terms of distance*
 
@@ -47,7 +47,7 @@ $$
 
 A diagram of this projection is shown in Figure 2.
 
-![图2：Projection of the spatial angular velocity onto the antenna array direction](/figure/MIMO/AoA/AoA_angle_space_velocity_projection.png)
+![图2：Projection of the spatial angular velocity onto the antenna array direction](/figure/mimo/AoA/AoA_angle_space_velocity_projection.png)
 
 *图2：Projection of the spatial angular velocity onto the antenna array direction*
 
@@ -58,7 +58,7 @@ In summary, the spatial angular velocity can be projected onto the direction of 
 
 When calculating the AoA angle in the case of a planar array, the azimuth angle and the zenith angle are generally used, as shown in Figure 3.
 
-![图3：Spatial angular velocity projection / azimuth angle / zenith angle on a planar array](/figure/MIMO/AoA/AoA_3D_projection.png)
+![图3：Spatial angular velocity projection / azimuth angle / zenith angle on a planar array](/figure/mimo/AoA/AoA_3D_projection.png)
 
 *图3：Spatial angular velocity projection / azimuth angle / zenith angle on a planar array*
 
