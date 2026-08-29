@@ -17,9 +17,9 @@ $$
 \tag{1}
 $$
 
-![图1：Projection onto the RF wave direction in terms of distance](/figure/mimo/AoA/AoA_distance_projection.png)
+![figure1：Projection onto the RF wave direction in terms of distance](/figure/mimo/AoA/AoA_distance_projection.png)
 
-*图1：Projection onto the RF wave direction in terms of distance*
+*figure1：Projection onto the RF wave direction in terms of distance*
 
 where $$d \operatorname{cos}(\theta)$$ is the length of the projection of the antenna spacing onto the RF wave direction.
 
@@ -47,9 +47,9 @@ $$
 
 A diagram of this projection is shown in Figure 2.
 
-![图2：Projection of the spatial angular velocity onto the antenna array direction](/figure/mimo/AoA/AoA_angle_space_velocity_projection.png)
+![figure2：Projection of the spatial angular velocity onto the antenna array direction](/figure/mimo/AoA/AoA_angle_space_velocity_projection.png)
 
-*图2：Projection of the spatial angular velocity onto the antenna array direction*
+*figure2：Projection of the spatial angular velocity onto the antenna array direction*
 
 In summary, the spatial angular velocity can be projected onto the direction of the linear array. Using this approach makes it easier to perform spatial projection analysis, without needing to draw the spatially parallel transmitted waves and then analyze their phase difference. Of course, in essence, parallel transmitted waves are still being used to analyze the phase difference.
 
@@ -58,9 +58,9 @@ In summary, the spatial angular velocity can be projected onto the direction of 
 
 When calculating the AoA angle in the case of a planar array, the azimuth angle and the zenith angle are generally used, as shown in Figure 3.
 
-![图3：Spatial angular velocity projection / azimuth angle / zenith angle on a planar array](/figure/mimo/AoA/AoA_3D_projection.png)
+![figure3：Spatial angular velocity projection / azimuth angle / zenith angle on a planar array](/figure/mimo/AoA/AoA_3D_projection.png)
 
-*图3：Spatial angular velocity projection / azimuth angle / zenith angle on a planar array*
+*figure3：Spatial angular velocity projection / azimuth angle / zenith angle on a planar array*
 
 **Zenith Angle:** For the zenith angle $$\theta$$, this is looking at the vertical direction of the planar array. Both of the methods above can be used to derive the corresponding formula, though it is easier to derive using the spatial angular velocity. The spatial angular velocity is: $$2\pi/\lambda$$.
 
