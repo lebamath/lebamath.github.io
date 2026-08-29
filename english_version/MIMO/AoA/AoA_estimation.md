@@ -1,3 +1,9 @@
+---
+layout: default
+title: "AoA: Angle of Arrival"
+lang: en
+back_url: /english_version.html
+---
 # AoA: Angle of Arrival
 
 ## Analyzing Phase Difference with the Traditional Method
