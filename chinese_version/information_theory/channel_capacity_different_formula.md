@@ -6,7 +6,7 @@ back_url: /chinese_version.html
 
 ## 信道容量的几个易混淆的公式
 
-[录制的视频在](https://www.bilibili.com/video/BV1dg4y1E7oM/)：[https://www.bilibili.com/video/BV1dg4y1E7oM/]((https://www.bilibili.com/video/BV1dg4y1E7oM/))
+[录制的视频在](https://www.bilibili.com/video/BV1dg4y1E7oM/)：[https://www.bilibili.com/video/BV1dg4y1E7oM/](https://www.bilibili.com/video/BV1dg4y1E7oM/)
 
 本文章试图把信道容量背后的物理思想做一下解释，或者说是本人的一个粗浅理解。
 
