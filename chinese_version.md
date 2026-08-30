@@ -23,3 +23,9 @@ title: 首页
 # GPU 
 
 [.GPU编程初步](/chinese_version/GPU/gpu_introduction_1)
+
+# 信息论
+
+## 信道容量
+
+[.信道容量的几个易混淆的公式](/chinese_version/information_theory/channel_capacity_different_formula)
