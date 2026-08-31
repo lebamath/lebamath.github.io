@@ -4,7 +4,14 @@ title: Home
 lang: en
 ---
 
+# Information Theory
+
+## Channel capacity
+
+[Several Easily Confused Formulas for Channel Capacity](/english_version/information_theory/channel_capacity_different_formula_en.md)
+
 # MUSIC：Multiple Signal Classification algorithm
+
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
 
 [.rootMUSIC](/english_version/MIMO/MUSIC/rootMUSIC.html) 
