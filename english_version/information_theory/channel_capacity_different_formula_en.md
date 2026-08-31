@@ -27,7 +27,7 @@ The following is the idea that this article wants to emphasize: the above channe
 Therefore, within 1 Hz, we can have two channels such as (4), so the maximum amount of data that can be transmitted in 1 Hz is twice that of (1), and thus we obtain formula (3). The unit of this capacity value in formula (3) is bits per second per Hz.
 At this point, it becomes relatively easy to understand formula (2). Suppose our physical bandwidth (the frequency range actually occupied; note: positive frequencies, not negative frequencies) is W Hz, then the channel capacity within this bandwidth is formula (2), whose unit is bits per second.
 This can be represented graphically as:
-![A Brief Analysis of Channel Capacity](/figure/information theory/channel_capacity_tutorial.png)
+![A Brief Analysis of Channel Capacity](/figure/information_theory/channel_capacity_tutorial.png)
 
 *A Brief Analysis of Channel Capacity*
 The above figure can be regarded as a 2-dimension channel. Reference [2] also mentions a 4-dimension channel; my personal understanding is that this requires implementing the structure shown in the figure above at another frequency point as well, with the two frequency points each being 2-dimension, together forming a 4-dimension channel.
