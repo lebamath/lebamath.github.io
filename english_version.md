@@ -8,7 +8,9 @@ lang: en
 
 ## Channel capacity
 
-[Several Easily Confused Formulas for Channel Capacity](/english_version/information_theory/channel_capacity_different_formula_en.md)
+[Several Easily Confused Formulas for Channel Capacity](/english_version/information_theory/channel_capacity_different_formula_en.html)
+
+[Channel Capacity under Modulation](channel_capacity_with_modulation_en.html)
 
 # MUSIC：Multiple Signal Classification algorithm
 
