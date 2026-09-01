@@ -44,7 +44,7 @@ So we can compute p(y|x) for every x, and after normalization we obtain the prob
 
 *Channel capacity curves under modulation, PSK*
 
-Code: on GitHub. \url{https://github.com/taichiorange/leba_math.git}
+Code: on [GitHub](https://github.com/taichiorange/leba_math.git)
 ### Monte Carlo Algorithm
 Applying the Monte Carlo method to Eq. (5), we can generalize the integral in Eq. (5), i.e., compute the expectation of a function f(y):
 $$

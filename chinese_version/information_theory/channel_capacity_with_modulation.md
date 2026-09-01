@@ -52,7 +52,7 @@ $$
 *调制模式下信道容量曲线PSK*
 
 
-代码：在 gitnub 中.  \url{https://github.com/taichiorange/leba_math.git}
+代码：在 [gitnub](https://github.com/taichiorange/leba_math.git) 中
 
 
 ### 蒙特卡罗算法算法
