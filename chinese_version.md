@@ -13,6 +13,8 @@ title: 首页
 
 [调制模式下的信道容量](/chinese_version/information_theory/channel_capacity_with_modulation)
 
+[如何通过仿真评估信道编译码算法达到了香农限](/chinese_version/information_theory/how_to_evaluate_reach_to_channel_capacity)
+
 
 # MIMO
 
