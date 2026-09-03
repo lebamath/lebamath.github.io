@@ -12,6 +12,8 @@ lang: en
 
 [Channel Capacity under Modulation](/english_version/information_theory/channel_capacity_with_modulation_en.html)
 
+[How to Evaluate Whether a Channel Coding/Decoding Algorithm Reaches the Shannon Limit via Simulation](/english_version/information_theory/how_to_evaluate_reach_to_channel_capacity_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
