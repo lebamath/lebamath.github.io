@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Several Easily Confused Formulas for Channel Capacity"
+title: "BER Analysis over the AWGN Channel - BPSK"
 lang: en
 back_url: /english_version.html
 ---
