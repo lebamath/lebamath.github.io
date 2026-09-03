@@ -136,7 +136,7 @@ $$
 
 画上图的 Python 代码
 
-代码在 github:  \url{https://github.com/taichiorange/leba_math.git}
+[代码在 github](https://github.com/taichiorange/leba_math.git)
 
 
 ## Rayleigh衰落下的误码率分析-BPSK
@@ -458,4 +458,4 @@ $$
 $$
 比较两者之间的大小关系，其中有两个是变量，即 $$\sigma^2$$ 和 $$\mu = SNR$$.
 
-代码在 github:  \url{https://github.com/taichiorange/leba_math.git}
+[代码在 github](https://github.com/taichiorange/leba_math.git)
