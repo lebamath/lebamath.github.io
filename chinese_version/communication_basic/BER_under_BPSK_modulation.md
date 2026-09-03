@@ -44,7 +44,7 @@ $$
 那么做最优判决的时候，如下图所示：
 
 
-![BPSK 最优判决](img//awgn//AWGN信道下的误码率分析-BPSK-SISO-PDF_of_BPSK_symbols.png)
+![BPSK 最优判决](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-PDF_of_BPSK_symbols.png)
 
 *BPSK 最优判决*
 
@@ -128,7 +128,7 @@ P(e) = Q\left (\sqrt{\frac{E_s}{N_0/2}} \right )
 $$
 
 
-![标准正太分布图Qx](img//awgn//AWGN信道下的误码率分析-BPSK-SISO-标准正太分布图Qx.png)
+![标准正太分布图Qx](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-标准正太分布图Qx.png)
 
 *标准正太分布图Qx*
 
@@ -429,7 +429,7 @@ $$
 
 
 
-![发生判决错误的区域](img//awgn//Rayleigh衰落信道与 AWGN 信道 BER 对比.png)
+![发生判决错误的区域](/figure/awgn/Rayleigh衰落信道与 AWGN 信道 BER 对比.png)
 
 *发生判决错误的区域*
 
