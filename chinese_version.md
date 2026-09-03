@@ -15,6 +15,9 @@ title: 首页
 
 [如何通过仿真评估信道编译码算法达到了香农限](/chinese_version/information_theory/how_to_evaluate_reach_to_channel_capacity)
 
+# 通信基础
+
+[BPSK 调制情况下的误比特率](/chinese_version/communication_basic/BER_under_BPSK_modulation)
 
 # MIMO
 
