@@ -19,6 +19,8 @@ title: 首页
 
 [BPSK 调制情况下的误比特率](/chinese_version/communication_basic/BER_under_BPSK_modulation)
 
+[单边带双边带噪声说明](/chinese_version/communication_basic/single_side_double_side_noise)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
