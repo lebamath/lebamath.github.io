@@ -46,29 +46,52 @@ sine or cosine 波形是有周期性的，我们以一个频率发送，例如 1
 如果我们得到这个相位偏差 $$\Delta \theta$$
 
 则可以通过下面的公式计算出频率偏差：
+
+
 $$
 \Delta \theta = 2 \pi \Delta f * \Delta t
 $$
+
+
 则：
+
+
 $$
 \Delta f = \frac{\Delta \theta}{ 2 \pi  \Delta t}
 $$
+
+
 因为 
+
+
 $$
 \Delta \theta \in [-\pi, \pi]
 $$
+
+
 则能估计出来的频率偏差的范围为：
+
+
 $$
 \Delta f \in [ -\frac{1}{2\Delta t}, \frac{1}{2\Delta t}]
 $$
+
+
 例如 $$\Delta t = 0.01$$， 那么能估计的频率偏差的范围就在：
+
+
 $$
 \Delta f \in [ -\frac{1}{2*0.01}, \frac{1}{2*0.01}]
 $$
+
+
 即：
+
+
 $$
 \Delta f \in [ -50, 50]
 $$
+
 
 
 画图的 python 代码,请到 Github 上下载：[https://github.com/taichiorange/leba_math](https://github.com/taichiorange/leba_math)
