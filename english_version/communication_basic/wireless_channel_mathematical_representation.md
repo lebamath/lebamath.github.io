@@ -217,15 +217,15 @@ $$
 
 In the above expression $$f'$$ is the frequency variable, i.e., the variable in the spectrum. Both $$f_n$$ and $$\tau'_n(0)$$ are parameters.
 
-It can be seen that the term $$e^{-j2\pi \tau'_n(0) f'}$$ is inside the summation, so the value of $$|H(f',t)|$$ is related to $$f'$$; therefore, different frequencies have different attenuation coefficients, and this is a frequency-selective channel.
+It can be seen that the term $$e^{-j2\pi \tau'_n(0) f'}$$ is inside the summation, so the value of $$\lvert H(f',t) \rvert$$ is related to $$f'$$; therefore, different frequencies have different attenuation coefficients, and this is a frequency-selective channel.
 
-If we want it to be a frequency-nonselective channel, also called a flat fading channel, then $$e^{-j2\pi \tau'_n(0) f'}$$ has to be unrelated to the summation, i.e., unrelated to n. If the symbol length $$T_{sym}$$ is much larger than the maximum delay, i.e., $$max|\tau'_n - \tau'_m|<< T_{sym}$$, then for the different paths n, $$\tau'_n(0)$$ all take the same value. Letting $$\tau'_0 = \tau'_n(0)$$, formula (7) can then be written as:
+If we want it to be a frequency-nonselective channel, also called a flat fading channel, then $$e^{-j2\pi \tau'_n(0) f'}$$ has to be unrelated to the summation, i.e., unrelated to n. If the symbol length $$T_{sym}$$ is much larger than the maximum delay, i.e., $$max\lvert\tau'_n - \tau'_m\rvert<< T_{sym}$$, then for the different paths n, $$\tau'_n(0)$$ all take the same value. Letting $$\tau'_0 = \tau'_n(0)$$, formula (7) can then be written as:
 
 $$
 H(f',t) = [\sum_{n=1}^Nc_n e^{j(2\pi f_nt + \theta_n)}] e^{-j2\pi\tau'_0 f'} \quad ----------(8)
 $$
 
-From formula (8) it can be seen that for different frequencies $$f'$$, the attenuation coefficient $$|H(f',t)|$$ is the same (because the modulus of $$e^{-j2\pi\tau'_0 f'}$$ equals one). Therefore, this kind of channel is called a frequency-nonselective channel, or a flat fading channel.
+From formula (8) it can be seen that for different frequencies $$f'$$, the attenuation coefficient $$\lvert H(f',t)\rvert$$ is the same (because the modulus of $$e^{-j2\pi\tau'_0 f'}$$ equals one). Therefore, this kind of channel is called a frequency-nonselective channel, or a flat fading channel.
 
 Then for such a flat fading channel, its expression in the time domain, again letting $$\tau'_0 = \tau'_n(0)$$, can be derived from formula (6):
 
