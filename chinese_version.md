@@ -21,6 +21,8 @@ title: 首页
 
 [单边带双边带噪声说明](/chinese_version/communication_basic/single_side_double_side_noise)
 
+[时频偏估计](/chinese_version/communication_basic/time_frequency_offset_estimation)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
