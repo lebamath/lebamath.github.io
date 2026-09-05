@@ -20,6 +20,8 @@ lang: en
 
 [Notes on Single-Sided and Double-Sided Noise](/english_version/communication_basic/single_side_double_size_noise)
 
+[Time and Frequency Offset Estimation](/english_version/communication_basic/time_frequency_offset_estimation_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
