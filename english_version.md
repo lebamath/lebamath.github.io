@@ -21,6 +21,7 @@ lang: en
 [Notes on Single-Sided and Double-Sided Noise](/english_version/communication_basic/single_side_double_size_noise)
 
 [Time and Frequency Offset Estimation](/english_version/communication_basic/time_frequency_offset_estimation_en)
+[A Brief Analysis of the Mathematical Representation of the Wireless Channel](/english_version/communication_basic/wireless_channel_mathematical_representation)
 
 # MUSIC：Multiple Signal Classification algorithm
 
