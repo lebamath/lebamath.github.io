@@ -122,34 +122,62 @@ $$
 做时间偏差的估计，可以采用在一定时间窗口内，做滑动互相关，找相关值最大的地方，这是一种方法；这篇文章主要探讨在 OFDM 中通过参考信号的方式来估计时间偏差。
 
 我们看上面第二个图，在没有对齐的情况下，两个不同频率的波形，其相位的偏差是不同的，根据这个特点，我们可以反推出来时间偏差。
+
+
 $$
 e^{j2\pi f_1 nT}   \quad \quad  n=0,1,2,\cdots
 $$
+
+
 另外不同频率的：
+
+
 $$
 e^{j2\pi f_2 nT}   \quad \quad  n=0,1,2,\cdots
 $$
+
+
 如果有个小的时间偏差 $$\Delta t$$：
+
+
 $$
 e^{j2\pi f_1 (nT++\Delta t)}   \quad \quad  n=0,1,2,\cdots
 $$
+
+
 另外一个不同频率的：
+
+
 $$
 e^{j2\pi f_2 (nT+\Delta t)}   \quad \quad  n=0,1,2,\cdots
 $$
+
+
 则这两个频率在相同的时间点上，其相位偏差就是(f1 和 f2 是倍数关系，且 T 是他们最大公约数
 代表的频率的周期)：
+
+
 $$
 2\pi (f2-f1) \Delta t
 $$
+
+
 这个相位我们可以在系统中计算出来，如果是 $$\Delta \theta$$，则
+
+
 $$
 \Delta \theta = 2\pi (f2-f1) \Delta t
 $$
+
+
 那么就可以计算出时间偏差：
+
+
 $$
 \Delta t = \frac{\Delta \theta}{ 2\pi (f2-f1) }
 $$
+
+
 这里需要主要的是，在这个推导过程中，需要保证 f1 和 f2 是倍数关系，且 T 是他们最大公约数代表的频率的周期。
 
 绘图的代码：请到 [Github](https://github.com/taichiorange/leba_math) 上下载：[https://github.com/taichiorange/leba_math](https://github.com/taichiorange/leba_math)
