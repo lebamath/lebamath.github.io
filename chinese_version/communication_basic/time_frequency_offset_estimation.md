@@ -141,7 +141,7 @@ $$
 
 
 $$
-e^{j2\pi f_1 (nT++\Delta t)}   \quad \quad  n=0,1,2,\cdots
+e^{j2\pi f_1 (nT+\Delta t)}   \quad \quad  n=0,1,2,\cdots
 $$
 
 
