@@ -5,6 +5,9 @@ back_url: /chinese_version.html
 ---
 
 # 浅析无线信道的数学表示
+
+录制的视频在 [B 站](https://www.bilibili.com/cheese/play/ss32694)：[https://www.bilibili.com/cheese/play/ss32694](https://www.bilibili.com/cheese/play/ss32694)
+
 ## 多径传播的典型场景 
 一个典型的多径传播场景
 
