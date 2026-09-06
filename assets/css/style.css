@@ -200,6 +200,36 @@ body {
   color: var(--color-muted);
 }
 
+/* 首页中英文切换按钮（index.md 专用） */
+.lang-switch {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  margin-bottom: 1.5em;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+.lang-switch__btn {
+  font: inherit;
+  font-size: 14px;
+  padding: 6px 18px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.lang-switch__btn.is-active {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.index-embed__loading {
+  color: var(--color-muted);
+}
+
 /* 底部 Footer：跨越整页宽度，不受两栏布局限制，每个页面都会显示
    （Google AdSense 审核要求：Privacy Policy / Terms of Service / About Us 三个页面
    要能从网站导航/footer 里访问到） */
