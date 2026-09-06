@@ -221,7 +221,7 @@ $$
 \prod_{i=1}^n(p_i e^t + 1-p_i )  \le \left (    \frac{\sum_{i=1}^n(p_i e^t + 1-p_i ) }{n}               \right )^n  = (pe^t+1-p)^n  \tag{5}
 $$
 
-where: $$p = \frac{\sum_i=1^n p_i}{n}$$
+where: $$p = \frac{\sum_{i=1}^n p_i}{n}$$
 
 Substituting formula (5) into formula (4):
 
