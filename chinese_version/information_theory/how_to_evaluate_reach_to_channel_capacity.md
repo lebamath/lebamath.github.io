@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "如何通过仿真评估信道编译码算法达到了香农限"
-back_url: /chinese_version.html
+back_url: /index.html?lang=zh
 ---
 
 # 如何通过仿真评估信道编译码算法达到了香农限

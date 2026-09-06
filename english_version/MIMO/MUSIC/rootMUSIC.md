@@ -2,7 +2,7 @@
 layout: default
 title: "Root MUSIC (Multiple Signal Classification) Algorithm"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 
 # Root MUSIC (Multiple Signal Classification) Algorithm

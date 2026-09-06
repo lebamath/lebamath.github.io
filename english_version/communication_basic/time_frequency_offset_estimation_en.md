@@ -2,7 +2,7 @@
 layout: default
 title: "Time and Frequency Offset Estimation"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 # Time and Frequency Offset Estimation
 ## Frequency Offset Estimation

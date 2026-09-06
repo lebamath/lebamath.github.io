@@ -2,7 +2,7 @@
 layout: default
 title: "Several Easily Confused Formulas for Channel Capacity"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 
 # Several Easily Confused Formulas for Channel Capacity

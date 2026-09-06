@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "几个概率不等式"
-back_url: /chinese_version.html
+back_url: /index.html?lang=zh
 ---
 # 几个概率不等式
 

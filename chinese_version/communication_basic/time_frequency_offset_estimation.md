@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "时频偏估计"
-back_url: /chinese_version.html
+back_url: /index.html?lang=zh
 ---
 # 时频偏估计
 ## 频偏估计

@@ -2,7 +2,7 @@
 layout: default
 title: "MUSIC (Multiple Signal Classification) Algorithm"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 
 # MUSIC (Multiple Signal Classification) Algorithm

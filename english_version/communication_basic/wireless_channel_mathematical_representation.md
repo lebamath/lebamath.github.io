@@ -2,7 +2,7 @@
 layout: default
 title: "A Brief Analysis of the Mathematical Representation of the Wireless Channel"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 
 # A Brief Analysis of the Mathematical Representation of the Wireless Channel

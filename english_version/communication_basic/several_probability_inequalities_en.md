@@ -2,7 +2,7 @@
 layout: default
 title: "Several Probability Inequalities"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 # Several Probability Inequalities
 ## The Markov and Chebyshev Bounds

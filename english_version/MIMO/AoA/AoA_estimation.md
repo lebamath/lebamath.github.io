@@ -2,7 +2,7 @@
 layout: default
 title: "AoA: Angle of Arrival"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 # AoA: Angle of Arrival
 

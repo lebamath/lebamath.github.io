@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "BPSK 调制情况下的误比特率"
-back_url: /chinese_version.html
+back_url: /index.html?lang=zh
 ---
 
 # BPSK 调制情况下的误比特率

@@ -2,7 +2,7 @@
 layout: default
 title: "Zero-Forcing Precoding Algorithm"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 
 # Zero-Forcing Precoding Algorithm 

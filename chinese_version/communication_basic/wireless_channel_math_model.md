@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "浅析无线信道的数学表示"
-back_url: /chinese_version.html
+back_url: /index.html?lang=zh
 ---
 
 # 浅析无线信道的数学表示

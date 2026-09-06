@@ -2,7 +2,7 @@
 layout: default
 title: "Channel Capacity under Modulation"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 
 ## Channel Capacity under Modulation

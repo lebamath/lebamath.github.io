@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "信道容量的几个易混淆的公式"
-back_url: /chinese_version.html
+back_url: /index.html?lang=zh
 ---
 
 ## 调制模式下的信道容量

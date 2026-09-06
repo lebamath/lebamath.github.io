@@ -2,7 +2,7 @@
 layout: default
 title: "BER Analysis over the AWGN Channel - BPSK"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 
 

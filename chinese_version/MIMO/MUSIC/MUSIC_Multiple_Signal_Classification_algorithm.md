@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "MUSIC（Multiple Signal Classification）算法"
-back_url: /chinese_version.html
+back_url: /index.html?lang=zh
 ---
 
 # MUSIC（Multiple Signal Classification）算法

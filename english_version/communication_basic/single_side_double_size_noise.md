@@ -2,7 +2,7 @@
 layout: default
 title: "Notes on Single-Sided and Double-Sided Noise"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 
 # Notes on Single-Sided and Double-Sided Noise

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "单边带双边带噪声说明"
-back_url: /chinese_version.html
+back_url: /index.html?lang=zh
 ---
 
 # 单边带双边带噪声说明

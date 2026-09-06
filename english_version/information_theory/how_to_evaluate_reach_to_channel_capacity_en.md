@@ -2,7 +2,7 @@
 layout: default
 title: "How to Evaluate Whether a Channel Coding/Decoding Algorithm Reaches the Shannon Limit via Simulation"
 lang: en
-back_url: /english_version.html
+back_url: /index.html?lang=en
 ---
 ## How to Evaluate Whether a Channel Coding/Decoding Algorithm Reaches the Shannon Limit via Simulation
 

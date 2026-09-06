@@ -61,6 +61,9 @@ ad_lang: en
     });
   });
 
-  show('en');
+  // 支持 index.html?lang=zh / ?lang=en：这样各篇文章的"返回主目录"链接
+  // 可以带上语言参数，从中文文章点返回时首页直接显示中文，不用再手动点一次切换。
+  var requested = new URLSearchParams(location.search).get('lang');
+  show(requested === 'zh' ? 'zh' : 'en');
 })();
 </script>
