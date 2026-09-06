@@ -25,6 +25,8 @@ title: 首页
 
 [浅析无线信道的数学表示](/chinese_version/communication_basic/wireless_channel_math_model)
 
+[几个概率不等式](/chinese_version/communication_basic/several_probability_inequalities)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
