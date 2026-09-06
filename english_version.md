@@ -24,6 +24,8 @@ lang: en
 
 [A Brief Analysis of the Mathematical Representation of the Wireless Channel](/english_version/communication_basic/wireless_channel_mathematical_representation)
 
+[Several Probability Inequalities](/english_version/communication_basic/several_probability_inequalities_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
