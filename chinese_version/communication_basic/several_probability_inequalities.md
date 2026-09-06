@@ -4,6 +4,9 @@ title: "几个概率不等式"
 back_url: /chinese_version.html
 ---
 # 几个概率不等式
+
+录制的视频在[ B 站](https://www.bilibili.com/video/BV1xj411q7gY)：[https://www.bilibili.com/video/BV1xj411q7gY](https://www.bilibili.com/video/BV1xj411q7gY)
+
 ## markov 和 Chebyshev限
 
 
