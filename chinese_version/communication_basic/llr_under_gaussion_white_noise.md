@@ -5,7 +5,7 @@ back_url: /index.html?lang=zh
 ---
 # 高斯白噪声信道下对数自然比的推导
 
-
+录制的视频在[B 站](https://www.bilibili.com/cheese/play/ep1076031)[https://www.bilibili.com/cheese/play/ep1076031](https://www.bilibili.com/cheese/play/ep1076031)
 
 在通信系统中，我们经常需要计算 Log Likelihood Ratio (LLR) 对数似然比，尤其是在信道译码采用软译码的时候。这个小文章，就来推导在不同调制下，如何根据接收到的信号，计算 LLR，我们主要讨论 三种调制：BPSK, QPSK, 8-PSK.
 

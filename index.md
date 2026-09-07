@@ -57,7 +57,14 @@ ad_lang: en
 
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      show(btn.getAttribute('data-lang'));
+      var lang = btn.getAttribute('data-lang');
+      show(lang);
+
+      // 把选中的语言同步写回地址栏（不新增一条历史记录），
+      // 这样刷新页面时能读到 ?lang=xxx，不会又跳回默认的英文。
+      var url = new URL(location.href);
+      url.searchParams.set('lang', lang);
+      history.replaceState(null, '', url);
     });
   });
 
