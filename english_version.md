@@ -26,6 +26,8 @@ lang: en
 
 [Several Probability Inequalities](/english_version/communication_basic/several_probability_inequalities_en)
 
+[Derivation of the Log Likelihood Ratio under the Gaussian White Noise Channel](/english_version/communication_basic/llr_under_gaussion_white_noise_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
