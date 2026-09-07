@@ -21,49 +21,49 @@ back_url: /index.html?lang=zh
 ![channel.png](/figure/高斯白噪声软信息计算/channel.png)
 
 
-通信系统中，我们关心的是在收到信号 y 的情况下，判断发送方发送的比特是 1 或者 0 的概率，可以表示成  p(b=0|y)  和 p(b=1|y).
+通信系统中，我们关心的是在收到信号 y 的情况下，判断发送方发送的比特是 1 或者 0 的概率，可以表示成  $$p(b=0\vert y)$$  和 $$p(b=1 \vert y)$$.
 
-很多情况下，我们关心两者的比值，因为如果  p(b=0|y)  大于 p(b=1|y)，我们就有理由可以判断 b=0，否则，我们更倾向于判断 b=1.  用比值来表示就是：
+很多情况下，我们关心两者的比值，因为如果  $$p(b=0\vert y)$$  大于 $$p(b=1\vert y)$$，我们就有理由可以判断 b=0，否则，我们更倾向于判断 b=1.  用比值来表示就是：
 
 $$
 \begin{cases}
-	\frac{p(b=0|y)  }{p(b=1|y)  } > 1&   b=0\\ \\
-	\frac{p(b=0|y)  }{p(b=1|y)  } < 1& b=1
+	\frac{p(b=0\vert y)  }{p(b=1\vert y)  } > 1&   b=0\\ \\
+	\frac{p(b=0\vert y)  }{p(b=1\vert y)  } < 1& b=1
 \end{cases}
 $$
 
 为了更简化一些运算（后面会解释），一般还要再取对数，即：
 
 $$
-log \frac{p(b=0|y)  }{p(b=1|y)  }
+log \frac{p(b=0\vert y)  }{p(b=1 \vert y)  }
 $$
 
 那么判决准则为：
 
 $$
 \begin{cases}
-	log\frac{p(b=0|y)  }{p(b=1|y)  } > 0&   b=0\\ \\
-	log\frac{p(b=0|y)  }{p(b=1|y)  } < 0& b=1
+	log\frac{p(b=0\vert y)  }{p(b=1\vert y)  } > 0&   b=0\\ \\
+	log\frac{p(b=0\vert y)  }{p(b=1\vert y)  } < 0& b=1
 \end{cases}
 $$
 
-接下啦我们把上面的比值，做一下推导，推导出似然比的形式，因为  p(y|b) 的形式，称之为似然函数，而 p(b|y) 一般称之为后验概率。
+接下啦我们把上面的比值，做一下推导，推导出似然比的形式，因为  $$p(y\vert b)$$ 的形式，称之为似然函数，而 $$p(b \vert y)$$ 一般称之为后验概率。
 
-先对 p(b|y) 做一下推导：
+先对 $$p(b\vert y)$$ 做一下推导：
 
 $$
-p(b|y) =\frac{p(b,y)}{p(y)} =\frac{p(y|b)p(b)}{p(y)}
+p(b\vert y) =\frac{p(b,y)}{p(y)} =\frac{p(y\vert b)p(b)}{p(y)}
 $$
 
 则：
 
 $$
-log \frac{p(b=0|y)  }{p(b=1|y)  } = log \frac {   \frac{p(y|b=0)p(b=0)}{p(y)}   }
-{    \frac{p(y|b=1)p(b=1)}{p(y)}     }
-= log \frac {   p(y|b=0)p(b=0) }
-{    p(y|b=1)p(b=1)    }
-= log \frac {   p(y|b=0) }
-{    p(y|b=1)  }
+log \frac{p(b=0 \vert y)  }{p(b=1\vert y)  } = log \frac {   \frac{p(y\vert b=0)p(b=0)}{p(y)}   }
+{    \frac{p(y\vert b=1)p(b=1)}{p(y)}     }
+= log \frac {   p(y\vert b=0)p(b=0) }
+{    p(y\vert b=1)p(b=1)    }
+= log \frac {   p(y\vert b=0) }
+{    p(y\vert b=1)  }
 $$
 
 上式推导的最后一步，我们是假定发送数据是 0 还是 1 的概率是相等的，都是 0.5，这个假定大部分情况下都是成立的，在数据生成的阶段，一般都有一步做 伪随机化，即让 0 和 1 出现的数量是相等的。
@@ -81,7 +81,7 @@ $$
 则如果发送的是 x 收到的是 y 的概率就是：
 
 $$
-p(y|x) = \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y-x)^2}{2\sigma^2}  }
+p(y\vert x) = \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y-x)^2}{2\sigma^2}  }
 $$
 
 ## QPSK+BPSK
@@ -103,11 +103,11 @@ $$
 下面来分析，如何计算 $$b_0$$ 的对数似然比，即：
 
 $$
-LLR(b_0) = log \frac {   p(y|b_0=0) }
-{    p(y|b_0=1)  }
+LLR(b_0) = log \frac {   p(y \vert b_0=0) }
+{    p(y\vert b_0=1)  }
 $$
 
-所以，需要分别求出来 $$p(y|b_0=0)$$  和 $$p(y|b_0=1)$$。
+所以，需要分别求出来 $$p(y\vert b_0=0)$$  和 $$p(y\vert b_0=1)$$。
 
 我们分析其中一个，另外一个是类似的。
 $$b_0 =0$$ 有两种情况，即 $$b_1 b_0 =00$$ 和 $$b_1 b_0 =10$$
@@ -115,16 +115,16 @@ $$b_0 =0$$ 有两种情况，即 $$b_1 b_0 =00$$ 和 $$b_1 b_0 =10$$
 则：
 
 $$
-p(y|b_0=0) = p(y|b_1=0, b_0=0) *0.5 + p(y|b_1=1, b_0=0) *0.5
+p(y\vert b_0=0) = p(y\vert b_1=0, b_0=0) *0.5 + p(y\vert b_1=1, b_0=0) *0.5
 $$
 
 其中：
 
 $$
 \begin{aligned}
-p(y|b_1=0, b_0=0) = p(y|s_I+js_Q = \frac{\sqrt 2}{2} + j\frac{\sqrt 2}{2} ) \\
-= p(y_I+j y_Q|s_I+js_Q = \frac{\sqrt 2}{2} + j\frac{\sqrt 2}{2} ) \\
-=p(y_I|s_I=\frac{\sqrt 2}{2}) *p(y_Q|s_Q=\frac{\sqrt 2}{2}) \\
+p(y\vert b_1=0, b_0=0) = p(y\vert s_I+js_Q = \frac{\sqrt 2}{2} + j\frac{\sqrt 2}{2} ) \\
+= p(y_I+j y_Q\vert s_I+js_Q = \frac{\sqrt 2}{2} + j\frac{\sqrt 2}{2} ) \\
+=p(y_I\vert s_I=\frac{\sqrt 2}{2}) *p(y_Q\vert s_Q=\frac{\sqrt 2}{2}) \\
 =\frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_I-\frac{\sqrt 2}{2})^2}{2\sigma^2}  } *
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_Q-\frac{\sqrt 2}{2})^2}{2\sigma^2}  }
 \end{aligned}
@@ -134,9 +134,9 @@ $$
 
 $$
 \begin{aligned}
-p(y|b_1=1, b_0=0) = p(y|s_I+js_Q = \frac{\sqrt 2}{2} - j\frac{\sqrt 2}{2} ) \\
-= p(y_I+j y_Q|s_I+js_Q = \frac{\sqrt 2}{2} - j\frac{\sqrt 2}{2} ) \\
-=p(y_I|s_I=\frac{\sqrt 2}{2}) *p(y_Q|s_Q=-\frac{\sqrt 2}{2}) \\
+p(y\vert b_1=1, b_0=0) = p(y\vert s_I+js_Q = \frac{\sqrt 2}{2} - j\frac{\sqrt 2}{2} ) \\
+= p(y_I+j y_Q\vert s_I+js_Q = \frac{\sqrt 2}{2} - j\frac{\sqrt 2}{2} ) \\
+=p(y_I\vert s_I=\frac{\sqrt 2}{2}) *p(y_Q\vert s_Q=-\frac{\sqrt 2}{2}) \\
 =\frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_I-\frac{\sqrt 2}{2})^2}{2\sigma^2}  } *
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_Q+\frac{\sqrt 2}{2})^2}{2\sigma^2}  }
 \end{aligned}
@@ -144,7 +144,7 @@ $$
 
 $$
 \begin{aligned}
-p(y|b_0=0) = 
+p(y\vert b_0=0) = 
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_I-\frac{\sqrt 2}{2})^2}{2\sigma^2}  } *
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_Q-\frac{\sqrt 2}{2})^2}{2\sigma^2}  } * 0.5 + 
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_I-\frac{\sqrt 2}{2})^2}{2\sigma^2}  } *
@@ -162,16 +162,16 @@ $$b_0 =1$$ 有两种情况，即 $$b_1 b_0 =01$$ 和 $$b_1 b_0 =11$$
 则：
 
 $$
-p(y|b_0=0) = p(y|b_1=0, b_0=1) *0.5 + p(y|b_1=1, b_1=1) *0.5
+p(y\vert b_0=0) = p(y\vert b_1=0, b_0=1) *0.5 + p(y\vert b_1=1, b_1=1) *0.5
 $$
 
 其中：
 
 $$
 \begin{aligned}
-p(y|b_1=0, b_0=1) = p(y|s_I+js_Q = -\frac{\sqrt 2}{2} + j\frac{\sqrt 2}{2} ) \\
-= p(y_I+j y_Q|s_I+js_Q = -\frac{\sqrt 2}{2} + j\frac{\sqrt 2}{2} ) \\
-=p(y_I|s_I=-\frac{\sqrt 2}{2}) *p(y_Q|s_Q=\frac{\sqrt 2}{2}) \\
+p(y\vert b_1=0, b_0=1) = p(y\vert s_I+js_Q = -\frac{\sqrt 2}{2} + j\frac{\sqrt 2}{2} ) \\
+= p(y_I+j y_Q\vert s_I+js_Q = -\frac{\sqrt 2}{2} + j\frac{\sqrt 2}{2} ) \\
+=p(y_I\vert s_I=-\frac{\sqrt 2}{2}) *p(y_Q\vert s_Q=\frac{\sqrt 2}{2}) \\
 =\frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_I+\frac{\sqrt 2}{2})^2}{2\sigma^2}  } *
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_Q-\frac{\sqrt 2}{2})^2}{2\sigma^2}  }
 \end{aligned}
@@ -179,9 +179,9 @@ $$
 
 $$
 \begin{aligned}
-p(y|b_1=1, b_0=1) = p(y|s_I+js_Q = -\frac{\sqrt 2}{2} - j\frac{\sqrt 2}{2} ) \\
-= p(y_I+j y_Q|s_I+js_Q = -\frac{\sqrt 2}{2} - j\frac{\sqrt 2}{2} ) \\
-=p(y_I|s_I=-\frac{\sqrt 2}{2}) *p(y_Q|s_Q=-\frac{\sqrt 2}{2}) \\
+p(y \vert b_1=1, b_0=1) = p(y\vert s_I+js_Q = -\frac{\sqrt 2}{2} - j\frac{\sqrt 2}{2} ) \\
+= p(y_I+j y_Q\vert s_I+js_Q = -\frac{\sqrt 2}{2} - j\frac{\sqrt 2}{2} ) \\
+=p(y_I\vert s_I=-\frac{\sqrt 2}{2}) *p(y_Q\vert s_Q=-\frac{\sqrt 2}{2}) \\
 =\frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_I+\frac{\sqrt 2}{2})^2}{2\sigma^2}  } *
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_Q+\frac{\sqrt 2}{2})^2}{2\sigma^2}  }
 \end{aligned}
@@ -189,7 +189,7 @@ $$
 
 $$
 \begin{aligned}
-p(y|b_0=1) = 
+p(y\vert b_0=1) = 
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_I+\frac{\sqrt 2}{2})^2}{2\sigma^2}  } *
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_Q-\frac{\sqrt 2}{2})^2}{2\sigma^2}  } * 0.5 + 
 \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y_I+\frac{\sqrt 2}{2})^2}{2\sigma^2}  } *
@@ -205,7 +205,7 @@ $$
 最后，
 
 $$
-log    \frac {   p(y|b_0=0) }  {    p(y|b_0=1)  } =  
+log    \frac {   p(y\vert b_0=0) }  {    p(y\vert b_0=1)  } =  
 log 
 \frac{e^{  -\frac{(y_I-\frac{\sqrt 2}{2})^2}{2\sigma^2}  } }
 { e^{  -\frac{(y_I+\frac{\sqrt 2}{2})^2}{2\sigma^2}  } } 
@@ -216,7 +216,7 @@ $$
 用同样的方法，可以得出：
 
 $$
-log \frac {   p(y|b_1=0) }{ p(y|b_1=1)  } 
+log \frac {   p(y\vert b_1=0) }{ p(y\vert b_1=1)  } 
 =  
 log 
 \frac
@@ -232,13 +232,13 @@ $$
 
 $$
 \begin{aligned}
-LLR(b) = log \frac {   p(y|b=0) }  {    p(y|b=1)  }  \\
+LLR(b) = log \frac {   p(y\vert b=0) }  {    p(y\vert b=1)  }  \\
 =log \frac
-{ p(y_I + j y_Q | 1 + 0j)   }
-{ p(y_I + j y_Q | -1 + 0j)   }   \\
+{ p(y_I + j y_Q \vert 1 + 0j)   }
+{ p(y_I + j y_Q \vert -1 + 0j)   }   \\
 =log \frac
-{ p(y_I|1) p( y_Q |0) }
-{ p(y_I|-1) p( y_Q |0) }   \\
+{ p(y_I\vert 1) p( y_Q \vert 0) }
+{ p(y_I\vert -1) p( y_Q \vert 0) }   \\
 =log \frac
 {  e^{  -\frac{(y_I-1)^2}{2\sigma^2} }             }
 {  e^{  -\frac{(y_I+1)^2}{2\sigma^2} }             }  \\
@@ -262,49 +262,49 @@ $$
 ![channel.png](/figure/高斯白噪声软信息计算/channel.png)
 
 
-通信系统中，我们关心的是在收到信号 y 的情况下，判断发送方发送的比特是 1 或者 0 的概率，可以表示成  p(b=0|y)  和 p(b=1|y).
+通信系统中，我们关心的是在收到信号 y 的情况下，判断发送方发送的比特是 1 或者 0 的概率，可以表示成  $$p(b=0\vert y)$$  和 $$p(b=1\vert y)$$.
 
-很多情况下，我们关心两者的比值，因为如果  p(b=0|y)  大于 p(b=1|y)，我们就有理由可以判断 b=0，否则，我们更倾向于判断 b=1.  用比值来表示就是：
+很多情况下，我们关心两者的比值，因为如果  $$p(b=0\vert y)$$  大于 $$p(b=1\vert y)$$，我们就有理由可以判断 b=0，否则，我们更倾向于判断 b=1.  用比值来表示就是：
 
 $$
 \begin{cases}
-	\frac{p(b=0|y)  }{p(b=1|y)  } > 1&   b=0\\ \\
-	\frac{p(b=0|y)  }{p(b=1|y)  } < 1& b=1
+	\frac{p(b=0\vert y)  }{p(b=1\vert y)  } > 1&   b=0\\ \\
+	\frac{p(b=0\vert y)  }{p(b=1\vert y)  } < 1& b=1
 \end{cases}
 $$
 
 为了更简化一些运算（后面会解释），一般还要再取对数，即：
 
 $$
-log \frac{p(b=0|y)  }{p(b=1|y)  }
+log \frac{p(b=0\vert y)  }{p(b=1\vert y)  }
 $$
 
 那么判决准则为：
 
 $$
 \begin{cases}
-	log\frac{p(b=0|y)  }{p(b=1|y)  } > 0&   b=0\\ \\
-	log\frac{p(b=0|y)  }{p(b=1|y)  } < 0& b=1
+	log\frac{p(b=0\vert y)  }{p(b=1\vert y)  } > 0&   b=0\\ \\
+	log\frac{p(b=0\vert y)  }{p(b=1\vert y)  } < 0& b=1
 \end{cases}
 $$
 
-接下啦我们把上面的比值，做一下推导，推导出似然比的形式，因为  p(y|b) 的形式，称之为似然函数，而 p(b|y) 一般称之为后验概率。
+接下啦我们把上面的比值，做一下推导，推导出似然比的形式，因为  $$p(y\vert b)$$ 的形式，称之为似然函数，而 $$p(b\vert y)$$ 一般称之为后验概率。
 
-先对 p(b|y) 做一下推导：
+先对 $$p(b\vert y)$$ 做一下推导：
 
 $$
-p(b|y) =\frac{p(b,y)}{p(y)} =\frac{p(y|b)p(b)}{p(y)}
+p(b\vert y) =\frac{p(b,y)}{p(y)} =\frac{p(y\vert b)p(b)}{p(y)}
 $$
 
 则：
 
 $$
-log \frac{p(b=0|y)  }{p(b=1|y)  } = log \frac {   \frac{p(y|b=0)p(b=0)}{p(y)}   }
-{    \frac{p(y|b=1)p(b=1)}{p(y)}     }
-= log \frac {   p(y|b=0)p(b=0) }
-{    p(y|b=1)p(b=1)    }
-= log \frac {   p(y|b=0) }
-{    p(y|b=1)  }
+log \frac{p(b=0\vert y)  }{p(b=1\vert y)  } = log \frac {   \frac{p(y\vert b=0)p(b=0)}{p(y)}   }
+{    \frac{p(y\vert b=1)p(b=1)}{p(y)}     }
+= log \frac {   p(y\vert b=0)p(b=0) }
+{    p(y\vert b=1)p(b=1)    }
+= log \frac {   p(y\vert b=0) }
+{    p(y\vert b=1)  }
 $$
 
 上式推导的最后一步，我们是假定发送数据是 0 还是 1 的概率是相等的，都是 0.5，这个假定大部分情况下都是成立的，在数据生成的阶段，一般都有一步做 伪随机化，即让 0 和 1 出现的数量是相等的。
@@ -322,7 +322,7 @@ $$
 则如果发送的是 x 收到的是 y 的概率就是：
 
 $$
-p(y|x) = \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y-x)^2}{2\sigma^2}  }
+p(y\vert x) = \frac{1}{\sqrt{2\pi} \sigma} e^{  -\frac{(y-x)^2}{2\sigma^2}  }
 $$
 
 8-PSK 下，三个比特调制为一个复数，我们把这连个比特记为  $$b_2b_1 b_0$$，调制后的符号记为 $$s_I + j s_Q$$，接收到的复数信号为 $$y_I + j y_Q$$.
@@ -365,11 +365,11 @@ $$
 下面来分析，如何计算 $$b_0$$ 的对数似然比，即：
 
 $$
-LLR(b_0) = log \frac {   p(y|b_0=0) }
-{    p(y|b_0=1)  }
+LLR(b_0) = log \frac {   p(y\vert b_0=0) }
+{    p(y\vert b_0=1)  }
 $$
 
-所以，需要分别求出来 $$p(y|b_0=0)$$  和 $$p(y|b_0=1)$$。
+所以，需要分别求出来 $$p(y\vert b_0=0)$$  和 $$p(y\vert b_0=1)$$。
 
 我们分析其中一个，另外一个是类似的。
 $$b_0 =0$$ 有四种情况：
@@ -385,7 +385,7 @@ $$
 
 $$
 \begin{aligned}
-p(y/b_0=0)= \\
+p(y\vert b_0=0)= \\
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_I-c)^2}{2\sigma^2}}  \cdot      
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_Q-s)^2}{2\sigma^2}} *\frac{1}{4}
 +  \\
@@ -413,7 +413,7 @@ $$
 
 $$
 \begin{aligned}
-p(y/b_0=1)= \\
+p(y\vert b_0=1)= \\
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_I-s)^2}{2\sigma^2}}  \cdot      
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_Q-c)^2}{2\sigma^2}} *\frac{1}{4}
 +  \\
@@ -431,8 +431,8 @@ $$
 则这个比值：
 
 $$
-\frac {   p(y|b_0=0) }
-{    p(y|b_0=1)  }
+\frac {   p(y\vert b_0=0) }
+{    p(y\vert b_0=1)  }
 $$
 
 分子和分母都无法提取出一些公因式可以约掉的了，因此，就不能化简成一个简单的表达形式了。
@@ -442,11 +442,11 @@ $$
 下面来分析，如何计算 $$b_1$$ 的对数似然比，即：
 
 $$
-LLR(b_1) = log \frac {   p(y|b_1=0) }
-{    p(y|b_1=1)  }
+LLR(b_1) = log \frac {   p(y\vert b_1=0) }
+{    p(y\vert b_1=1)  }
 $$
 
-所以，需要分别求出来 $$p(y|b_1=0)$$  和$$p(y|b_1=1)$$。
+所以，需要分别求出来 $$p(y\vert b_1=0)$$  和$$p(y\vert b_1=1)$$。
 
 我们分析其中一个，另外一个是类似的。
 
@@ -463,7 +463,7 @@ $$
 
 $$
 \begin{aligned}
-p(y/b_1=0)= \\
+p(y\vert b_1=0)= \\
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_I-c)^2}{2\sigma^2}}  \cdot      
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_Q-s)^2}{2\sigma^2}} *\frac{1}{4}
 +  \\
@@ -491,7 +491,7 @@ $$
 
 $$
 \begin{aligned}
-p(y/b_1=1)= \\
+p(y\vert b_1=1)= \\
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_I+s)^2}{2\sigma^2}}  \cdot      
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_Q-c)^2}{2\sigma^2}} *\frac{1}{4}
 +  \\
@@ -511,11 +511,11 @@ $$
 下面来分析，如何计算 $$b_2$$ 的对数似然比，即：
 
 $$
-LLR(b_2) = log \frac {   p(y|b_2=0) }
-{    p(y|b_2=1)  }
+LLR(b_2) = log \frac {   p(y\vert b_2=0) }
+{    p(y\vert b_2=1)  }
 $$
 
-所以，需要分别求出来 $$p(y|b_2=0)$$  和 $$p(y|b_2=1)$$。
+所以，需要分别求出来 $$p(y\vert b_2=0)$$  和 $$p(y\vert b_2=1)$$。
 
 我们分析其中一个，另外一个是类似的。
 
@@ -532,7 +532,7 @@ $$
 
 $$
 \begin{aligned}
-p(y/b_2=0)= \\
+p(y\vert b_2=0)= \\
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_I-c)^2}{2\sigma^2}}  \cdot      
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_Q-s)^2}{2\sigma^2}} *\frac{1}{4}
 +  \\
@@ -560,7 +560,7 @@ $$
 
 $$
 \begin{aligned}
-p(y/b_2=1)= \\
+p(y\vert b_2=1)= \\
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_I+c)^2}{2\sigma^2}}  \cdot      
 \frac{1}{\sigma \sqrt{2\pi}}   e^{-\frac{(Y_Q+s)^2}{2\sigma^2}} *\frac{1}{4}
 +  \\
@@ -577,16 +577,16 @@ $$
 
 ### log 指数的近似定理
 
-定理：$$ln(e^a+e^b)=max(a,b)+ln(1+e^{-|a-b|})$$
+定理：$$ln(e^a+e^b)=max(a,b)+ln(1+e^{-\lvert a-b \rvert})$$
 
-因为 $$e^{-|a-b|} < 1$$
+因为 $$e^{-\lvert a-b\rvert} < 1$$
 
-所以 $$ln(1+e^{-|a-b|}) < ln2<1$$
+所以 $$ln(1+e^{-\lvert a-b\rvert}) < ln2<1$$
 
 最后可以推导一个近似公式：
 
 $$
-ln(e^a+e^b)=max(a,b)+ln(1+e^{-|a-b|})\approx max(a,b)
+ln(e^a+e^b)=max(a,b)+ln(1+e^{-\lvert a-b \rvert })\approx max(a,b)
 $$
 
 推而广之
