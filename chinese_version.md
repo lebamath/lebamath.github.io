@@ -29,6 +29,8 @@ title: 首页
 
 [高斯白噪声信道下对数自然比的推导](/chinese_version/communication_basic/llr_under_gaussion_white_noise)
 
+[离散傅里叶变换对应的真实频率](/chinese_version/communication_basic/real_frequency_in_dft_transform)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
