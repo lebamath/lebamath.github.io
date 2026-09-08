@@ -28,6 +28,8 @@ lang: en
 
 [Derivation of the Log Likelihood Ratio under the Gaussian White Noise Channel](/english_version/communication_basic/llr_under_gaussion_white_noise_en)
 
+[The Real Frequencies Corresponding to the Discrete Fourier Transform](/english_version/communication_basic/real_frequency_in_dft_transform_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
