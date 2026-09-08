@@ -94,4 +94,4 @@ $$
 
 ![离散傅里叶变换对应的真实频率.png](/figure/通信基础/离散傅里叶变换对应的真实频率.png)
 
-代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
+代码请到 [github 下载](https://github.com/taichiorange/leba_math)：[https://github.com/taichiorange/leba_math](https://github.com/taichiorange/leba_math)
