@@ -30,6 +30,8 @@ lang: en
 
 [The Real Frequencies Corresponding to the Discrete Fourier Transform](/english_version/communication_basic/real_frequency_in_dft_transform_en)
 
+[The Effect of Multipath Delay](/english_version/communication_basic/multipath_effect_explain_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
