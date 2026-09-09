@@ -32,6 +32,8 @@ lang: en
 
 [The Effect of Multipath Delay](/english_version/communication_basic/multipath_effect_explain_en)
 
+[The Effect of Multipath Frequency Shift on the Received Signal](/english_version/communication_basic/multipath_freq_shift_explain_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
