@@ -31,6 +31,8 @@ title: 首页
 
 [离散傅里叶变换对应的真实频率](/chinese_version/communication_basic/real_frequency_in_dft_transform)
 
+[多径时延的影响](/chinese_version/communication_basic/multipath_effect_explain)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
