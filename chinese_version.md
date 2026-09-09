@@ -33,6 +33,8 @@ title: 首页
 
 [多径时延的影响](/chinese_version/communication_basic/multipath_effect_explain)
 
+[多径频移对接收信号的影响](/chinese_version/communication_basic/multipath_freq_shift_explain)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
