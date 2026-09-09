@@ -11,7 +11,7 @@ back_url: /index.html?lang=zh
 
 假如有两个频率经过无线来传输，一个频率是 20Hz，执行下面的 python 代码：
 
-代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
+代码请到 github 下载：[github](https://github.com/taichiorange/leba_math)
 
 ​	这个会生成幅度为 1 的波形：
 
@@ -29,7 +29,7 @@ back_url: /index.html?lang=zh
 
 代码如下：
 
-代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
+代码请到 github 下载：[github](https://github.com/taichiorange/leba_math)
 
 
 ![20hz_two_path.png](/figure/通信基础/多径时延对不同频率的影响/20hz_two_path.png)
@@ -40,7 +40,7 @@ back_url: /index.html?lang=zh
 
 按照同样方法，另外一个频率是 80 Hz，执行下面的 python 代码：
 
-代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
+代码请到 github 下载：[github](https://github.com/taichiorange/leba_math)
 
 这个会生成幅度为 1 的 80Hz 波形：
 
@@ -59,7 +59,7 @@ back_url: /index.html?lang=zh
 
 代码如下：
 
-代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
+代码请到 github 下载：[github](https://github.com/taichiorange/leba_math)
 
 ![80hz_two_path.png](/figure/通信基础/多径时延对不同频率的影响/80hz_two_path.png)
 红色是原始信号。蓝色和绿色这两个不同延时的信号，相位相差比较大，叠加后信号被减弱了，可以看到黄色叠加后的信号，比红色原始信号弱很多。
@@ -68,7 +68,7 @@ back_url: /index.html?lang=zh
 
 下面，我们用同样两个时延的路径，把频率从 10 Hz 到 1000Hz 扫一遍，看不同频率下两路时延信号叠加后的最大幅度的变化：
 
-代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
+代码请到 github 下载：[github](https://github.com/taichiorange/leba_math)
 
 ![10to1000.png](/figure/通信基础/多径时延对不同频率的影响/10to1000.png)
 原始信号的幅度，都是 1. 可以看到，在 10Hz 的时候，接收的信号是比原始信号强，在 100Hz 的时候，接收到的信号已经相互抵消为 0 了。
