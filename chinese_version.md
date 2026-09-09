@@ -35,6 +35,8 @@ title: 首页
 
 [多径频移对接收信号的影响](/chinese_version/communication_basic/multipath_freq_shift_explain)
 
+[瑞利分布 rayleigh](/chinese_version/communication_basic/rayleigh_distribution)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
