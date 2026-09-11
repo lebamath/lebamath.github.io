@@ -37,6 +37,8 @@ title: 首页
 
 [瑞利分布 rayleigh](/chinese_version/communication_basic/rayleigh_distribution)
 
+[傅里叶变换能量不守恒问题](/chinese_version/communication_basic/energy_non_conservation_fourier_transform)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
