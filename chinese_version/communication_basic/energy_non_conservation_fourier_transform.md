@@ -1,3 +1,8 @@
+---
+layout: default
+title: "傅里叶变换能量不守恒问题"
+back_url: /index.html?lang=zh
+---
 # 傅里叶变换能量不守恒问题
 
 录制的视频在 B站[1](https://www.bilibili.com/video/BV1kP411V7hq), [2](https://www.bilibili.com/video/BV1114y1s7DE/), [3](bilibili.com/video/BV1ye4y1d7tM/)
