@@ -36,6 +36,8 @@ lang: en
 
 [The Problem of Energy Non-Conservation in the Fourier Transform](/english_version/communication_basic/energy_non_conservation_fourier_transform_en)
 
+[antenna polarization](/english_version/communication_basic/antenna_polarization_intro_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 

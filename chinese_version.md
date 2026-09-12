@@ -39,6 +39,8 @@ title: 首页
 
 [傅里叶变换能量不守恒问题](/chinese_version/communication_basic/energy_non_conservation_fourier_transform)
 
+[天线极化](/chinese_version/communication_basic/antenna_polarization_intro)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
