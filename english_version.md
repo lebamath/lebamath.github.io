@@ -38,6 +38,12 @@ lang: en
 
 [antenna polarization](/english_version/communication_basic/antenna_polarization_intro_en)
 
+# Channel Coding
+
+## Polar Code
+
+[Belief Propagation Decoding Algorithm for Polar Codes](/english_version/channel_coding/polar_code/belief_propagation_decoding_algorithm_for_polar_codes_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
