@@ -5,6 +5,7 @@ back_url: /index.html?lang=zh
 ---
 
 # 天线极化
+录制的视频在 [B 站](https://www.bilibili.com/video/BV1oc411b71H)
 
 
 ## 极化
@@ -29,11 +30,11 @@ $$
 *图1：图3.5 沿波传播方向观察, 电场矢量的轨迹表现出不同极化类型：线性极化（左）、圆极化（中）和椭圆极化（右）。* 
 
 
-\textit{线性极化}发生在电场矢量沿着一个恒定方向振荡的情况下，即，当 ，$$\phi_{\theta} = \phi_{\varphi}$$ ，或者当 $$E_{\theta}$$ 或 $$E_{\varphi}$$ 中的任意一个为零时。$$E_{\theta}$$ 和 $$E_{\varphi}$$ 之间的振幅关系决定了电场矢量的倾斜角度。在本书中，垂直极化（vertical polarization，VP）[注2]被定义为当电场沿着 $$\hat{\boldsymbol{\theta}}$$ 轴振荡时的极化，即当  $$E_{\varphi} = 0$$。类似地，水平极化（horizontal polarization，HP）被定义为当电场沿着  $$\hat{\boldsymbol{\varphi}}$$ 轴振荡时的极化（$$E_{\theta} = 0$$）。其他线性极化包括 +45° 极化（$$E_{\theta}=E_{\varphi}$$）和 -45° 极化（$$E_{\theta}=-E_{\varphi}$$）。
+**线性极化**: 发生在电场矢量沿着一个恒定方向振荡的情况下，即，当 ，$$\phi_{\theta} = \phi_{\varphi}$$ ，或者当 $$E_{\theta}$$ 或 $$E_{\varphi}$$ 中的任意一个为零时。$$E_{\theta}$$ 和 $$E_{\varphi}$$ 之间的振幅关系决定了电场矢量的倾斜角度。在本书中，垂直极化（vertical polarization，VP）[注2]被定义为当电场沿着 $$\hat{\boldsymbol{\theta}}$$ 轴振荡时的极化，即当  $$E_{\varphi} = 0$$。类似地，水平极化（horizontal polarization，HP）被定义为当电场沿着  $$\hat{\boldsymbol{\varphi}}$$ 轴振荡时的极化（$$E_{\theta} = 0$$）。其他线性极化包括 +45° 极化（$$E_{\theta}=E_{\varphi}$$）和 -45° 极化（$$E_{\theta}=-E_{\varphi}$$）。
 
 注2：在文献中，水平和垂直极化有时是相对于笛卡尔坐标系中的地平线定义的。然而，这种定义在描述天线特性时会导致问题，因为天线方向性和极化将变得不可分离，可参见方程（3.30）。
 
-\textit{圆极化}发生在电场矢量在横向平面内以恒定的振幅旋转时，即当 $$E_{\theta}=E_{\varphi}$$ 且$$\phi_{\theta} = \phi_{\varphi} \pm 90°$$ 时。旋转的方向可以是顺时针或逆时针，分别导致右旋圆极化（right-hand circular polarization，RHCP）或左旋圆极化（lefthand circular polarization，LHCP）。
+**圆极化**:发生在电场矢量在横向平面内以恒定的振幅旋转时，即当 $$E_{\theta}=E_{\varphi}$$ 且$$\phi_{\theta} = \phi_{\varphi} \pm 90°$$ 时。旋转的方向可以是顺时针或逆时针，分别导致右旋圆极化（right-hand circular polarization，RHCP）或左旋圆极化（lefthand circular polarization，LHCP）。
 
 相量之间的其他关系导致\textit{椭圆极化}，即电场矢量的振幅和旋转角都发生变化。
 
@@ -65,9 +66,11 @@ $$
 
 包含了极化矢量在基向量$$\hat{\boldsymbol{\theta}}$$ 和 $$\hat{\boldsymbol{\varphi}}$$上的坐标.
 这里，
-$\begin{bmatrix}
-	\hat{\boldsymbol{\theta}} & \hat{\boldsymbol{\varphi}}  
-\end{bmatrix}$
+$$
+\begin{bmatrix}
+\hat{\boldsymbol{\theta}} & \hat{\boldsymbol{\varphi}}  
+\end{bmatrix}
+$$
 是一个 $$3\times 2$$ 的实数矩阵，其中包含了基向量 $$\hat{\boldsymbol{\theta}}$$ 和 $$\hat{\boldsymbol{\varphi}}$$ 作为其元素。
 
 一般而言，本章采用符号 $$\underline{x}$$ 来表示 $$x$$ 在不同基坐标系中的向量。基坐标系由上下文给定，通常是以发射机或接收机坐标系中的 量$$\hat{\boldsymbol{\theta}}$$ 和 $$\hat{\boldsymbol{\varphi}}$$ 为基。在以下内容中，将交替使用两种不同方式表示的同一个向量。与 $$x$$ 对应的向量 $$\underline{x}$$ 可以称为与之对应的 Jones 向量[注3]。

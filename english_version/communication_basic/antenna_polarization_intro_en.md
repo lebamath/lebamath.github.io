@@ -28,11 +28,11 @@ The relationship between the phasors determines the polarization of the wave, i.
 *图1：Figure 3.5 Observed along the direction of wave propagation, the trajectory of the electric field vector exhibits different polarization types: linear polarization (left), circular polarization (middle) and elliptical polarization (right).* 
 
 
-\textit{Linear polarization} occurs when the electric field vector oscillates along a constant direction, i.e., when $$\phi_{\theta} = \phi_{\varphi}$$, or when either one of $$E_{\theta}$$ or $$E_{\varphi}$$ is zero. The amplitude relationship between $$E_{\theta}$$ and $$E_{\varphi}$$ determines the tilt angle of the electric field vector. In this book, vertical polarization (vertical polarization, VP) [Note 2] is defined as the polarization when the electric field oscillates along the $$\hat{\boldsymbol{\theta}}$$ axis, i.e., when $$E_{\varphi} = 0$$. Similarly, horizontal polarization (horizontal polarization, HP) is defined as the polarization when the electric field oscillates along the $$\hat{\boldsymbol{\varphi}}$$ axis ($$E_{\theta} = 0$$). Other linear polarizations include +45° polarization ($$E_{\theta}=E_{\varphi}$$) and -45° polarization ($$E_{\theta}=-E_{\varphi}$$).
+**Linear polarization**:  occurs when the electric field vector oscillates along a constant direction, i.e., when $$\phi_{\theta} = \phi_{\varphi}$$, or when either one of $$E_{\theta}$$ or $$E_{\varphi}$$ is zero. The amplitude relationship between $$E_{\theta}$$ and $$E_{\varphi}$$ determines the tilt angle of the electric field vector. In this book, vertical polarization (vertical polarization, VP) [Note 2] is defined as the polarization when the electric field oscillates along the $$\hat{\boldsymbol{\theta}}$$ axis, i.e., when $$E_{\varphi} = 0$$. Similarly, horizontal polarization (horizontal polarization, HP) is defined as the polarization when the electric field oscillates along the $$\hat{\boldsymbol{\varphi}}$$ axis ($$E_{\theta} = 0$$). Other linear polarizations include +45° polarization ($$E_{\theta}=E_{\varphi}$$) and -45° polarization ($$E_{\theta}=-E_{\varphi}$$).
 
 Note 2: In the literature, horizontal and vertical polarization are sometimes defined relative to the horizon in a Cartesian coordinate system. However, this definition leads to problems when describing antenna characteristics, because the antenna directivity and the polarization become inseparable; see Equation (3.30).
 
-\textit{Circular polarization} occurs when the electric field vector rotates in the transverse plane with a constant amplitude, i.e., when $$E_{\theta}=E_{\varphi}$$ and $$\phi_{\theta} = \phi_{\varphi} \pm 90°$$. The direction of rotation can be clockwise or counterclockwise, leading respectively to right-hand circular polarization (right-hand circular polarization, RHCP) or left-hand circular polarization (lefthand circular polarization, LHCP).
+**Circular polarization**:  occurs when the electric field vector rotates in the transverse plane with a constant amplitude, i.e., when $$E_{\theta}=E_{\varphi}$$ and $$\phi_{\theta} = \phi_{\varphi} \pm 90°$$. The direction of rotation can be clockwise or counterclockwise, leading respectively to right-hand circular polarization (right-hand circular polarization, RHCP) or left-hand circular polarization (lefthand circular polarization, LHCP).
 
 Other relationships between the phasors lead to \textit{elliptical polarization}, i.e., both the amplitude and the rotation angle of the electric field vector change.
 
@@ -64,9 +64,11 @@ $$
 
 contains the coordinates of the polarization vector on the basis vectors $$\hat{\boldsymbol{\theta}}$$ and $$\hat{\boldsymbol{\varphi}}$$.
 Here,
-$\begin{bmatrix}
-	\hat{\boldsymbol{\theta}} & \hat{\boldsymbol{\varphi}}  
-\end{bmatrix}$
+$$
+\begin{bmatrix}
+\hat{\boldsymbol{\theta}} & \hat{\boldsymbol{\varphi}}  
+\end{bmatrix}
+$$
 is a $$3\times 2$$ real-valued matrix, which contains the basis vectors $$\hat{\boldsymbol{\theta}}$$ and $$\hat{\boldsymbol{\varphi}}$$ as its elements.
 
 In general, this chapter adopts the notation $$\underline{x}$$ to denote the vector of $$x$$ in a different basis coordinate system. The basis coordinate system is given by the context, and is usually based on the quantities $$\hat{\boldsymbol{\theta}}$$ and $$\hat{\boldsymbol{\varphi}}$$ in the transmitter or receiver coordinate system. In what follows, the same vector expressed in these two different ways will be used interchangeably. The vector $$\underline{x}$$ corresponding to $$x$$ may be called its corresponding Jones vector [Note 3].
