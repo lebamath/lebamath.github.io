@@ -41,6 +41,12 @@ title: 首页
 
 [天线极化](/chinese_version/communication_basic/antenna_polarization_intro)
 
+# 信道编码
+
+## 极化码
+
+[极化码的 Belief Propagation 译码算法](/chinese_version/channel_coding/polar_code/belief_propagation_decoding_algorithm_for_polar_codes)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
