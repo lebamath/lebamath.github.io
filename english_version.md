@@ -44,6 +44,8 @@ lang: en
 
 [Belief Propagation Decoding Algorithm for Polar Codes](/english_version/channel_coding/polar_code/belief_propagation_decoding_algorithm_for_polar_codes_en)
 
+[Interpretation of the metric of SCL decoding for polar codes](/english_version/channel_coding/polar_code/interpretation_o_the_metric_of_SCL_decoding_for_polar_codes_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
