@@ -47,6 +47,8 @@ title: 首页
 
 [极化码的 Belief Propagation 译码算法](/chinese_version/channel_coding/polar_code/belief_propagation_decoding_algorithm_for_polar_codes)
 
+[极化码SCL译码的度量解释](chinese_version/channel_coding/polar_code/interpretation_o_the_metric_of_SCL_decoding_for_polar_codes)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
