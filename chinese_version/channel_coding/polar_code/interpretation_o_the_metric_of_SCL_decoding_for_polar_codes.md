@@ -5,7 +5,7 @@ back_url: /index.html?lang=zh
 ---
 # 极化码SCL译码的度量解释
 
-录制的视频在 [B站]（https://www.bilibili.com/cheese/play/ep468349）
+录制的视频在 [B站](https://www.bilibili.com/cheese/play/ep468349)
 
 ## SCL译码的度量解释
 
