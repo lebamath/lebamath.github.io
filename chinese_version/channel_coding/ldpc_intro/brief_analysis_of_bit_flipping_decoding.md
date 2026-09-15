@@ -9,7 +9,7 @@ back_url: /index.html?lang=zh
 
 LDPC码（low-density parity-check）实际上就是一种线性分组码，但是，由于LDPC码的 low-density  特性，可以用比较高效的算法来实现译码。这篇小文不是探讨 LDPC 码的方方面面，而是在读者已经了解线性分组码的基本概念，以及校验矩阵的基础上，试图对 LDPC码中一个简单的译码算法进行一个描述。在 Gallager 博士论文 [1] 中非常简要描述了一种称之为 Bit-Flipping 的 hard decoder 方法来译码。下面这段英文摘自 Gallager 博士论文 [1] :
 
-		......, the decoder computes all the parity checks and then changes any digit that is contained in more than some fixed number of unsatisfied parity-check equations. Using these new values, the parity checks are recomputed, and the process is repeated until the parity checks are all satisfied.
+......, the decoder computes all the parity checks and then changes any digit that is contained in more than some fixed number of unsatisfied parity-check equations. Using these new values, the parity checks are recomputed, and the process is repeated until the parity checks are all satisfied.
 
 
 下面举个例子来具体说明这个过程。
