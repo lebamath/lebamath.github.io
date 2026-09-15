@@ -46,6 +46,10 @@ lang: en
 
 [Interpretation of the metric of SCL decoding for polar codes](/english_version/channel_coding/polar_code/interpretation_o_the_metric_of_SCL_decoding_for_polar_codes_en)
 
+## LDPC introduction
+
+[A Brief Analysis of Bit-Flipping Decoding](brief_analysis_of_bit_flipping_decoding_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
