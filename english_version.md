@@ -48,7 +48,7 @@ lang: en
 
 ## LDPC introduction
 
-[A Brief Analysis of Bit-Flipping Decoding](brief_analysis_of_bit_flipping_decoding_en)
+[A Brief Analysis of Bit-Flipping Decoding](/english_version/channel_coding/ldpc_intro/brief_analysis_of_bit_flipping_decoding_en)
 
 # MUSIC：Multiple Signal Classification algorithm
 
