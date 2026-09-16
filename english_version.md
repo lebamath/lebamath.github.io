@@ -50,6 +50,8 @@ lang: en
 
 [A Brief Analysis of Bit-Flipping Decoding](/english_version/channel_coding/ldpc_intro/brief_analysis_of_bit_flipping_decoding_en)
 
+[A Brief Analysis of Soft-Decision Decoding Algorithms (Part One)](/english_version/channel_coding/ldpc_intro/brief_analysis_of_soft_decision_decoding_algorithms_part_one_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
