@@ -51,6 +51,8 @@ title: 首页
 
 [比特翻转译码浅析](/chinese_version/channel_coding/ldpc_intro/brief_analysis_of_bit_flipping_decoding)
 
+[软判决译码算法浅析(一)](/chinese_version/channel_coding/ldpc_intro/brief_analysis_of_soft_decision_decoding_algorithms_part_one)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
