@@ -61,7 +61,7 @@ $$
 p(c_1=1|r1=-0.63)
 $$
 
-We use $$p(c_1|r_1)$$ to denote this kind of a posteriori probability. 
+We use $$p(c_1\vert r_1)$$ to denote this kind of a posteriori probability. 
 
 If we directly use this a posteriori probability to decide whether $$c_1=0$$ or $$c_1=1$$, then we make no use of the fact that the individual bits inside the codeword are correlated, and thus gain no benefit from the coding.
 
@@ -153,7 +153,7 @@ In the formula above, the denominator part is a term unrelated to $$c_i=x$$ and 
 
 For the two terms in the numerator, further simplifications are made (which are in fact a kind of approximation)
 
-First:  let $$p(c_i=x|r) = p(c_i=x|r_i)$$, that is, assume that the other received data (apart from $$r_i$$) do not affect the decision that $$c_i=x$$. This is of course a simplification, because, considering the constraints of the parity-check equations, the values of the other data can give more information for the current judgment of $$c_i=x$$. This probability has nothing to do with the LDPC code any more; it is determined only by the characteristics of the channel.
+First:  let $$p(c_i=x\vert r) = p(c_i=x \vert r_i)$$, that is, assume that the other received data (apart from $$r_i$$) do not affect the decision that $$c_i=x$$. This is of course a simplification, because, considering the constraints of the parity-check equations, the values of the other data can give more information for the current judgment of $$c_i=x$$. This probability has nothing to do with the LDPC code any more; it is determined only by the characteristics of the channel.
 
 Second: assume that the parity-check equations in which $$c_i$$ participates are, under the condition that $$c_i=x$$ and that r has been received, independent of each other, statistically independent. This holds only in the case where, among these parity-check equations, there is no other jointly participating bit apart from $$c_i$$. In the parity-check matrix of an actual LDPC code, this cannot be guaranteed. Therefore, this is also a simplification. Under this assumption, the term in the numerator can be expanded as:
 
@@ -214,7 +214,7 @@ $$
 \end{aligned}
 $$
 
-For the three probabilities on the right-hand side of the formula above, use the total probability formula to expand each of them. Now we expand the first one ( $$p(z_1=0|c_2=0,r)$$ ) as an example for illustration. In the parity-check equation $$z_1$$, besides $$c_2$$ which participates, the 5 bits $$c_1,c_3,c_6,c_7,c_{10}$$ also participate. Now enumerate all the value combinations of these 5 bits, each taking 0 or 1, giving $$2^5=32$$ cases:
+For the three probabilities on the right-hand side of the formula above, use the total probability formula to expand each of them. Now we expand the first one ( $$p(z_1=0\vert c_2=0,r)$$ ) as an example for illustration. In the parity-check equation $$z_1$$, besides $$c_2$$ which participates, the 5 bits $$c_1,c_3,c_6,c_7,c_{10}$$ also participate. Now enumerate all the value combinations of these 5 bits, each taking 0 or 1, giving $$2^5=32$$ cases:
 
 $$
 \begin{aligned}
@@ -230,9 +230,9 @@ $$
 
 From the example given above it is easy to see that, under the condition $$c_2=0$$, in order to require $$z_1=0$$, one can see that not all of the $$2^5=32$$ cases above hold; it holds only when there is an even number of 1s among the 5 bits $$c_1,c_3,c_6,c_7,c_{10}$$.
 
-In addition, for $$p(z_m=0|c_n=x,\{c_{n^{'}}=x^{'}\},r)$$ in Formula (1), when all the $$c_i$$ are fixed, $$z_m=0$$ is already unrelated to r, therefore:
+In addition, for $$p(z_m=0\vert c_n=x,\{c_{n^{'}}=x^{'}\},r)$$ in Formula (1), when all the $$c_i$$ are fixed, $$z_m=0$$ is already unrelated to r, therefore:
 
-$$p(z_m=0|c_n=x,\{c_{n^{'}}=x^{'}\},r) = p(z_m=0|c_n=x,\{c_{n^{'}}=x^{'}\}$$
+$$p(z_m=0\vert c_n=x,\{c_{n^{'}}=x^{'}\},r) = p(z_m=0\vert c_n=x,\{c_{n^{'}}=x^{'}\}$$
 
 
 
@@ -271,13 +271,13 @@ $$
 p(z_m=0|c_i=x,r) = \sum_{x^{'} summing to x} \prod_{\{n^{'}\}} p(c_{n^{'}}=x^{'}|r)----------Formula (3)
 $$
 
-For $$p(c_1=0,c_3=0,c_6=0,c_7=0,c_{10}=0|r)$$ in the example above, assuming $$c_1,c_3,c_7,c_{10}$$ are mutually independent, then:
+For $$p(c_1=0,c_3=0,c_6=0,c_7=0,c_{10}=0\vert r)$$ in the example above, assuming $$c_1,c_3,c_7,c_{10}$$ are mutually independent, then:
 
 $$
 p(c_1=0,c_3=0,c_6=0,c_7=0,c_{10}=0|r) = p(c_1=0|r)p(c_3=0|r)p(c_6=0|r)p(c_7=0|r)p(c_{10}=0|r)
 $$
 
-At this point, the $$p(c_{n^{'}}=x^{'}|r)$$ in Formula (3) can be replaced by $$p(c_{n^{'}}=x^{'}|r_{n^{'}})$$ — obviously an approximation is used here as well — and then Formula (3) can be computed, and substituting it into Formula (0), $$p(c_i=x|\{z_m=0\},r)$$ can be computed.  At this moment a decision can be made on the bit $$c_i$$:
+At this point, the $$p(c_{n^{'}}=x^{'}\vert r)$$ in Formula (3) can be replaced by $$p(c_{n^{'}}=x^{'}\vert r_{n^{'}})$$ — obviously an approximation is used here as well — and then Formula (3) can be computed, and substituting it into Formula (0), $$p(c_i=x\vert \{z_m=0\},r)$$ can be computed.  At this moment a decision can be made on the bit $$c_i$$:
 
 $$
 If\quad p(c_i=0|\{z_m=0\},r) > 0.5, then\quad c_i=0,\quad otherwise\quad c_i=1
@@ -285,13 +285,13 @@ $$
 
 Then, carrying out the above procedure once for all the $$c_i$$, $$c_1,\dots,c_{10}$$ are all decided. Because several assumptions and simplifications were used in the computation above, when the results decided this time are substituted into the parity-check equations, it may be that not all the parity-check equations hold. In that case, we must take some measures so as to make another attempt. If we simply run through the above procedure once more, we will still get the same result, so we naturally think: can we use some parameters estimated in the previous round to make this round's attempt? Using the results of the previous round, can some of the estimated probabilities be made more accurate?
 
-Let us look at Formula (3). For the multiplication part $$p(c_{n^{'}}=x^{'}|r)$$ on the right-hand side of Formula (3), in the first round it was approximated by $$p(c_{n^{'}}=x^{'}|r_{n^{'}})$$; here the possibility that the parity-check equations in which $$c_{n^{'}}$$ participates hold was not taken into account. If this factor is taken into account, we can imagine that the accuracy of the estimate of $$c_{n^{'}}$$ should be improved. Therefore, we can use the following formula to further improve the accuracy of the estimate:
+Let us look at Formula (3). For the multiplication part $$p(c_{n^{'}}=x^{'}\vert r)$$ on the right-hand side of Formula (3), in the first round it was approximated by $$p(c_{n^{'}}=x^{'}\vert r_{n^{'}})$$; here the possibility that the parity-check equations in which $$c_{n^{'}}$$ participates hold was not taken into account. If this factor is taken into account, we can imagine that the accuracy of the estimate of $$c_{n^{'}}$$ should be improved. Therefore, we can use the following formula to further improve the accuracy of the estimate:
 
 $$
 p(c_{n^{'}}=x^{'}|r_{n^{'}}) \approx p(c_{n^{'}}=x^{'}|\{z_{m^{'}}=0\},r_{n^{'}})
 $$
 
-Because on the left-hand side of the equals sign in Formula (3) it is already assumed that $$z_m=0$$, the $$\{z_{m^{'}}=0\}$$ in the formula above must exclude the parity-check equation $$z_m=0$$. The right-hand side of the formula above can, using the derivation approach of Formula (0), in turn be converted into something computed from $$p(z_m=0|c_i=x,r)$$. In this way, using the probability $$p(z_m=0|c_i=x,r)$$ that the parity-check equations hold, computed in the first round, the accuracy of $$p(c_i=x|\{z_m=0\},r)$$ is improved recursively and iteratively.
+Because on the left-hand side of the equals sign in Formula (3) it is already assumed that $$z_m=0$$, the $$\{z_{m^{'}}=0\}$$ in the formula above must exclude the parity-check equation $$z_m=0$$. The right-hand side of the formula above can, using the derivation approach of Formula (0), in turn be converted into something computed from $$p(z_m=0\vert c_i=x,r)$$. In this way, using the probability $$p(z_m=0\vert c_i=x,r)$$ that the parity-check equations hold, computed in the first round, the accuracy of $$p(c_i=x\vert \{z_m=0\},r)$$ is improved recursively and iteratively.
 
 
 ![LDPC_soft_decoding.png](/figure/LDPC译码浅析/LDPC_soft_decoding.png) 
