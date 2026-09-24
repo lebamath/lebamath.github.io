@@ -55,6 +55,8 @@ title: 首页
 
 [软判决译码算法浅析(二)：降低运算量和算法描述](/chinese_version/channel_coding/ldpc_intro/brief_analysis_soft_decision_decoding2_reducing_computation)
 
+[LDPC 软判决算法之似然比形式(一)](/chinese_version/channel_coding/ldpc_intro/likelihood_ratio_form_LDPC_soft_decision_algorithm)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
