@@ -5,6 +5,8 @@ back_url: /index.html?lang=zh
 ---
 ## LDPC 软判决算法之似然比形式 (一)
 
+录制的视频在 [B 站](https://www.bilibili.com/cheese/play/ep1070105)
+
 在前面的文章中，我们推导了 LDPC 软判决译码的迭代算法，这篇文章，我们用对数比的形式，再推导一下 LDPC 的迭代算法。
 
 本文参考了文献[1] 的 15.5.6 章节。
