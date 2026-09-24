@@ -299,7 +299,7 @@ $$
 \eta_{m,n}=- 2 tanh^{-1}(\prod_{j \in N_{m,n} } tanh(-\frac{\lambda(c_j|\{r_i,i \neq n\})}{2})) \quad -----\quad Formula (5)
 $$
 
-This $$\eta_{m,n}$$ can be understood as a certain measure of the m-th parity-check equation holding; it is a measure realized by comparing the probabilities that the parity-check equation holds under the two situations $$c_n=1$$ and $$c_n=0$$. In short, this is a quantity measuring whether the parity-check equation holds. And within this quantity, that is, the $$\lambda(c_j|\{r_i,i \neq n\})$$ in Formula (5), is in turn a certain probability measure of bit j. In the concrete implementation of the algorithm, it is set equal to $$\lambda(c_j|r_j)$$.
+This $$\eta_{m,n}$$ can be understood as a certain measure of the m-th parity-check equation holding; it is a measure realized by comparing the probabilities that the parity-check equation holds under the two situations $$c_n=1$$ and $$c_n=0$$. In short, this is a quantity measuring whether the parity-check equation holds. And within this quantity, that is, the $$\lambda(c_j\vert \{r_i,i \neq n\})$$ in Formula (5), is in turn a certain probability measure of bit j. In the concrete implementation of the algorithm, it is set equal to $$\lambda(c_j\vert r_j)$$.
 
 Then Formula (3) becomes:
 
@@ -371,7 +371,7 @@ Similarly, all the $$\lambda(c_i\vert r)$$ can be computed.  Make a decision onc
 
 At this time, make a decision once on all the $$\lambda(c_j\vert r_j)$$; if the check result is found to be correct, then finish. Otherwise, we have reason to use the newly estimated $$\lambda(c_j\vert r_j)$$ to further strengthen the accuracy of the measure of the parity-check equations holding, so this $$\eta_{m,n}$$ needs to be updated.
 
-In this update, because the computation of the previous round's $$\lambda(c_j\vert r_j)$$ contained the information of the measure of the m-th parity-check equation, therefore, in order to update the information of the m-th parity-check equation, the previous round's $$\eta_{m,n}$$ must be subtracted from the previous round's $$\lambda(c_j|r_j)$$, so this update formula is:
+In this update, because the computation of the previous round's $$\lambda(c_j\vert r_j)$$ contained the information of the measure of the m-th parity-check equation, therefore, in order to update the information of the m-th parity-check equation, the previous round's $$\eta_{m,n}$$ must be subtracted from the previous round's $$\lambda(c_j\vert r_j)$$, so this update formula is:
 
 $$
 \lambda^{[l-1]}(c_j|\{r_i,i \neq n\}) = \lambda^{[l-1]}(c_j|r) -\eta_{m,j}^{[l-1]}
