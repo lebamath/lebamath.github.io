@@ -54,6 +54,8 @@ lang: en
 
 [A Brief Analysis of Soft-Decision Decoding Algorithms (Part Two): Reducing Computaion and algorithm](/english_version/channel_coding/ldpc_intro/brief_analysis_soft_decision_decoding2_reducing_computation_en)
 
+[The Likelihood-Ratio Form of the LDPC Soft-Decision Algorithm](/english_version/channel_coding/ldpc_intro/likelihood_ratio_form_LDPC_soft_decision_algorithm_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
