@@ -176,13 +176,13 @@ $$
 由于 tanh 函数是奇函数，所以：
 
 $$
-tanh( \frac{\lambda(x_1)}{2} )  tanh( \frac{\lambda(x_2)}{2}) = tanh( \textcolor{red}{-} \frac{\lambda(x_1)}{2} )  tanh( \textcolor{red}{-} \frac{\lambda(x_2)}{2})
+tanh( \frac{\lambda(x_1)}{2} )  tanh( \frac{\lambda(x_2)}{2}) = tanh( \color{red}{-} \frac{\lambda(x_1)}{2} )  tanh( \color{red}{-} \frac{\lambda(x_2)}{2})
 $$
 
 则公式 (5) 也可以写成：
 
 $$
-\lambda(x_1 \oplus x_2) = -2 tanh^{-1} ( tanh(  \textcolor{red}{-} \frac{\lambda(x_1)}{2} )  tanh(  \textcolor{red}{-}  \frac{\lambda(x_2)}{2})  )
+\lambda(x_1 \oplus x_2) = -2 tanh^{-1} ( tanh(  \color{red}{-} \frac{\lambda(x_1)}{2} )  tanh(  \color{red}{-}  \frac{\lambda(x_2)}{2})  )
 \quad ---- \quad  公式(6)
 $$
 
