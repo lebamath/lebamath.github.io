@@ -175,13 +175,13 @@ $$
 Since the tanh function is an odd function, we have:
 
 $$
-tanh( \frac{\lambda(x_1)}{2} )  tanh( \frac{\lambda(x_2)}{2}) = tanh( \textcolor{red}{-} \frac{\lambda(x_1)}{2} )  tanh( \textcolor{red}{-} \frac{\lambda(x_2)}{2})
+tanh( \frac{\lambda(x_1)}{2} )  tanh( \frac{\lambda(x_2)}{2}) = tanh( {\color{red}{-}} \frac{\lambda(x_1)}{2} )  tanh( {\color{red}{-}} \frac{\lambda(x_2)}{2})
 $$
 
 Then Formula (5) can also be written as:
 
 $$
-\lambda(x_1 \oplus x_2) = -2 tanh^{-1} ( tanh(  \textcolor{red}{-} \frac{\lambda(x_1)}{2} )  tanh(  \textcolor{red}{-}  \frac{\lambda(x_2)}{2})  )
+\lambda(x_1 \oplus x_2) = -2 tanh^{-1} ( tanh(  {\color{red}{-}} \frac{\lambda(x_1)}{2} )  tanh(  {\color{red}{-}}  \frac{\lambda(x_2)}{2})  )
 \quad ---- \quad  Formula (6)
 $$
 
