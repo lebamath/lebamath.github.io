@@ -57,6 +57,8 @@ title: 首页
 
 [LDPC 软判决算法之似然比形式(一)](/chinese_version/channel_coding/ldpc_intro/likelihood_ratio_form_LDPC_soft_decision_algorithm)
 
+[软判决算法之似然比形式: tanh-lambda 规则](/chinese_version/channel_coding/ldpc_intro/likelihood_ratio_form_LDPC_soft_decision_algorithm_tanh_lambda_rule)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
