@@ -58,6 +58,8 @@ lang: en
 
 [The Likelihood-Ratio Form of the Soft-Decision Algorithm: The tanh-lambda Rule](/english_version/channel_coding/ldpc_intro/likelihood_ratio_form_LDPC_soft_decision_algorithm_tanh_lambda_rule_en)
 
+[LDPC Soft-Decision Algorithm -- Introducing the Tanner Graph](/english_version/channel_coding/ldpc_intro/LDPC_Soft_Decision_Algorithm_Introducing_the_Tanner_Graph_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
