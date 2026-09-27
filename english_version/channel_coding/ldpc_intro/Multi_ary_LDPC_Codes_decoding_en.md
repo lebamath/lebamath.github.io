@@ -29,7 +29,7 @@ $$
 
 A special reminder: all the operations above are under the modulo-4 rule, and the results of the computations all need to be taken modulo 4.
 
-Originally the optimal decoding method is to find the largest probability among $$p({c_1,c_2,c_3,c_4,c_5,c_6}|\{z_m=0\},r)$$, and take the $$c_1,c_2,c_3,c_4,c_5,c_6$$ corresponding to the largest probability as our decoding result. However, the amount of computation for this is large, and when the code length is rather long, the amount of computation becomes so large as to be infeasible. We settle for the next best thing and compute the probability of a single $$c_i$$ to make the decision:
+Originally the optimal decoding method is to find the largest probability among $$p({c_1,c_2,c_3,c_4,c_5,c_6}\vert \{z_m=0\},r)$$, and take the $$c_1,c_2,c_3,c_4,c_5,c_6$$ corresponding to the largest probability as our decoding result. However, the amount of computation for this is large, and when the code length is rather long, the amount of computation becomes so large as to be infeasible. We settle for the next best thing and compute the probability of a single $$c_i$$ to make the decision:
 
 $$
 p(c_i|\{z_m=0\},r)
@@ -41,7 +41,7 @@ $$
 p(c_i|\{z_m=0\},r) = \frac{p(c_i,\{z_m=0\}|r)}{p(\{z_m=0\}|r)} =  \frac{p(\{z_m=0\}|c_i,r)p(c_i|r)}{p(\{z_m=0\}|r)} \tag{1}
 $$
 
-where $$p(c_i|r) = p(c_i|r_i)$$ (because in this condition there is no requirement of the constraint equations, therefore the other $$r_j, j\neq i$$ do not affect $$c_i$$.
+where $$p(c_i\vert r) = p(c_i\vert r_i)$$ (because in this condition there is no requirement of the constraint equations, therefore the other $$r_j, j\neq i$$ do not affect $$c_i$$.
 
 In Formula (1), in order to simplify the computation, we assume that whether the individual parity-check equations hold is mutually independent; of course, in reality, because every transmitted datum $$c_i$$ takes part in several parity-check equations, the parity-check equations are mutually correlated, and the assumption here leads to an approximate equality:
 
@@ -63,13 +63,13 @@ $$
 
 Now, we have used the probability of whether the parity-check equations hold to express the probability of the transmitted data.
 
-Next, carry out some derivation of the $$p(z_m=0|c_i,r)$$ in Formula (2):
+Next, carry out some derivation of the $$p(z_m=0\vert c_i,r)$$ in Formula (2):
 
 $$
 p(z_m=0|c_i,r) = \frac{p(z_m=0,c_i|r)}{p(c_i|r)} = \frac{p(z_m=0,c_i|r)}{p(c_i|r_i)} \tag{3}
 $$
 
-where $$p(c_i|r_i)$$ can be regarded as a constant; let us analyze the numerator part: because $$c_i$$ is given, then for $$z_m=0$$ to hold means that the other terms in the parity-check equation have to take all sorts of cases
+where $$p(c_i\vert r_i)$$ can be regarded as a constant; let us analyze the numerator part: because $$c_i$$ is given, then for $$z_m=0$$ to hold means that the other terms in the parity-check equation have to take all sorts of cases
 
 $$
 p(z_m=0,c_i|r)= \sum_{h_ic_i+\sum_{k\neq i}h_kc_k=0} p(\{c_j\}|r) \tag{4}
