@@ -60,6 +60,8 @@ lang: en
 
 [LDPC Soft-Decision Algorithm -- Introducing the Tanner Graph](/english_version/channel_coding/ldpc_intro/LDPC_Soft_Decision_Algorithm_Introducing_the_Tanner_Graph_en)
 
+[FFT-QSPA Algorithm for Multi-ary LDPC Codes](/english_version/channel_coding/ldpc_intro/Multi_ary_LDPC_Codes_decoding_en)
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
