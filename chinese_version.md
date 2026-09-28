@@ -66,7 +66,8 @@ title: 首页
 ## 卷积码编码和译码--维特比 Viterbi 译码
 
 [卷积码编码](/chinese_version/channel_coding/ConvolutionalCodeEncodingDecodingViterbiDecoding/ConvolutionalCodeEncoding)
-[译码]((/chinese_version/channel_coding/ConvolutionalCodeEncodingDecodingViterbiDecoding/ConvolutionalCodeDecoding)
+
+[译码](/chinese_version/channel_coding/ConvolutionalCodeEncodingDecodingViterbiDecoding/ConvolutionalCodeDecoding)
 
 # MIMO
 
