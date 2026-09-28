@@ -63,6 +63,10 @@ title: 首页
 
 [多元LDPC译码算法](/chinese_version/channel_coding/ldpc_intro/Multi_ary_LDPC_Codes_decoding)
 
+## 卷积码编码和译码--维特比 Viterbi 译码
+
+[卷积码编码](/chinese_version/channel_coding/ConvolutionalCodeEncodingDecodingViterbiDecoding/ConvolutionalCodeEncoding)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
