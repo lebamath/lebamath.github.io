@@ -66,7 +66,7 @@ lang: en
 
 [The BCJR Decoding Algorithm for Convolutional Codes (Part One)](/english_version/channel_coding/BCJR_Turbo/BCJR_Decoding_Algorithm_for_Convolutional_Codes_en)
 
-
+[The BCJR Decoding Algorithm for Convolutional Codes (Part Two)-Computing $$\gamma$$](/english_version/channel_coding/BCJR_Turbo/BCJR_Decoding_Algorithm_for_Convolutional_Codes_2_en)
 
 # MUSIC：Multiple Signal Classification algorithm
 
