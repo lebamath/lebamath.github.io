@@ -40,7 +40,10 @@ ad_lang: en
       container.innerHTML = cache[lang];
       // 本页目录是运行时扫描标题生成的，不在抓回来的静态 HTML 里，
       // 每次把内容塞进页面之后都要重新生成一次（见 _layouts/default.html）。
-      if (window.buildArticleToc) window.buildArticleToc(container);
+      // 首页每个 # 都是独立一节，没有单独的"文章标题"，所以用 placement: 'before'
+      // 把目录放在中文/English切换按钮之后、第一节标题之前（而不是普通文章那样
+      // 放在文章标题后面）。
+      if (window.buildArticleToc) window.buildArticleToc(container, { placement: 'before' });
       return;
     }
 
@@ -51,7 +54,7 @@ ad_lang: en
         var content = doc.querySelector('.content-col');
         cache[lang] = content ? content.innerHTML : '';
         container.innerHTML = cache[lang];
-        if (window.buildArticleToc) window.buildArticleToc(container);
+        if (window.buildArticleToc) window.buildArticleToc(container, { placement: 'before' });
       })
       .catch(function () {
         container.innerHTML = '<p><a href="' + sources[lang] + '">' +

@@ -65,16 +65,21 @@
     </aside>
   </div>
   <script>
-    // 本页目录：扫描正文里的 h1/h2/h3，紧跟在第一个标题（文章标题本身）下面
-    // 插入一个可折叠的目录框，列出除了文章标题以外的其余标题。
+    // 本页目录：扫描正文里的 h1/h2/h3，插入一个可折叠的目录框。
     // 剩余标题少于 2 个就没必要放目录，什么都不插入。
     //
-    // 封装成 window.buildArticleToc(root) 可重复调用——普通文章页面加载时
+    // 普通文章页面（placement 默认 'after'）：目录紧跟在第一个标题
+    // （文章标题本身）下面，列出除了文章标题以外的其余标题。
+    // 首页 index.md（placement: 'before'）：每个 # 都是独立的一节，没有
+    // 单独的"文章标题"可以排除，目录要放在所有小节之前——也就是中英文
+    // 切换按钮之后、第一节标题之前——所以列出全部标题，插到正文最前面。
+    //
+    // 封装成 window.buildArticleToc(root, opts) 可重复调用——普通文章页面加载时
     // 自己调一次就行；但 index.md 首页的正文是切换语言时用 fetch 异步抓回来、
     // 再塞进 DOM 的，这段脚本第一次跑的时候内容还没到，所以 index.md 会在
     // 每次把内容塞进页面之后，自己再调用一次 window.buildArticleToc()
     // （切语言的时候也要调，不然目录还是上一个语言、上一份内容的）。
-    window.buildArticleToc = function (root) {
+    window.buildArticleToc = function (root, opts) {
       var contentCol = root || document.querySelector('.content-col');
       if (!contentCol) return;
 
@@ -82,13 +87,21 @@
       var old = contentCol.querySelector('.article-toc');
       if (old) old.remove();
 
+      var placement = (opts && opts.placement) || 'after';
+
       var headings = Array.prototype.slice.call(
         contentCol.querySelectorAll('h1[id], h2[id], h3[id]')
       );
-      if (headings.length < 2) return;
 
-      var firstHeading = headings[0];
-      var rest = headings.slice(1);
+      var firstHeading = null;
+      var rest;
+      if (placement === 'before') {
+        rest = headings;
+      } else {
+        if (headings.length < 2) return;
+        firstHeading = headings[0];
+        rest = headings.slice(1);
+      }
       if (rest.length < 2) return;
 
       var details = document.createElement('details');
@@ -137,7 +150,11 @@
       nav.appendChild(topList);
       details.appendChild(nav);
 
-      firstHeading.insertAdjacentElement('afterend', details);
+      if (placement === 'before') {
+        contentCol.insertBefore(details, contentCol.firstChild);
+      } else {
+        firstHeading.insertAdjacentElement('afterend', details);
+      }
 
       // 点击目录链接平滑滚动（标题已经用 scroll-margin-top 让开了吸顶广告条）
       nav.addEventListener('click', function (e) {
