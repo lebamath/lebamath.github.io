@@ -60,10 +60,92 @@
       {{ content }}
     </main>
 
+    <aside class="toc-col" id="toc-col">
+      <p class="toc-col__title" id="toc-col-title">{% if page.lang == "en" %}On this page{% else %}目录{% endif %}</p>
+      <nav class="toc-col__nav" id="toc-col-nav"></nav>
+    </aside>
+
     <aside class="ad-col">
       {% include ads.html %}
     </aside>
   </div>
+  <script>
+    // 本页目录：扫描正文里的 h1/h2/h3，按层级生成链接列表塞进目录栏。
+    // 标题数量太少（< 3）就没必要显示目录，直接隐藏目录栏，正文栏补回 80% 宽度。
+    (function () {
+      var pageWrap = document.querySelector('.page-wrap');
+      var contentCol = document.querySelector('.content-col');
+      var tocCol = document.getElementById('toc-col');
+      var tocNav = document.getElementById('toc-col-nav');
+      if (!pageWrap || !contentCol || !tocCol || !tocNav) return;
+
+      var headings = Array.prototype.slice.call(
+        contentCol.querySelectorAll('h1[id], h2[id], h3[id]')
+      );
+
+      if (headings.length < 3) {
+        pageWrap.classList.add('page-wrap--no-toc');
+        return;
+      }
+
+      var links = headings.map(function (h) {
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent;
+        a.className = 'toc-col__link toc-col__link--' + h.tagName.toLowerCase();
+        tocNav.appendChild(a);
+        return a;
+      });
+
+      // 点击目录链接平滑滚动（标题已经用 scroll-margin-top 让开了吸顶广告条）
+      tocNav.addEventListener('click', function (e) {
+        var a = e.target.closest('a');
+        if (!a) return;
+        var target = document.getElementById(a.getAttribute('href').slice(1));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', '#' + target.id);
+      });
+
+      // 滚动的时候高亮当前所在小节：取"标题顶部已经滚过吸顶广告条"的最后一个标题。
+      // 用 scroll 事件 + rAF 节流实现，不用 IntersectionObserver——
+      // 一些环境（比如被后台/不可见的标签页）里 IntersectionObserver 的回调
+      // 会被浏览器整个节流掉不触发，scroll 事件配合直接读 getBoundingClientRect
+      // 更简单也更可靠。
+      var active = null;
+      var ticking = false;
+
+      function updateActive() {
+        ticking = false;
+        var topOffset = parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue('--top-ad-height')
+        ) || 60;
+        var threshold = topOffset + 24;
+        var current = headings[0];
+        for (var i = 0; i < headings.length; i++) {
+          if (headings[i].getBoundingClientRect().top <= threshold) {
+            current = headings[i];
+          } else {
+            break;
+          }
+        }
+        var link = links[headings.indexOf(current)];
+        if (link === active) return;
+        if (active) active.classList.remove('is-active');
+        active = link;
+        active.classList.add('is-active');
+      }
+
+      window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(updateActive);
+      }, { passive: true });
+
+      updateActive();
+    })();
+  </script>
 
   <footer class="site-footer">
     {% include footer.html %}

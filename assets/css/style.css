@@ -1,11 +1,13 @@
 /* ------------------------------------------------------------------
    乐吧的数学 - 站点样式
-   两栏布局：左栏（正文，80%）+ 右栏（广告，20%）
-   宽度小于 900px 时改为单栏，广告栏移到正文下方
+   三栏布局：正文（65%）+ 本页目录（15%）+ 广告（20%）
+   标题数量少于 3 个的页面不显示目录栏，正文栏自动补回 80% 宽度
+   宽度小于 900px 时改为单栏：目录栏直接隐藏，广告栏移到正文下方
 ------------------------------------------------------------------ */
 
 :root {
-  --content-width: 80%;
+  --content-width: 65%;
+  --toc-width: 15%;
   --ad-width: 20%;
   --max-page-width: 1400px;
   --gap: 32px;
@@ -69,11 +71,75 @@ body {
   gap: var(--gap);
 }
 
-/* 正文栏：80% */
+/* 正文栏：65%（没有目录栏时靠 .page-wrap--no-toc 补回 80%） */
 .content-col {
   flex: 0 0 var(--content-width);
   max-width: var(--content-width);
   min-width: 0; /* 防止长公式/长链接把栏撑爆 */
+}
+
+/* 本页目录栏：15%，JS 在页面加载时根据正文里的标题自动生成
+   （见 _layouts/default.html 里的脚本），标题少于 3 个就不显示 */
+.toc-col {
+  flex: 0 0 var(--toc-width);
+  max-width: var(--toc-width);
+  position: sticky;
+  top: calc(var(--top-ad-height) + 24px);
+  max-height: calc(100vh - var(--top-ad-height) - 48px);
+  overflow-y: auto;
+  font-size: 13px;
+}
+
+.toc-col__title {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.toc-col__link {
+  display: block;
+  padding: 4px 0 4px 10px;
+  border-left: 2px solid transparent;
+  color: var(--color-muted);
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.toc-col__link:hover {
+  color: var(--color-link);
+}
+
+.toc-col__link.is-active {
+  border-left-color: var(--color-link);
+  color: var(--color-link);
+  font-weight: 600;
+}
+
+.toc-col__link--h1 {
+  font-weight: 600;
+}
+
+.toc-col__link--h2 {
+  padding-left: 20px;
+}
+
+.toc-col__link--h3 {
+  padding-left: 30px;
+  font-size: 12px;
+}
+
+/* 页面标题少于 3 个时，JS 会给 .page-wrap 加这个类，隐藏目录栏，
+   正文栏补回原来两栏布局时的 80% 宽度 */
+.page-wrap--no-toc .toc-col {
+  display: none;
+}
+
+.page-wrap--no-toc .content-col {
+  flex: 0 0 80%;
+  max-width: 80%;
 }
 
 /* 广告栏：20% */
@@ -112,6 +178,8 @@ body {
   line-height: 1.4;
   margin-top: 1.6em;
   margin-bottom: 0.6em;
+  /* 点目录链接跳转到标题时，让标题跳到吸顶广告条下面，不被盖住 */
+  scroll-margin-top: calc(var(--top-ad-height) + 16px);
 }
 
 .content-col h1 {
@@ -287,6 +355,11 @@ body {
   .ad-col {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  /* 手机屏幕空间有限，目录栏直接隐藏，不堆到正文下面 */
+  .toc-col {
+    display: none;
   }
 
   .ad-col {
