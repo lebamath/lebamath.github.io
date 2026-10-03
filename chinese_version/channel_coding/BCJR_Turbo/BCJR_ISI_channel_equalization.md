@@ -82,7 +82,7 @@ $$
 
 其中 $$S_x$$ 表示在 t 时刻，输入 x 引起的所有可能的状态转移.
 
-我们接着分析公式 (4) 中的 $$p(\psi_k=p,\psi_{k+1}=q|r)$$
+我们接着分析公式 (4) 中的 $$p(\psi_k=p,\psi_{k+1}=q\vert r)$$
 
 $$
 p(\psi_k=p,\psi_{k+1}=q|r)  = \frac{p(\psi_k=p,\psi_{k+1}=q,r)}{p(r)}  \tag{5}
