@@ -73,6 +73,8 @@ title: 首页
 
 [卷积码的 BCJR 译码算法 (一)](/chinese_version/channel_coding/BCJR_Turbo/BCJR_Decoding_Algorithm_for_Convolutional_Codes)
 
+[卷积码的 BCJR 译码算法 (二)--计算 $$\gamma$$](/chinese_version/channel_coding/BCJR_Turbo/BCJR_Decoding_Algorithm_for_Convolutional_Codes_2)
+
 
 
 # MIMO
