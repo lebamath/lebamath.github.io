@@ -69,6 +69,12 @@ title: 首页
 
 [译码](/chinese_version/channel_coding/ConvolutionalCodeEncodingDecodingViterbiDecoding/ConvolutionalCodeDecoding)
 
+## BCJR 译码算法和 Turbo 码
+
+[卷积码的 BCJR 译码算法 (一)](/chinese_version/channel_coding/BCJR_Turbo/BCJR_Decoding_Algorithm_for_Convolutional_Codes)
+
+
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
