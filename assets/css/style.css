@@ -105,6 +105,19 @@ body {
   margin-top: 10px;
 }
 
+/* 真正的 <ul><li> 列表（不是靠 CSS 分行的一串 <a>），这样浏览器、屏幕阅读器、
+   还有网页转 Markdown/纯文本的工具都能正确识别出这是分行的列表 */
+.article-toc__list,
+.article-toc__sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-toc__sublist {
+  margin-top: 2px;
+}
+
 .article-toc__link {
   display: block;
   padding: 3px 0 3px 12px;

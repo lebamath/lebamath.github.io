@@ -90,15 +90,41 @@
       summary.textContent = '{% if page.lang == "en" %}On this page{% else %}目录{% endif %}';
       details.appendChild(summary);
 
+      // 用真正的 <ul><li> 列表（而不是一串靠 CSS display:block 分行的 <a>）：
+      // 这样浏览器、屏幕阅读器、还有各种"网页转 Markdown/纯文本"的工具，
+      // 都能正确识别出这是一份分行的列表，不会把所有链接文字挤成一整行。
       var nav = document.createElement('nav');
       nav.className = 'article-toc__nav';
+      var topList = document.createElement('ul');
+      topList.className = 'article-toc__list';
+      var subList = null;
+
       rest.forEach(function (h) {
+        var level = h.tagName.toLowerCase(); // 'h1' | 'h2' | 'h3'
+        var li = document.createElement('li');
         var a = document.createElement('a');
         a.href = '#' + h.id;
         a.textContent = h.textContent;
-        a.className = 'article-toc__link article-toc__link--' + h.tagName.toLowerCase();
-        nav.appendChild(a);
+        a.className = 'article-toc__link article-toc__link--' + level;
+        li.appendChild(a);
+
+        if (level === 'h3' && subList) {
+          subList.appendChild(li);
+          return;
+        }
+
+        topList.appendChild(li);
+        subList = document.createElement('ul');
+        subList.className = 'article-toc__sublist';
+        li.appendChild(subList);
       });
+
+      // 清掉没用上的空 <ul>（某个 H1/H2 后面没有跟着 H3）
+      Array.prototype.slice.call(topList.querySelectorAll('ul:empty')).forEach(function (ul) {
+        ul.remove();
+      });
+
+      nav.appendChild(topList);
       details.appendChild(nav);
 
       firstHeading.insertAdjacentElement('afterend', details);
