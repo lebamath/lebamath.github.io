@@ -1,3 +1,9 @@
+---
+layout: default
+title: "The BCJR Decoding Algorithm for Convolutional Codes (Part One)"
+lang: en
+back_url: /index.html?lang=en
+---
 ## The BCJR Decoding Algorithm for Convolutional Codes (Part One)
 This article mainly discusses the BCJR decoding algorithm for convolutional codes. One needs to know the basic principles of convolutional codes and some knowledge of probability. We will derive the formulas of the decoding algorithm, and explain the BCJR decoding process with a concrete example.
 

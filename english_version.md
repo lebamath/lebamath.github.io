@@ -62,6 +62,12 @@ lang: en
 
 [FFT-QSPA Algorithm for Multi-ary LDPC Codes](/english_version/channel_coding/ldpc_intro/Multi_ary_LDPC_Codes_decoding_en)
 
+## BCJR decoder algorithm and Turbo code
+
+[The BCJR Decoding Algorithm for Convolutional Codes (Part One)](/english_version/channel_coding/BCJR_Turbo/BCJR_Decoding_Algorithm_for_Convolutional_Codes_en)
+
+
+
 # MUSIC：Multiple Signal Classification algorithm
 
 [.MUSIC:Multiple Signal Classification algorithm](/english_version/MIMO/MUSIC/MUSIC-Multiple-Signal-Classification.html) 
