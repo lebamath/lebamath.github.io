@@ -38,6 +38,9 @@ ad_lang: en
 
     if (cache[lang]) {
       container.innerHTML = cache[lang];
+      // 本页目录是运行时扫描标题生成的，不在抓回来的静态 HTML 里，
+      // 每次把内容塞进页面之后都要重新生成一次（见 _layouts/default.html）。
+      if (window.buildArticleToc) window.buildArticleToc(container);
       return;
     }
 
@@ -48,6 +51,7 @@ ad_lang: en
         var content = doc.querySelector('.content-col');
         cache[lang] = content ? content.innerHTML : '';
         container.innerHTML = cache[lang];
+        if (window.buildArticleToc) window.buildArticleToc(container);
       })
       .catch(function () {
         container.innerHTML = '<p><a href="' + sources[lang] + '">' +

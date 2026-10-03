@@ -68,9 +68,19 @@
     // 本页目录：扫描正文里的 h1/h2/h3，紧跟在第一个标题（文章标题本身）下面
     // 插入一个可折叠的目录框，列出除了文章标题以外的其余标题。
     // 剩余标题少于 2 个就没必要放目录，什么都不插入。
-    (function () {
-      var contentCol = document.querySelector('.content-col');
+    //
+    // 封装成 window.buildArticleToc(root) 可重复调用——普通文章页面加载时
+    // 自己调一次就行；但 index.md 首页的正文是切换语言时用 fetch 异步抓回来、
+    // 再塞进 DOM 的，这段脚本第一次跑的时候内容还没到，所以 index.md 会在
+    // 每次把内容塞进页面之后，自己再调用一次 window.buildArticleToc()
+    // （切语言的时候也要调，不然目录还是上一个语言、上一份内容的）。
+    window.buildArticleToc = function (root) {
+      var contentCol = root || document.querySelector('.content-col');
       if (!contentCol) return;
+
+      // 重复调用时，先把上一次生成的目录清掉（比如 index.md 切换语言后重新生成）
+      var old = contentCol.querySelector('.article-toc');
+      if (old) old.remove();
 
       var headings = Array.prototype.slice.call(
         contentCol.querySelectorAll('h1[id], h2[id], h3[id]')
@@ -139,7 +149,11 @@
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.replaceState(null, '', '#' + target.id);
       });
-    })();
+    };
+
+    // 普通文章页面：正文在布局渲染的时候已经直接写进页面了，这里生成一次就行。
+    // index.md 首页自己的正文是异步塞进去的，不会在这里生成，由它自己调用。
+    window.buildArticleToc();
   </script>
 
   <footer class="site-footer">
