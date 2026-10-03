@@ -211,7 +211,7 @@ $$
 \tag{4}
 $$
 
-Then any one of the summations in Formula (4) can be expanded according to the example below; we take $$P(\psi_6=2,\psi_7=3|r_0,r_1,\cdots,r_9)$$ as the example:
+Then any one of the summations in Formula (4) can be expanded according to the example below; we take $$P(\psi_6=2,\psi_7=3\vert r_0,r_1,\cdots,r_9)$$ as the example:
 
 $$
 \begin{aligned}
