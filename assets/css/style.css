@@ -114,8 +114,12 @@ body {
   padding: 0;
 }
 
+/* 缩进由嵌套的 <ul> 本身体现（每多一层子目录就多缩进一点），
+   而不是按 h1/h2/h3 标签名硬编码缩进量——这样无论文章实际用的是
+   h1→h2→h3 中的哪几级组合，缩进层次都是对的 */
 .article-toc__sublist {
   margin-top: 2px;
+  padding-left: 16px;
 }
 
 .article-toc__link {
@@ -139,7 +143,6 @@ body {
 }
 
 .article-toc__link--h3 {
-  padding-left: 28px;
   font-size: 13px;
 }
 
