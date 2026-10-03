@@ -77,6 +77,14 @@ title: 首页
 
 [卷积码的 BCJR 译码算法 (三)--计算 $$\alpha$$](/chinese_version/channel_coding/BCJR_Turbo/BCJR_Decoding_Algorithm_for_Convolutional_Codes_3)
 
+[卷积码的 BCJR 译码算法 (四)--计算 $$\beta$$](/chinese_version/channel_coding/BCJR_Turbo/BCJR_Decoding_Algorithm_for_Convolutional_Codes_4_5)
+
+[BCJR应用-ISI信道均衡](/chinese_version/channel_coding/BCJR_Turbo/BCJR_ISI_channel_equalization)
+
+[Turbo 译码浅析](/chinese_version/channel_coding/BCJR_Turbo/BCJR_Turbo_decoding)
+
+
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
