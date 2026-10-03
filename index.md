@@ -23,6 +23,16 @@ ad_lang: en
   var buttons = document.querySelectorAll('.lang-switch__btn');
   var cache = {};
 
+  // MathJax（v2）只在页面首次加载时自动扫描一次全文，之后用 innerHTML
+  // 动态塞进来的公式它并不知道，需要手动让它重新扫描一次指定的节点。
+  // 如果脚本这时候还没加载完（异步加载，首次 show() 调用很可能更早），
+  // 就什么都不用做——它自己启动时的那一遍全文扫描会连带把这块内容扫到。
+  function retypesetMath(node) {
+    if (window.MathJax && window.MathJax.Hub) {
+      window.MathJax.Hub.Queue(['Typeset', window.MathJax.Hub, node]);
+    }
+  }
+
   // 直接借用 chinese_version.html / english_version.html 已经生成好的正文内容，
   // 不复制内容、不改动这两个页面本身——它们的链接和标题由你自己维护，
   // 这里只是运行时把渲染好的 .content-col 内容抓过来显示。
@@ -47,6 +57,7 @@ ad_lang: en
       // page.lang——这个静态页面本身没有固定语言，构建时 page.lang 不知道
       // 用户点的是哪个，所以显式传 lang 覆盖。
       if (window.buildArticleToc) window.buildArticleToc(container, { placement: 'before', lang: lang });
+      retypesetMath(container);
       return;
     }
 
@@ -58,6 +69,7 @@ ad_lang: en
         cache[lang] = content ? content.innerHTML : '';
         container.innerHTML = cache[lang];
         if (window.buildArticleToc) window.buildArticleToc(container, { placement: 'before', lang: lang });
+        retypesetMath(container);
       })
       .catch(function () {
         container.innerHTML = '<p><a href="' + sources[lang] + '">' +
