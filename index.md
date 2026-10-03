@@ -43,7 +43,10 @@ ad_lang: en
       // 首页每个 # 都是独立一节，没有单独的"文章标题"，所以用 placement: 'before'
       // 把目录放在中文/English切换按钮之后、第一节标题之前（而不是普通文章那样
       // 放在文章标题后面）。
-      if (window.buildArticleToc) window.buildArticleToc(container, { placement: 'before' });
+      // 目录标题（"目录" / "On this page"）要跟着当前切换的语言走，不能用
+      // page.lang——这个静态页面本身没有固定语言，构建时 page.lang 不知道
+      // 用户点的是哪个，所以显式传 lang 覆盖。
+      if (window.buildArticleToc) window.buildArticleToc(container, { placement: 'before', lang: lang });
       return;
     }
 
@@ -54,7 +57,7 @@ ad_lang: en
         var content = doc.querySelector('.content-col');
         cache[lang] = content ? content.innerHTML : '';
         container.innerHTML = cache[lang];
-        if (window.buildArticleToc) window.buildArticleToc(container, { placement: 'before' });
+        if (window.buildArticleToc) window.buildArticleToc(container, { placement: 'before', lang: lang });
       })
       .catch(function () {
         container.innerHTML = '<p><a href="' + sources[lang] + '">' +

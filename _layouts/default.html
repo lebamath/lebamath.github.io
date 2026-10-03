@@ -108,9 +108,17 @@
       details.className = 'article-toc';
       details.open = true;
 
+      // 目录标题文字的语言：普通文章页面每篇的语言在构建时就定了，用
+      // page.lang 由 Liquid 直接渲染好即可；首页 index.md 是同一个静态
+      // 页面，语言是切换按钮点出来的，构建时 page.lang 并不知道，所以
+      // 首页调用时要显式传 opts.lang 覆盖，不能只看 page.lang。
+      var isEnglish = (opts && opts.lang)
+        ? opts.lang === 'en'
+        : {% if page.lang == "en" %}true{% else %}false{% endif %};
+
       var summary = document.createElement('summary');
       summary.className = 'article-toc__summary';
-      summary.textContent = '{% if page.lang == "en" %}On this page{% else %}目录{% endif %}';
+      summary.textContent = isEnglish ? 'On this page' : '目录';
       details.appendChild(summary);
 
       // 用真正的 <ul><li> 列表（而不是一串靠 CSS display:block 分行的 <a>）：
