@@ -65,6 +65,21 @@
     </aside>
   </div>
   <script>
+    // "返回主目录"是吸顶的，实际高度（字号、padding）写死在 CSS 里基本不变，
+    // 但还是跟顶部广告条一样用 ResizeObserver 实时测量，写回 --back-link-height，
+    // 这样 .article-toc 算自己吸顶偏移量时能准确让开它，不用在 CSS 里猜一个固定数。
+    // 没有返回链接的页面（比如首页）这里直接跳过，变量保持 style.css 里的默认值 0。
+    (function () {
+      var backLink = document.querySelector('.back-link');
+      if (!backLink || typeof ResizeObserver === 'undefined') return;
+      var root = document.documentElement;
+      new ResizeObserver(function (entries) {
+        var h = entries[0].contentRect.height;
+        if (h > 0) root.style.setProperty('--back-link-height', h + 'px');
+      }).observe(backLink);
+    })();
+  </script>
+  <script>
     // 本页目录：扫描正文里的 h1/h2/h3，插入一个可折叠的目录框。
     // 剩余标题少于 2 个就没必要放目录，什么都不插入。
     //

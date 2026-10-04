@@ -12,6 +12,9 @@
   --max-page-width: 1400px;
   --gap: 32px;
   --top-ad-height: 60px;
+  /* 没有返回链接的页面（比如首页）这个值就是 0，.article-toc 的吸顶
+     偏移量直接退化成只让开广告条，见 _layouts/default.html 里的脚本 */
+  --back-link-height: 0px;
 
   --color-text: #24292e;
   --color-bg: #ffffff;
@@ -84,7 +87,10 @@ body {
    吸顶（position: sticky）：往下滚动时目录框停在视口顶部，跟 .ad-col
    用的是同一套机制，top 同样要让开吸顶的广告条，不然会被盖住。
    目录可能很长（标题很多的文章，或首页全部小节展开的情况），这里不限制
-   最大高度——目录本身是可折叠的，嫌挡地方用户自己点一下收起来就行。 */
+   最大高度——目录本身是可折叠的，嫌挡地方用户自己点一下收起来就行。
+   top 里加上 --back-link-height：有返回链接的文章页面，返回链接自己
+   也是吸顶的、且排在目录前面，目录要让在它下面，不然两个吸顶元素会
+   叠在同一个位置上。 */
 .article-toc {
   margin: 1.2em 0 1.6em;
   padding: 14px 18px;
@@ -92,7 +98,7 @@ body {
   border-radius: 8px;
   background: var(--color-code-bg);
   position: sticky;
-  top: calc(var(--top-ad-height) + 16px);
+  top: calc(var(--top-ad-height) + var(--back-link-height) + 32px);
   z-index: 10;
 }
 
@@ -270,9 +276,18 @@ body {
   padding: 6px 12px;
 }
 
+/* 吸顶：滚动时"返回主目录"不随正文滚走，一直留在可点的位置。
+   背景色盖住从下面滚上来的正文，避免吸顶的一瞬间和正文文字重叠串行。
+   高度由 _layouts/default.html 里的脚本实时测量写回 --back-link-height，
+   供 .article-toc 算自己的吸顶偏移量时让开这里。 */
 .back-link {
   margin-bottom: 0.5em;
   font-size: 0.95em;
+  position: sticky;
+  top: calc(var(--top-ad-height) + 16px);
+  z-index: 11;
+  background: var(--color-bg);
+  padding: 4px 0;
 }
 
 .back-link a {
