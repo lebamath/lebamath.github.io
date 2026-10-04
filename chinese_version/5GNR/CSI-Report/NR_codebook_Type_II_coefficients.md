@@ -70,7 +70,7 @@ w_{3,3}, w_{3,7},w_{7,3},w_{7,7}
 \end{aligned}
 $$
 
-![CSI-Report-003-5G NR codebook typeII-回传向量的选择](/figure/5GNR/CSI-REPORT/CSI-Report-003-5G NR codebook typeII-回传向量的选择.png) 
+![CSI-Report-003-5G NR codebook typeII-回传向量的选择](/figure/5GNR/CSI-REPORT/CSI-Report-003-5G-NR-codebook-typeII-回传向量的选择.png) 
 
 
 在 38.214 协议中，表示一个基中的矩阵，用如下的符号：
@@ -109,7 +109,7 @@ $$
 ## 5G NR codebook typeII-回传向量的系数
 回传的向量(Beam 方向) 做线性组合，对于宽带（全频带）有个幅度系数，由 $$i_{1,4,l}$$ 确定；对于每个子带(subband) 也可能有个幅度系数，由 $$i_{2,2,l}$$ 决定，然后，对于每个子带，还有个相位的系数，由 $$i_{2,2,l}$$ 决定。
 
-!["CSI-Report-004-5G NR codebook typeII-回传向量的系数.png"](/figure/5GNR/CSI-REPORT/"CSI-Report-004-5G NR codebook typeII-回传向量的系数.png") 
+![CSI-Report-004-5G NR codebook typeII-回传向量的系数](/figure/5GNR/CSI-REPORT/"CSI-Report-004-5G-NR-codebook-typeII-回传向量的系数.png") 
 
 上面表格中的 $$p_{l,i}^{(1)}$$ 和  $$p_{l,i+L}^{(1)}$$ 是宽带幅度系数，是由 $$i_{1,4,l}$$ 确定的，其中 $$L$$ 表示一共几个向量（波束）.
 
