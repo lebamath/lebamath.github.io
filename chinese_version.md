@@ -93,6 +93,8 @@ title: 首页
 
 [NR type I/II Codebook](/chinese_version/5GNR/CSI-Report/NR_codebook_typeI_II)
 
+[NR codebook typeII-回传向量](/chinese_version/5GNR/CSI-Report/NR_codebook_Type_II_coefficients)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
