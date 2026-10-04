@@ -87,7 +87,7 @@ title: 首页
 
 ## 随机接入 RACH
 
-[zadoff 码的超级快速的傅立叶变换](/chinese_version/5GExplain/PRACHSuperFastFourierTransformOfTheZadoffCode)
+[zadoff 码的超级快速的傅立叶变换](/chinese_version/5GExplain/PRACH/SuperFastFourierTransformOfTheZadoffCode)
 
 ## CSI-REPORT
 
