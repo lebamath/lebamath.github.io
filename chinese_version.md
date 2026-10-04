@@ -89,6 +89,10 @@ title: 首页
 
 [zadoff 码的超级快速的傅立叶变换](/chinese_version/5GExplain/PRACHSuperFastFourierTransformOfTheZadoffCode)
 
+## CSI-REPORT
+
+[NR type I/II Codebook](/chinese_version/5GExplain/CSI-Report/NR_codebook_typeI_II)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
