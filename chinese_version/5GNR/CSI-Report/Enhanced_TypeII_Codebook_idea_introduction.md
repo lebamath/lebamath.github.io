@@ -6,7 +6,7 @@ back_url: /index.html?lang=zh
 ## Enhanced Type II Codebook 思想简介
 
 
-![Enhanced Type II Codebook-1.png](/figure/5GNR/CSI-REPORT/Enhanced_TypeII_Codebook1.png) 
+![Enhanced Type II Codebook-1.png](/figure/5GNR/CSI-report/Enhanced_TypeII_Codebook1.png) 
 
 
 通过上面的公式，为每个 subband （其索引为 $$t$$ ，即第 t 个 subband )生成其预编码矩阵。
@@ -59,7 +59,7 @@ $$
 
 
 一些具体参数的对应关系，可以参考下图来看：这个图中的 $$\tau_{n_f,l}^{(f)}$$ 就是协议中的那个 $$y_{t,l}^{(f)}$$
-!["Enhanced Type II Codebook-2.png"](/figure/5GNR/CSI-REPORT/Enhanced_TypeIl_Codebook2.png") 
+![Enhanced Type II Codebook-2](/figure/5GNR/CSI-report/Enhanced_TypeIl_Codebook2.png) 
 
 图片摘自文献 [1]
 
