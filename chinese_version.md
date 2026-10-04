@@ -99,6 +99,8 @@ title: 首页
 
 [type I 天线端口大于 16 的情况](/chinese_version/5GNR/CSI-Report/NR_codebook_typeI_port_greater_16)
 
+[CIS-RS 的生成](/chinese_version/5GNR/CSI-Report/NR_csi_rs_generation)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
