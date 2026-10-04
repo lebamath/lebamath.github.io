@@ -95,6 +95,8 @@ title: 首页
 
 [NR codebook typeII-回传向量](/chinese_version/5GNR/CSI-Report/NR_codebook_Type_II_coefficients)
 
+[Enhanced Type II Codebook 思想简介](/chinese_version/5GNR/CSI-Report/Enhanced_TypeII_Codebook_idea_introduction)
+
 [type I 天线端口大于 16 的情况](/chinese_version/5GNR/CSI-Report/NR_codebook_typeI_port_greater_16)
 
 # MIMO
