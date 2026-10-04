@@ -13,21 +13,21 @@ back_url: /index.html?lang=zh
 
 Table 5.2.2.2.1-7: Codebook for 3-layer CSI reporting using antenna ports 3000 to 2999+PCSI-RS
 
-!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-3Layers-.png"](/figure/5GNR/CSI-report/"PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-3Layers-.png") 
+!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-3Layers-.png"](/figure/5GNR/CSI-report/PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-3Layers-.png) 
 
 
 
 Table 5.2.2.2.1-8: Codebook for 4-layer CSI reporting using antenna ports 3000 to 2999+PCSI-RS
 
-!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-4Layers-.png"](/figure/5GNR/CSI-report/"PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-4Layers-.png") 
+!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-4Layers-.png"](/figure/5GNR/CSI-report/PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-4Layers-.png) 
 
 
 我们先不考虑另外一个极化方向，那么，上面的表格，可以简化成如下：
 
-!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-3Layers-Remove-one-polarization.png"](/figure/5GNR/CSI-report/"PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-3Layers-Remove-one-polarization.png") 
+!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-3Layers-Remove-one-polarization.png"](/figure/5GNR/CSI-report/PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-3Layers-Remove-one-polarization.png) 
 
 
-!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-4Layers-Remove-one-polarization.png"](/figure/5GNR/CSI-report/"PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-4Layers-Remove-one-polarization.png") 
+!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-4Layers-Remove-one-polarization.png"](/figure/5GNR/CSI-report/PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4-3GPP-PMI-Table-4Layers-Remove-one-polarization.png) 
 
 
 我们假定 N2 = 1，即只考虑一个线阵（而不是面阵），这样方便推导和理解。
@@ -138,7 +138,7 @@ $$
 （代码见附录一）
 
 
-!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4.png"](/figure/5GNR/CSI-report/"PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4.png") 
+!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4.png"](/figure/5GNR/CSI-report/PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-4.png) 
 
 \clearpage 
 
@@ -162,7 +162,7 @@ $$
 
 (代码见附录二)
 
-!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-any-P.png"](/figure/5GNR/CSI-report/"PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-any-P.png") 
+!["PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-any-P.png"](/figure/5GNR/CSI-report/PMI-TypeI-port-is-greater-16-layer-3-4-cophasing-pi-over-any-P.png) 
 
 \clearpage
 
