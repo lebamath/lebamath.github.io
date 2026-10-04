@@ -59,7 +59,7 @@ $$
 
 
 一些具体参数的对应关系，可以参考下图来看：这个图中的 $$\tau_{n_f,l}^{(f)}$$ 就是协议中的那个 $$y_{t,l}^{(f)}$$
-![Enhanced Type II Codebook-2](/figure/5GNR/CSI-report/Enhanced_TypeIl_Codebook2.png) 
+![Enhanced Type II Codebook-2](/figure/5GNR/CSI-report/Enhanced_TypeII_Codebook2.png) 
 
 图片摘自文献 [1]
 
