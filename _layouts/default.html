@@ -104,9 +104,12 @@
       }
       if (rest.length < 2) return;
 
+      // 默认收起：目录现在是吸顶的，如果默认展开，滚动页面时这个几百像素高
+      // 的框会一直钉在顶部，把下面正文滚过去的内容整段盖住看不见。收起状态
+      // 吸顶只占摘要那一行，不会挡内容，用户想跳转自己点开就行。
       var details = document.createElement('details');
       details.className = 'article-toc';
-      details.open = true;
+      details.open = false;
 
       // 目录标题文字的语言：普通文章页面每篇的语言在构建时就定了，用
       // page.lang 由 Liquid 直接渲染好即可；首页 index.md 是同一个静态

@@ -80,13 +80,20 @@ body {
 
 /* 本页目录：文章内的可折叠框，JS 在加载时根据正文标题自动生成并插到
    文章标题下面（见 _layouts/default.html 里的脚本），剩余标题少于 2 个
-   就不插入。用原生 <details>/<summary> 做折叠，不用额外写展开/收起的 JS。 */
+   就不插入。用原生 <details>/<summary> 做折叠，不用额外写展开/收起的 JS。
+   吸顶（position: sticky）：往下滚动时目录框停在视口顶部，跟 .ad-col
+   用的是同一套机制，top 同样要让开吸顶的广告条，不然会被盖住。
+   目录可能很长（标题很多的文章，或首页全部小节展开的情况），这里不限制
+   最大高度——目录本身是可折叠的，嫌挡地方用户自己点一下收起来就行。 */
 .article-toc {
   margin: 1.2em 0 1.6em;
   padding: 14px 18px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: var(--color-code-bg);
+  position: sticky;
+  top: calc(var(--top-ad-height) + 16px);
+  z-index: 10;
 }
 
 .article-toc__summary {
