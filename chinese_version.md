@@ -87,11 +87,11 @@ title: 首页
 
 ## 随机接入 RACH
 
-[zadoff 码的超级快速的傅立叶变换](/chinese_version/5GExplain/PRACH/SuperFastFourierTransformOfTheZadoffCode)
+[zadoff 码的超级快速的傅立叶变换](/chinese_version/5GNR/PRACH/SuperFastFourierTransformOfTheZadoffCode)
 
 ## CSI-REPORT
 
-[NR type I/II Codebook](/chinese_version/5GExplain/CSI-Report/NR_codebook_typeI_II)
+[NR type I/II Codebook](/chinese_version/5GNR/CSI-Report/NR_codebook_typeI_II)
 
 # MIMO
 
