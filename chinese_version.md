@@ -83,7 +83,11 @@ title: 首页
 
 [Turbo 译码浅析](/chinese_version/channel_coding/BCJR_Turbo/BCJR_Turbo_decoding)
 
+# 5G NR 协议解读
 
+## 随机接入 RACH
+
+[zadoff 码的超级快速的傅立叶变换](/chinese_version/5GExplain/PRACHSuperFastFourierTransformOfTheZadoffCode)
 
 # MIMO
 
