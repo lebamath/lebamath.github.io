@@ -67,10 +67,10 @@ w_{3,0}, w_{3,4},w_{7,0},w_{7,4} \\
 w_{3,1}, w_{3,5},w_{7,1},w_{7,5} \\
 w_{3,2}, w_{3,6},w_{7,2},w_{7,6} \\
 w_{3,3}, w_{3,7},w_{7,3},w_{7,7}
-\end{aligned} 
+\end{aligned}
 $$
 
-!["CSI-Report-003-5G NR codebook typeII-回传向量的选择.png"](/figure/5GNR/CSI-REPORT/"CSI-Report-003-5G NR codebook typeII-回传向量的选择.png") 
+![CSI-Report-003-5G NR codebook typeII-回传向量的选择](/figure/5GNR/CSI-REPORT/CSI-Report-003-5G NR codebook typeII-回传向量的选择.png) 
 
 
 在 38.214 协议中，表示一个基中的矩阵，用如下的符号：
