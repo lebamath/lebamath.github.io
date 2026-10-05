@@ -1,3 +1,8 @@
+---
+layout: default
+title: "CIS-RS 的生成"
+back_url: /index.html?lang=zh
+---
 # CIS-RS 的生成
 
 这篇短文讨论一下 5G NR 中 CSI-RS 是如何在时频域网格中放置的，即重点讨论如下这个公式，在38.211 7.4.1.5.3节中：
