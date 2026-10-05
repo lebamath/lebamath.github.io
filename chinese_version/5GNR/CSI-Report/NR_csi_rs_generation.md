@@ -67,79 +67,88 @@ $$
 
 对于 **Row 4**（4 端口配置，$$X=4$$），计算 $$m'$$ 如下
 
-\vspace{0.5em}
 **提取核心参数** \\
-**端口数**：$$X = 4 > 1$$，根据协议规定，$$\alpha = 2\rho$$ \\
-**复用类型**：\texttt{fd-CDM2}，因此频域内部索引 $$k' \in \{0, 1\}$$ \\
+**端口数**：$$X = 4 > 1$$，根据协议规定，$$\alpha = 2\rho$$ 
+
+**复用类型**：fd-CDM2，因此频域内部索引 $$k' \in \{0, 1\}$$ 
+
 **频域起始点**：$$\bar{k}$$ 位于一个 PRB 内部（即 $$\bar{k} \le 11$$），且 $$N_{\text{sc}}^{\text{RB}} = 12$$
 
-\vspace{0.5em}
-**代入公式化简** \\
-原始通用公式为：
-$$m' = \lfloor n\alpha \rfloor + k' + \left\lfloor \frac{\bar{k}\rho}{12} \right\rfloor
+**代入公式化简** 
 
+原始通用公式为：
+$$
+m' = \lfloor n\alpha \rfloor + k' + \left\lfloor \frac{\bar{k}\rho}{12} \right\rfloor
 $$
 由于 $$\bar{k} \le 11$$ 且 $$\rho = 1$$，其乘积除以 12 必定小于 1，所以向下取整项 $$\lfloor \frac{\bar{k}\rho}{12} \rfloor \equiv 0$$
 
-\vspace{0.5em}
-**最终结论** \\
+
+**最终结论** 
 将 $$\alpha = 2\rho$$ 和尾项为 0 代入，得到极其简洁的最终公式：
 $$
-
 m' = 2 n  + k'
-
 $$
 
-\vspace{0.5em}
-**具体取值示例** \\
-公式为 $$m' = 2n + k'$$（由于在所有 RB 上连续发送，实际有效 $$n = 0, 1, 2 \dots$$）\\
-当 $$n = 0$$ 时，$$m'$$ 取值为 $$0, 1$$\\
-当 $$n = 1$$ 时，$$m'$$ 取值为 $$2, 3$$\\
-当 $$n = 2$$ 时，$$m'$$ 取值为 $$4, 5$$\\
+**具体取值示例** 
+
+公式为 $$m' = 2n + k'$$（由于在所有 RB 上连续发送，实际有效 $$n = 0, 1, 2 \dots$$）
+
+当 $$n = 0$$ 时，$$m'$$ 取值为 $$0, 1$$
+
+当 $$n = 1$$ 时，$$m'$$ 取值为 $$2, 3$$
+
+当 $$n = 2$$ 时，$$m'$$ 取值为 $$4, 5$$
+
 序列索引每次消耗 2 个，完美连续递增
 
 
 ### Row 14 例子
 对于 **Row 14**（24 端口配置，$$X=24$$），计算 $$m'$$ 的极简推导如下
 
-\vspace{0.5em}
-**提取核心参数** \\
-**端口数**：$$X = 24 > 1$$，根据协议规定，$$\alpha = 2\rho$$ \\
-**复用类型**：\texttt{cdm4-FD2-TD2}，频域依然为 2 抽头，因此频域内部索引 $$k' \in \{0, 1\}$$ \\
+
+**提取核心参数** 
+
+**端口数**：$$X = 24 > 1$$，根据协议规定，$$\alpha = 2\rho$$ 
+
+**复用类型**：\texttt{cdm4-FD2-TD2}，频域依然为 2 抽头，因此频域内部索引 $$k' \in \{0, 1\}$$ 
+
 **频域起始点**：$$\bar{k}$$ 位于一个 PRB 内部（即 $$\bar{k} \le 11$$），且 $$N_{\text{sc}}^{\text{RB}} = 12$$
 
-\vspace{0.5em}
-**代入公式化简** \\
+
+**代入公式化简** 
 原始通用公式为：
 $$
-
 m' = \lfloor n\alpha \rfloor + k' + \left\lfloor \frac{\bar{k}\rho}{12} \right\rfloor
-
 $$
+
 由于 $$\bar{k} \le 11$$ 且 $$\rho \le 1$$（如 $$\rho=1$$ 或 $$0.5$$），其乘积除以 12 必定小于 1，所以向下取整项 $$\lfloor \frac{\bar{k}\rho}{12} \rfloor \equiv 0$$
 
-\vspace{0.5em}
-**最终结论** \\
+**最终结论** 
 将 $$\alpha = 2\rho$$ 和尾项为 0 代入，得到极其简洁的最终公式：
 $$
-
 m' = \lfloor 2\rho n \rfloor + k'
-
 $$
 
-\vspace{0.5em}
-**具体取值示例** \\
-\textbf{当 $$\rho = 1$$ 时}：公式为 $$m' = 2n + k'$$（由于在所有 RB 上连续发送，实际有效 $$n = 0, 1, 2 \dots$$）\\
-当 $$n = 0$$ 时，$$m'$$ 取值为 $$0, 1$$\\
-当 $$n = 1$$ 时，$$m'$$ 取值为 $$2, 3$$\\
-当 $$n = 2$$ 时，$$m'$$ 取值为 $$4, 5$$\\
+**具体取值示例** 
+当 $$\rho = 1$$ 时：公式为 $$m' = 2n + k'$$（由于在所有 RB 上连续发送，实际有效 $$n = 0, 1, 2 \dots$$）
+
+当 $$n = 0$$ 时，$$m'$$ 取值为 $$0, 1$$
+
+当 $$n = 1$$ 时，$$m'$$ 取值为 $$2, 3$$
+
+当 $$n = 2$$ 时，$$m'$$ 取值为 $$4, 5$$
+
 序列索引每次消耗 2 个，完美连续递增
 
-\vspace{0.5em}
-\textbf{当 $$\rho = 0.5$$ 时}：公式为 $$m' = n + k'$$（假设 offset = 0，仅在偶数 RB 上发送，实际有效 $$n = 0, 2, 4 \dots$$）\\
-当 $$n = 0$$ 时，$$m'$$ 取值为 $$0, 1$$\\
-当 $$n = 2$$ 时，$$m'$$ 取值为 $$2, 3$$\\
-当 $$n = 4$$ 时，$$m'$$ 取值为 $$4, 5$$\\
+
+当 $$\rho = 0.5$$ 时：公式为 $$m' = n + k'$$（假设 offset = 0，仅在偶数 RB 上发送，实际有效 $$n = 0, 2, 4 \dots$$）
+
+当 $$n = 0$$ 时，$$m'$$ 取值为 $$0, 1$$
+
+当 $$n = 2$$ 时，$$m'$$ 取值为 $$2, 3$$
+
+当 $$n = 4$$ 时，$$m'$$ 取值为 $$4, 5$$
+
 结合奇偶 RB 的物理过滤机制，虽然跳过了奇数 RB，但实际提取的序列索引依然是 $$0, 1, 2, 3, 4, 5$$，同样完美连续递增
 
 ![图1：Enter Caption](/figure/5GNR/CSI-RS-Alloc/resouceGridRow14p1.png)
@@ -157,21 +166,21 @@ $$
 
 The UE shall assume that a CSI-RS is transmitted using antenna ports $$p$$ numbered according to
 $$
-
+\begin{aligned}
 p &= 3000 + s + jL; \\
 	j &= 0, 1, \dots, N/L - 1 \\
 	s &= 0, 1, \dots, L - 1;
-
+\end{aligned}
 $$
 where $$s$$ is the sequence index provided by Tables 7.4.1.5.3-2 to 7.4.1.5.3-5, $$L \in \{1, 2, 4, 8\}$$ is the CDM group size, and $$N$$ is the number of CSI-RS ports. The CDM group index $$j$$ given in Table 7.4.1.5.3-1 corresponds to the time/frequency locations $$(\bar{k}, \bar{l})$$ for a given row of the table. The CDM groups are numbered in order of increasing frequency domain allocation first and then increasing time domain allocation.
 
 UE（用户设备）应假设 CSI-RS 是使用按以下方式编号的天线端口 $$p$$ 来传输的：
 $$
-
+\begin{aligned}
 p &= 3000 + s + jL; \\
 	j &= 0, 1, \dots, N/L - 1 \\
 	s &= 0, 1, \dots, L - 1;
-
+\end{aligned}
 $$
 其中 $$s$$ 是由表 7.4.1.5.3-2 至 7.4.1.5.3-5 提供的序列索引，$$L \in \{1, 2, 4, 8\}$$ 是 CDM 组大小，且 $$N$$ 是 CSI-RS 端口的数量。表 7.4.1.5.3-1 中给出的 CDM 组索引 $$j$$ 对应于该表给定行的时频位置 $$(\bar{k}, \bar{l})$$。CDM 组的编号顺序为：首先按频域分配递增的顺序排序，然后再按时域分配递增的顺序排序。
 
@@ -196,29 +205,20 @@ $$j$$ 代表的是 CDM 组号， $$s$$ 代表组中的第几个天线端口，�
 ### 确定在 RB 中的什么位置开始
 
 由如下公式得到：
-
 $$
-
 [b_3 \cdots b_0], \quad k_{i-1} = f(i) \quad \text{for row 1 of Table 7.4.1.5.3-1}
-
 $$
 
 $$
-
 [b_{11} \cdots b_0], \quad k_{i-1} = f(i) \quad \text{for row 2 of Table 7.4.1.5.3-1}
-
 $$
 
 $$
-
 [b_2 \cdots b_0], \quad k_{i-1} = 4f(i) \quad \text{for row 4 of Table 7.4.1.5.3-1}
-
 $$
 
 $$
-
 [b_5 \cdots b_0], \quad k_{i-1} = 2f(i) \quad \text{for all other cases}
-
 $$
 
 其中 $$f(i)$$ 表示第$$i$$ 个设置为1的比特在比特流中的位置， $$i$$ 的取值范围是38.211 Table 7.4.1.5.3-1表格中 k 的下标取值范围，例如 Row=6，有$$k_0,k_1,k_2,k_3$$,则$$i$$ 的取值有 $$i=0,1,2,3$$.  那么 $$f(2)$$ 表示 $$[b_5 \cdots b_0]$$ 中从左到右第2个（从0开始计数）为1的比特在 $$[b_5 \cdots b_0]$$ 中的位置，例如  $$[b_5 \cdots b_0] = [1\textcolor{red}{1}1001]$$，则 $$f(2)=4$$.
@@ -272,13 +272,9 @@ $$k'$$  的取值只有 0. 因此，这种情况下一捆就是一个 RE，则�
 
 
 **Row 4**  如图 5 所示的第三种情况就是 row 4 的，根据表格 38.211 Table 7.4.1.5.3-1: CSI-RS locations within a slot ,  频域信息的相关信息为
-
 $$
-
 (k_0,l_0)\ (k_0+2,l_0), \ \ k'=\{0,1\}
-
 $$
-
 当 $$k_0$$ 取定后，分派的 RE  就是 $$k_0,k_0+1,k_0+2,k_0+3$$  这 4 个 RE.
 
 ![图6：Row 4 的情况](/figure/5GNR/CSI-RS-Alloc/csirs-row4-b2b1b0.png)
@@ -294,13 +290,9 @@ $$i$$  是表示这是第几个 1， 因为只有一个 是 1， 因此， $$i=1
 **第四种情况** 如图 5 所示的第四种情况，适用于除 Row 1, Row 2 和 Row 4 之外的所有情况，这些情况都是需要 6 个比特来表示。我们以 Row 6 为例来讨论。
 
 根据表格 38.211 Table 7.4.1.5.3-1: CSI-RS locations within a slot ,  频域信息的相关信息为
-
 $$
-
 (k_0,l_0)\ (k_1,l_0)\ (k_2,l_0)\ (k_3,l_0), \ \ k'=\{0,1\}
-
 $$
-
 这种情况，需要指定四个参数 $$k_0,k_1,k_2,k_3$$. 由于 $$k'$$  有两个取值，因此，每个 $$k$$ 确定后就对应连续的两个 RE，因此，将一个 RB 内的 12 个 RE 分成了6 组，
 ![图7：Row 6 的情况](/figure/5GNR/CSI-RS-Alloc/csirs-row6-b5b4b3b2b1b0.png)
 
@@ -366,30 +358,22 @@ $$
 
 
 ### CDM 的解复用
-
 $$
-
 \begin{cases}
 		y(0) = r(0)w(0,0)h_0 + r(0)w(0,1)h_1 + r(0)w(0,2)h_2 + r(0)w(0,3)h_3 \\
 		y(1) = r(1)w(1,0)h_0 + r(1)w(1,1)h_1 + r(1)w(1,2)h_2 + r(1)w(1,3)h_3 \\
 		y(2) = r(2)w(2,0)h_0 + r(2)w(2,1)h_1 + r(2)w(2,2)h_2 + r(2)w(2,3)h_3 \\
 		y(3) = r(3)w(3,0)h_0 + r(3)w(3,1)h_1 + r(3)w(3,2)h_2 + r(3)w(3,3)h_3
 	\end{cases}
-
 $$
 
 $$
-
 y' = W \cdot \vec{h}
-
 $$
 
 $$
-
 W^T \cdot y' = W^T \cdot W \cdot \vec{h} = \vec{h}
-
 $$
-
 其中 w(m,s) 的 s 表示组内第 s 个 天线端口，m 表示组内的RE的位置，是由 $$k'$$ 和 $$l'$$ 决定的。$$y(i)$$ 表示第 $$i$$ 个 CSI-RS RE 上被 UE 接收到的信号。
 
 可以看到，通过可逆正交矩阵 $$W$$，可以计算出每个天线端口对应的信道系数 $$h_i$$.
@@ -400,47 +384,36 @@ $$
 *图10：cdm4-FD2-TD2*
 
 $$s=0$$  时，取图10中表格的第0行，
-
 $$
-
 W(0,0) = w_{\text{f},0}(0) \cdot w_{\text{t},0}(0) = 1 \times 1 = 1  \\
 	W(1,0) = w_{\text{f},0}(1) \cdot w_{\text{t},0}(0) = 1 \times 1 = 1  \\
 	W(2,0) = w_{\text{f},0}(0) \cdot w_{\text{t},0}(1) = 1 \times 1 = 1  \\
 	W(3,0) = w_{\text{f},0}(1) \cdot w_{\text{t},0}(1) = 1 \times 1 = 1
-
 $$
 
 $$s=3$$  时，取图10中表格的第3行(从0开始计)，
 
 $$
-
 \begin{aligned}
 		W(0,3) &= w_{\text{f},3}(0) \cdot w_{\text{t},3}(0) = 1 \times 1 &=& 1  \\
 		W(1,3) &= w_{\text{f},3}(1) \cdot w_{\text{t},3}(0) = (-1) \times 1 &=& -1  \\
 		W(2,3) &= w_{\text{f},3}(0) \cdot w_{\text{t},3}(1) = 1 \times (-1) &=& -1  \\
 		W(3,3) &= w_{\text{f},3}(1) \cdot w_{\text{t},3}(1) = (-1) \times (-1) &=& 1  
 	\end{aligned}
-
 $$
-
 ## CDM码分复用的解耦
 
 我们以cdm4-FD2-TD2为例子来解释。那么原始的参考信号(在没有做 CDM 码分复用操作之前的)有 4 个，虽然在时频域资源网格中是一个 2x2 的，但是，为了数学推导的方便，我们将之记为一个列向量：
 $$
-
 \mathbf{r} = \begin{bmatrix}
 		r_0 \\
 		r_1 \\
 		r_2 \\
 		r_3
 	\end{bmatrix}
-
 $$
-
 对应四个端口有四个码分复用的编码向量，我们记为：
-
 $$
-
 \mathbf{U} = \begin{bmatrix}
 		u_0 \\
 		u_1 \\
@@ -468,13 +441,10 @@ $$
 		f_2 \\
 		f_3
 	\end{bmatrix}
-
 $$
-
 上面这四个向量是用表格 \ref{fig:csi_rs_cdm_table_cdm4FD2TD2} 中的对应行做 Kronecker 积产生的。
 例如  $$\mathbf{F}$$ 是用表格中的第 3 行产生的：
 $$
-
 \mathbf U =
 	\begin{bmatrix}
 		w_f(0) \\
@@ -502,18 +472,15 @@ $$
 		-1 \\
 		1
 	\end{bmatrix}
-
 $$
-
 
 容易证明，这四个向量是彼此正交的。
 
 则每个端口发出去的参考信号为(其中 $$\cdot$$ 乘法，表示矩阵对应元素相乘)：
 $$
-
 \mathbf U \cdot \mathbf r
-
 $$
+
 $$
 \mathbf V \cdot \mathbf r
 $$
@@ -525,30 +492,22 @@ $$
 $$
 \mathbf F \cdot \mathbf r
 $$
-
 为了表达式的简洁，忽略接收端的高斯白噪声，四个天线端口对应信道的系数为 $$h_i, \  i=0,1,2,3$$, 则接收到的数据为：
-
 $$
 \mathbf Y =  h_0(\mathbf U \cdot \mathbf r)   + h_1 (\mathbf V \cdot \mathbf r)  + h_2 (\mathbf W \cdot \mathbf r)  + h_3 (\mathbf F \cdot \mathbf r )
 $$
-
 可以推导为：
-
 $$
 \mathbf Y =  (h_0\mathbf U) \cdot \mathbf r   + (h_1 \mathbf V )\cdot \mathbf r  + (h_2 \mathbf W) \cdot \mathbf r  + (h_3 \mathbf F) \cdot \mathbf r
 $$
-
 两边同时点除 $$\mathbf r$$:
-
 $$
 \mathbf Y'  = \mathbf Y ./ \mathbf r =  h_0\mathbf U   + h_1 \mathbf V   + h_2 \mathbf W  + h_3 \mathbf F
 \tag{1}
 $$
-
 其中  $$./$$ 表示两个向量对应元素相除。
 
 可以看到上式是 4 个正交向量的线性组合，组合的系数是信道系数，则再两段分别左乘码分复用的编码向量，则可以得到对应的系数，例如左乘 $$\mathbf V^{\text T}$$：
-
 $$
 \begin{aligned}
 		\mathbf V^{\text T}\mathbf Y' &=  \mathbf V^{\text T}( h_0\mathbf U   + h_1 \mathbf V   + h_2 \mathbf W  + h_3 \mathbf F) \\
@@ -557,15 +516,11 @@ $$
 		& = h_1 * |\mathbf V|^2
 	\end{aligned}
 $$
-
 则可以解得 $$h_1$$:
-
 $$
 h_1 =   \mathbf V^{\text T}\mathbf Y' /|\mathbf V|^2
 $$
-
 从方程组 (1), 这个方程组有 4 个方程，有 4 个未知数$$h_0,h_1,h_2,h_3$$:
-
 $$
 \begin{aligned}
 		y'_0 = h_0 u_0 + h_1 v_0 + h_2 w_0 + h_3 f_0 \\
