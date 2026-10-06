@@ -111,6 +111,10 @@ title: 首页
 
 [Polar Code 的 puncture 和 shortening](/chinese_version/5GNR/ChannelCoding/NR_puncture_and_shortening)
 
+## PDSCH
+
+[PDSCH编码过程](/chinese_version/5GNR/Pdsch/NR_pdsch_encoding)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
