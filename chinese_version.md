@@ -121,6 +121,8 @@ title: 首页
 
 # MIMO
 
+## [MIMO 初步](/chinese_version/MIMO_pre/MIMO_introduction)
+
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
 
 ## MUSIC 算法
