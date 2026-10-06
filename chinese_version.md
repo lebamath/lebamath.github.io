@@ -132,6 +132,7 @@ title: 首页
 [MIMO 非线性检测](/chinese_version/MIMO/MIMO_Non_Linear_equalization)
 
 [MIMO 信道容量的数学分析](/chinese_version/MIMO/mimo_channel_capacity_analysis)
+
 [MIMO 预编码](/chinese_version/MIMO/MIMO_precoder)
 
 ## MUSIC 算法
