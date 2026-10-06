@@ -129,6 +129,8 @@ title: 首页
 
 [MIMO 线性检测/均衡](/chinese_version/MIMO/MIMO_Linear_equalization)
 
+[MIMO 非线性检测](/chinese_version/MIMO/MIMO_Non_Linear_equalization)
+
 ## MUSIC 算法
 
 [.MUSIC(Multiple Signal Classification)算法](/chinese_version/MIMO/MUSIC/MUSIC_Multiple_Signal_Classification_algorithm)
