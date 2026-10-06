@@ -131,6 +131,8 @@ title: 首页
 
 [MIMO 非线性检测](/chinese_version/MIMO/MIMO_Non_Linear_equalization)
 
+[MIMO 信道容量的数学分析](/chinese_version/MIMO/mimo_channel_capacity_analysis)
+
 ## MUSIC 算法
 
 [.MUSIC(Multiple Signal Classification)算法](/chinese_version/MIMO/MUSIC/MUSIC_Multiple_Signal_Classification_algorithm)
@@ -138,6 +140,8 @@ title: 首页
 [.root MUSIC 算法](/chinese_version/MIMO/MUSIC/root_MUSIC_algorithm)
 
 [.空域平滑 MUSIC 算法](/chinese_version/MIMO/MUSIC/spatial_smoothing_music)
+# 神经网络与通信
+[一个简单的例子](/chinese_version/neural_network_and_comm/nn_an_simple_example)
 
 # GPU 
 
