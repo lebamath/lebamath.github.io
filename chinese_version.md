@@ -123,6 +123,8 @@ title: 首页
 
 ## [MIMO 初步](/chinese_version/MIMO_pre/MIMO_introduction)
 
+## [MIMO波束成形浅析](/chinese_version/MIMO/BeamformingIntro/BeamForming_introduction)
+
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
 
 ## MUSIC 算法
