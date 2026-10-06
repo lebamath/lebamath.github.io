@@ -115,6 +115,10 @@ title: 首页
 
 [PDSCH编码过程](/chinese_version/5GNR/Pdsch/NR_pdsch_encoding)
 
+## SRS 
+
+[SRS(Sounding Reference Signal) hopping](/chinese_version/5GNR/SRS/NR_SRS_hopping)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
