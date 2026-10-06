@@ -255,4 +255,4 @@ $$
 \end{aligned}
 $$
 
-!["CCE candidate 位置的确定-18CCEs.png"](/figure/5GNR/PDCCH/CCE_candidate_位置的确定-18CCEs.png") 
+!["CCE candidate 位置的确定-18CCEs.png"](/figure/5GNR/PDCCH/CCE_candidate_位置的确定-18CCEs.png) 
