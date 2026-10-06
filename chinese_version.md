@@ -101,6 +101,10 @@ title: 首页
 
 [CIS-RS 的生成](/chinese_version/5GNR/CSI-Report/NR_csi_rs_generation)
 
+## PDCCH
+
+[频域资源映射](/chinese_version/5GNR/PDCCH/nr_pdcch_freq_resource_mapping)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
