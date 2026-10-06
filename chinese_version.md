@@ -109,6 +109,8 @@ title: 首页
 
 [5G 协议中如何计算 Parity Check 比特](/chinese_version/5GNR/ChannelCoding/NR_how_to_calculate_parity_check_bits)
 
+[Polar Code 的 puncture 和 shortening](/chinese_version/5GNR/ChannelCoding/NR_puncture_and_shortening)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
