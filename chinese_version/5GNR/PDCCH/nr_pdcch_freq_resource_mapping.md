@@ -75,7 +75,7 @@ $$
 \end{aligned}
 $$
 
-!["CCE2REG的映射-1.png"](/figure/5GNR/PDCCH/"CCE2REG的映射-1.png") 
+!["CCE2REG的映射-1.png"](/figure/5GNR/PDCCH/CCE2REG的映射-1.png) 
 
 
 
@@ -102,7 +102,7 @@ $$
 \end{aligned}
 $$
 
-!["CCE2REG的映射-2.png"](/figure/5GNR/PDCCH/"CCE2REG的映射-2.png") 
+!["CCE2REG的映射-2.png"](/figure/5GNR/PDCCH/CCE2REG的映射-2.png) 
 
 
 
@@ -129,9 +129,9 @@ $$
 \end{aligned}
 $$
 
-!["CCE2REG的映射-3.png"](/figure/5GNR/PDCCH/"CCE2REG的映射-3.png") 
+!["CCE2REG的映射-3.png"](/figure/5GNR/PDCCH/CCE2REG的映射-3.png) 
 
-\clearpage
+
 
 ### CCE candidate 位置的确定
 
@@ -239,7 +239,7 @@ $$
 \end{aligned}
 $$
 
-!["CCE candidate 位置的确定-48CCEs.png"](/figure/5GNR/PDCCH/"CCE candidate 位置的确定-48CCEs.png") 
+!["CCE candidate 位置的确定-48CCEs.png"](/figure/5GNR/PDCCH/CCE_candidate_位置的确定-48CCEs.png) 
 
 
 再举一个不能整除的例子，假如$$N_{CCE,p} = 18$$
@@ -255,4 +255,4 @@ $$
 \end{aligned}
 $$
 
-!["CCE candidate 位置的确定-18CCEs.png"](/figure/5GNR/PDCCH/"CCE candidate 位置的确定-18CCEs.png") 
+!["CCE candidate 位置的确定-18CCEs.png"](/figure/5GNR/PDCCH/CCE_candidate_位置的确定-18CCEs.png") 
