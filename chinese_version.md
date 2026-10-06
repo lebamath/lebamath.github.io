@@ -105,6 +105,10 @@ title: 首页
 
 [频域资源映射](/chinese_version/5GNR/PDCCH/nr_pdcch_freq_resource_mapping)
 
+## 信道编码
+
+[5G 协议中如何计算 Parity Check 比特](/chinese_version/5GNR/ChannelCoding/NR_how_to_calculate_parity_check_bits)
+
 # MIMO
 
 [.AoA入射角/到达角估计算法](/chinese_version/MIMO/AoA_angle_of_arrival.html)
