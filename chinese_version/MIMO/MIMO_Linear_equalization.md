@@ -4,6 +4,9 @@ title: "MIMO 线性检测"
 back_url: /index.html?lang=zh
 ---
 # MIMO 线性检测
+
+录制的视频在[B站](https://www.bilibili.com/cheese/play/ep1060677)
+
 ## 匹配滤波 Matched Filter
 
 这篇文章讲解一下 MIMO 检测算法的一个小类别：线性算法。
