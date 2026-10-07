@@ -641,7 +641,7 @@ $$
 $$
 \begin{aligned}
 	\Lambda_i^k  &= \frac{|y_i -(\mu_{z_{ik}}+h_{ik}(-1)|^2}{\sigma^2_{z_{ik}}} -
-	\frac{|y_i -(\mu_{z_{ik}}+h_{ik}(+1))|^2}{{\sigma^2_{z_{ik}}} }  \\ \quad  \\
+	\frac{|y_i -(\mu_{z_{ik}}+h_{ik}(+1))|^2}{\sigma^2_{z_{ik}} }  \\ \quad  \\
 	&= \frac{|y_i -\mu_{z_{ik}}+h_{ik}|^2 - |y_i -\mu_{z_{ik}}-h_{ik}|^2}    
 	{\sigma^2_{z_{ik}}}    \\ \quad  \\
 \end{aligned}   \quad ---- 公式 (10)
