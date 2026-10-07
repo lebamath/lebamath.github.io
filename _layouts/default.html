@@ -189,7 +189,9 @@
         firstHeading.insertAdjacentElement('afterend', details);
       }
 
-      // 点击目录链接平滑滚动（标题已经用 scroll-margin-top 让开了吸顶广告条）
+      // 点击目录链接平滑滚动（标题已经用 scroll-margin-top 让开了吸顶广告条），
+      // 然后把目录收起来——目录是吸顶的，跳转之后如果还摊开着，会一直占着
+      // 顶部一块地方挡正文，收起后只留摘要那一行。
       nav.addEventListener('click', function (e) {
         var a = e.target.closest('a');
         if (!a) return;
@@ -198,6 +200,7 @@
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.replaceState(null, '', '#' + target.id);
+        details.open = false;
       });
     };
 
