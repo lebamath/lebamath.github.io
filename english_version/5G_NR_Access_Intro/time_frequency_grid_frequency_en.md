@@ -19,11 +19,12 @@ It is easy to prove:
 
 Different subcarriers (meaning subcarriers of the same width but at different positions) are orthogonal between the complex exponential waveforms; even if the initial phases and amplitudes of these waveforms are all different, they are still all orthogonal. The orthogonality here means orthogonality within the time interval $$[0,T)$$ ($$T=1/\Delta f$$, or an integer multiple of it).
 
+**Figure 1: sub carriers**
+
 <a id="fig-different-subcarrier"></a>
 
 ![sub carriers](/figure//5G_NR_Access_Intro/different_subcarrier_orth.png)
 
-**Figure 1: sub carriers**
 
 Superposing these subcarrier waveforms carrying phase and amplitude information together and sending them to the receiving side (the up-conversion and down-conversion actions of the high-frequency carrier are omitted here, that is, it is regarded as an equivalent baseband system), because of the orthogonality of the different subcarriers, the receiving side can separate out each subcarrier, and can thereby obtain the phase and amplitude information of each subcarrier.
 
@@ -51,11 +52,13 @@ The waveform of the third subcarrier is then:  $$\beta_3 e^{j\theta_3} e^{j2\pi\
 
 The waveform of the fourth subcarrier is then:  $$\beta_4 e^{j\theta_4} e^{j 2\pi\cdot 4\Delta f t}, t \in [0,T)$$, that is, $$\beta_4 e^{j \left (2\pi\cdot 4\Delta f t + \theta_4 \right ) }$$
 
+**Figure 2: sub carriers with modulation**
+
 <a id="fig-different-subcarrier-with-modulation"></a>
 
 ![sub carriers with modulation](/figure//5G_NR_Access_Intro/different_subcarrier_orth_with_modulation.png)
 
-**Figure 2: sub carriers with modulation**
+
 
 As shown in [Figure 2](#fig-different-subcarrier-with-modulation), a different amplitude and initial phase has been given to each subcarrier; the amplitude and phase information is as shown in the constellation diagram at the lower left of the figure , where the four colored points correspond respectively to the amplitudes and phases of the four subcarriers above. The figure at the lower right is still the spectrum of the individual subcarriers, and it can be seen that orthogonality is still satisfied. The fifth waveform in the figure is the waveform after the four subcarriers with amplitude and initial phase have been simply superposed in time; the solid line is the real part and the dashed line is the imaginary part. This composite waveform is the waveform sent to the receiving side, that is to say, what the receiving side gets is the superposed waveform; to explain once more, because orthogonality is satisfied between the subcarriers, the receiving side can separate out the amplitude and phase information of each subcarrier.
 
