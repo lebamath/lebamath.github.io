@@ -21,7 +21,7 @@ Different subcarriers (meaning subcarriers of the same width but at different po
 
 <a id="fig-different-subcarrier"></a>
 
-![sub carriers](//figure//5G_NR_Access_Intro/different_subcarrier_orth.png)
+![sub carriers](/figure//5G_NR_Access_Intro/different_subcarrier_orth.png)
 
 **Figure 1: sub carriers**
 
@@ -53,7 +53,7 @@ The waveform of the fourth subcarrier is then:  $$\beta_4 e^{j\theta_4} e^{j 2\p
 
 <a id="fig-different-subcarrier-with-modulation"></a>
 
-![sub carriers with modulation](//figure//5G_NR_Access_Intro/different_subcarrier_orth_with_modulation.png)
+![sub carriers with modulation](/figure//5G_NR_Access_Intro/different_subcarrier_orth_with_modulation.png)
 
 **Figure 2: sub carriers with modulation**
 
