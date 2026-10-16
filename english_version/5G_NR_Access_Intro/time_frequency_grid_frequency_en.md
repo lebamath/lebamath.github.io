@@ -11,7 +11,19 @@ back_url: /index.html?lang=en
 
 The basic idea of OFDM is very simple, and it can be understood without needing knowledge of the Discrete Fourier transform (DFT).  OFDM divides the frequency band into subcarriers of **equal bandwidth**.
 
-For example, if the subcarrier width is 15kHz, then the frequency of the first subcarrier can be taken as 15kHz, the frequency of the second subcarrier as 30kHz = 15kHz * 2, the frequency of the third subcarrier as 45kHz = 15kHz * 3, the frequency of the fourth subcarrier as 60kHz = 15kHz * 4, $$\cdots$$, and the frequency spacing between the individual subcarrier frequencies is 15kHz.
+For example, if the subcarrier width is 15kHz, then 
+
+1st subcarrier frequency: 15kHz =15kHz * 1
+
+2nd subcarrier frequency: 30kHz = 15kHz * 2
+
+3rd subcarrier frequency: 45kHz = 15kHz * 3
+
+4th subcarrier frequency: 60kHz = 15kHz * 4, 
+
+......
+
+the frequency spacing between the individual subcarrier frequencies is 15kHz.
 
 As shown in [Figure 1](#fig-different-subcarrier), the first four waveforms are the subcarriers corresponding respectively; it can be seen that the frequency and period of each subcarrier are different, and the frequencies are all integer multiples of the subcarrier bandwidth.
 
