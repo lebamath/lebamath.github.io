@@ -9,7 +9,7 @@ back_url: /index.html?lang=en
 
 5G NR, including the previous generation 4G LTE, are both built on the basis of OFDM (Orthogonal Frequency Division Multiplexing). We will not introduce OFDM in depth here, but we will introduce the idea of OFDM from a very intuitive angle.
 
-The basic idea of OFDM is very simple, and it can be understood without needing knowledge of the discrete Fourier transform (DFT).  OFDM divides the frequency band into subcarriers of **equal bandwidth**.
+The basic idea of OFDM is very simple, and it can be understood without needing knowledge of the Discrete Fourier transform (DFT).  OFDM divides the frequency band into subcarriers of **equal bandwidth**.
 
 For example, if the subcarrier width is 15kHz, then the frequency of the first subcarrier can be taken as 15kHz, the frequency of the second subcarrier as 30kHz = 15kHz * 2, the frequency of the third subcarrier as 45kHz = 15kHz * 3, the frequency of the fourth subcarrier as 60kHz = 15kHz * 4, $$\cdots$$, and the frequency spacing between the individual subcarrier frequencies is 15kHz.
 
