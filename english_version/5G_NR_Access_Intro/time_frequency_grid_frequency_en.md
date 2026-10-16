@@ -13,15 +13,13 @@ The basic idea of OFDM is very simple, and it can be understood without needing 
 
 For example, if the subcarrier width is 15kHz, then 
 
+```
 1st subcarrier frequency: 15kHz =15kHz * 1
-
 2nd subcarrier frequency: 30kHz = 15kHz * 2
-
 3rd subcarrier frequency: 45kHz = 15kHz * 3
-
 4th subcarrier frequency: 60kHz = 15kHz * 4, 
-
 ......
+```
 
 the frequency spacing between the individual subcarrier frequencies is 15kHz.
 
