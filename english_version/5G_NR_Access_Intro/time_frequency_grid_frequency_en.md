@@ -39,28 +39,28 @@ The waveform of the fourth subcarrier is shown in Figure 4. This time span is th
 
 
 
-![图1：First Subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_1.png)
+![figure 1：First Subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_1.png)
 
-*图1：First Subcarrier*
-![图2：the second subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_2.png)
+*figure 1：First Subcarrier*
+![figure 2：the second subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_2.png)
 
-*图2：the second subcarrier*
+*figure 2：the second subcarrier*
 
-![图3：the third subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_3.png)
+![figure 3：the third subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_3.png)
 
-*图3：the third subcarrier*
+*figure 3：the third subcarrier*
 
-![图4：the fourth subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_4.png)
+![figure 4：the fourth subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_4.png)
 
-*图4：the fourth subcarrier*
+*figure 4：the fourth subcarrier*
 
 
 The waveforms of these four subcarriers are sent out over the air at the same time, which is equivalent to these four waveforms being simply superposed together; the waveform after being superposed together is as shown in the figure 5.
 
 
-![图5：Four subcarriers superposed together](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_4_SCs.png)
+![figure 5：Four subcarriers superposed together](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_4_SCs.png)
 
-*图5：Four subcarriers superposed together*
+*figure 5：Four subcarriers superposed together*
 
 We send waveforms out in order to carry useful data information, that is, data bits, so each subcarrier needs to be modulated. In the figures illustrated above, the initial phases of all the subcarriers are 0 and the maximum amplitudes are all 1, so in fact no information is carried. In wireless communications, different initial phases and/or amplitudes are used to represent the bit information carried, for example (if you want to understand modulation in depth, please refer to 16QAM modulation):
 
@@ -83,32 +83,32 @@ The waveform of the third subcarrier is shown in Figure 8.
 
 The waveform of the fourth subcarrier is shown in Figure 9.
 
-![图6：First Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_1.png)
+![figure 6：First Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_1.png)
 
-*图6：First Subcarrier，initial phase and amplitude*
-
-
-![图7：Second Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_2.png)
-
-*图7：Second Subcarrier，initial phase and amplitude*
+*figure 6：First Subcarrier，initial phase and amplitude*
 
 
-![图8：Third Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_3.png)
+![figure 7：Second Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_2.png)
 
-*图8：Third Subcarrier，initial phase and amplitude*
+*figure 7：Second Subcarrier，initial phase and amplitude*
 
 
-![图9：Fourth Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_4.png)
+![figure 8：Third Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_3.png)
 
-*图9：Fourth Subcarrier，initial phase and amplitude*
+*figure 8：Third Subcarrier，initial phase and amplitude*
+
+
+![figure 9：Fourth Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_4.png)
+
+*figure 9：Fourth Subcarrier，initial phase and amplitude*
 
 
 The waveform after the four subcarriers carrying information have been superposed is shown in Figure 10.
 
 
-![图10：Superposition of the four subcarriers carrying information](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_sum.png)
+![figure 10：Superposition of the four subcarriers carrying information](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_sum.png)
 
-*图10：Superposition of the four subcarriers carrying information*
+*figure 10：Superposition of the four subcarriers carrying information*
 
 
 For the example illustrated above, let us discuss it with simple mathematics; the amplitude and initial phase that each subcarrier has had added in order to carry bit information have also been taken into account. Suppose the subcarrier bandwidth is denoted by $$\Delta f$$, for example $$\Delta f = 15 \text{kHz}$$; the corresponding period is $$T = \frac{1}{\Delta f}$$.
