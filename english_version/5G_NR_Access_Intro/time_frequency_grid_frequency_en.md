@@ -64,14 +64,14 @@ The waveforms of these four subcarriers are sent out over the air at the same ti
 
 We send waveforms out in order to carry useful data information, that is, data bits, so each subcarrier needs to be modulated. In the figures illustrated above, the initial phases of all the subcarriers are 0 and the maximum amplitudes are all 1, so in fact no information is carried. In wireless communications, different initial phases and/or amplitudes are used to represent the bit information carried, for example (if you want to understand modulation in depth, please refer to 16QAM modulation):
 
-**Table 1: The amplitude/phase of each subcarrier and the corresponding bit information ($\Delta f = 15$ kHz)**
+**Table 1: The amplitude/phase of each subcarrier and the corresponding bit information ($$\Delta f$$ = 15$ kHz)**
 
-| $k$ | Frequency | Bits $b_0b_1b_2b_3$ | Amplitude $A_k$ | Phase $\varphi_k$ |
+| $$k$$ | Frequency | Bits $$b_0b_1b_2b_3$$ | Amplitude $$A_k$$ | Phase $$\varphi_k$$ |
 |:---:|:---------:|:-------------------:|:---------------:|:-----------------:|
-| 1 | 15 kHz | 0011 | 1.3416 | $0.25\pi$ |
-| 2 | 30 kHz | 1001 | 1.0000 | $0.6024\pi$ |
-| 3 | 45 kHz | 1100 | 0.4472 | $-0.75\pi$ |
-| 4 | 60 kHz | 0110 | 1.0000 | $-0.1024\pi$ |
+| 1 | 15 kHz | 0011 | 1.3416 | $$0.25\pi$$ |
+| 2 | 30 kHz | 1001 | 1.0000 | $$0.6024\pi$$ |
+| 3 | 45 kHz | 1100 | 0.4472 | $$-0.75\pi$$ |
+| 4 | 60 kHz | 0110 | 1.0000 | $$-0.1024\pi$$ |
 
 Each subcarrier carries 4 bits of data, represented by different initial phases and amplitudes. Now let us draw once more the waveforms of the individual subcarriers that carry data (solid lines); the dashed lines in the figures are the original waveforms with 0 phase and amplitude 1 that carry no information.
 
