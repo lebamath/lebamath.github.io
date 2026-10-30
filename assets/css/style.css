@@ -324,6 +324,77 @@ body {
   color: var(--color-muted);
 }
 
+/* 首页工具条：语言切换 + 全部展开/全部折叠 */
+.index-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-bottom: 1.5em;
+}
+
+.index-toolbar .lang-switch {
+  margin-bottom: 0;
+}
+
+.fold-all {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.fold-all__btn {
+  font: inherit;
+  font-size: 13px;
+  padding: 5px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.fold-all__btn:hover {
+  color: var(--color-link);
+  border-color: var(--color-link);
+}
+
+/* 首页标题折叠（index.md 的脚本把每个标题和它后面的内容包进 .fold）。
+   箭头由 ::before 画，按钮里没有文字。 */
+.fold__head {
+  cursor: pointer;
+}
+
+.fold__toggle {
+  font: inherit;
+  color: var(--color-muted);
+  background: none;
+  border: 0;
+  padding: 0 0.4em 0 0;
+  cursor: pointer;
+}
+
+.fold__toggle::before {
+  content: "\25BE";
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+.fold.is-collapsed > .fold__head .fold__toggle::before {
+  transform: rotate(-90deg);
+}
+
+.fold.is-collapsed > .fold__body {
+  display: none;
+}
+
+.fold.is-empty > .fold__head {
+  cursor: default;
+}
+
+.fold.is-empty > .fold__head .fold__toggle {
+  display: none;
+}
+
 /* 底部 Footer：跨越整页宽度，不受两栏布局限制，每个页面都会显示
    （Google AdSense 审核要求：Privacy Policy / Terms of Service / About Us 三个页面
    要能从网站导航/footer 里访问到） */
