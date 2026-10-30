@@ -4,45 +4,122 @@ title: " Frequency Domain"
 lang: en
 back_url: /index.html?lang=en
 ---
-
-### Frequency Domain
+## Frequency Domain
 
 5G NR, including the previous generation 4G LTE, are both built on the basis of OFDM (Orthogonal Frequency Division Multiplexing). We will not introduce OFDM in depth here, but we will introduce the idea of OFDM from a very intuitive angle.
 
-The basic idea of OFDM is very simple, and it can be understood without needing knowledge of the Discrete Fourier Transform (DFT).  OFDM divides the frequency band into subcarriers of **equal bandwidth**.
+The basic idea of OFDM is very simple, and it can be understood without needing knowledge of the discrete Fourier transform (DFT: Discrete Fourier Transform).  OFDM divides the frequency band into subcarriers of **equal bandwidth**.
 
-For example, if the subcarrier width is 15kHz, then 
+For example, if the subcarrier width is 15kHz, then,
 
-```
-1st subcarrier frequency: 15kHz =15kHz * 1
-2nd subcarrier frequency: 30kHz = 15kHz * 2
-3rd subcarrier frequency: 45kHz = 15kHz * 3
-4th subcarrier frequency: 60kHz = 15kHz * 4, 
+the frequency of the first subcarrier is 15kHz
+
+the frequency of the second subcarrier is 30kHz = 15kHz * 2
+
+the frequency of the third subcarrier is 45kHz = 15kHz * 3
+
+the frequency of the fourth subcarrier is 60kHz = 15kHz * 4,
+
 ......
-```
 
-the frequency spacing between the individual subcarrier frequencies is 15kHz.
-
-As shown in [Figure 1](#fig-different-subcarrier), the first four waveforms are the subcarriers corresponding respectively; it can be seen that the frequency and period of each subcarrier are different, and the frequencies are all integer multiples of the subcarrier bandwidth.
-
-It is easy to prove:
-
-Different subcarriers (meaning subcarriers of the same width but at different positions) are orthogonal between the complex exponential waveforms; even if the initial phases and amplitudes of these waveforms are all different, they are still all orthogonal. The orthogonality here means orthogonality within the time interval $$[0,T)$$ ($$T=1/\Delta f$$, or an integer multiple of it).
-
-**Figure 1: sub carriers**
-
-<a id="fig-different-subcarrier"></a>
-
-![sub carriers](/figure//5G_NR_Access_Intro/different_subcarrier_orth.png)
+Here do not confuse the frequency value of a subcarrier with the width of a subcarrier: the frequency spacing between the individual subcarrier frequencies is 15kHz, whereas the frequency values of the individual subcarriers are different, and are all integer multiples of the frequency of the first subcarrier.
 
 
-Superposing these subcarrier waveforms carrying phase and amplitude information together and sending them to the receiving side (the up-conversion and down-conversion actions of the high-frequency carrier are omitted here, that is, it is regarded as an equivalent baseband system), because of the orthogonality of the different subcarriers, the receiving side can separate out each subcarrier, and can thereby obtain the phase and amplitude information of each subcarrier.
+Now let us draw figures to understand this(in order to make the figures look concise, only the imaginary part of the complex exponential, that is, the sine part, has been drawn):
 
-Simply superposing together the first four waveforms shown in [Figure 1](#fig-different-subcarrier) forms the fifth waveform plot ($$\sum \text{Re}$$）, where only the superposition plot of the real part is displayed.
+The waveform of the first subcarrier is shown in Figure 1; this is one complete period, the real part (cosine) is the solid line and the imaginary part (sine) is the dashed line.
 
-The last one in [Figure 1](#fig-different-subcarrier) is a spectrum plot, which displays the spectrum plots of the different subcarriers, used to intuitively show the orthogonality: that is, the highest amplitude point of the spectrum of a certain subcarrier corresponds exactly to the amplitude 0 points (null points) of the other subcarriers.
+The waveform of the second subcarrier is shown in Figure 2. This time span is the time of one period of the first subcarrier. Because the frequency of the second subcarrier is 2 times that of the first subcarrier, two complete periods can be seen in the figure.
 
-For the example illustrated above, let us discuss it with simple mathematics. Here we also take into account that each subcarrier has had an amplitude and an initial phase added in order to carry bit information. Suppose the subcarrier bandwidth is denoted by $$\Delta f $$, for example $$\Delta f = 15 \text{kHz}$$; the corresponding period is $$T = \frac{1}{\Delta f}$$.
+
+The waveform of the third subcarrier is shown in Figure 3. This time span is the time of one period of the first subcarrier. Because the frequency of the third subcarrier is 3 times that of the first subcarrier, three complete periods can be seen in the figure.
+
+
+The waveform of the fourth subcarrier is shown in Figure 4. This time span is the time of one period of the first subcarrier. Because the frequency of the fourth subcarrier is 4 times that of the first subcarrier, four complete periods can be seen in the figure.
+
+
+
+![图1：First Subcarrier](/figure//5G_NR_Access_Intro/grid/different_subcarrier_orth_k_1.png)
+
+*图1：First Subcarrier*
+![图2：the second subcarrier](/figure//5G_NR_Access_Intro/grid/different_subcarrier_orth_k_2.png)
+
+*图2：the second subcarrier*
+
+![图3：the third subcarrier](/figure//5G_NR_Access_Intro/grid/different_subcarrier_orth_k_3.png)
+
+*图3：the third subcarrier*
+
+![图4：the fourth subcarrier](/figure//5G_NR_Access_Intro/grid/different_subcarrier_orth_k_4.png)
+
+*图4：the fourth subcarrier*
+
+
+The waveforms of these four subcarriers are sent out over the air at the same time, which is equivalent to these four waveforms being simply superposed together; the waveform after being superposed together is as shown in the figure 5.
+
+
+![图5：Four subcarriers superposed together](/figure//5G_NR_Access_Intro/grid/different_subcarrier_orth_4_SCs.png)
+
+*图5：Four subcarriers superposed together*
+
+We send waveforms out in order to carry useful data information, that is, data bits, so each subcarrier needs to be modulated. In the figures illustrated above, the initial phases of all the subcarriers are 0 and the maximum amplitudes are all 1, so in fact no information is carried. In wireless communications, different initial phases and/or amplitudes are used to represent the bit information carried, for example (if you want to understand modulation in depth, please refer to 16QAM modulation):
+
+% Preamble: \usepackage{booktabs}
+\begin{table}[htbp]
+  \centering
+  \caption{The amplitude/phase of each subcarrier and the corresponding bit information ($$\Delta f = 15$$\,kHz)}
+  \label{tab:subcarrier_qam}
+  \renewcommand{\arraystretch}{1.3}
+  | \toprule
+    $$k$$ | Frequency | Bits $$b_0b_1b_2b_3$$ | Amplitude $$A_k$$ | Phase $$\varphi_k$$ |
+|---|---|---|---|---|
+| \midrule
+    1 | 15 kHz | 0011 | 1.3416 | $$0.25\pi$$ |
+| 2 | 30 kHz | 1001 | 1.0000 | $$0.6024\pi$$ |
+| 3 | 45 kHz | 1100 | 0.4472 | $$-0.75\pi$$ |
+| 4 | 60 kHz | 0110 | 1.0000 | $$-0.1024\pi$$ |
+| \bottomrule |  |  |  |  |
+\end{table}
+
+Each subcarrier carries 4 bits of data, represented by different initial phases and amplitudes. Now let us draw once more the waveforms of the individual subcarriers that carry data (solid lines); the dashed lines in the figures are the original waveforms with 0 phase and amplitude 1 that carry no information.
+
+The waveform of the first subcarrier is shown in Figure 6.
+
+The waveform of the second subcarrier is shown in Figure 7.
+
+The waveform of the third subcarrier is shown in Figure 8.
+
+The waveform of the fourth subcarrier is shown in Figure 9.
+
+![图6：First Subcarrier，initial phase and amplitude](/figure//5G_NR_Access_Intro/grid/modulation/different_subcarrier_orth_modulation_k_1.png)
+
+*图6：First Subcarrier，initial phase and amplitude*
+
+
+![图7：Second Subcarrier，initial phase and amplitude](/figure//5G_NR_Access_Intro/grid/modulation/different_subcarrier_orth_modulation_k_2.png)
+
+*图7：Second Subcarrier，initial phase and amplitude*
+
+
+![图8：Third Subcarrier，initial phase and amplitude](/figure//5G_NR_Access_Intro/grid/modulation/different_subcarrier_orth_modulation_k_3.png)
+
+*图8：Third Subcarrier，initial phase and amplitude*
+
+
+![图9：Fourth Subcarrier，initial phase and amplitude](/figure//5G_NR_Access_Intro/grid/modulation/different_subcarrier_orth_modulation_k_4.png)
+
+*图9：Fourth Subcarrier，initial phase and amplitude*
+
+
+The waveform after the four subcarriers carrying information have been superposed is shown in Figure 10.
+
+
+![图10：Superposition of the four subcarriers carrying information](/figure//5G_NR_Access_Intro/grid/modulation/different_subcarrier_orth_modulation_sum.png)
+
+*图10：Superposition of the four subcarriers carrying information*
+
+
+For the example illustrated above, let us discuss it with simple mathematics; the amplitude and initial phase that each subcarrier has had added in order to carry bit information have also been taken into account. Suppose the subcarrier bandwidth is denoted by $$\Delta f$$, for example $$\Delta f = 15 \text{kHz}$$; the corresponding period is $$T = \frac{1}{\Delta f}$$.
 
 For the first subcarrier, the information we want to send is $$\beta_1 e^{j\theta_1}$$, that is, the amplitude information is $$\beta_1$$ and the initial phase is $$\theta_1$$.
 
@@ -52,7 +129,7 @@ For the third subcarrier, the information we want to send is $$\beta_3 e^{j\thet
 
 For the fourth subcarrier, the information we want to send is $$\beta_4 e^{j\theta_4}$$
 
-Then, within one period, that is, the time parameter $$t$$ continuously runs over the time range $$[0,T)$$, where for intuitive understanding the time added by the cyclic prefix is temporarily ignored .
+Then, within one period, that is, the time parameter $$t$$  continuously runs over the time range $$[0,T)$$:
 
 The waveform of the first subcarrier is then:  $$\beta_1 e^{j\theta_1} e^{j 2\pi\Delta f t}, t \in [0,T)$$, that is, $$\beta_1 e^{j \left (2\pi\Delta f t + \theta_1 \right ) }$$
 
@@ -62,14 +139,3 @@ The waveform of the third subcarrier is then:  $$\beta_3 e^{j\theta_3} e^{j2\pi\
 
 The waveform of the fourth subcarrier is then:  $$\beta_4 e^{j\theta_4} e^{j 2\pi\cdot 4\Delta f t}, t \in [0,T)$$, that is, $$\beta_4 e^{j \left (2\pi\cdot 4\Delta f t + \theta_4 \right ) }$$
 
-**Figure 2: sub carriers with modulation**
-
-<a id="fig-different-subcarrier-with-modulation"></a>
-
-![sub carriers with modulation](/figure//5G_NR_Access_Intro/different_subcarrier_orth_with_modulation.png)
-
-
-
-As shown in [Figure 2](#fig-different-subcarrier-with-modulation), a different amplitude and initial phase has been given to each subcarrier; the amplitude and phase information is as shown in the constellation diagram at the lower left of the figure , where the four colored points correspond respectively to the amplitudes and phases of the four subcarriers above. The figure at the lower right is still the spectrum of the individual subcarriers, and it can be seen that orthogonality is still satisfied. The fifth waveform in the figure is the waveform after the four subcarriers with amplitude and initial phase have been simply superposed in time; the solid line is the real part and the dashed line is the imaginary part. This composite waveform is the waveform sent to the receiving side, that is to say, what the receiving side gets is the superposed waveform; to explain once more, because orthogonality is satisfied between the subcarriers, the receiving side can separate out the amplitude and phase information of each subcarrier.
-
-In summary, the frequency domain is divided into grids according to the subcarrier spacing.
