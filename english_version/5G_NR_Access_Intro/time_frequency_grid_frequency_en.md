@@ -6,6 +6,10 @@ back_url: /index.html?lang=en
 ---
 ## Frequency Domain
 
+[![Video: OFDM introduction with an animation](https://img.youtube.com/vi/oc2g05ahZjw/hqdefault.jpg)](https://youtu.be/oc2g05ahZjw)
+
+[Video: OFDM introduction with an animation](https://youtu.be/oc2g05ahZjw)
+
 5G NR, including the previous generation 4G LTE, are both built on the basis of OFDM (Orthogonal Frequency Division Multiplexing). We will not introduce OFDM in depth here, but we will introduce the idea of OFDM from a very intuitive angle.
 
 The basic idea of OFDM is very simple, and it can be understood without needing knowledge of the discrete Fourier transform (DFT: Discrete Fourier Transform).  OFDM divides the frequency band into subcarriers of **equal bandwidth**.
