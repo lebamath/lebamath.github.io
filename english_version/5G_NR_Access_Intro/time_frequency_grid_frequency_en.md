@@ -6,7 +6,7 @@ back_url: /index.html?lang=en
 ---
 ## Frequency Domain
 
-[![Video: OFDM introduction with an animation](https://img.youtube.com/vi/oc2g05ahZjw/hqdefault.jpg)](https://youtu.be/oc2g05ahZjw)
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/oc2g05ahZjw" title="OFDM introduction with an animation" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 [Video: OFDM introduction with an animation](https://youtu.be/oc2g05ahZjw)
 
