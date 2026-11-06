@@ -1,4 +1,9 @@
-## 频域
+---
+layout: default
+title: "OFDM介绍"
+back_url: /index.html?lang=zh
+---
+## OFDM介绍
 
 5G NR，包括上一代的 4G LTE，都是建立在 OFDM（Orthogonal Frequency Division Multiplexing 正交频分复用）的基础上的。这里不深入介绍 OFDM，但是，我们从非常直观的角度来介绍一下 OFDM 的思想。
 
@@ -33,18 +38,18 @@ OFDM 的基本思想很简单，不需要用离散傅里叶变换(DFT:Discrete F
 
 
 
-![图1：First Subcarrier](./figure/Grid/different_subcarrier_orth_k_1.png)
+![图1：First Subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_1.png)
 
 *图1：First Subcarrier*
-![图2：the second subcarrier](./figure/Grid/different_subcarrier_orth_k_2.png)
+![图2：the second subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_2.png)
 
 *图2：the second subcarrier*
 
-![图3：the third subcarrier](./figure/Grid/different_subcarrier_orth_k_3.png)
+![图3：the third subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_3.png)
 
 *图3：the third subcarrier*
 
-![图4：the fourth subcarrier](./figure/Grid/different_subcarrier_orth_k_4.png)
+![图4：the fourth subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_4.png)
 
 *图4：the fourth subcarrier*
 
@@ -52,7 +57,7 @@ OFDM 的基本思想很简单，不需要用离散傅里叶变换(DFT:Discrete F
 这四个子载波的波形，在空中是同时发出的，也就是相当于这四个波形简单叠加在一起，叠加在一起后的波形如图所示5。
 
 
-![图5：四个子载波叠加在一起](./figure/Grid/different_subcarrier_orth_4_SCs.png)
+![图5：四个子载波叠加在一起](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_4_SCs.png)
 
 *图5：四个子载波叠加在一起*
 
@@ -79,22 +84,22 @@ OFDM 的基本思想很简单，不需要用离散傅里叶变换(DFT:Discrete F
 
 第四个子载波波形如图9 所示.
 
-![图6：First Subcarrier，初始相位和幅度](./figure/Grid/modulation/different_subcarrier_orth_modulation_k_1.png)
+![图6：First Subcarrier，初始相位和幅度](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_1.png)
 
 *图6：First Subcarrier，初始相位和幅度*
 
 
-![图7：Second Subcarrier，初始相位和幅度](./figure/Grid/modulation/different_subcarrier_orth_modulation_k_2.png)
+![图7：Second Subcarrier，初始相位和幅度](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_2.png)
 
 *图7：Second Subcarrier，初始相位和幅度*
 
 
-![图8：Third Subcarrier，初始相位和幅度](./figure/Grid/modulation/different_subcarrier_orth_modulation_k_3.png)
+![图8：Third Subcarrier，初始相位和幅度](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_3.png)
 
 *图8：Third Subcarrier，初始相位和幅度*
 
 
-![图9：Fourth Subcarrier，初始相位和幅度](./figure/Grid/modulation/different_subcarrier_orth_modulation_k_4.png)
+![图9：Fourth Subcarrier，初始相位和幅度](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_4.png)
 
 *图9：Fourth Subcarrier，初始相位和幅度*
 
@@ -102,7 +107,7 @@ OFDM 的基本思想很简单，不需要用离散傅里叶变换(DFT:Discrete F
 携带信息的四个子载波叠加后的波形如图 10 所示。
 
 
-![图10：携带信息的四个子载波叠加](./figure/Grid/modulation/different_subcarrier_orth_modulation_sum.png)
+![图10：携带信息的四个子载波叠加](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_sum.png)
 
 *图10：携带信息的四个子载波叠加*
 

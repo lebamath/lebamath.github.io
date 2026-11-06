@@ -87,6 +87,10 @@ title: 首页
 
 [DMRS 时频域资源分配](/chinese_version/Introduction_5G_NR/dmrs_resouce_allocation.md)
 
+## 时频域网格Grid
+
+[OFDM介绍](/chinese_version/Introduction_5G_NR/Grid/OFDM_Introduction)
+
 # 5G NR 协议解读
 
 ## 随机接入 RACH
