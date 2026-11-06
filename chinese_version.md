@@ -83,6 +83,10 @@ title: 首页
 
 [Turbo 译码浅析](/chinese_version/channel_coding/BCJR_Turbo/BCJR_Turbo_decoding)
 
+# 5G NR 入门介绍
+
+[DMRS 时频域资源分配](/chinese_version/Introduction_5G_NR/dmrs_resouce_allocation.md)
+
 # 5G NR 协议解读
 
 ## 随机接入 RACH
