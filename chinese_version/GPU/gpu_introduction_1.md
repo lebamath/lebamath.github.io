@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "天线阵列的射频波入射角公式 AoA: Angle of Arrival"
+title: "GPU 编程初步介绍（一）"
 back_url: /index.html?lang=zh
 ---
 
