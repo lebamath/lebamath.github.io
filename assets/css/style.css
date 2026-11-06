@@ -294,15 +294,19 @@ body {
   color: var(--color-muted);
 }
 
-/* 页面内直接播放的 YouTube 嵌入。md 里这样写（视频 ID 是 youtu.be/ 后面那串）：
+/* 页面内直接播放的视频嵌入（YouTube / B站通用，iframe 都套在 .video-embed 里）。md 里这样写：
+   YouTube（视频 ID 是 youtu.be/ 后面那串）：
    <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/视频ID" title="说明" loading="lazy" allowfullscreen></iframe></div>
-   用 youtube-nocookie.com 域名，用户不点播放之前 YouTube 不会往访客浏览器写 cookie。
+   B站（BV 号是视频网址里 BV 开头那串）：
+   <div class="video-embed"><iframe src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV号&p=1&autoplay=0" title="说明" loading="lazy" scrolling="no" allowfullscreen></iframe></div>
+   YouTube 用 youtube-nocookie.com 域名，用户不点播放之前不会往访客浏览器写 cookie。
    GitHub 渲染 md 时会去掉 iframe，所以 md 里要在下面再放一行文字链接兜底。 */
 .video-embed {
   position: relative;
-  max-width: 640px;
+  width: 100%;
+  max-width: 900px;
   aspect-ratio: 16 / 9;
-  margin: 1em 0;
+  margin: 1.5em auto;
 }
 
 .video-embed iframe {

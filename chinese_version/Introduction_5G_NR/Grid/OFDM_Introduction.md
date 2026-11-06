@@ -5,6 +5,10 @@ back_url: /index.html?lang=zh
 ---
 ## OFDM介绍
 
+<div class="video-embed"><iframe src="https://player.bilibili.com/player.html?isOutside=true&bvid=BV1FD4Y6aE25&p=1&autoplay=0" title="OFDM 的直观理解" loading="lazy" scrolling="no" allowfullscreen></iframe></div>
+
+[视频：OFDM 的直观理解（B站）](https://www.bilibili.com/video/BV1FD4Y6aE25/)
+
 5G NR，包括上一代的 4G LTE，都是建立在 OFDM（Orthogonal Frequency Division Multiplexing 正交频分复用）的基础上的。这里不深入介绍 OFDM，但是，我们从非常直观的角度来介绍一下 OFDM 的思想。
 
 OFDM 的基本思想很简单，不需要用离散傅里叶变换(DFT:Discrete Fourier Transform)的知识就可以理解.  OFDM 将频带划分成**等带宽**的子载波.
