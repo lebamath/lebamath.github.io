@@ -51,25 +51,25 @@ $$
 
 对于 configuration  type 2:  CDM 组数 * 2 = $$3\times 2 = 6$$
 
-**表：Configuration type 1 的 RE index 推导：$k = 4n + 2k' + \Delta$（一个 RB 内）**
+**表：Configuration type 1 的 RE index 推导：$$k = 4n + 2k' + \Delta$$（一个 RB 内）**
 
-| $n$  | $k'$ | CDM 组 0（$\Delta=0$） | CDM 组 1（$\Delta=1$） |
+| $$n$$  | $$k'$$ | CDM 组 0（$$\Delta=0$$） | CDM 组 1（$$\Delta=1$$） |
 | :--: | :--: | :--------------------- | :--------------------- |
-|  0   |  0   | $4\cdot0+2\cdot0+0=0$  | $4\cdot0+2\cdot0+1=1$  |
-|  0   |  1   | $4\cdot0+2\cdot1+0=2$  | $4\cdot0+2\cdot1+1=3$  |
-|  1   |  0   | $4\cdot1+2\cdot0+0=4$  | $4\cdot1+2\cdot0+1=5$  |
-|  1   |  1   | $4\cdot1+2\cdot1+0=6$  | $4\cdot1+2\cdot1+1=7$  |
-|  2   |  0   | $4\cdot2+2\cdot0+0=8$  | $4\cdot2+2\cdot0+1=9$  |
-|  2   |  1   | $4\cdot2+2\cdot1+0=10$ | $4\cdot2+2\cdot1+1=11$ |
+|  0   |  0   | $$4\cdot0+2\cdot0+0=0$$  | $$4\cdot0+2\cdot0+1=1$$  |
+|  0   |  1   | $$4\cdot0+2\cdot1+0=2$$  | $$4\cdot0+2\cdot1+1=3$$  |
+|  1   |  0   | $$4\cdot1+2\cdot0+0=4$$  | $$4\cdot1+2\cdot0+1=5$$  |
+|  1   |  1   | $$4\cdot1+2\cdot1+0=6$$  | $$4\cdot1+2\cdot1+1=7$$  |
+|  2   |  0   | $$4\cdot2+2\cdot0+0=8$$  | $$4\cdot2+2\cdot0+1=9$$  |
+|  2   |  1   | $$4\cdot2+2\cdot1+0=10$$ | $$4\cdot2+2\cdot1+1=11$$ |
 
-**表：Configuration type 2 的 RE index 推导：$k = 6n + k' + \Delta$（一个 RB 内）**
+**表：Configuration type 2 的 RE index 推导：$$k = 6n + k' + \Delta$$（一个 RB 内）**
 
-| $n$  | $k'$ | CDM 组 0（$\Delta=0$） | CDM 组 1（$\Delta=2$） | CDM 组 2（$\Delta=4$） |
+| $$n$$  | $$k'$$ | CDM 组 0（$$\Delta=0$$） | CDM 组 1（$$\Delta=2$$） | CDM 组 2（$$\Delta=4$$） |
 | :--: | :--: | :--------------------- | :--------------------- | :--------------------- |
-|  0   |  0   | $6\cdot0+0+0=0$        | $6\cdot0+0+2=2$        | $6\cdot0+0+4=4$        |
-|  0   |  1   | $6\cdot0+1+0=1$        | $6\cdot0+1+2=3$        | $6\cdot0+1+4=5$        |
-|  1   |  0   | $6\cdot1+0+0=6$        | $6\cdot1+0+2=8$        | $6\cdot1+0+4=10$       |
-|  1   |  1   | $6\cdot1+1+0=7$        | $6\cdot1+1+2=9$        | $6\cdot1+1+4=11$       |
+|  0   |  0   | $$6\cdot0+0+0=0$$        | $$6\cdot0+0+2=2$$        | $$6\cdot0+0+4=4$$        |
+|  0   |  1   | $$6\cdot0+1+0=1$$        | $$6\cdot0+1+2=3$$        | $$6\cdot0+1+4=5$$        |
+|  1   |  0   | $$6\cdot1+0+0=6$$        | $$6\cdot1+0+2=8$$        | $$6\cdot1+0+4=10$$       |
+|  1   |  1   | $$6\cdot1+1+0=7$$        | $$6\cdot1+1+2=9$$        | $$6\cdot1+1+4=11$$       |
 
 根据以上的描述，可以画出分组的图。如图 1 所示，这个是 DMRS configuration Type 1 的情况，图中左边是一个组，右边是另外一个组，每组有 6 个 RE， 每两个 RE 构成了一个 OCC；如图 2 所示，这个是 DMRS configuration Type 2 的情况，一共有三个组。图中左边是一个组，中间是一个组，右边是一个组，每组有 4 个 RE， 每两个 RE 构成了一个 OCC；
 
@@ -215,7 +215,7 @@ DMRS RE + 6 个空闲 RE）和 configuration type 2（每 RB 4 个 DMRS RE + 4 �
 | DCI 中 Antenna port(s)      |     0     |     1     |
 | 端口                        |   1000    |   1001    |
 | CDM 组                      |   组 0    |   组 0    |
-| 码分的正交掩码 FD-OCC $w_f$ | $[+1,+1]$ | $[+1,-1]$ |
+| 码分的正交掩码 FD-OCC $$w_f$$ | $$[+1,+1]$$ | $$[+1,-1]$$ |
 | N：不承载数据的 CDM 组数    |     1     |     1     |
 | front-load：DMRS 符号数     |     1     |     1     |
 
