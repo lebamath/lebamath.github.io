@@ -90,6 +90,9 @@ lang: en
 [.AoA:Angle of Arrival](/english_version/MIMO/AoA/AoA_estimation.html)
 
 # 5G NR UE Access-Flow Introduction
+
+[DMRS for PDSCH](/english_version/5G_NR_Access_Intro/dmrs_resource_allocation_en)
+
 ## Grid
 [Frequency Domain](/english_version/5G_NR_Access_Intro/time_frequency_grid_frequency_en.html)
 

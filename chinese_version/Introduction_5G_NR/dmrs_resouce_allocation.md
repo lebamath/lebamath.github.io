@@ -84,50 +84,50 @@ $$
 
 每一层的 PDSCH，都对应一个 DMRS，在以上列出的组里进行选择。例如，可能有如下的使用情况。
 
-a) Configuration Type 1，只有一个 Layer/Port，可以用第一组()，也可以用第二组，还要区分使用的组之外的另外一个组是空闲还是给 PDSCH 使用，这样至少就有四种情况，再加上用组 2 的两种情况，这里一共列出 6 种情况.
+a) Configuration Type 1，只有一个 Layer/Port，可以用 CDM 组 0，也可以用 CDM 组 1，还要区分使用的组之外的另外一个组是空闲还是给 PDSCH 使用，每种情况再区分是否通过 OCC 方式复用。协议规定 N=1 时只使用 CDM 组 0（见后文），所以这里一共有 6 种情况.
 
- 图3 使用组1，但是 组 2 给 PDSCH 使用；
+ 图3 使用组 0，但是 组 1 给 PDSCH 使用；
 
- 图 4通过 OCC 方式复用组1，同样，组 2 也是给 PDSCH 使用。
-
-
-图5 是使用组1，但是 组 2 空闲不给 PDSCH 使用。
-
-图6 是通过 OCC 复用的方式使用组1，同样 组 2 空闲不给 PDSCH 使用。
-
-图7 是使用组2，类似的，组 1 空闲不给 PDSCH 使用。
-
-图8 是通过 OCC 复用的方式使用组2，同样，组 1 空闲不给 PDSCH 使用。
+ 图 4 通过 OCC 方式复用组 0，同样，组 1 也是给 PDSCH 使用。
 
 
-![图3：DMRS CDM group for configuration type 1, use CDM 0, CDM 2 PDSCH](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value0_port1000.png)
+图5 是使用组 0，但是 组 1 空闲不给 PDSCH 使用。
 
-*图3：DMRS CDM group for configuration type 1, use CDM 0, CDM 2 PDSCH*
+图6 是通过 OCC 复用的方式使用组 0，同样 组 1 空闲不给 PDSCH 使用。
 
-![图4：DMRS CDM group for configuration type 1，use CDM 0 through OCC, CDM 2 PDSCH](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value1_port1001.png)
+图7 是使用组 1，类似的，组 0 空闲不给 PDSCH 使用。
 
-*图4：DMRS CDM group for configuration type 1，use CDM 0 through OCC, CDM 2 PDSCH*
-
-
-![图5：DMRS CDM group for configuration type 1, use CDM 1, CDM 2 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value3_port1000.png)
-
-*图5：DMRS CDM group for configuration type 1, use CDM 1, CDM 2 empty*
-
-![图6：DMRS CDM group for configuration type 1,, use CDM 1 through OCC, CDM 2 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value4_port1001.png)
-
-*图6：DMRS CDM group for configuration type 1,, use CDM 1 through OCC, CDM 2 empty*
+图8 是通过 OCC 复用的方式使用组 1，同样，组 0 空闲不给 PDSCH 使用。
 
 
+![图3：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 PDSCH](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value0_port1000.png)
 
-![图7：DMRS CDM group for configuration type 1,, use CDM 2, CDM 1 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value5_port1002.png)
+*图3：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 PDSCH*
 
-*图7：DMRS CDM group for configuration type 1,, use CDM 2, CDM 1 empty*
+![图4：DMRS CDM group for configuration type 1，use CDM 0 through OCC, CDM 1 PDSCH](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value1_port1001.png)
+
+*图4：DMRS CDM group for configuration type 1，use CDM 0 through OCC, CDM 1 PDSCH*
+
+
+![图5：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value3_port1000.png)
+
+*图5：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 empty*
+
+![图6：DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value4_port1001.png)
+
+*图6：DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 empty*
 
 
 
-![图8：DMRS CDM group for configuration type 1, use CDM 2 through OCC, CDM 1 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value6_port1003.png)
+![图7：DMRS CDM group for configuration type 1, use CDM 1, CDM 0 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value5_port1002.png)
 
-*图8：DMRS CDM group for configuration type 1, use CDM 2 through OCC, CDM 1 empty*
+*图7：DMRS CDM group for configuration type 1, use CDM 1, CDM 0 empty*
+
+
+
+![图8：DMRS CDM group for configuration type 1, use CDM 1 through OCC, CDM 0 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value6_port1003.png)
+
+*图8：DMRS CDM group for configuration type 1, use CDM 1 through OCC, CDM 0 empty*
 
 
 b) 使用 DMRS Configuration Type 2. 
