@@ -168,8 +168,9 @@ $$
 
 是下面这段文字描述的：
 
-
 The UE shall assume that a CSI-RS is transmitted using antenna ports $$p$$ numbered according to
+
+
 $$
 \begin{aligned}
 p &= 3000 + s + jL; \\
@@ -177,9 +178,13 @@ p &= 3000 + s + jL; \\
 	s &= 0, 1, \dots, L - 1;
 \end{aligned}
 $$
+
+
 where $$s$$ is the sequence index provided by Tables 7.4.1.5.3-2 to 7.4.1.5.3-5, $$L \in \{1, 2, 4, 8\}$$ is the CDM group size, and $$N$$ is the number of CSI-RS ports. The CDM group index $$j$$ given in Table 7.4.1.5.3-1 corresponds to the time/frequency locations $$(\bar{k}, \bar{l})$$ for a given row of the table. The CDM groups are numbered in order of increasing frequency domain allocation first and then increasing time domain allocation.
 
 UE（用户设备）应假设 CSI-RS 是使用按以下方式编号的天线端口 $$p$$ 来传输的：
+
+
 $$
 \begin{aligned}
 p &= 3000 + s + jL; \\
@@ -187,6 +192,8 @@ p &= 3000 + s + jL; \\
 	s &= 0, 1, \dots, L - 1;
 \end{aligned}
 $$
+
+
 其中 $$s$$ 是由表 7.4.1.5.3-2 至 7.4.1.5.3-5 提供的序列索引，$$L \in \{1, 2, 4, 8\}$$ 是 CDM 组大小，且 $$N$$ 是 CSI-RS 端口的数量。表 7.4.1.5.3-1 中给出的 CDM 组索引 $$j$$ 对应于该表给定行的时频位置 $$(\bar{k}, \bar{l})$$。CDM 组的编号顺序为：首先按频域分配递增的顺序排序，然后再按时域分配递增的顺序排序。
 
 
@@ -226,7 +233,7 @@ $$
 [b_5 \cdots b_0], \quad k_{i-1} = 2f(i) \quad \text{for all other cases}
 $$
 
-其中 $$f(i)$$ 表示第$$i$$ 个设置为1的比特在比特流中的位置， $$i$$ 的取值范围是38.211 Table 7.4.1.5.3-1表格中 k 的下标取值范围，例如 Row=6，有$$k_0,k_1,k_2,k_3$$,则$$i$$ 的取值有 $$i=0,1,2,3$$.  那么 $$f(2)$$ 表示 $$[b_5 \cdots b_0]$$ 中从左到右第2个（从0开始计数）为1的比特在 $$[b_5 \cdots b_0]$$ 中的位置，例如  $$[b_5 \cdots b_0] = [1\textcolor{red}{1}1001]$$，则 $$f(2)=4$$.
+其中 $$f(i)$$ 表示第$$i$$ 个设置为1的比特在比特流中的位置， $$i$$ 的取值范围是38.211 Table 7.4.1.5.3-1表格中 k 的下标取值范围，例如 Row=6，有$$k_0,k_1,k_2,k_3$$,则$$i$$ 的取值有 $$i=0,1,2,3$$.  那么 $$f(2)$$ 表示 $$[b_5 \cdots b_0]$$ 中从左到右第2个（从0开始计数）为1的比特在 $$[b_5 \cdots b_0]$$ 中的位置，例如  $$[b_5 \cdots b_0] = [1\color{red}{1}\color{black}{1001}]$$，则 $$f(2)=4$$.
 
 
 
@@ -403,6 +410,8 @@ $$
 ## CDM码分复用的解耦
 
 我们以cdm4-FD2-TD2为例子来解释。那么原始的参考信号(在没有做 CDM 码分复用操作之前的)有 4 个，虽然在时频域资源网格中是一个 2x2 的，但是，为了数学推导的方便，我们将之记为一个列向量：
+
+
 $$
 \mathbf{r} = \begin{bmatrix}
 		r_0 \\
@@ -411,7 +420,11 @@ $$
 		r_3
 	\end{bmatrix}
 $$
+
+
 对应四个端口有四个码分复用的编码向量，我们记为：
+
+
 $$
 \mathbf{U} = \begin{bmatrix}
 		u_0 \\
@@ -441,8 +454,12 @@ $$
 		f_3
 	\end{bmatrix}
 $$
+
+
 上面这四个向量是用表格 \ref{fig:csi_rs_cdm_table_cdm4FD2TD2} 中的对应行做 Kronecker 积产生的。
 例如  $$\mathbf{F}$$ 是用表格中的第 3 行产生的：
+
+
 $$
 \mathbf U =
 	\begin{bmatrix}
@@ -473,9 +490,13 @@ $$
 	\end{bmatrix}
 $$
 
+
+
 容易证明，这四个向量是彼此正交的。
 
 则每个端口发出去的参考信号为(其中 $$\cdot$$ 乘法，表示矩阵对应元素相乘)：
+
+
 $$
 \mathbf U \cdot \mathbf r
 $$
@@ -492,21 +513,35 @@ $$
 \mathbf F \cdot \mathbf r
 $$
 为了表达式的简洁，忽略接收端的高斯白噪声，四个天线端口对应信道的系数为 $$h_i, \  i=0,1,2,3$$, 则接收到的数据为：
+
+
 $$
 \mathbf Y =  h_0(\mathbf U \cdot \mathbf r)   + h_1 (\mathbf V \cdot \mathbf r)  + h_2 (\mathbf W \cdot \mathbf r)  + h_3 (\mathbf F \cdot \mathbf r )
 $$
+
+
 可以推导为：
+
+
 $$
 \mathbf Y =  (h_0\mathbf U) \cdot \mathbf r   + (h_1 \mathbf V )\cdot \mathbf r  + (h_2 \mathbf W) \cdot \mathbf r  + (h_3 \mathbf F) \cdot \mathbf r
 $$
+
+
 两边同时点除 $$\mathbf r$$:
+
+
 $$
 \mathbf Y'  = \mathbf Y ./ \mathbf r =  h_0\mathbf U   + h_1 \mathbf V   + h_2 \mathbf W  + h_3 \mathbf F
 \tag{1}
 $$
+
+
 其中  $$./$$ 表示两个向量对应元素相除。
 
 可以看到上式是 4 个正交向量的线性组合，组合的系数是信道系数，则再两段分别左乘码分复用的编码向量，则可以得到对应的系数，例如左乘 $$\mathbf V^{\text T}$$：
+
+
 $$
 \begin{aligned}
 		\mathbf V^{\text T}\mathbf Y' &=  \mathbf V^{\text T}( h_0\mathbf U   + h_1 \mathbf V   + h_2 \mathbf W  + h_3 \mathbf F) \\
@@ -517,7 +552,9 @@ $$
 $$
 
 
+
 则可以解得 $$h_1$$:
+
 
 
 $$
@@ -525,7 +562,9 @@ h_1 =   \mathbf V^{\text T}\mathbf Y' /|\mathbf V|^2
 $$
 
 
+
 从方程组 (1), 这个方程组有 4 个方程，有 4 个未知数$$h_0,h_1,h_2,h_3$$:
+
 
 
 $$
@@ -536,5 +575,7 @@ $$
 		y'_3 = h_0 u_3 + h_1 v_3 + h_2 w_3 + h_3 f_3
 	\end{aligned}
 $$
+
+
 
 其实只要保证这四个向量线性无关，就可以把四个未知系数接出来，但是用正交的好处是，避免复杂的求逆，用矩阵的转置就是矩阵的逆，大大减少运算量。
