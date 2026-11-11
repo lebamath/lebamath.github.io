@@ -3429,7 +3429,7 @@ let cells=[],idx=0,timer=null;
 function build(){
   const p=+sel.value,j=Math.floor(p/8),s=p%8;
   cells=[];
-  for(let n=0;n<3;n++)for(let kp=0;kp<2;kp++)for(let lp=0;lp<4;lp++){
+  for(let lp=0;lp<4;lp++)for(let n=0;n<3;n++)for(let kp=0;kp<2;kp++){
     const w1=wf[s][kp],w2=wt[s][lp];
     cells.push({n,kp,lp,g:12*n+K[j]+kp,m:2*n+kp,w1,w2,v:w1*w2});
   }
@@ -3474,35 +3474,36 @@ function build(){
   const my=T0+18*rh;
   h+=`<text class="th" x="${(A+4*ca+B)/2}" y="${my}" text-anchor="middle" dominant-baseline="central" style="font-size:20px">×</text>`;
   h+=`<text class="th" x="${(B+4*cb+C)/2}" y="${my}" text-anchor="middle" dominant-baseline="central" style="font-size:20px">=</text>`;
-  h+=`<rect id="hA" width="${ca}" height="${rh}" fill="none" stroke="#E24B4A" stroke-width="2" opacity="0"/><rect id="hB" width="${cb}" height="${BH}" fill="none" stroke="#E24B4A" stroke-width="2" opacity="0"/><rect id="hC" width="${cc}" height="${rh}" fill="none" stroke="#E24B4A" stroke-width="2" opacity="0"/>`;
+  h+=`<rect id="hA" width="${ca}" height="${2*rh}" fill="none" stroke="#E24B4A" stroke-width="2" opacity="0"/><rect id="hB" width="${cb}" height="${2*BH}" fill="none" stroke="#E24B4A" stroke-width="2" opacity="0"/><rect id="hC" width="${cc}" height="${2*rh}" fill="none" stroke="#E24B4A" stroke-width="2" opacity="0"/>`;
   h+=`</svg>`;
   document.getElementById('wrap').innerHTML=h;
   idx=0;show(-1);
 }
 function fmt(v){return v>0?'(+1)':'(−1)';}
 function show(i){
-  const prog=document.getElementById('prog'),eq=document.getElementById('eq');
-  prog.textContent=`${Math.max(i+1,0)} / ${cells.length}`;
+  const prog=document.getElementById('prog'),eq=document.getElementById('eq'),N=cells.length/2;
+  prog.textContent=`${Math.max(i+1,0)} / ${N}`;
   ['hA','hB','hC'].forEach(id=>document.getElementById(id).setAttribute('opacity',i<0?'0':'1'));
   if(i<0){eq.textContent=T('hint');return;}
-  const c=cells[i],y=yT(c.g);
-  const set=(id,x)=>{const e=document.getElementById(id);e.setAttribute('x',x);e.setAttribute('y',y);};
-  set('hA',A+c.lp*ca);{const e=document.getElementById('hB');e.setAttribute('x',B+c.lp*cb);e.setAttribute('y',BY+(1-c.kp)*BH);}set('hC',C+c.lp*cc);
-  const g=document.getElementById('rc'+i);g.setAttribute('class',c.v>0?'c-purple':'c-coral');
-  const val=(c.v>0?'+':'−')+rs(4+c.lp,c.m);
-  g.querySelector('text').textContent=val;
-  eq.textContent=`RB${c.n} k=${c.g%12} (k′=${c.kp}), symbol ${4+c.lp} (l′=${c.lp}):  w_f·w_t = ${fmt(c.w1)}·${fmt(c.w2)} = ${fmt(c.v)}  →  ${val}`;
+  const c0=cells[2*i],c1=cells[2*i+1],y=yT(c1.g);
+  const set=(id,x,yy)=>{const e=document.getElementById(id);e.setAttribute('x',x);e.setAttribute('y',yy);};
+  set('hA',A+c0.lp*ca,y);set('hB',B+c0.lp*cb,BY);set('hC',C+c0.lp*cc,y);
+  const parts=[c0,c1].map((c,k)=>{
+    const g=document.getElementById('rc'+(2*i+k));g.setAttribute('class',c.v>0?'c-purple':'c-coral');
+    const val=(c.v>0?'+':'−')+rs(4+c.lp,c.m);g.querySelector('text').textContent=val;
+    return `k=${c.g%12} (k′=${c.kp}): ${fmt(c.v)}·${rs(4+c.lp,c.m)} = ${val}`;});
+  eq.textContent=`RB${c0.n}, symbol ${4+c0.lp} (l′=${c0.lp}):  ${parts[0]};  ${parts[1]}`;
 }
 function clearRes(){cells.forEach((c,i)=>{const g=document.getElementById('rc'+i);g.setAttribute('class','');g.querySelector('text').textContent='';});}
 function stop(){if(timer){clearInterval(timer);timer=null;}document.getElementById('play').innerHTML='<i class="ti ti-player-play" aria-hidden="true"></i> <span data-i18n="play">'+T('play')+'</span>';}
-function step(){if(idx>=cells.length){stop();return;}show(idx);idx++;if(idx>=cells.length)stop();}
+function step(){const N=cells.length/2;if(idx>=N){stop();return;}show(idx);idx++;if(idx>=N)stop();}
 document.getElementById('play').onclick=()=>{
   if(timer){stop();return;}
-  if(idx>=cells.length){clearRes();idx=0;}
+  if(idx>=cells.length/2){clearRes();idx=0;}
   document.getElementById('play').innerHTML='<i class="ti ti-player-pause" aria-hidden="true"></i> <span data-i18n="pause">'+T('pause')+'</span>';
-  timer=setInterval(step,450);
+  timer=setInterval(step,900);
 };
-document.getElementById('stepb').onclick=()=>{stop();if(idx>=cells.length){clearRes();idx=0;}step();};
+document.getElementById('stepb').onclick=()=>{stop();if(idx>=cells.length/2){clearRes();idx=0;}step();};
 document.getElementById('reset').onclick=()=>{stop();clearRes();idx=0;show(-1);};
 sel.onchange=()=>{stop();build();};
 function applyLang(){
