@@ -40,7 +40,7 @@ $$
 p(x|y) \propto  p(y|x) \tag{8}
 $$
 So we can compute p(y|x) for every x, and after normalization we obtain the probability p(x|y).
-![Channel capacity curves under modulation, PSK](/figure/information_theory/调制模式下信道容量曲线PSK.png)
+![Channel capacity curves under modulation, PSK](/img/information_theory/调制模式下信道容量曲线PSK.png)
 
 *Channel capacity curves under modulation, PSK*
 

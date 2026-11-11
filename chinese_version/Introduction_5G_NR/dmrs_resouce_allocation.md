@@ -73,11 +73,11 @@ $$
 
 根据以上的描述，可以画出分组的图。如图 1 所示，这个是 DMRS configuration Type 1 的情况，图中左边是一个组，右边是另外一个组，每组有 6 个 RE， 每两个 RE 构成了一个 OCC；如图 2 所示，这个是 DMRS configuration Type 2 的情况，一共有三个组。图中左边是一个组，中间是一个组，右边是一个组，每组有 4 个 RE， 每两个 RE 构成了一个 OCC；
 
-![图1：DMRS CDM group for configuration type 1](/figure/5G_NR_Access_Intro/DMRS/dmrs_config_type1_re_mapping.png)
+![图1：DMRS CDM group for configuration type 1](/img/5G_NR_Access_Intro/DMRS/dmrs_config_type1_re_mapping.png)
 
 *图1：DMRS CDM group for configuration type 1*
 
-![图2：DMRS CDM group for configuration type 2](/figure/5G_NR_Access_Intro/DMRS/dmrs_config_type2_re_mapping.png)
+![图2：DMRS CDM group for configuration type 2](/img/5G_NR_Access_Intro/DMRS/dmrs_config_type2_re_mapping.png)
 
 *图2：DMRS CDM group for configuration type 2*
 
@@ -100,32 +100,32 @@ a) Configuration Type 1，只有一个 Layer/Port，可以用 CDM 组 0，也可
 图8 是通过 OCC 复用的方式使用组 1，同样，组 0 空闲不给 PDSCH 使用。
 
 
-![图3：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 PDSCH](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value0_port1000.png)
+![图3：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 PDSCH](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value0_port1000.png)
 
 *图3：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 PDSCH*
 
-![图4：DMRS CDM group for configuration type 1，use CDM 0 through OCC, CDM 1 PDSCH](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value1_port1001.png)
+![图4：DMRS CDM group for configuration type 1，use CDM 0 through OCC, CDM 1 PDSCH](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value1_port1001.png)
 
 *图4：DMRS CDM group for configuration type 1，use CDM 0 through OCC, CDM 1 PDSCH*
 
 
-![图5：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value3_port1000.png)
+![图5：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 empty](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value3_port1000.png)
 
 *图5：DMRS CDM group for configuration type 1, use CDM 0, CDM 1 empty*
 
-![图6：DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value4_port1001.png)
+![图6：DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 empty](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value4_port1001.png)
 
 *图6：DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 empty*
 
 
 
-![图7：DMRS CDM group for configuration type 1, use CDM 1, CDM 0 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value5_port1002.png)
+![图7：DMRS CDM group for configuration type 1, use CDM 1, CDM 0 empty](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value5_port1002.png)
 
 *图7：DMRS CDM group for configuration type 1, use CDM 1, CDM 0 empty*
 
 
 
-![图8：DMRS CDM group for configuration type 1, use CDM 1 through OCC, CDM 0 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value6_port1003.png)
+![图8：DMRS CDM group for configuration type 1, use CDM 1 through OCC, CDM 0 empty](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value6_port1003.png)
 
 *图8：DMRS CDM group for configuration type 1, use CDM 1 through OCC, CDM 0 empty*
 
@@ -221,25 +221,25 @@ DMRS RE + 6 个空闲 RE）和 configuration type 2（每 RB 4 个 DMRS RE + 4 �
 
 
 
-![图9：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 0 行](/figure/5G_NR_Access_Intro/DMRS/example/dmrs_type2_value0_grid.png)
+![图9：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 0 行](/img/5G_NR_Access_Intro/DMRS/example/dmrs_type2_value0_grid.png)
 
 *图9：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 0 行*
 
 用户 A 的 grid 如图10 所示。
 
-![图10：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 0 行给用户 A](/figure/5G_NR_Access_Intro/DMRS/example/mu_ueA_port1000_grid.png)
+![图10：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 0 行给用户 A](/img/5G_NR_Access_Intro/DMRS/example/mu_ueA_port1000_grid.png)
 
 *图10：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 0 行给用户 A*
 
 用户 B 的 grid 如图11 所示。
 
-![图11：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 1 行给用户 B](/figure/5G_NR_Access_Intro/DMRS/example/mu_ueB_port1001_grid.png)
+![图11：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 1 行给用户 B](/img/5G_NR_Access_Intro/DMRS/example/mu_ueB_port1001_grid.png)
 
 *图11：例子 1：DMRS configuration Type 2, 最多 2 symbols, 第 1 行给用户 B*
 
 两个用户在一个 MU-MIMO 组中，资源是复用的，因此，如图12 所示，最终是叠加在一起的（叠加前会分别做一次 beam forming来实现空间分离).
 
-![图12：用户 A 和 B 复用相同的资源](/figure/5G_NR_Access_Intro/DMRS/example/mu_drop_first_frame.png)
+![图12：用户 A 和 B 复用相同的资源](/img/5G_NR_Access_Intro/DMRS/example/mu_drop_first_frame.png)
 
 *图12：用户 A 和 B 复用相同的资源*
 
@@ -255,11 +255,11 @@ DMRS RE + 6 个空闲 RE）和 configuration type 2（每 RB 4 个 DMRS RE + 4 �
 
 此 DCI 发给的这个用户，是有两层(layers/ports)，第一层(Layer/Port)的 grid 如图13 所示, 第二层(Layer/Port)的 grid 如图 14 所示.
 
-![图13：第一层(Layer/Port)的 grid](/figure/5G_NR_Access_Intro/DMRS/example/n2_layer0_port1000_grid.png)
+![图13：第一层(Layer/Port)的 grid](/img/5G_NR_Access_Intro/DMRS/example/n2_layer0_port1000_grid.png)
 
 *图13：第一层(Layer/Port)的 grid*
 
-![图14：第二层(Layer/Port)的 grid](/figure/5G_NR_Access_Intro/DMRS/example/n2_layer1_port1001_grid.png)
+![图14：第二层(Layer/Port)的 grid](/img/5G_NR_Access_Intro/DMRS/example/n2_layer1_port1001_grid.png)
 
 *图14：第二层(Layer/Port)的 grid*
 
@@ -274,11 +274,11 @@ DMRS RE + 6 个空闲 RE）和 configuration type 2（每 RB 4 个 DMRS RE + 4 �
 
 这种情况下，这个 UE 的两层 (Layers/Ports) 各自使用不同的 RE 来放置 DMRS. 一个用 CDM group 0，如图 15所示，一个用 CDM group 1，如图 16所示.
 
-![图15：Value=23情况下的 Layer 0](/figure/5G_NR_Access_Intro/DMRS/example/v23_layer0_port1000_grid.png)
+![图15：Value=23情况下的 Layer 0](/img/5G_NR_Access_Intro/DMRS/example/v23_layer0_port1000_grid.png)
 
 *图15：Value=23情况下的 Layer 0*
 
-![图16：Value=23情况下的 Layer 1](/figure/5G_NR_Access_Intro/DMRS/example/v23_layer1_port1002_grid.png)
+![图16：Value=23情况下的 Layer 1](/img/5G_NR_Access_Intro/DMRS/example/v23_layer1_port1002_grid.png)
 
 *图16：Value=23情况下的 Layer 1*
 
@@ -294,6 +294,6 @@ DMRS RE + 6 个空闲 RE）和 configuration type 2（每 RB 4 个 DMRS RE + 4 �
 
 层 (layer/port) 0、1 使用 CDM group 0，层 (layer/port) 2、3 使用 CDM group 1，如图 17 所示。此时，对于每一层而言，DMRS 符号上它只在本组的 4 个 RE（三分之一）上发送 DMRS，在其余 8 个 RE（三分之二）上不发送任何信号（其中 4 个是另一组的 DMRS，4 个即 CDM 组 2 完全空闲），因此 DMRS EPRE 可以增加到 PDSCH EPRE 的 3 倍，即提升 4.77 dB（$$\beta_{\text{DMRS}}=-4.77$$ dB）.
 
-![图17：Value=22 情况下的 4 个 Layers/Ports](/figure/5G_NR_Access_Intro/DMRS/example/v22_four_layers_grid.png)
+![图17：Value=22 情况下的 4 个 Layers/Ports](/img/5G_NR_Access_Intro/DMRS/example/v22_four_layers_grid.png)
 
 *图17：Value=22 情况下的 4 个 Layers/Ports*

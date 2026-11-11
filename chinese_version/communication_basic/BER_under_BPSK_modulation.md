@@ -24,7 +24,7 @@ back_url: /index.html?lang=zh
 因为 x 是 BPSK  调制，我们假定其信号能量为 Es (因为是 BPSK，所以 Eb = Es).
 
 
-![BPSK 符号映射图](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-BPSK_ideal_constellation.png)
+![BPSK 符号映射图](/img/awgn/AWGN信道下的误码率分析-BPSK-SISO-BPSK_ideal_constellation.png)
 
 *BPSK 符号映射图*
 
@@ -44,7 +44,7 @@ $$
 那么做最优判决的时候，如下图所示：
 
 
-![BPSK 最优判决](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-PDF_of_BPSK_symbols.png)
+![BPSK 最优判决](/img/awgn/AWGN信道下的误码率分析-BPSK-SISO-PDF_of_BPSK_symbols.png)
 
 *BPSK 最优判决*
 
@@ -69,7 +69,7 @@ P(e) = P(1_D| 0_T)P(0_T) + P(0_D|1_T)P(1_T)  \tag{4}
 $$
 从下图的示意，我们可以知道 $$P(1_D| 0_T)$$ 和 $$P(0_D|1_T)$$ 的数学表达式，实际上表示的就是下图中红色的区域的概率。
 
-![发生判决错误的区域](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-Calculating-Error-Probability.png)
+![发生判决错误的区域](/img/awgn/AWGN信道下的误码率分析-BPSK-SISO-Calculating-Error-Probability.png)
 
 *发生判决错误的区域*
 
@@ -128,7 +128,7 @@ P(e) = Q\left (\sqrt{\frac{E_s}{N_0/2}} \right )
 $$
 
 
-![标准正太分布图Qx](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-标准正太分布图Qx.png)
+![标准正太分布图Qx](/img/awgn/AWGN信道下的误码率分析-BPSK-SISO-标准正太分布图Qx.png)
 
 *标准正太分布图Qx*
 
@@ -429,7 +429,7 @@ $$
 
 
 
-![发生判决错误的区域](/figure/awgn/Rayleigh衰落信道与 AWGN 信道 BER 对比.png)
+![发生判决错误的区域](/img/awgn/Rayleigh衰落信道与 AWGN 信道 BER 对比.png)
 
 *发生判决错误的区域*
 

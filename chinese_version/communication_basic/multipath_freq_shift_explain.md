@@ -41,19 +41,19 @@ $$
 
 代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
-![waves_of_two_path.png](/figure/通信基础/不同路径有不同频移对接收信号的影响/waves_of_two_path.png)
+![waves_of_two_path.png](/img/通信基础/不同路径有不同频移对接收信号的影响/waves_of_two_path.png)
 
 图中上边一个波形是偏移 5 Hz 的，第二个波形时偏移 7Hz 的，乍一看上去也没什么不同，实际上是有微小的差别的，我们把他们画在一起，就能明显看出来差别。
 
 代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
-![two_waves_of_diff_freq_shift_in_one_image.png](/figure/通信基础/不同路径有不同频移对接收信号的影响/two_waves_of_diff_freq_shift_in_one_image.png)
+![two_waves_of_diff_freq_shift_in_one_image.png](/img/通信基础/不同路径有不同频移对接收信号的影响/two_waves_of_diff_freq_shift_in_one_image.png)
 
 从图中可以明显看到，随着时间的延长，两个波形偏差越来越大，如果把这两个波形叠加再一起，会有什么效果呢？下图就是叠加在一起的波形：
 
 代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
-![merge_of_two_waves_of_diff_freq_shift_in_one_image.png](/figure/通信基础/不同路径有不同频移对接收信号的影响/merge_of_two_waves_of_diff_freq_shift_in_one_image.png)
+![merge_of_two_waves_of_diff_freq_shift_in_one_image.png](/img/通信基础/不同路径有不同频移对接收信号的影响/merge_of_two_waves_of_diff_freq_shift_in_one_image.png)
 
 可以明显看出来，随着时间的推移，波形的幅度先是增强到 2 ，然后逐渐降低，大概在 0.25 秒左右，已经是相互抵消了。这就是多径有不同频率偏移，在时间轴上的表现。
 
@@ -63,4 +63,4 @@ $$
 
 代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
-![merge_of_two_waves_of_diff_freq_shift_in_one_image_duration_is_1s.png](/figure/通信基础/不同路径有不同频移对接收信号的影响/merge_of_two_waves_of_diff_freq_shift_in_one_image_duration_is_1s.png)
+![merge_of_two_waves_of_diff_freq_shift_in_one_image_duration_is_1s.png](/img/通信基础/不同路径有不同频移对接收信号的影响/merge_of_two_waves_of_diff_freq_shift_in_one_image_duration_is_1s.png)

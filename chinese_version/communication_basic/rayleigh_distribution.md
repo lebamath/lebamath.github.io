@@ -30,7 +30,7 @@ $$
 
 我们把这个联合概率的图，画在三维空间中，z 轴是概率的值，另外两个轴分布代表实部的 x 和虚部的 y，则其图形如下（摘自 wiki ):
 
-![瑞利Rayleigh分布-1.png](/figure/通信基础/瑞利Rayleigh分布/瑞利Rayleigh分布-1.png)
+![瑞利Rayleigh分布-1.png](/img/通信基础/瑞利Rayleigh分布/瑞利Rayleigh分布-1.png)
 
 
 
@@ -56,7 +56,7 @@ $$
 dxdy = zdzd\theta
 $$
 
-![瑞利Rayleigh分布-2.png](/figure/通信基础/瑞利Rayleigh分布/瑞利Rayleigh分布-2.png)
+![瑞利Rayleigh分布-2.png](/img/通信基础/瑞利Rayleigh分布/瑞利Rayleigh分布-2.png)
 
 
 
@@ -99,9 +99,9 @@ $$
 然后，用我们的理论公式也计算出来概率，画图比较，发现两者重合。
 
 
-![瑞利Rayleigh分布-3.png](/figure/通信基础/瑞利Rayleigh分布/瑞利Rayleigh分布-3.png)
+![瑞利Rayleigh分布-3.png](/img/通信基础/瑞利Rayleigh分布/瑞利Rayleigh分布-3.png)
 
-![瑞利Rayleigh分布-4.png](/figure/通信基础/瑞利Rayleigh分布/瑞利Rayleigh分布-4.png)
+![瑞利Rayleigh分布-4.png](/img/通信基础/瑞利Rayleigh分布/瑞利Rayleigh分布-4.png)
 
 
 Matlab/Octave 代码

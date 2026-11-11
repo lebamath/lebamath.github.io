@@ -21,7 +21,7 @@ The channel capacity C is achieved at a certain SNR. Then, at this SNR, for a ch
 
 Let us take 1024QAM modulation as an example, with M = 10. Suppose that under 1024QAM modulation, the channel capacity curve is as shown in the figure below:
 
-![Channel Capacity Curve](/figure/information_theory/信道容量曲线.png)
+![Channel Capacity Curve](/img/information_theory/信道容量曲线.png)
 
 *Channel Capacity Curve*
 
@@ -29,6 +29,6 @@ At the position $$SNR = SNR_0$$, the channel capacity C = 3 bps/Hz.
 
 Then the code rate is $$R = \frac{3}{10}$$. We can then draw a vertical line on the BER curve plot; as shown in the figure below, the BER curve obtained from simulating our encoding/decoding algorithm needs to lie to the right of this vertical line and close to it. The figure shows several different implementations of encoding and decoding, from which we can see how many dB of SNR each is away from the Shannon limit when reaching the target bit error rate.
 
-![Distance Between Channel Coding and the Shannon Limit](/figure/information_theory/信道编码与香农限之间的距离.png)
+![Distance Between Channel Coding and the Shannon Limit](/img/information_theory/信道编码与香农限之间的距离.png)
 
 *Distance Between Channel Coding and the Shannon Limit*

@@ -17,13 +17,13 @@ back_url: /index.html?lang=zh
 如下图所示，需要用到 PC校验比特的情况，是在上行 (Uplink) 情况下， A ( 数据比特长度) 比较小的情况，如下图中橙色背景所示。此图摘自论文 [2]
 
 
-![Parity-Check-with-Polar-Code-in-NR-5G-1.png](/figure/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-1.png)
+![Parity-Check-with-Polar-Code-in-NR-5G-1.png](/img/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-1.png)
 
 
 首先，确定 PC 比特的位置，在 3GPP 38.212 的 5.3.1.2 节有描述：
 
 
-![Parity-Check-with-Polar-Code-in-NR-5G-2-3GPP-PC-bit-position.png](/figure/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-2-3GPP-PC-bit-position.png)
+![Parity-Check-with-Polar-Code-in-NR-5G-2-3GPP-PC-bit-position.png](/img/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-2-3GPP-PC-bit-position.png)
 
 所有 $$n_{pc} 个$$PC 比特的位置，由 $$Q_{PC}^N$$  确定，其中有 $$n_{pc}-n_{pc}^{wm}$$ 个 是选择最不可靠 (least reliable) 的，剩余的 $$n_{pc}^{wm}$$ 个比特，在剩下的位置中，选择最小行重 (minimum row weight) 的位置，  $$n_{pc}^{wm}$$ 中的上标 wm 表示  Weight Minimum。详细的理论分析，可以参考文献 [3] ，本文重点想讲如何计算校验比特，所以，对 PC 比特位置的选择就一笔带过了。
 
@@ -31,17 +31,17 @@ back_url: /index.html?lang=zh
 接下来，重点讨论的是，如何计算这些校验比特，协议中是这样规定的：
 
 
-![Parity-Check-with-Polar-Code-in-NR-5G-3-calculate-PC.png](/figure/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-3-calculate-PC.png)
+![Parity-Check-with-Polar-Code-in-NR-5G-3-calculate-PC.png](/img/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-3-calculate-PC.png)
 
 
 这类似一个循环移位加法器，大概结构如下（此图摘自文献 [3]）：
 
-![Parity-Check-with-Polar-Code-in-NR-5G-4-PC-cyclic-shift-structure.png](/figure/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-4-PC-cyclic-shift-structure.png)
+![Parity-Check-with-Polar-Code-in-NR-5G-4-PC-cyclic-shift-structure.png](/img/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-4-PC-cyclic-shift-structure.png)
 
 
 也可以用下面的方法来理解这个过程，把输出的 $$u_n$$  按照每行 5 个元素进行排列，如果某个 $$u_i$$ 不是校验比特，就按照顺序填上 $$c_k$$ ，如果某个 $$u_i$$ 是 PC 校验比特，则这个校验比特的值是所在列的前面所有输出的异或求和。 参考下表：
 
-![Parity-Check-with-Polar-Code-in-NR-5G-5-PC-generating-by-an-array.png](/figure/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-5-PC-generating-by-an-array.png)
+![Parity-Check-with-Polar-Code-in-NR-5G-5-PC-generating-by-an-array.png](/img/5GNR/ChannelCoding/Parity-Check-with-Polar-Code-in-NR-5G-5-PC-generating-by-an-array.png)
 
 
 

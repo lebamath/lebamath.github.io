@@ -73,11 +73,11 @@ For configuration type 2: number of CDM groups * 2 = $$3\times 2 = 6$$
 
 From the description above, the grouping diagrams can be drawn. Figure 1 shows DMRS configuration type 1: the left part of the figure is one group and the right part is the other group; each group has 6 REs, and every two REs form one OCC. Figure 2 shows DMRS configuration type 2, which has three groups in total: the left part of the figure is one group, the middle part is one group and the right part is one group; each group has 4 REs, and every two REs form one OCC.
 
-![Figure 1: DMRS CDM group for configuration type 1](/figure/5G_NR_Access_Intro/DMRS/dmrs_config_type1_re_mapping.png)
+![Figure 1: DMRS CDM group for configuration type 1](/img/5G_NR_Access_Intro/DMRS/dmrs_config_type1_re_mapping.png)
 
 *Figure 1: DMRS CDM group for configuration type 1*
 
-![Figure 2: DMRS CDM group for configuration type 2](/figure/5G_NR_Access_Intro/DMRS/dmrs_config_type2_re_mapping.png)
+![Figure 2: DMRS CDM group for configuration type 2](/img/5G_NR_Access_Intro/DMRS/dmrs_config_type2_re_mapping.png)
 
 *Figure 2: DMRS CDM group for configuration type 2*
 
@@ -100,32 +100,32 @@ Figure 7 uses group 1, and similarly group 0 is idle and not given to the PDSCH.
 Figure 8 uses group 1 multiplexed through OCC, and likewise group 0 is idle and not given to the PDSCH.
 
 
-![Figure 3: DMRS CDM group for configuration type 1, use CDM 0, CDM 1 PDSCH](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value0_port1000.png)
+![Figure 3: DMRS CDM group for configuration type 1, use CDM 0, CDM 1 PDSCH](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value0_port1000.png)
 
 *Figure 3: DMRS CDM group for configuration type 1, use CDM 0, CDM 1 PDSCH*
 
-![Figure 4: DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 PDSCH](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value1_port1001.png)
+![Figure 4: DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 PDSCH](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value1_port1001.png)
 
 *Figure 4: DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 PDSCH*
 
 
-![Figure 5: DMRS CDM group for configuration type 1, use CDM 0, CDM 1 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value3_port1000.png)
+![Figure 5: DMRS CDM group for configuration type 1, use CDM 0, CDM 1 empty](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value3_port1000.png)
 
 *Figure 5: DMRS CDM group for configuration type 1, use CDM 0, CDM 1 empty*
 
-![Figure 6: DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value4_port1001.png)
+![Figure 6: DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 empty](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value4_port1001.png)
 
 *Figure 6: DMRS CDM group for configuration type 1, use CDM 0 through OCC, CDM 1 empty*
 
 
 
-![Figure 7: DMRS CDM group for configuration type 1, use CDM 1, CDM 0 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value5_port1002.png)
+![Figure 7: DMRS CDM group for configuration type 1, use CDM 1, CDM 0 empty](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value5_port1002.png)
 
 *Figure 7: DMRS CDM group for configuration type 1, use CDM 1, CDM 0 empty*
 
 
 
-![Figure 8: DMRS CDM group for configuration type 1, use CDM 1 through OCC, CDM 0 empty](/figure/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value6_port1003.png)
+![Figure 8: DMRS CDM group for configuration type 1, use CDM 1 through OCC, CDM 0 empty](/img/5G_NR_Access_Intro/DMRS/table_1_example/dmrs_type1_value6_port1003.png)
 
 *Figure 8: DMRS CDM group for configuration type 1, use CDM 1 through OCC, CDM 0 empty*
 
@@ -212,25 +212,25 @@ One thing to stress here: the DMRS and the PDSCH data of the corresponding layer
 
 
 
-![Figure 9: Example 1: DMRS configuration Type 2, up to 2 symbols, row 0](/figure/5G_NR_Access_Intro/DMRS/example/dmrs_type2_value0_grid.png)
+![Figure 9: Example 1: DMRS configuration Type 2, up to 2 symbols, row 0](/img/5G_NR_Access_Intro/DMRS/example/dmrs_type2_value0_grid.png)
 
 *Figure 9: Example 1: DMRS configuration Type 2, up to 2 symbols, row 0*
 
 The grid of user A is shown in Figure 10.
 
-![Figure 10: Example 1: DMRS configuration Type 2, up to 2 symbols, row 0 for user A](/figure/5G_NR_Access_Intro/DMRS/example/mu_ueA_port1000_grid.png)
+![Figure 10: Example 1: DMRS configuration Type 2, up to 2 symbols, row 0 for user A](/img/5G_NR_Access_Intro/DMRS/example/mu_ueA_port1000_grid.png)
 
 *Figure 10: Example 1: DMRS configuration Type 2, up to 2 symbols, row 0 for user A*
 
 The grid of user B is shown in Figure 11.
 
-![Figure 11: Example 1: DMRS configuration Type 2, up to 2 symbols, row 1 for user B](/figure/5G_NR_Access_Intro/DMRS/example/mu_ueB_port1001_grid.png)
+![Figure 11: Example 1: DMRS configuration Type 2, up to 2 symbols, row 1 for user B](/img/5G_NR_Access_Intro/DMRS/example/mu_ueB_port1001_grid.png)
 
 *Figure 11: Example 1: DMRS configuration Type 2, up to 2 symbols, row 1 for user B*
 
 The two users are in one MU-MIMO group and their resources are multiplexed, so, as shown in Figure 12, they are finally superposed on each other (beamforming is applied to each of them separately before the superposition, to achieve the spatial separation).
 
-![Figure 12: User A and user B multiplex the same resources](/figure/5G_NR_Access_Intro/DMRS/example/mu_drop_first_frame.png)
+![Figure 12: User A and user B multiplex the same resources](/img/5G_NR_Access_Intro/DMRS/example/mu_drop_first_frame.png)
 
 *Figure 12: User A and user B multiplex the same resources*
 
@@ -246,11 +246,11 @@ The two users are in one MU-MIMO group and their resources are multiplexed, so, 
 
 The user this DCI is sent to has two layers (layers/ports). The grid of the first layer (layer/port) is shown in Figure 13, and the grid of the second layer (layer/port) is shown in Figure 14.
 
-![Figure 13: grid of the first layer (layer/port)](/figure/5G_NR_Access_Intro/DMRS/example/n2_layer0_port1000_grid.png)
+![Figure 13: grid of the first layer (layer/port)](/img/5G_NR_Access_Intro/DMRS/example/n2_layer0_port1000_grid.png)
 
 *Figure 13: grid of the first layer (layer/port)*
 
-![Figure 14: grid of the second layer (layer/port)](/figure/5G_NR_Access_Intro/DMRS/example/n2_layer1_port1001_grid.png)
+![Figure 14: grid of the second layer (layer/port)](/img/5G_NR_Access_Intro/DMRS/example/n2_layer1_port1001_grid.png)
 
 *Figure 14: grid of the second layer (layer/port)*
 
@@ -266,11 +266,11 @@ A slightly different example is when Antenna port(s) in DCI 1\_1 is equal to 23:
 
 In this case, the two layers (layers/ports) of this UE place their DMRS on different REs. One uses CDM group 0, as shown in Figure 15, and the other uses CDM group 1, as shown in Figure 16.
 
-![Figure 15: Layer 0 for value = 23](/figure/5G_NR_Access_Intro/DMRS/example/v23_layer0_port1000_grid.png)
+![Figure 15: Layer 0 for value = 23](/img/5G_NR_Access_Intro/DMRS/example/v23_layer0_port1000_grid.png)
 
 *Figure 15: Layer 0 for value = 23*
 
-![Figure 16: Layer 1 for value = 23](/figure/5G_NR_Access_Intro/DMRS/example/v23_layer1_port1002_grid.png)
+![Figure 16: Layer 1 for value = 23](/img/5G_NR_Access_Intro/DMRS/example/v23_layer1_port1002_grid.png)
 
 *Figure 16: Layer 1 for value = 23*
 
@@ -286,6 +286,6 @@ For each layer, it sends no signal on the REs of the other CDM group, and this p
 
 Layers (layer/port) 0 and 1 use CDM group 0, and layers (layer/port) 2 and 3 use CDM group 1, as shown in Figure 17. In this case, for each layer, on the DMRS symbol it sends DMRS only on the 4 REs of its own group (one third), and sends no signal on the other 8 REs (two thirds); of these, 4 carry the DMRS of the other group, and the 4 REs of CDM group 2 are completely idle. The DMRS EPRE can therefore be increased to 3 times the PDSCH EPRE, that is, boosted by 4.77 dB ($$\beta_{\text{DMRS}}=-4.77$$ dB).
 
-![Figure 17: the 4 layers/ports for value = 22](/figure/5G_NR_Access_Intro/DMRS/example/v22_four_layers_grid.png)
+![Figure 17: the 4 layers/ports for value = 22](/img/5G_NR_Access_Intro/DMRS/example/v22_four_layers_grid.png)
 
 *Figure 17: the 4 layers/ports for value = 22*

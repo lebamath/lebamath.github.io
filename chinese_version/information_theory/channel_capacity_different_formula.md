@@ -40,7 +40,7 @@ $$
 ​    用图形可以表示为：
 
 
-![信道容量的浅析](/figure/information_theory/channel_capacity_tutorial.png)
+![信道容量的浅析](/img/information_theory/channel_capacity_tutorial.png)
 
 *信道容量的浅析*
 

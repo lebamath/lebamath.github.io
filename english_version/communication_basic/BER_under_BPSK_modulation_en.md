@@ -15,7 +15,7 @@ where x is BPSK modulated, and w is additive white Gaussian noise, following a G
 
 Since x is BPSK modulated, we assume its signal energy is Es (since it is BPSK, Eb = Es).
 
-![BPSK Symbol Mapping Diagram](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-BPSK_ideal_constellation.png)
+![BPSK Symbol Mapping Diagram](/img/awgn/AWGN信道下的误码率分析-BPSK-SISO-BPSK_ideal_constellation.png)
 
 *BPSK Symbol Mapping Diagram*
 
@@ -34,7 +34,7 @@ $$
 
 Then, for making the optimal decision, as shown in the figure below:
 
-![BPSK Optimal Decision](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-PDF_of_BPSK_symbols.png)
+![BPSK Optimal Decision](/img/awgn/AWGN信道下的误码率分析-BPSK-SISO-PDF_of_BPSK_symbols.png)
 
 *BPSK Optimal Decision*
 
@@ -59,7 +59,7 @@ P(e) = P(1_D| 0_T)P(0_T) + P(0_D|1_T)P(1_T)  \tag{4}
 $$
 From the illustration below, we can know the mathematical expressions of $$P(1_D| 0_T)$$ and $$P(0_D|1_T)$$, which actually represent the probability of the red region in the figure below.
 
-![Region Where a Decision Error Occurs](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-Calculating-Error-Probability.png)
+![Region Where a Decision Error Occurs](/img/awgn/AWGN信道下的误码率分析-BPSK-SISO-Calculating-Error-Probability.png)
 
 *Region Where a Decision Error Occurs*
 
@@ -118,7 +118,7 @@ P(e) = Q\left (\sqrt{\frac{E_s}{N_0/2}} \right )
 $$
 
 
-![Standard Normal Distribution Plot Qx](/figure/awgn/AWGN信道下的误码率分析-BPSK-SISO-标准正太分布图Qx.png)
+![Standard Normal Distribution Plot Qx](/img/awgn/AWGN信道下的误码率分析-BPSK-SISO-标准正太分布图Qx.png)
 
 *Standard Normal Distribution Plot Qx*
 
@@ -419,7 +419,7 @@ $$
 
 
 
-![Region Where a Decision Error Occurs](/figure/awgn/Rayleigh衰落信道与 AWGN 信道 BER 对比.png)
+![Region Where a Decision Error Occurs](/img/awgn/Rayleigh衰落信道与 AWGN 信道 BER 对比.png)
 
 *Region Where a Decision Error Occurs*
 

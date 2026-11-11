@@ -23,7 +23,7 @@ Here, if the transverse-wave electric field is decomposed along the fundamental 
 The relationship between the phasors determines the polarization of the wave, i.e., the time-varying direction and the relative amplitude of the electric field vector. In this book, the polarization of a wave is observed along the direction of wave propagation. Some specific polarization types are as follows (see also Figure 3.5):
 
 
-![图1：Figure 3.5 Observed along the direction of wave propagation, the trajectory of the electric field vector exhibits different polarization types: linear polarization (left), circular polarization (middle) and elliptical polarization (right).](/figure/通信基础/天线极化/fig_3.5.png)
+![图1：Figure 3.5 Observed along the direction of wave propagation, the trajectory of the electric field vector exhibits different polarization types: linear polarization (left), circular polarization (middle) and elliptical polarization (right).](/img/通信基础/天线极化/fig_3.5.png)
 
 *图1：Figure 3.5 Observed along the direction of wave propagation, the trajectory of the electric field vector exhibits different polarization types: linear polarization (left), circular polarization (middle) and elliptical polarization (right).* 
 

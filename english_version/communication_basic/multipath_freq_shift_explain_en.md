@@ -39,17 +39,17 @@ The python code below plots the received signals of the two paths in the first f
 
 For the code please download it from github: \url{https://github.com/taichiorange/leba_math}
 
-![waves_of_two_path.png](/figure/通信基础/不同路径有不同频移对接收信号的影响/waves_of_two_path.png)
+![waves_of_two_path.png](/img/通信基础/不同路径有不同频移对接收信号的影响/waves_of_two_path.png)
 
 The upper waveform in the figure is the one offset by 5 Hz, and the second waveform is the one offset by 7Hz. At first glance they do not look any different, but in fact there is a tiny difference; if we plot them together, the difference can be clearly seen.
 
 For the code please download it from github: \url{https://github.com/taichiorange/leba_math}
-![two_waves_of_diff_freq_shift_in_one_image.png](/figure/通信基础/不同路径有不同频移对接收信号的影响/two_waves_of_diff_freq_shift_in_one_image.png)
+![two_waves_of_diff_freq_shift_in_one_image.png](/img/通信基础/不同路径有不同频移对接收信号的影响/two_waves_of_diff_freq_shift_in_one_image.png)
 It can be clearly seen from the figure that as time goes on, the deviation between the two waveforms becomes larger and larger. If these two waveforms are superimposed together, what will the effect be? The figure below is the waveform after superposition:
 
 For the code please download it from github: \url{https://github.com/taichiorange/leba_math}
 
-![merge_of_two_waves_of_diff_freq_shift_in_one_image.png](/figure/通信基础/不同路径有不同频移对接收信号的影响/merge_of_two_waves_of_diff_freq_shift_in_one_image.png)
+![merge_of_two_waves_of_diff_freq_shift_in_one_image.png](/img/通信基础/不同路径有不同频移对接收信号的影响/merge_of_two_waves_of_diff_freq_shift_in_one_image.png)
 
 It can be clearly seen that as time passes, the amplitude of the waveform first increases to 2 and then gradually decreases, and at around 0.25 second they have already cancelled each other out. This is the manifestation on the time axis of multipath having different frequency offsets.
 
@@ -59,4 +59,4 @@ Let us extend the time in the last piece of code above to 1 second and see what 
 
 For the code please download it from github: \url{https://github.com/taichiorange/leba_math}
 
-![merge_of_two_waves_of_diff_freq_shift_in_one_image_duration_is_1s.png](/figure/通信基础/不同路径有不同频移对接收信号的影响/merge_of_two_waves_of_diff_freq_shift_in_one_image_duration_is_1s.png)
+![merge_of_two_waves_of_diff_freq_shift_in_one_image_duration_is_1s.png](/img/通信基础/不同路径有不同频移对接收信号的影响/merge_of_two_waves_of_diff_freq_shift_in_one_image_duration_is_1s.png)

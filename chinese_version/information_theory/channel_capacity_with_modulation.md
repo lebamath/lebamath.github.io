@@ -47,7 +47,7 @@ $$
 所以，可以把 p(y|x) 对每个 x 计算出来，然后 归一化之后，就是  p(x|y) 的概率。
 
 
-![调制模式下信道容量曲线PSK](/figure/information_theory/调制模式下信道容量曲线PSK.png)
+![调制模式下信道容量曲线PSK](/img/information_theory/调制模式下信道容量曲线PSK.png)
 
 *调制模式下信道容量曲线PSK*
 

@@ -78,7 +78,7 @@ The greater than 1 above is because, when the decision disagrees, LR > 1, and th
 
 If it is a frozen bit and the path taken is ``the decision is 1'', then the metric becomes  $$+\infty$$
 
-![Approximate computation of the metric in SCL decoding](/figure/极化码/SCL译码的度量近似计算.png)
+![Approximate computation of the metric in SCL decoding](/img/极化码/SCL译码的度量近似计算.png)
 
 *Approximate computation of the metric in SCL decoding*
 

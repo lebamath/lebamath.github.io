@@ -239,4 +239,4 @@ if __name__ == "__main__":
     plt.show()
 ```
 
-![MUSIC](/figure/mimo/music/rootmusic.png)
+![MUSIC](/img/mimo/music/rootmusic.png)

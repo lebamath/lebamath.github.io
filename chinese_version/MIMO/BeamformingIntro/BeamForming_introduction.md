@@ -10,7 +10,7 @@
 
 天线阵列，我们讨论的是 ULA（Uniform Linear Array，均匀线性阵列），如下图所示：
 
-![ULA（Uniform Linear Array，均匀线性阵列）](/figure/beamforming/ULA.png)
+![ULA（Uniform Linear Array，均匀线性阵列）](/img/beamforming/ULA.png)
 
 *ULA（Uniform Linear Array，均匀线性阵列）*
 
@@ -19,7 +19,7 @@
 
 若不计信号的衰减，我们发射的数据是 s ( 一个复数 )，而且接收端与发射端距离足够远，发射端各个天线到接收端的单个天线，之间的连线，从发射端天线附近看起来就是平行的（实际上不是平行的，是接近平行，是为了计算的一种简化，如果不简化，计算就过于复杂）。
 
-![bf transmitter](/figure/beamforming/bf_transmitter.png)
+![bf transmitter](/img/beamforming/bf_transmitter.png)
 
 *bf transmitter*
 
@@ -132,13 +132,13 @@ $$
 
 此程序中假设   $$\frac{d}{\lambda}=\frac{1}{2}$$ 
 
-![bf.png](/figure/beamforming/bf.png)
+![bf.png](/img/beamforming/bf.png)
 
 
 
 16 个天线排一排
 
-![bf_16.png](/figure/beamforming/bf_16.png)
+![bf_16.png](/img/beamforming/bf_16.png)
 
 可以看出来，天线多，则越集中。
 
@@ -177,7 +177,7 @@ $$
 
 如下图所示：
 
-![16 个天线排一排](/figure/beamforming/bf_16.png)
+![16 个天线排一排](/img/beamforming/bf_16.png)
 
 *16 个天线排一排*
 
@@ -185,7 +185,7 @@ $$
 
 我们用上一篇文章中的那个图来分析：
 
-![bf_transmitter.png](/figure/beamforming/bf_transmitter.png)
+![bf_transmitter.png](/img/beamforming/bf_transmitter.png)
 
 以第一根天线为基准，第一根天线上发射的信号是 S ( 复数，含有幅度和相位），那么第二根发射天线发出的信号，抵达接收者后，与第一根天线发射的信号抵达接收者之间的相位差是  $$e^{j\psi}$$ ，所以，我们可以把第二根发射天线发出的信号，提前把相位抵消掉，在第一根天线的信号基础上，乘以 $$e^{-j\psi}$$ 后，再从第二根发射天线上发射出去，同理，对第三根发射天线，把原始信号 S 乘以$$e^{-j2\psi}$$ 后再从第三根发射天线上发射出去，以此类推，直到第 N 根发射天线，把原始信号 S 乘以$$e^{-j（N-1)\psi}$$ 后再从第N根发射天线上发射出去.
 
@@ -243,7 +243,7 @@ $$
 
 下面以 $$\theta_0=\frac{\pi}{6}$$ 为例，让 $$\theta \in [0,2\pi]$$，在极坐标上画出来信号强度的图：
 
-![*信号强度](/figure/beamforming/bf_pointedt_to_somewhere.png)
+![*信号强度](/img/beamforming/bf_pointedt_to_somewhere.png)
 
 **信号强度*
 
@@ -259,7 +259,7 @@ Python 代码如下：
 
 假设在足够远处有一个发射天线，那么 N个 接收天线接收的信号，可以近似认为是平行到达各个接收天线的，与天线阵列的夹角都是相同的。如下图所示：
 
-![接收](/figure/beamforming/receiver.png)
+![接收](/img/beamforming/receiver.png)
 
 *接收*
 
@@ -337,7 +337,7 @@ $$
 
 图形如下：
 
-![bf.png](/figure/beamforming/bf.png)
+![bf.png](/img/beamforming/bf.png)
 
 代码中假设 $$\frac{d}{\lambda} = \frac{1}{2}$$.
 
@@ -376,7 +376,7 @@ $$
 用如下图所示的天线阵列：
 
 
-![receiver.png](/figure/beamforming/receiver.png)
+![receiver.png](/img/beamforming/receiver.png)
 
 
 这 N 根天线收到的信号，以第一根天线为参照，相当于分别被乘以一个复数：
@@ -422,7 +422,7 @@ $$
 
 下面以 $$\theta_0 = \pi/6$$  为例，让$$\theta \in [0,2\pi]$$ ，在极坐标上画出来信号强度的图：
 
-![bf_pointedt_to_somewhere.png](/figure/beamforming/bf_pointedt_to_somewhere.png)
+![bf_pointedt_to_somewhere.png](/img/beamforming/bf_pointedt_to_somewhere.png)
 
 代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
@@ -504,7 +504,7 @@ $$
 
 文件名为：c\_antenna\_distance\_half\_lambda\_wavelength.py
 
-![幅度](/figure/beamforming/minus_2pi_2pi_psi.png)
+![幅度](/img/beamforming/minus_2pi_2pi_psi.png)
 
 *幅度*
 
@@ -513,17 +513,17 @@ $$
 
 所以，当 $$\frac{d}{\lambda}$$ 从 0.5 逐渐增大 1 的过程中，可以看到多出来的指向逐渐显现出来：
 
-![d_vs_lambda_0.5.png](/figure/beamforming/d_vs_lambda_0.5.png)
+![d_vs_lambda_0.5.png](/img/beamforming/d_vs_lambda_0.5.png)
 
-![d_vs_lambda_0.6.png](/figure/beamforming/d_vs_lambda_0.6.png)
+![d_vs_lambda_0.6.png](/img/beamforming/d_vs_lambda_0.6.png)
 
-![d_vs_lambda_0.7.png](/figure/beamforming/d_vs_lambda_0.7.png)
+![d_vs_lambda_0.7.png](/img/beamforming/d_vs_lambda_0.7.png)
 
-![d_vs_lambda_0.8.png](/figure/beamforming/d_vs_lambda_0.8.png)
+![d_vs_lambda_0.8.png](/img/beamforming/d_vs_lambda_0.8.png)
 
-![Figure_0.9.png](/figure/beamforming/Figure_0.9.png)
+![Figure_0.9.png](/img/beamforming/Figure_0.9.png)
 
-![d_vs_lambda_1.0.png](/figure/beamforming/d_vs_lambda_1.0.png)
+![d_vs_lambda_1.0.png](/img/beamforming/d_vs_lambda_1.0.png)
 
 代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
@@ -625,33 +625,33 @@ $$
 
 修改程序中变量  d vs lambda 的值，从 0.5 逐渐减小，看是什么效果：
 
-![0.5](/figure/beamforming/kk_0.5.png)
+![0.5](/img/beamforming/kk_0.5.png)
 
 *0.5*
 
-![0.1](/figure/beamforming/kk_0.1.png)
+![0.1](/img/beamforming/kk_0.1.png)
 
 *0.1*
 
-![0.05](/figure/beamforming/kk_0.05.png)
+![0.05](/img/beamforming/kk_0.05.png)
 
 *0.05*
 
-![0.03](/figure/beamforming/kk_0.03.png)
+![0.03](/img/beamforming/kk_0.03.png)
 
 *0.03*
 
-![0.02](/figure/beamforming/kk_0.02.png)
+![0.02](/img/beamforming/kk_0.02.png)
 
 *0.02*
 
 
-![0.01](/figure/beamforming/kk_0.01.png)
+![0.01](/img/beamforming/kk_0.01.png)
 
 *0.01*
 
 
-![0.005](/figure/beamforming/kk_0.005.png)
+![0.005](/img/beamforming/kk_0.005.png)
 
 *0.005*
 
@@ -682,11 +682,11 @@ $$
 极坐标系选择以向下的方向为 0 度。
 如下图所示：
 
-![beam指向-用直观代码实现-极坐标0度指向.png](/figure/beamforming/beam指向-用直观代码实现-极坐标0度指向.png)
+![beam指向-用直观代码实现-极坐标0度指向.png](/img/beamforming/beam指向-用直观代码实现-极坐标0度指向.png)
 
 以向下方向为 0 度，从天线指向 UE 的夹角，定义为 beamAngle
 
-![beam指向-用直观代码实现-beam角度.png](/figure/beamforming/beam指向-用直观代码实现-beam角度.png)
+![beam指向-用直观代码实现-beam角度.png](/img/beamforming/beam指向-用直观代码实现-beam角度.png)
 
 则最下面那根天线发送信号 s，则倒数第二根发射的信号为：
 
@@ -708,7 +708,7 @@ $$
 
 现在依然以上面的坐标系为参考，假设接收端在角度为 $$\theta$$ 的位置，如下图所示：
 
-![beam指向-用直观代码实现-接收方向.png](/figure/beamforming/beam指向-用直观代码实现-接收方向.png)
+![beam指向-用直观代码实现-接收方向.png](/img/beamforming/beam指向-用直观代码实现-接收方向.png)
 
 那么从下往上，各个天线上发射的信号，当到达接收端时不同天线间的相位延迟分别为：
 
@@ -751,22 +751,22 @@ latex 版本的，直接在这个目录下可以看：img//beamforming//beam指�
 
 
 
-![beam指向-用直观代码实现-极坐标图 0.png](/figure/beamforming/beam指向-用直观代码实现-极坐标图 0.png)
+![beam指向-用直观代码实现-极坐标图 0.png](/img/beamforming/beam指向-用直观代码实现-极坐标图 0.png)
 
 
-![beam指向-用直观代码实现-极坐标图 1.png](/figure/beamforming/beam指向-用直观代码实现-极坐标图 1.png)
+![beam指向-用直观代码实现-极坐标图 1.png](/img/beamforming/beam指向-用直观代码实现-极坐标图 1.png)
 
-![beam指向-用直观代码实现-极坐标图 2.png](/figure/beamforming/beam指向-用直观代码实现-极坐标图 2.png)
+![beam指向-用直观代码实现-极坐标图 2.png](/img/beamforming/beam指向-用直观代码实现-极坐标图 2.png)
 
-![beam指向-用直观代码实现-极坐标图 3.png](/figure/beamforming/beam指向-用直观代码实现-极坐标图 3.png)
+![beam指向-用直观代码实现-极坐标图 3.png](/img/beamforming/beam指向-用直观代码实现-极坐标图 3.png)
 
-![beam指向-用直观代码实现-极坐标图 4.png](/figure/beamforming/beam指向-用直观代码实现-极坐标图 4.png)
+![beam指向-用直观代码实现-极坐标图 4.png](/img/beamforming/beam指向-用直观代码实现-极坐标图 4.png)
 
-![beam指向-用直观代码实现-极坐标图 5.png](/figure/beamforming/beam指向-用直观代码实现-极坐标图 5.png)
+![beam指向-用直观代码实现-极坐标图 5.png](/img/beamforming/beam指向-用直观代码实现-极坐标图 5.png)
 
-![beam指向-用直观代码实现-极坐标图 6.png](/figure/beamforming/beam指向-用直观代码实现-极坐标图 6.png)
+![beam指向-用直观代码实现-极坐标图 6.png](/img/beamforming/beam指向-用直观代码实现-极坐标图 6.png)
 
-![beam指向-用直观代码实现-极坐标图 7.png](/figure/beamforming/beam指向-用直观代码实现-极坐标图 7.png)
+![beam指向-用直观代码实现-极坐标图 7.png](/img/beamforming/beam指向-用直观代码实现-极坐标图 7.png)
 
 代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
@@ -785,7 +785,7 @@ latex 版本的，直接在这个目录下可以看：img//beamforming//beam指�
 
 
 
-![半波长大于0.5的效果分析_01.png](/figure/beamforming/半波长大于0.5的效果分析_01.png)
+![半波长大于0.5的效果分析_01.png](/img/beamforming/半波长大于0.5的效果分析_01.png)
 
 $$
 2 \pi \frac{d cos \theta}{\lambda}
@@ -809,9 +809,9 @@ $$
 
 
 
-![半波长大于0.5的效果分析_02_PI_over_4.png](/figure/beamforming/半波长大于0.5的效果分析_02_PI_over_4.png)
+![半波长大于0.5的效果分析_02_PI_over_4.png](/img/beamforming/半波长大于0.5的效果分析_02_PI_over_4.png)
 
-![半波长大于0.5的效果分析_03_PI_over_4_and_3_PI_over_4.png](/figure/beamforming/半波长大于0.5的效果分析_03_PI_over_4_and_3_PI_over_4.png)
+![半波长大于0.5的效果分析_03_PI_over_4_and_3_PI_over_4.png](/img/beamforming/半波长大于0.5的效果分析_03_PI_over_4_and_3_PI_over_4.png)
 
 当增加一个 $$pi$$ 的相位旋转，则在两个角度上都有波束：
 
@@ -837,7 +837,7 @@ $$
 （用附录一的代码画出来的）
 
 
-![2023-11-28-波束的几种类型浅析--k是整数的情况.png](/figure/beamforming/2023-11-28-波束的几种类型浅析--k是整数的情况.png)
+![2023-11-28-波束的几种类型浅析--k是整数的情况.png](/img/beamforming/2023-11-28-波束的几种类型浅析--k是整数的情况.png)
 
 (2) 非基中的向量，但是是单波束的
 其向量的数学表示为：
@@ -857,7 +857,7 @@ $$
 
 （附录二的代码画出来的）
 
-![2023-11-28-波束的几种类型浅析--k是小数的情况.png](/figure/beamforming/2023-11-28-波束的几种类型浅析--k是小数的情况.png) 
+![2023-11-28-波束的几种类型浅析--k是小数的情况.png](/img/beamforming/2023-11-28-波束的几种类型浅析--k是小数的情况.png) 
 (3) 除了以上两种情况
 其向量的数学表示为：
 
@@ -876,7 +876,7 @@ $$
 （附录三的代码画出来的）
 
 
-![2023-11-28-波束的几种类型浅析--随机相位的情况.png](/figure/beamforming/2023-11-28-波束的几种类型浅析--随机相位的情况.png) 
+![2023-11-28-波束的几种类型浅析--随机相位的情况.png](/img/beamforming/2023-11-28-波束的几种类型浅析--随机相位的情况.png) 
 
 在文献 [1] 中的第 6.1.1 节，把 beam 分成了两类，一类是 classical 的，一类的 generalized，前者是在 line-of-sight 或者 free-space 中做理论推导的，就是直接用各个电线发射的电子波，在指向的方向上平行射出直接到接收端，走的距离不同导致的相位偏差，然后在有些方向上加强，有些方向上衰减；但是，对于多径的情况，有较大的多径时延的时候，就用 generalized 的类型。在我这个文章的分类中，第一和第二类可以看成是文献 [1] 中说的 classical 的，第三类是文献 [1] 中说的 generalized 类别。
 

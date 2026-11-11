@@ -71,11 +71,11 @@ $$
 
 所以，将$$\mathbf V$$ 的各列称之为发射特征波束，$$\mathbf U$$ 的各列称之为接收特征波束，将一对特征波束 $$(\mathbf v_k, \mathbf u_k)$$ 称为第 $$k$$ 个特征波束对。这些定义，有助于后续分析信道的波束域表示。
 
-![图1：非直射经(NLOS)，两条主径](/figure/mimo_precoder/linear/H_singular_vector_1.png)
+![图1：非直射经(NLOS)，两条主径](/img/mimo_precoder/linear/H_singular_vector_1.png)
 
 *图1：非直射经(NLOS)，两条主径*
 
-![图2：直射径 LOS](/figure/mimo_precoder/linear/H_singular_vector_2.png)
+![图2：直射径 LOS](/img/mimo_precoder/linear/H_singular_vector_2.png)
 
 *图2：直射径 LOS*
 
@@ -97,7 +97,7 @@ $$
 
 如图 3 所示，
 
-![图3：预编码/物理信道/均衡/参考信号](/figure/mimo_precoder/linear/precoder_H_equalizer_referenceSignal.png)
+![图3：预编码/物理信道/均衡/参考信号](/img/mimo_precoder/linear/precoder_H_equalizer_referenceSignal.png)
 
 *图3：预编码/物理信道/均衡/参考信号*
 
@@ -210,7 +210,7 @@ $$
 其中 $$\mathbf{H}^{\dagger}\mathbf{H} \vec{\mathbf a}$$ 是投影到 3 维子空间中的一个向量，那么
 $$\vec{\mathbf a} - \mathbf{H}^{\dagger}\mathbf{H} \vec{\mathbf a}$$ 就是与前面那个3维子空间正交的2维子空间中的向量，这些向量虽然都是在各自的2或者3维子空间中，但是，因为都是 5 维空间中的向量，因此，这些投影到子空间中的向量，也是各自都是用 5 个元素来表示的。
 
-![图4：在三维空间中演示投影](/figure/mimo_precoder/linear/3D_vector_projection.png)
+![图4：在三维空间中演示投影](/img/mimo_precoder/linear/3D_vector_projection.png)
 
 *图4：在三维空间中演示投影*
 

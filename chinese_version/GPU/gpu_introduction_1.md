@@ -68,7 +68,7 @@ back_url: /index.html?lang=zh
 
 我们先来看看图1的架构:
 
-![图1：AMD GPU MI300X 架构](/figure//GPU//AMD-MI300X-CU-structure.png)
+![图1：AMD GPU MI300X 架构](/img/GPU//AMD-MI300X-CU-structure.png)
 
 *图1：AMD GPU MI300X 架构*
 
@@ -665,23 +665,23 @@ GPC 负责管理多个 TPC ，知道各个 TPC 的繁忙与空闲状态， GPC �
 
 这些 GPC 和 TPC 的划分，是为了一些存储共享，例如 cache 共享，或者是在芯片设计时方便裁剪，例如 GPC 模块在芯片设计阶段，可以根据芯片的高低端定位，放置不同数量的 GPC，如图 4 所示时整个芯片的一个局部。如图 5 是 GB202 的整体。
 
-![图1：AMD GPU MI300X 架构](/figure/GPU/AMD-MI300X-CU-structure.png)
+![图1：AMD GPU MI300X 架构](/img/GPU/AMD-MI300X-CU-structure.png)
 
 *图1：AMD GPU MI300X 架构*
 
-![图2：nvidia BG202 sub partition 示意图](/figure/GPU/nvidia_GB202_c.png)
+![图2：nvidia BG202 sub partition 示意图](/img/GPU/nvidia_GB202_c.png)
 
 *图2：nvidia BG202 sub partition 示意图*
 
-![图3：nvidia BG202 GPC 示意图](/figure/GPU/nvidia_GB202_b.png)
+![图3：nvidia BG202 GPC 示意图](/img/GPU/nvidia_GB202_b.png)
 
 *图3：nvidia BG202 GPC 示意图*
 
-![图4：nvidia BG202 局部 示意图](/figure/GPU/nvidia_GB202_a.png)
+![图4：nvidia BG202 局部 示意图](/img/GPU/nvidia_GB202_a.png)
 
 *图4：nvidia BG202 局部 示意图*
 
-![图5：nvidia BG202 整体 示意图](/figure/GPU/nvidia_GB202_0.png)
+![图5：nvidia BG202 整体 示意图](/img/GPU/nvidia_GB202_0.png)
 
 *图5：nvidia BG202 整体 示意图*
 
@@ -740,7 +740,7 @@ GPC 负责管理多个 TPC ，知道各个 TPC 的繁忙与空闲状态， GPC �
 的矩阵， 如图 6所示,我们把这个计算称为 4x1x4外积。
 
 
-![图6：矩阵加速的最小单元](/figure/GPU/MFMA-prim.png)
+![图6：矩阵加速的最小单元](/img/GPU/MFMA-prim.png)
 
 *图6：矩阵加速的最小单元*
 
@@ -890,7 +890,7 @@ AMD MI300X 中一个 SIMD 含有 4 个矩阵原语，因此需要 16 个周期�
 个thread 中的每个 thread，负责输入矩阵A 的一个元素和一个矩阵 B 的元素，具体对应规则如图7 所示。 thread 编号是 0 到 63，图 7 中的数字对应的 thread
 编号，图中的每个小方框对应矩阵中的一个元素。
 
-![图7：64个 thread 对应的输入数据](/figure/GPU/MFMA-thread_maping_to_AB.png)
+![图7：64个 thread 对应的输入数据](/img/GPU/MFMA-thread_maping_to_AB.png)
 
 *图7：64个 thread 对应的输入数据*
 
@@ -959,7 +959,7 @@ AMD MI300X 中一个 SIMD 含有 4 个矩阵原语，因此需要 16 个周期�
 在前一节的代码中，已经看到了输出的操作，这里详细解释一下。AMD MI300X 的设计思路是一个 thread 负责一个4x1向量的输出，结果矩阵是 16x16 = 256 个元素，按照前面的讨论，我们是有 64 个 thread，因此，每个 thread 负责输出 4
 个元素，如图8所示：
 
-![图8：64个 thread 对应的输出](/figure/GPU/MFMA-thread_maping_to_D.png)
+![图8：64个 thread 对应的输出](/img/GPU/MFMA-thread_maping_to_D.png)
 
 *图8：64个 thread 对应的输出*
 
@@ -1073,7 +1073,7 @@ $$
 
 每个线程负责 所有四个16x16 矩阵中的一个 4x1 向量，如图9 所示。
 
-![图9：16x16x1 情况下的 C/D 矩阵 mapping](/figure/GPU/MFMA-thread_maping_to_DC_16x16x1.png)
+![图9：16x16x1 情况下的 C/D 矩阵 mapping](/img/GPU/MFMA-thread_maping_to_DC_16x16x1.png)
 
 *图9：16x16x1 情况下的 C/D 矩阵 mapping*
 
@@ -1119,10 +1119,10 @@ tid = threadIdx.x + threadIdx.y * threadDim.x
 	sgemm_16x16x4 <<< grid, block >>> (d_A, d_B, d_D);
 ```
 
-![图10：Enter Caption](/figure/GPU/MFMA-thread_maping_to_AB_2D_Block.png)
+![图10：Enter Caption](/img/GPU/MFMA-thread_maping_to_AB_2D_Block.png)
 
 *图10：Enter Caption*
 
-![图10：Enter Caption](/figure/GPU/MFMA-thread_maping_to_D_2D_Block.png)
+![图10：Enter Caption](/img/GPU/MFMA-thread_maping_to_D_2D_Block.png)
 
 *图10：Enter Caption*

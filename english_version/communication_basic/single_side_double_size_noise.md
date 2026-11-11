@@ -24,10 +24,10 @@ N_0 B   \tag{2}
 $$
 Only in this way are the noise powers in equations (1) and (2) equal.
 The illustrations are given below:
-![Double-sided signal and noise](/figure/通信基础/双边带信号和噪声.png)
+![Double-sided signal and noise](/img/通信基础/双边带信号和噪声.png)
 
 *Double-sided signal and noise*
 Converted to single-sided:
-![Single-sided signal and noise](/figure/通信基础/单边带信号和噪声.png)
+![Single-sided signal and noise](/img/通信基础/单边带信号和噪声.png)
 
 *Single-sided signal and noise*

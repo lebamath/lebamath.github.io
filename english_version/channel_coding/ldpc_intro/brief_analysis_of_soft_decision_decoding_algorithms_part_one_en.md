@@ -294,6 +294,6 @@ $$
 Because on the left-hand side of the equals sign in Formula (3) it is already assumed that $$z_m=0$$, the $$\{z_{m^{'}}=0\}$$ in the formula above must exclude the parity-check equation $$z_m=0$$. The right-hand side of the formula above can, using the derivation approach of Formula (0), in turn be converted into something computed from $$p(z_m=0\vert c_i=x,r)$$. In this way, using the probability $$p(z_m=0\vert c_i=x,r)$$ that the parity-check equations hold, computed in the first round, the accuracy of $$p(c_i=x\vert \{z_m=0\},r)$$ is improved recursively and iteratively.
 
 
-![LDPC_soft_decoding.png](/figure/LDPC译码浅析/LDPC_soft_decoding.png) 
+![LDPC_soft_decoding.png](/img/LDPC译码浅析/LDPC_soft_decoding.png) 
 
 [1]  Error Correction Coding--Mathematical Methods and Algorithms , Todd K. Moon, Wiley, 2005 , mainly referring to Section 15.5.

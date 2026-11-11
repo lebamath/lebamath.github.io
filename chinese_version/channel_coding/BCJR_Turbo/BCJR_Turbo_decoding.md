@@ -16,7 +16,7 @@ Turbo 码是由多个卷积码并联而成的， Turbo 名字的由来，是从�
 注：也有串联的卷积码构成 Turbo 码，也有由多个不同的卷积码并联/串联成的 Turbo 码，本文主要讲解由多个相同的卷积码并联构成的 Turbo 码。而且，为了叙述方便和公式的简洁，我们以下面的卷积码为例子进行讨论。
 
 
-![turbo-encoder.png](/figure/卷积码编码和译码/BCJR-turbo/turbo-encoder.png) 
+![turbo-encoder.png](/img/卷积码编码和译码/BCJR-turbo/turbo-encoder.png) 
 
 如果单独看每一个卷积码，我们可以用 BCJR 译码算法来译码，假如我们先用上面那一个卷积码，做 BCJR 译码，则根据之前的文章和视频讲解，我们知道对每个发送比特的后验概率，可以用如下公式计算：
 
@@ -132,7 +132,7 @@ $$
 
 
 
-![turbo-decoder.png](/figure/卷积码编码和译码/BCJR-turbo/turbo-decoder.png) 
+![turbo-decoder.png](/img/卷积码编码和译码/BCJR-turbo/turbo-decoder.png) 
 
 
 
@@ -190,7 +190,7 @@ M  最大迭代次数
 
 
 
-![convolutionary_encoder_state_transition.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
+![convolutionary_encoder_state_transition.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
 
 首先，做初始化，我们有的先验概率，是 0/1 比特的取值是等概率的，所以:
 

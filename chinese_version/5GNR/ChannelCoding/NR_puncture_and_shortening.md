@@ -14,9 +14,9 @@ back_url: /index.html?lang=zh
 下面这两个图摘自文献 [1]:
 
 
-![极化码中级-001-puncture 和 shortening 的基本原理-puncture.png](/figure/极化码/puncture和shortening/极化码中级-001-puncture 和 shortening 的基本原理-puncture.png)
+![极化码中级-001-puncture 和 shortening 的基本原理-puncture.png](/img/极化码/puncture和shortening/极化码中级-001-puncture 和 shortening 的基本原理-puncture.png)
 
-![极化码中级-001-puncture 和 shortening 的基本原理-shortening.png](/figure/极化码/puncture和shortening/极化码中级-001-puncture 和 shortening 的基本原理-shortening.png)
+![极化码中级-001-puncture 和 shortening 的基本原理-shortening.png](/img/极化码/puncture和shortening/极化码中级-001-puncture 和 shortening 的基本原理-shortening.png)
 
 
 图 (a) 中 puncture 掉的两个比特数据，是不确定是什么具体值，因为这两个比特与发送的数据位有关。
@@ -31,9 +31,9 @@ back_url: /index.html?lang=zh
 ### puncture 和 shortening 的使用场景
 
 ​									   
-![极化码中级-002-puncture 和 shortening 的使用场景-puncture.png](/figure/极化码/puncture和shortening/极化码中级-002-puncture 和 shortening 的使用场景-puncture.png)
+![极化码中级-002-puncture 和 shortening 的使用场景-puncture.png](/img/极化码/puncture和shortening/极化码中级-002-puncture 和 shortening 的使用场景-puncture.png)
 
-![极化码中级-002-puncture 和 shortening 的使用场景-shortening.png](/figure/极化码/puncture和shortening/极化码中级-002-puncture 和 shortening 的使用场景-shortening.png)
+![极化码中级-002-puncture 和 shortening 的使用场景-shortening.png](/img/极化码/puncture和shortening/极化码中级-002-puncture 和 shortening 的使用场景-shortening.png)
 
 
 

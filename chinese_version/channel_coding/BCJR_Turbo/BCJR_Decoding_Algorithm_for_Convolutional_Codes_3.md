@@ -55,13 +55,13 @@ t+1 时刻状态为 q, 且知道 t+1 时刻之前所有的接收数据，那么�
 
 
 
-![alpha_recursive_calculate.png](/figure/卷积码编码和译码/BCJR-turbo/alpha_recursive_calculate.png) 
+![alpha_recursive_calculate.png](/img/卷积码编码和译码/BCJR-turbo/alpha_recursive_calculate.png) 
 
 
 
 举个例子，例如 t=6 时刻，令 t+1=7时刻的状态 q=3，根据状态栅格图，有状态 2 和状态 3 会转移到状态 3
 
-![convolutionary_encoder_state_transition.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
+![convolutionary_encoder_state_transition.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
 
 则:
 

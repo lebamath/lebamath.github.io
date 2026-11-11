@@ -171,7 +171,7 @@ $$
 
 那么，可以形成一个如下所示的图：
 
-![trellisL.png](/figure/LDPC译码浅析/trellisL.png) 
+![trellisL.png](/img/LDPC译码浅析/trellisL.png) 
 
 
 若$$\xi (L)=x$$ (其中 x 是  $$c_n$$ 的取值)，则这种情况是被考虑到进来的，否则，这种组合就不用考虑，不用展开连乘并参与到累加中。继续上面的例子，因为 $$N_{m,n}=N_{1,2}=\{1,3,6,7,10\}$$， 所以 L=5.
@@ -196,7 +196,7 @@ $$
 
 最后 $$\xi(5) = \xi(4) + x_{10}$$, 就依赖于 $$x_{10}$$ 的取值.
 
-![trellis5.png](/figure/LDPC译码浅析/trellis5.png) 
+![trellis5.png](/img/LDPC译码浅析/trellis5.png) 
 
 为了书写方便，我们再引入一个记号  $$W_k(x)=p(\xi(k)=x)$$, 表示在上面图形的第 k 步，或者说加到第 k 个数时 结果为 x 的概率。在例子中 x =1 ，那么
 

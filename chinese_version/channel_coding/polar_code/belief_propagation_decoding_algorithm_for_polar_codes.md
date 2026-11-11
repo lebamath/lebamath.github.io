@@ -13,13 +13,13 @@ back_url: /index.html?lang=zh
 
 N = 2  极化码示意图, 如图 1.
 
-![图1：N = 2 极化码的示意图](/figure/极化码/bp/polar_code_core_N_is_2.png)
+![图1：N = 2 极化码的示意图](/img/极化码/bp/polar_code_core_N_is_2.png)
 
 *图1：N = 2 极化码的示意图*
 
 BP 算法, 是一种消息传递算法，需要迭代多次，在极化码的示意图中，由于是左右方向排布的，所以，消息传递的方向是从右向左和从左向右。 如图 2 所示。
 
-![图2：极化码 BP 算法的消息传递](/figure/极化码/bp/polar_bp_2.png)
+![图2：极化码 BP 算法的消息传递](/img/极化码/bp/polar_bp_2.png)
 
 *图2：极化码 BP 算法的消息传递*
 
@@ -29,7 +29,7 @@ LR(a) 这个概率，实际上是计算出 a 左方向的概率，因此，对�
 
 为了计算 a 的概率，则传递的消息如图 3  所示。
 
-![图3：极化码 BP 算法的消息传递, 计算 a](/figure/极化码/bp/polar_bp_3.png)
+![图3：极化码 BP 算法的消息传递, 计算 a](/img/极化码/bp/polar_bp_3.png)
 
 *图3：极化码 BP 算法的消息传递, 计算 a*
 
@@ -117,7 +117,7 @@ $$
 这里需要计算的是图 2 中的 $$b_l$$，为了书写方便，后面公式中都省略了下标 $$l$$，输入的消息中的下标 $$l,r$$  也都省略了。
 
 为了计算 b 的概率，则传递的消息如图 4  所示。
-![图4：极化码 BP 算法的消息传递，计算 b](/figure/极化码/bp/polar_bp_4.png)
+![图4：极化码 BP 算法的消息传递，计算 b](/img/极化码/bp/polar_bp_4.png)
 
 *图4：极化码 BP 算法的消息传递，计算 b*
 
@@ -203,7 +203,7 @@ $$
 
 由于极化码的编码矩阵的逆矩阵就是其本身，或者从图上也可以看出， $$c = a+e$$ ，这与 $$a = c+e$$ 是类似的。
 传递的消息如图 5  所示。
-![图5：极化码 BP 算法的消息传递，计算 c](/figure/极化码/bp/polar_bp_5.png)
+![图5：极化码 BP 算法的消息传递，计算 c](/img/极化码/bp/polar_bp_5.png)
 
 *图5：极化码 BP 算法的消息传递，计算 c*
 
@@ -222,7 +222,7 @@ $$
 ### 计算 LR(d)
 同理，可以按照计算 LR(b) 的方式，推导出 LR(d) 的计算公式.
 传递的消息如图 6  所示。
-![图6：极化码 BP 算法的消息传递，计算 d](/figure/极化码/bp/polar_bp_6.png)
+![图6：极化码 BP 算法的消息传递，计算 d](/img/极化码/bp/polar_bp_6.png)
 
 *图6：极化码 BP 算法的消息传递，计算 d*
 
@@ -294,7 +294,7 @@ $$
 
 ## N = 4 的 极化码 BP 译码过程描述
 
-![图7：极化码 BP 算法的消息传递，N=4 的示例](/figure/极化码/bp/polar_bp_7.png)
+![图7：极化码 BP 算法的消息传递，N=4 的示例](/img/极化码/bp/polar_bp_7.png)
 
 *图7：极化码 BP 算法的消息传递，N=4 的示例*
 
@@ -302,7 +302,7 @@ $$
 
 从图中我们可以看到，我们需要保存 $$1+log_2 N$$ 层的数据，在本例子中，需要保存 3 层。  图中括号里面 (2,3) 表示第二层的第三个数据位置。 我们用 $$L(2,3)$$ 表示在第 2 层第 3 个数据处，向左传递的消息。类似的，用 $$R(2,3)$$ 表示在第 2 层第 3 个数据处，向右传递的消息。编程时需要注意的是，例如第二层，我们可以把 标号放在靠右边，如图 8 所示。本文以标号在左边，即如图7 所示。
 
-![图8：极化码 BP 算法的消息传递，N=4 的示例，标号都靠右](/figure/极化码/bp/polar_bp_8.png)
+![图8：极化码 BP 算法的消息传递，N=4 的示例，标号都靠右](/img/极化码/bp/polar_bp_8.png)
 
 *图8：极化码 BP 算法的消息传递，N=4 的示例，标号都靠右*
 
@@ -381,7 +381,7 @@ $$
 
 为了后面画图的方便，我们把极化码的表示图做一点简化，从图 9  的左边的标准图，改画为右边的简化图.
 
-![图9：N = 2 的简化画法](/figure/极化码/bp/polar_bp_N2_simplify.png)
+![图9：N = 2 的简化画法](/img/极化码/bp/polar_bp_N2_simplify.png)
 
 *图9：N = 2 的简化画法*
 
@@ -402,36 +402,36 @@ $$
 这里可以有多种画法，这些画法，如果是使用 SC（Successive Cancel） 译码算法，结果都是一样的，但是对于 BP 算法，则会有不同的结果（误码率不同）。
 
 **第一种结构**，如图 10：注意看最后输出的数据，即最右边输出的。
-![图10：N = 4 非置换的第一种结构的标准画法](/figure/极化码/bp/polar_code_core_N_is_4_standard_drawing_2_1.png)
+![图10：N = 4 非置换的第一种结构的标准画法](/img/极化码/bp/polar_code_core_N_is_4_standard_drawing_2_1.png)
 
 *图10：N = 4 非置换的第一种结构的标准画法*
 
 对应的简化算法如图 11
 
-![图11：N = 4 非置换的第一种结构的简化画法](/figure/极化码/bp/polar_code_core_N_is_4_simple_drawing_2_1.png)
+![图11：N = 4 非置换的第一种结构的简化画法](/img/极化码/bp/polar_code_core_N_is_4_simple_drawing_2_1.png)
 
 *图11：N = 4 非置换的第一种结构的简化画法*
 
 在用 BP 译码时，简化画法需要做一下反向，如图12
-![图12：N = 4 非置换的第一种结构的简化画法：译码](/figure/极化码/bp/polar_code_core_N_is_4_simple_drawing_2_1_reverse.png)
+![图12：N = 4 非置换的第一种结构的简化画法：译码](/img/极化码/bp/polar_code_core_N_is_4_simple_drawing_2_1_reverse.png)
 
 *图12：N = 4 非置换的第一种结构的简化画法：译码*
 
 实际上图  10 和图 11 对应的极化码图都是图10。只是这种简化画法，让图形不对称了，那种标准画法，每个小的单元都是左右对称的。
 
 **第二种结构**，如图 13：注意看最后输出的数据，即最右边输出的。
-![图13：N = 4 非置换的第二种结构的标准画法](/figure/极化码/bp/polar_code_core_N_is_4_standard_drawing_1_2.png)
+![图13：N = 4 非置换的第二种结构的标准画法](/img/极化码/bp/polar_code_core_N_is_4_standard_drawing_1_2.png)
 
 *图13：N = 4 非置换的第二种结构的标准画法*
 
 对应的简化算法如图 14
 
-![图14：N = 4 非置换的第二种结构的简化画法](/figure/极化码/bp/polar_code_core_N_is_4_simple_drawing_1_2.png)
+![图14：N = 4 非置换的第二种结构的简化画法](/img/极化码/bp/polar_code_core_N_is_4_simple_drawing_1_2.png)
 
 *图14：N = 4 非置换的第二种结构的简化画法*
 
 在用 BP 译码时，简化画法需要做一下反向，如图15
-![图15：N = 4 非置换的第二种结构的简化画法：译码](/figure/极化码/bp/polar_code_core_N_is_4_simple_drawing_1_2_reverse.png)
+![图15：N = 4 非置换的第二种结构的简化画法：译码](/img/极化码/bp/polar_code_core_N_is_4_simple_drawing_1_2_reverse.png)
 
 *图15：N = 4 非置换的第二种结构的简化画法：译码*
 
@@ -444,13 +444,13 @@ $$
 
 上面第二种结构的简化画法，把编码和译码画在一起，如图 16 所示，从左到右是编码，从右到左是译码。
 
-![图16：N = 4 非置换的第二种结构的简化画法：编译码](/figure/极化码/bp/polar_code_core_N_is_4_simple_drawing_1_2_bidirection_together.png)
+![图16：N = 4 非置换的第二种结构的简化画法：编译码](/img/极化码/bp/polar_code_core_N_is_4_simple_drawing_1_2_bidirection_together.png)
 
 *图16：N = 4 非置换的第二种结构的简化画法：编译码*
 
 这个正反向一起的，实际上可以看成图向左或者向右倾斜一点造成的，如图 17 上面的是编码的，下面的是译码的。
 
-![图17：N = 4 非置换的第二种结构的变形至简化画法：编译码](/figure/极化码/bp/polar_code_core_N_is_4_simple_drawing_1_2_tilt_to_get_encode_dec.png)
+![图17：N = 4 非置换的第二种结构的变形至简化画法：编译码](/img/极化码/bp/polar_code_core_N_is_4_simple_drawing_1_2_tilt_to_get_encode_dec.png)
 
 *图17：N = 4 非置换的第二种结构的变形至简化画法：编译码*
 
@@ -463,7 +463,7 @@ $$
 **第一种结构**
 如图 18,图中标注的绿色数字，是 $$u_x$$的简写，省略了 $$x$$.
 
-![图18：N = 8 的第一种结构](/figure/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_124.png)
+![图18：N = 8 的第一种结构](/img/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_124.png)
 
 *图18：N = 8 的第一种结构*
 
@@ -471,7 +471,7 @@ $$
 **第二种结构**
 如图 19,图中标注的绿色数字，是 $$u_x$$的简写，省略了 $$x$$.
 
-![图19：N = 8 的第二种结构](/figure/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_142.png)
+![图19：N = 8 的第二种结构](/img/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_142.png)
 
 *图19：N = 8 的第二种结构*
 
@@ -479,14 +479,14 @@ $$
 **第三种结构**
 如图 20,图中标注的绿色数字，是 $$u_x$$的简写，省略了 $$x$$.
 
-![图20：N = 8 的第三种结构](/figure/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_214.png)
+![图20：N = 8 的第三种结构](/img/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_214.png)
 
 *图20：N = 8 的第三种结构*
 
 **第四种结构**
 如图 21,图中标注的绿色数字，是 $$u_x$$的简写，省略了 $$x$$.
 
-![图21：N = 8 的第四种结构](/figure/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_241.png)
+![图21：N = 8 的第四种结构](/img/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_241.png)
 
 *图21：N = 8 的第四种结构*
 
@@ -494,14 +494,14 @@ $$
 **第五种结构**
 如图 22,图中标注的绿色数字，是 $$u_x$$的简写，省略了 $$x$$.
 
-![图22：N = 8 的第五种结构](/figure/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_412.png)
+![图22：N = 8 的第五种结构](/img/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_412.png)
 
 *图22：N = 8 的第五种结构*
 
 **第六种结构**
 如图 23,图中标注的绿色数字，是 $$u_x$$的简写，省略了 $$x$$.
 
-![图23：N = 8 的第六种结构](/figure/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_421.png)
+![图23：N = 8 的第六种结构](/img/极化码/bp/polar_code_core_N_is_8_simple_drawing_reverse_421.png)
 
 *图23：N = 8 的第六种结构*
 
@@ -512,7 +512,7 @@ $$
 ### 其他画法
 **显式画出变量节点和校验节点**
 
-![图24：N = 8 显式画出变量节点和校验节点](/figure/极化码/bp/polar_code_core_N_is_8_variable_notes_check_notes.png)
+![图24：N = 8 显式画出变量节点和校验节点](/img/极化码/bp/polar_code_core_N_is_8_variable_notes_check_notes.png)
 
 *图24：N = 8 显式画出变量节点和校验节点*
 
@@ -524,7 +524,7 @@ A. Elkelesh, M. Ebada, S. Cammerer and S. ten Brink, "Belief Propagation List De
 **正规图/Forney 因子图**
 
 
-![图25：N = 8 正规图/Forney 因子图](/figure/极化码/bp/polar_code_core_N_is_8_Forney_Factor_Graph.png)
+![图25：N = 8 正规图/Forney 因子图](/img/极化码/bp/polar_code_core_N_is_8_Forney_Factor_Graph.png)
 
 *图25：N = 8 正规图/Forney 因子图*
 

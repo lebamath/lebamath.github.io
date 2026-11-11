@@ -67,7 +67,7 @@ So how does the GPU allocate and schedule all of this?
 
 Let us first look at the architecture in Figure 1:
 
-![Figure 1: AMD GPU MI300X architecture](/figure/GPU/AMD-MI300X-CU-structure.png)
+![Figure 1: AMD GPU MI300X architecture](/img/GPU/AMD-MI300X-CU-structure.png)
 
 *Figure 1: AMD GPU MI300X architecture*
 
@@ -667,23 +667,23 @@ A GPC manages multiple TPCs, knows which TPCs are busy and which are idle, and a
 
 This division into GPCs and TPCs exists to allow some storage to be shared, for example sharing caches, or to make it easy to scale the chip up or down at design time: at the chip design stage, depending on whether the chip is positioned as high-end or low-end, a different number of GPC modules can be placed. Figure 4 shows a part of the whole chip, and Figure 5 shows the whole GB202.
 
-![Figure 1: AMD GPU MI300X architecture](/figure/GPU/AMD-MI300X-CU-structure.png)
+![Figure 1: AMD GPU MI300X architecture](/img/GPU/AMD-MI300X-CU-structure.png)
 
 *Figure 1: AMD GPU MI300X architecture*
 
-![Figure 2: NVIDIA GB202 sub-partition](/figure/GPU/nvidia_GB202_c.png)
+![Figure 2: NVIDIA GB202 sub-partition](/img/GPU/nvidia_GB202_c.png)
 
 *Figure 2: NVIDIA GB202 sub-partition*
 
-![Figure 3: NVIDIA GB202 GPC](/figure/GPU/nvidia_GB202_b.png)
+![Figure 3: NVIDIA GB202 GPC](/img/GPU/nvidia_GB202_b.png)
 
 *Figure 3: NVIDIA GB202 GPC*
 
-![Figure 4: NVIDIA GB202, a part of the chip](/figure/GPU/nvidia_GB202_a.png)
+![Figure 4: NVIDIA GB202, a part of the chip](/img/GPU/nvidia_GB202_a.png)
 
 *Figure 4: NVIDIA GB202, a part of the chip*
 
-![Figure 5: NVIDIA GB202, the whole chip](/figure/GPU/nvidia_GB202_0.png)
+![Figure 5: NVIDIA GB202, the whole chip](/img/GPU/nvidia_GB202_0.png)
 
 *Figure 5: NVIDIA GB202, the whole chip*
 
@@ -741,7 +741,7 @@ int main()
 Similar to the scalar compute module VALU, each SIMD also contains a matrix-operation accelerator. From the hardware point of view, the smallest unit of the accelerator is one outer-product computation. It multiplies two vectors, A x B, where A is a column vector of 4 elements and B is a row vector of 4 elements, so A*B gives a 4x4 matrix, as shown in Figure 6. We call this computation a 4x1x4 outer product.
 
 
-![Figure 6: the smallest unit of matrix acceleration](/figure/GPU/MFMA-prim.png)
+![Figure 6: the smallest unit of matrix acceleration](/img/GPU/MFMA-prim.png)
 
 *Figure 6: the smallest unit of matrix acceleration*
 
@@ -888,7 +888,7 @@ A SIMD on the AMD MI300X contains 4 matrix primitives, so 16 cycles are needed t
 
 Each primitive needs 4 + 4 = 8 input values, and these values are reused. However, we can see that the input data differs for every 16 primitive computations: the data used by each group of 16 threads is exactly one column of A and one row of B, 32 values in total. The hardware therefore adopts a convention: each thread within a group of 16 threads is responsible for loading one element of matrix A and one element of matrix B. The exact correspondence is shown in Figure 7. The thread numbers run from 0 to 63; the numbers in Figure 7 are the thread numbers, and each small box in the figure corresponds to one element of the matrix.
 
-![Figure 7: input data for the 64 threads](/figure/GPU/MFMA-thread_maping_to_AB.png)
+![Figure 7: input data for the 64 threads](/img/GPU/MFMA-thread_maping_to_AB.png)
 
 *Figure 7: input data for the 64 threads*
 
@@ -955,7 +955,7 @@ Index into matrix B: int kn = x + N * y;
 
 The previous code already showed the output operation; here we explain it in detail. The design idea of the AMD MI300X is that a thread is responsible for outputting a 4x1 vector. The result matrix has 16x16 = 256 elements, and as discussed above we have 64 threads, so each thread is responsible for outputting 4 elements, as shown in Figure 8:
 
-![Figure 8: output for the 64 threads](/figure/GPU/MFMA-thread_maping_to_D.png)
+![Figure 8: output for the 64 threads](/img/GPU/MFMA-thread_maping_to_D.png)
 
 *Figure 8: output for the 64 threads*
 
@@ -1068,7 +1068,7 @@ Only the correspondence between the threads and the accumulation matrix C and th
 
 Each thread is responsible for one 4x1 vector in each of the four 16x16 matrices, as shown in Figure 9.
 
-![Figure 9: C/D matrix mapping for the 16x16x1 case](/figure/GPU/MFMA-thread_maping_to_DC_16x16x1.png)
+![Figure 9: C/D matrix mapping for the 16x16x1 case](/img/GPU/MFMA-thread_maping_to_DC_16x16x1.png)
 
 *Figure 9: C/D matrix mapping for the 16x16x1 case*
 
@@ -1113,10 +1113,10 @@ dim3 block(16, 4, 1);
 sgemm_16x16x4 <<< grid, block >>> (d_A, d_B, d_D);
 ```
 
-![Figure 10: Enter Caption](/figure/GPU/MFMA-thread_maping_to_AB_2D_Block.png)
+![Figure 10: Enter Caption](/img/GPU/MFMA-thread_maping_to_AB_2D_Block.png)
 
 *Figure 10: Enter Caption*
 
-![Figure 10: Enter Caption](/figure/GPU/MFMA-thread_maping_to_D_2D_Block.png)
+![Figure 10: Enter Caption](/img/GPU/MFMA-thread_maping_to_D_2D_Block.png)
 
 *Figure 10: Enter Caption*

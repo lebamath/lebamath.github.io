@@ -53,13 +53,13 @@ t 时刻状态为 p, 且知道 t - 1 时刻之后所有的接收数据，那么�
 (图中的 $$\lambda$$ 应该是 $$\gamma$$ )
 
 
-![beta_recursive_calculate.png](/figure/卷积码编码和译码/BCJR-turbo/beta_recursive_calculate.png) 
+![beta_recursive_calculate.png](/img/卷积码编码和译码/BCJR-turbo/beta_recursive_calculate.png) 
 
 
 举个例子，例如 t=6 时刻，令 t=6 时刻的状态 p=2，根据状态栅格图
 
 
-![convolutionary_encoder_state_transition.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
+![convolutionary_encoder_state_transition.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
 
 从状态 2 可以走到状态 1 和状态 3, 则:
 
@@ -164,7 +164,7 @@ $$
 \end{aligned}
 $$
 
-![the_whole_pitcutre_of_BCJR.png](/figure/卷积码编码和译码/BCJR-turbo/the_whole_pitcutre_of_BCJR.png) 
+![the_whole_pitcutre_of_BCJR.png](/img/卷积码编码和译码/BCJR-turbo/the_whole_pitcutre_of_BCJR.png) 
 
 
 
@@ -172,7 +172,7 @@ Python 代码：代码请到 github 下载：\url{https://github.com/taichiorang
 
 
 
-![convolutionary_encoder_state_transition.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
+![convolutionary_encoder_state_transition.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
 
 编码前的数据为：x=[1,1,0,0,1,0,1,0,1,1]
 
@@ -193,4 +193,4 @@ r = [  (2.53008, 0.731636), (-0.523916, 1.93052), (-0.793262, 0.307327), (1.2402
 第三个（从1开始算）比特是译码错了。
 
 
-![numerial_result_of_alpha_belta_APB.png](/figure/卷积码编码和译码/BCJR-turbo/numerial_result_of_alpha_belta_APB.png)
+![numerial_result_of_alpha_belta_APB.png](/img/卷积码编码和译码/BCJR-turbo/numerial_result_of_alpha_belta_APB.png)

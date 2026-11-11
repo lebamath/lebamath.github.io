@@ -29,7 +29,7 @@ $$
 P(\psi_t=p,\psi_{t+1}=q|r) = \alpha_t(p) \gamma_t(p,q) \beta_{t+1}(q)
 $$
 
-![alpha_gamma_beta.png](/figure/卷积码编码和译码/BCJR-turbo/alpha_gamma_beta.png) 
+![alpha_gamma_beta.png](/img/卷积码编码和译码/BCJR-turbo/alpha_gamma_beta.png) 
 
 
 公式 (2) 中的 第二个，实际上是可以计算的，我们做一下推导：

@@ -436,7 +436,7 @@ $$
 
 整体示意流程图如下：
 
-![LLR-LDPC-soft.png](/figure/LDPC译码浅析/LLR-LDPC-soft.png) 
+![LLR-LDPC-soft.png](/img/LDPC译码浅析/LLR-LDPC-soft.png) 
 
 [1]  Error Correction Coding--Mathematical Methods and Algorithms , Todd K. Moon, Wiley, 2005 ，主要参考第 15.5 章节。
 

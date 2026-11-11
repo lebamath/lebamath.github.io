@@ -294,6 +294,6 @@ $$
 因为在公式 (3) 中等号的左边，已经是假设 $$z_m=0$$，因此上面公式中的 $$\{z_{m^{'}}=0\}$$ 要排除 $$z_m=0$$ 这个校验方程。上面公式的右边，利用公式(0) 的推导方式，又可以转化为由 $$p(z_m=0\vert c_i=x,r)$$计算出来，这样，利用第一轮计算出来的关于校验方程成立的概率$$p(z_m=0\vert c_i=x,r)$$，来递归循环第提高$$p(c_i=x\vert \{z_m=0\},r)$$  的准确率。
 
 
-![LDPC_soft_decoding.png](/figure/LDPC译码浅析/LDPC_soft_decoding.png) 
+![LDPC_soft_decoding.png](/img/LDPC译码浅析/LDPC_soft_decoding.png) 
 
 [1]  Error Correction Coding--Mathematical Methods and Algorithms , Todd K. Moon, Wiley, 2005 ，主要参考第 15.5 章节。

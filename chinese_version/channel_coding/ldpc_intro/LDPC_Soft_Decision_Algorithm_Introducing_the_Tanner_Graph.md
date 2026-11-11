@@ -89,7 +89,7 @@ $$
 那么，用 Tanner 图来表示这些依赖关系，可以表示成下图：
 
 
-![tanner_graph.png](/figure/LDPC译码浅析/tanner_graph.png) 
+![tanner_graph.png](/img/LDPC译码浅析/tanner_graph.png) 
 
 
 两种变量节点间的关系，可以用这个思想来描述：校验节点（校验方程）把自己的某种度量信息告知这个校验方程含有的比特对应的变量节点，同理，变量节点也把自己取值的概率信息的某种度量也发给包含这个比特的校验方程对应的校验节点。

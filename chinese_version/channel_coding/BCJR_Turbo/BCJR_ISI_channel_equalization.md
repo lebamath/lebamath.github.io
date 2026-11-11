@@ -45,7 +45,7 @@ $$
 图一:
 
 
-![ISI-channel-trellis.png](/figure/卷积码编码和译码/BCJR-turbo/ISI-channel-trellis.png) 
+![ISI-channel-trellis.png](/img/卷积码编码和译码/BCJR-turbo/ISI-channel-trellis.png) 
 
 
 

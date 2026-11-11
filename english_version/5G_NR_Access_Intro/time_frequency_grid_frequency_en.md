@@ -43,18 +43,18 @@ The waveform of the fourth subcarrier is shown in Figure 4. This time span is th
 
 
 
-![figure 1：First Subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_1.png)
+![figure 1：First Subcarrier](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_1.png)
 
 *figure 1：First Subcarrier*
-![figure 2：the second subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_2.png)
+![figure 2：the second subcarrier](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_2.png)
 
 *figure 2：the second subcarrier*
 
-![figure 3：the third subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_3.png)
+![figure 3：the third subcarrier](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_3.png)
 
 *figure 3：the third subcarrier*
 
-![figure 4：the fourth subcarrier](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_4.png)
+![figure 4：the fourth subcarrier](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_k_4.png)
 
 *figure 4：the fourth subcarrier*
 
@@ -62,7 +62,7 @@ The waveform of the fourth subcarrier is shown in Figure 4. This time span is th
 The waveforms of these four subcarriers are sent out over the air at the same time, which is equivalent to these four waveforms being simply superposed together; the waveform after being superposed together is as shown in the figure 5.
 
 
-![figure 5：Four subcarriers superposed together](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_4_SCs.png)
+![figure 5：Four subcarriers superposed together](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_4_SCs.png)
 
 *figure 5：Four subcarriers superposed together*
 
@@ -87,22 +87,22 @@ The waveform of the third subcarrier is shown in Figure 8.
 
 The waveform of the fourth subcarrier is shown in Figure 9.
 
-![figure 6：First Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_1.png)
+![figure 6：First Subcarrier，initial phase and amplitude](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_1.png)
 
 *figure 6：First Subcarrier，initial phase and amplitude*
 
 
-![figure 7：Second Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_2.png)
+![figure 7：Second Subcarrier，initial phase and amplitude](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_2.png)
 
 *figure 7：Second Subcarrier，initial phase and amplitude*
 
 
-![figure 8：Third Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_3.png)
+![figure 8：Third Subcarrier，initial phase and amplitude](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_3.png)
 
 *figure 8：Third Subcarrier，initial phase and amplitude*
 
 
-![figure 9：Fourth Subcarrier，initial phase and amplitude](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_4.png)
+![figure 9：Fourth Subcarrier，initial phase and amplitude](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_k_4.png)
 
 *figure 9：Fourth Subcarrier，initial phase and amplitude*
 
@@ -110,7 +110,7 @@ The waveform of the fourth subcarrier is shown in Figure 9.
 The waveform after the four subcarriers carrying information have been superposed is shown in Figure 10.
 
 
-![figure 10：Superposition of the four subcarriers carrying information](/figure/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_sum.png)
+![figure 10：Superposition of the four subcarriers carrying information](/img/5G_NR_Access_Intro/grid/different_subcarrier_orth_modulation_sum.png)
 
 *figure 10：Superposition of the four subcarriers carrying information*
 

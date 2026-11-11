@@ -443,4 +443,4 @@ plt.xticks(np.arange(0, 1, 0.1))
 plt.show()
 ```
 
-![MUSIC](/figure/mimo/music/music.png)
+![MUSIC](/img/mimo/music/music.png)

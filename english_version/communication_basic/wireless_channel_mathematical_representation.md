@@ -9,7 +9,7 @@ back_url: /index.html?lang=en
 ## A Typical Multipath Propagation Scenario 
 A typical multipath propagation scenario
 
-![multi-path.png](/figure/通信基础/无线信道的数学表示/multi-path.png)
+![multi-path.png](/img/通信基础/无线信道的数学表示/multi-path.png)
 
 Let $$X_{LP}$$ denote the original transmitted signal (i.e., the one that has not been shifted up to a high frequency; LP: Low Pass), which is called the low-pass signal or the baseband signal, and let $$X_{BP}$$ denote the signal that has been shifted to the high frequency (BP: Band Pass), which is called the bandpass signal. Then the relationship between the two is:
 
@@ -80,7 +80,7 @@ The meaning of the expression above is: at instant t (which can be regarded as a
 
 
 
-![multi-path2.png](/figure/通信基础/无线信道的数学表示/multi-path2.png)
+![multi-path2.png](/img/通信基础/无线信道的数学表示/multi-path2.png)
 
 
 In the figure above there are three paths with different delays in total, and each path is in turn composed of several different sub-paths. Among the various sub-paths under each path, the delays are the same (the attenuation coefficient and the phase, i.e., the complex attenuation coefficient, may be different) or the delays differ slightly.
@@ -118,7 +118,7 @@ $$
 In the expression above, $$vt cos(\alpha_n)$$ is the component, along the direction of the electromagnetic wave, of the distance that the phone has moved, as shown in the figure below:
 
 
-![doppler.png](/figure/通信基础/无线信道的数学表示/doppler.png)
+![doppler.png](/img/通信基础/无线信道的数学表示/doppler.png)
 
 
 
@@ -244,7 +244,7 @@ The expression above can be understood as follows: at a certain instant t, among
 We analyze this single-valued case, which is in fact analyzing the path marked with a certain color in the figure below:
 
 
-![multi-path2.png](/figure/通信基础/无线信道的数学表示/multi-path2.png)
+![multi-path2.png](/img/通信基础/无线信道的数学表示/multi-path2.png)
 
 For example, analyzing $$\tau_1$$, formula (9) becomes:
 

@@ -156,11 +156,11 @@ $$
 
 结合奇偶 RB 的物理过滤机制，虽然跳过了奇数 RB，但实际提取的序列索引依然是 $$0, 1, 2, 3, 4, 5$$，同样完美连续递增
 
-![图1：Enter Caption](/figure/5GNR/CSI-RS-Alloc/resouceGridRow14p1.png)
+![图1：Enter Caption](/img/5GNR/CSI-RS-Alloc/resouceGridRow14p1.png)
 
 *图1：Enter Caption*
 
-![图1：Enter Caption](/figure/5GNR/CSI-RS-Alloc/resouceGridRow14p.5.png)
+![图1：Enter Caption](/img/5GNR/CSI-RS-Alloc/resouceGridRow14p.5.png)
 
 *图1：Enter Caption*
 
@@ -201,16 +201,16 @@ $$
 
 $$j$$ 代表的是 CDM 组号， $$s$$ 代表组中的第几个天线端口，也是用于确定码分复用的正交码：where   is the sequence index provided by Tables 7.4.1.5.3-2 to 7.4.1.5.3-5
 
-![图2：Enter Caption](/figure/5GNR/CSI-RS-Alloc/resouceGridRow18p1.png)
+![图2：Enter Caption](/img/5GNR/CSI-RS-Alloc/resouceGridRow18p1.png)
 
 *图2：Enter Caption*
 
-![图3：Enter Caption](/figure/5GNR/CSI-RS-Alloc/resouceGridRow18p.5.png)
+![图3：Enter Caption](/img/5GNR/CSI-RS-Alloc/resouceGridRow18p.5.png)
 
 *图3：Enter Caption*
 
 
-![图1：Enter Caption](/figure/5GNR/CSI-RS-Alloc/csirs.png)
+![图1：Enter Caption](/img/5GNR/CSI-RS-Alloc/csirs.png)
 
 *图1：Enter Caption*
 
@@ -241,7 +241,7 @@ $$
 
 协议中，在决定 CSI-RS 在一个 RB 的频域位置上，是按照如图4所示的公式，看起来不是很清晰，我们这个文章稍微做一下解释。
 
-![图4：CSI-RS 在频域中的开始位置](/figure/5GNR/CSI-RS-Alloc/csirs-bxb0-calculation.png)
+![图4：CSI-RS 在频域中的开始位置](/img/5GNR/CSI-RS-Alloc/csirs-bxb0-calculation.png)
 
 *图4：CSI-RS 在频域中的开始位置*
 
@@ -255,7 +255,7 @@ $$
 
 $$(k_0,l_0),(k_0+4,l_0),(k_0+8,l_0)$$
 
-![图5：Row 1 的情况](/figure/5GNR/CSI-RS-Alloc/csirs-row1-b3b2b1b0.png)
+![图5：Row 1 的情况](/img/5GNR/CSI-RS-Alloc/csirs-row1-b3b2b1b0.png)
 
 *图5：Row 1 的情况*
 
@@ -289,7 +289,7 @@ $$
 $$
 当 $$k_0$$ 取定后，分派的 RE  就是 $$k_0,k_0+1,k_0+2,k_0+3$$  这 4 个 RE.
 
-![图6：Row 4 的情况](/figure/5GNR/CSI-RS-Alloc/csirs-row4-b2b1b0.png)
+![图6：Row 4 的情况](/img/5GNR/CSI-RS-Alloc/csirs-row4-b2b1b0.png)
 
 *图6：Row 4 的情况*
 
@@ -306,7 +306,7 @@ $$
 (k_0,l_0)\ (k_1,l_0)\ (k_2,l_0)\ (k_3,l_0), \ \ k'=\{0,1\}
 $$
 这种情况，需要指定四个参数 $$k_0,k_1,k_2,k_3$$. 由于 $$k'$$  有两个取值，因此，每个 $$k$$ 确定后就对应连续的两个 RE，因此，将一个 RB 内的 12 个 RE 分成了6 组，
-![图7：Row 6 的情况](/figure/5GNR/CSI-RS-Alloc/csirs-row6-b5b4b3b2b1b0.png)
+![图7：Row 6 的情况](/img/5GNR/CSI-RS-Alloc/csirs-row6-b5b4b3b2b1b0.png)
 
 *图7：Row 6 的情况*
 
@@ -328,7 +328,7 @@ $$
 
 选择后的 RE 如图8 所示：
 
-![图8：Row 6 选择后的情况](/figure/5GNR/CSI-RS-Alloc/csirs-row6-b5b4b3b2b1b0-selected.png)
+![图8：Row 6 选择后的情况](/img/5GNR/CSI-RS-Alloc/csirs-row6-b5b4b3b2b1b0-selected.png)
 
 *图8：Row 6 选择后的情况*
 
@@ -358,7 +358,7 @@ $$
 | $$b_5$$ | 1    | 3    | $$f(3)=5$$ | 10        | $$k_2=10$$  |
 
 选择后的 RE 如图9 所示：
-![图9：Row 10 选择后的情况](/figure/5GNR/CSI-RS-Alloc/csirs-row10-b5b4b3b2b1b0-selected.png)
+![图9：Row 10 选择后的情况](/img/5GNR/CSI-RS-Alloc/csirs-row10-b5b4b3b2b1b0-selected.png)
 
 *图9：Row 10 选择后的情况*
 
@@ -385,7 +385,7 @@ $$
 可以看到，通过可逆正交矩阵 $$W$$，可以计算出每个天线端口对应的信道系数 $$h_i$$.
 
 以 cdm4-FD2-TD2 为例：
-![图10：cdm4-FD2-TD2](/figure/5GNR/CSI-RS-Alloc/W_cdm4_FD2_TD2.png)
+![图10：cdm4-FD2-TD2](/img/5GNR/CSI-RS-Alloc/W_cdm4_FD2_TD2.png)
 
 *图10：cdm4-FD2-TD2*
 
@@ -455,10 +455,17 @@ $$
 	\end{bmatrix}
 $$
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{/img/5GNR/CSI-RS-Alloc/W_cdm4_FD2_TD2.png}
+	\label{fig:csi_rs_cdm_table_cdm4FD2TD2}
+\end{figure} 
+
+
 
 上面这四个向量是用表格 \ref{fig:csi_rs_cdm_table_cdm4FD2TD2} 中的对应行做 Kronecker 积产生的。
-例如  $$\mathbf{F}$$ 是用表格中的第 3 行产生的：
 
+例如  $$\mathbf{F}$$ 是用表格中的第 3 行产生的：
 
 $$
 \mathbf U =

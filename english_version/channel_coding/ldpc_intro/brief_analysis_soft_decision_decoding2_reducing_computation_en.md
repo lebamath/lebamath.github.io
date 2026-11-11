@@ -169,7 +169,7 @@ We denote the number of elements in $$N_{m,n}$$ by L.
 
 Then, a diagram as shown below can be formed:
 
-![trellisL.png](/figure/LDPC译码浅析/trellisL.png) 
+![trellisL.png](/img/LDPC译码浅析/trellisL.png) 
 
 
 If $$\xi (L)=x$$ (where x is the value of $$c_n$$), then this case is taken into consideration; otherwise, this combination need not be considered, need not be expanded into a continued product and take part in the accumulation. Continuing the example above, because $$N_{m,n}=N_{1,2}={1,3,6,7,10}$$, L=5.
@@ -194,7 +194,7 @@ Next $$\xi(4) = \xi(3) + x_7$$, which depends on the value of $$x_7$$
 
 Finally $$\xi(5) = \xi(4) + x_{10}$$, which depends on the value of $$x_{10}$$.
 
-![trellis5.png](/figure/LDPC译码浅析/trellis5.png) 
+![trellis5.png](/img/LDPC译码浅析/trellis5.png) 
 
 For convenience of writing, we introduce one more notation $$W_k(x)=p(\xi(k)=x)$$, denoting the probability that, at step k in the figure above, or in other words when the k-th number has been added, the result is x. In the example x =1, then
 

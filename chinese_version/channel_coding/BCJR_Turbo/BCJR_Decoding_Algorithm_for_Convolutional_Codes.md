@@ -155,23 +155,23 @@ $$
 则结构如下：
 
 
-![convolutionary_code_encoder_1.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_code_encoder_1.png) 
+![convolutionary_code_encoder_1.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_code_encoder_1.png) 
 
 
 也可以画成下图，两者是等价的：
 
 
-![convolutionary_code_encoder_2.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_code_encoder_2.png) 
+![convolutionary_code_encoder_2.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_code_encoder_2.png) 
 
 
 则其状态转移栅格图为：
 
-![convolutionary_encoder_state_transition.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
+![convolutionary_encoder_state_transition.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png) 
 
 
 假如我们要编码 10 个比特，从状态 00 出发，编码结束后回到 00 状态，则所有可能路径有：
 
-![encoder_10bits_trellis.png](/figure/卷积码编码和译码/BCJR-turbo/encoder_10bits_trellis.png) 
+![encoder_10bits_trellis.png](/img/卷积码编码和译码/BCJR-turbo/encoder_10bits_trellis.png) 
 
 
 假如我们编码的比特  x=[1, 1, 0, 0, 1, 0,  1, 0, 1, 1]

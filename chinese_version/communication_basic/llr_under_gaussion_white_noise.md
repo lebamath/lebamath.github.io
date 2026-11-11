@@ -18,7 +18,7 @@ back_url: /index.html?lang=zh
 注 2：实部我们称之为 in-phase，用 I 做下标，虚部我们称之为 quadrature，用 Q 做表示）。
 
 
-![channel.png](/figure/高斯白噪声软信息计算/channel.png)
+![channel.png](/img/高斯白噪声软信息计算/channel.png)
 
 
 通信系统中，我们关心的是在收到信号 y 的情况下，判断发送方发送的比特是 1 或者 0 的概率，可以表示成  $$p(b=0\vert y)$$  和 $$p(b=1 \vert y)$$.
@@ -89,7 +89,7 @@ QSPK 下，两个比特调制为一个复数，我们把这两个比特记为  $
 
 映射关系如下图所示：
 
-![QPSK.png](/figure/高斯白噪声软信息计算/QPSK.png)
+![QPSK.png](/img/高斯白噪声软信息计算/QPSK.png)
 
 $$
 \begin{aligned}
@@ -259,7 +259,7 @@ $$
 经过高斯白噪声信道传输，这里我们把实部和虚部看成是分别独立传输的，分别加上独立的高斯白噪声的干扰。（注 1：实际上是实部和虚部在相同的信道上传输，只是由相互正交的高频信号做载波发送的，可以看成是分别传输的
 注 2：实部我们称之为 in-phase，用 I 做下标，虚部我们称之为 quadrature，用 Q 做表示）。
 
-![channel.png](/figure/高斯白噪声软信息计算/channel.png)
+![channel.png](/img/高斯白噪声软信息计算/channel.png)
 
 
 通信系统中，我们关心的是在收到信号 y 的情况下，判断发送方发送的比特是 1 或者 0 的概率，可以表示成  $$p(b=0\vert y)$$  和 $$p(b=1\vert y)$$.
@@ -329,7 +329,7 @@ $$
 
 映射关系如下图所示：
 
-![8-psk.png](/figure/高斯白噪声软信息计算/8-psk.png)
+![8-psk.png](/img/高斯白噪声软信息计算/8-psk.png)
 令：
 
 $$

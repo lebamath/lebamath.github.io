@@ -16,12 +16,12 @@ MIMO 检测有很多种方法，这个文档，我们想讲一下基于马尔科
 由于每个接收的天线都能接收到所有发射天线来的信号，因此，在接收到的每个信号，都可以给出每个发送符号的概率信息。因此，如果把每个发射信号都各看成一种需要估计的东西，那么这些估计之间是相互依赖的，这种依赖关系，是由接收天线得到的数据建立起来的。我们构造的马尔科夫随机场概率图模型中，是看不到接收到的信号的，是隐藏在后面的。例如，一个四根发射天线四根接收天线的系统如图一，对应的马尔科夫随机场如图二。
 
 
-![图一 MIMO 系统示意图](/figure/MIMO检测/System.png)
+![图一 MIMO 系统示意图](/img/MIMO检测/System.png)
 
 *图一 MIMO 系统示意图*​																							
 
 
-![图二  马尔科夫随机场概率图模型](/figure/MIMO检测/MRF.png)
+![图二  马尔科夫随机场概率图模型](/img/MIMO检测/MRF.png)
 
 *图二  马尔科夫随机场概率图模型*​	
 
@@ -332,12 +332,12 @@ $$
 
 基于马尔科夫随机场的置信传播算法，我们也可以在马尔科夫随机场图模型的边上，引入一个函数节点（Function Nodes, FN），把原来的节点称为变量节点(Variable Nodes, VN), 如下图所示：
 
-![MRF_with_FNs.png](/figure/MIMO检测/MRF_with_FNs.png)​	
+![MRF_with_FNs.png](/img/MIMO检测/MRF_with_FNs.png)​	
 
 
 按照如下图定义传递的消息：
 
-![MRF_messaging_with_FNs.png](/figure/MIMO检测/MRF_messaging_with_FNs.png)​	
+![MRF_messaging_with_FNs.png](/img/MIMO检测/MRF_messaging_with_FNs.png)​	
 
 则变量节点发给函数节点的消息，可以理解为就是变量节点本身的置信度，因为是发给某条边的，因此，计算这个变量节点时，来自其目的地的边的消息，则不参与计算这个变量节点的置信度。
 
@@ -503,7 +503,7 @@ $$
 
 系统图如下：
 
-![System.png](/figure/MIMO检测/System.png)​	
+![System.png](/img/MIMO检测/System.png)​	
 
 
 则：
@@ -732,9 +732,9 @@ $$
 
 至此，我们引入因子图来表示这种迭代关系以及迭代过程中传递的概率信息（称之为消息）。
 
-![FG.png](/figure/MIMO检测/FG.png)​	
+![FG.png](/img/MIMO检测/FG.png)​	
 
-![FG_part.png](/figure/MIMO检测/FG_part.png)​	
+![FG_part.png](/img/MIMO检测/FG_part.png)​	
 
 ### 算法和代码
 

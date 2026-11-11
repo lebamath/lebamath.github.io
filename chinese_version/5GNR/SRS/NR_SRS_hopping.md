@@ -39,18 +39,18 @@ $$
 
 整个 SRS 带宽会被划分成多个段，而且是有不同的划分（即对不同的划分方式划分后的段长度不同），这个由表 Table 6.4.1.4.3-1: SRS bandwidth configuration 确定，如图 1。 表格中 $$m_{\text{SRS},b}$$ 表示每一段的长度，以 RB 为单位，$$N_b$$ 
 
-![图1：SRS bandwidth table](/figure/5GNR/srs/srsHopping/SRS_bandwidth_table.png)
+![图1：SRS bandwidth table](/img/5GNR/srs/srsHopping/SRS_bandwidth_table.png)
 
 *图1：SRS bandwidth table*
 
 
 以 $$C_{\text{SRS}}=29$$ 为例，如图 2所示，其分段方式如图 3 所示：
 
-![图2：SRS bandwidth table,$$C_\text{SRS}=29$$](/figure/5GNR/srs/srsHopping/SRS_bandwidth_table_Csrs29.png)
+![图2：SRS bandwidth table,$$C_\text{SRS}=29$$](/img/5GNR/srs/srsHopping/SRS_bandwidth_table_Csrs29.png)
 
 *图2：SRS bandwidth table,$$C_\text{SRS}=29$$*
 
-![图3：SRS bandwidth table,$$C_\text{SRS}=29$$](/figure/5GNR/srs/srsHopping/Csrs29_segments_show.png)
+![图3：SRS bandwidth table,$$C_\text{SRS}=29$$](/img/5GNR/srs/srsHopping/Csrs29_segments_show.png)
 
 *图3：SRS bandwidth table,$$C_\text{SRS}=29$$*
 
@@ -126,13 +126,13 @@ $$
 
 为了演示和讲解，我们人为造一个例子，即在表Table 6.4.1.4.3-1: SRS bandwidth configuration 中，假定有这样一行，如图 4, 对应的段划分，如图 5 所示。
 
-![图4：为了方便说明，制造了不是标准中的一行](/figure/5GNR/srs/srsHopping/bandwidth_table_one_own_row.png)
+![图4：为了方便说明，制造了不是标准中的一行](/img/5GNR/srs/srsHopping/bandwidth_table_one_own_row.png)
 
 *图4：为了方便说明，制造了不是标准中的一行*
 
 
 
-![图5：为了方便说明，制造了不是标准中的一行](/figure/5GNR/srs/srsHopping/bandwidth_table_one_own_row_on_grid_show.png)
+![图5：为了方便说明，制造了不是标准中的一行](/img/5GNR/srs/srsHopping/bandwidth_table_one_own_row_on_grid_show.png)
 
 *图5：为了方便说明，制造了不是标准中的一行*
 
@@ -391,7 +391,7 @@ $$
 	\label{tab:srs_hopping_Nb_odd}
 \end{table}
 
-![图6：$$N_b=7$$ 时在时频格子中跳频情况](/figure/5GNR/srs/srsHopping/Nb_7_hopping_in_grid.png)
+![图6：$$N_b=7$$ 时在时频格子中跳频情况](/img/5GNR/srs/srsHopping/Nb_7_hopping_in_grid.png)
 
 *图6：$$N_b=7$$ 时在时频格子中跳频情况*
 
@@ -399,10 +399,10 @@ $$
 
 如图 7 和 图 8
 
-![图7：一个总的例子-计算跳频](/figure/5GNR/srs/srsHopping/一个总的例子-计算跳频.png)
+![图7：一个总的例子-计算跳频](/img/5GNR/srs/srsHopping/一个总的例子-计算跳频.png)
 
 *图7：一个总的例子-计算跳频*
 
-![图8：一个总的例子-跳频图](/figure/5GNR/srs/srsHopping/一个总的例子-跳频图.png)
+![图8：一个总的例子-跳频图](/img/5GNR/srs/srsHopping/一个总的例子-跳频图.png)
 
 *图8：一个总的例子-跳频图*

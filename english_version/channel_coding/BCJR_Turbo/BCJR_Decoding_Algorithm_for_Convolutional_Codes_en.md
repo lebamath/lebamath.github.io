@@ -153,23 +153,23 @@ $$
 Then the structure is as follows:
 
 
-![convolutionary_code_encoder_1.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_code_encoder_1.png)
+![convolutionary_code_encoder_1.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_code_encoder_1.png)
 
 
 It can also be drawn as the figure below; the two are equivalent:
 
 
-![convolutionary_code_encoder_2.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_code_encoder_2.png)
+![convolutionary_code_encoder_2.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_code_encoder_2.png)
 
 
 Then its state transition trellis diagram is:
 
-![convolutionary_encoder_state_transition.png](/figure/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png)
+![convolutionary_encoder_state_transition.png](/img/卷积码编码和译码/BCJR-turbo/convolutionary_encoder_state_transition.png)
 
 
 Suppose we want to encode 10 bits, starting from state 00 and returning to state 00 after the encoding is finished; then all the possible paths are:
 
-![encoder_10bits_trellis.png](/figure/卷积码编码和译码/BCJR-turbo/encoder_10bits_trellis.png)
+![encoder_10bits_trellis.png](/img/卷积码编码和译码/BCJR-turbo/encoder_10bits_trellis.png)
 
 
 Suppose the bits we encode are  x=[1, 1, 0, 0, 1, 0,  1, 0, 1, 1]

@@ -370,7 +370,7 @@ Therefore, formula (1) attains its minimum at the point (3).
 
 Code: please download it from GitHub: \url{https://github.com/taichiorange/leba_math}
 
-![05-有最小值的证明.png](/figure/通信基础/05-有最小值的证明.png)
+![05-有最小值的证明.png](/img/通信基础/05-有最小值的证明.png)
 
 ## Chernoff bounds: another derivation result
 

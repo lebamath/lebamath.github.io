@@ -14,7 +14,7 @@ back_url: /index.html?lang=zh
 
 完整的 PDSCH 编码流程如下图所示，此图摘自网上的文章 [1]:
 
-![NR_PDSCH_Flow.png](/figure/5GNR/pdsch/NR_PDSCH_Flow.png)
+![NR_PDSCH_Flow.png](/img/5GNR/pdsch/NR_PDSCH_Flow.png)
 
 所以，本文章会讲述上图中的第 1、2、3 和 4 步。核心目的是为了讲第 4 步。
 
@@ -45,7 +45,7 @@ $$
 
 下图摘自网上的文章 [1]，清晰地演示了上面说的过程：
 
-![NR_PDSCH_TransportBlockCRC_01.png](/figure/5GNR/pdsch/NR_PDSCH_TransportBlockCRC_01.png)
+![NR_PDSCH_TransportBlockCRC_01.png](/img/5GNR/pdsch/NR_PDSCH_TransportBlockCRC_01.png)
 
 
 ### LDPC base graph selection
@@ -62,10 +62,10 @@ $$
 
 文章[1] 中有几个图来解释这个选择范围，比较清楚：
 
-![NR_PDSCH_LDPC_basegraph_selection_02.png](/figure/5GNR/pdsch/NR_PDSCH_LDPC_basegraph_selection_02.png)
+![NR_PDSCH_LDPC_basegraph_selection_02.png](/img/5GNR/pdsch/NR_PDSCH_LDPC_basegraph_selection_02.png)
 
 
-![NR_PDSCH_LDPC_basegraph_selection_03.png](/figure/5GNR/pdsch/NR_PDSCH_LDPC_basegraph_selection_03.png)
+![NR_PDSCH_LDPC_basegraph_selection_03.png](/img/5GNR/pdsch/NR_PDSCH_LDPC_basegraph_selection_03.png)
 
 总的来讲，或者粗略来看，Base Graph 1 用于数据比较长，或者码率比较高（冗余度小）的情况。当码长较小或者码率比较低时，倾向于选择 Base Grapha 2.
 
@@ -81,7 +81,7 @@ $$
 
 下图是文章[1] 中一个图，比较形象地说明了这个步骤在干啥：
 
-![NR_PDSCH_CodeBlockSegmentation_01.png](/figure/5GNR/pdsch/NR_PDSCH_CodeBlockSegmentation_01.png)
+![NR_PDSCH_CodeBlockSegmentation_01.png](/img/5GNR/pdsch/NR_PDSCH_CodeBlockSegmentation_01.png)
 
 需要注意的是，上面图中，分割后的 CodeBlock 绿色部分不是仅仅把 Transport Block 绿色那一段 进行分割而得到的，实际上也包括灰色的那个 CRC.
 
@@ -204,7 +204,7 @@ end for  \\
 
 这个值用来在表格 38.212 - 5.3.2-2 和 5.3.2-3 中选择一列.
 
-![LDPC_Base_Graph_1_HBG_Vij_table_5.3.2-2.png](/figure/5GNR/pdsch/LDPC_Base_Graph_1_HBG_Vij_table_5.3.2-2.png)
+![LDPC_Base_Graph_1_HBG_Vij_table_5.3.2-2.png](/img/5GNR/pdsch/LDPC_Base_Graph_1_HBG_Vij_table_5.3.2-2.png)
 
 i 和 j 对应的是 $$H_{BG}$$ 矩阵的行和列，例如上图，假定我们得到的 $$i_{LS} = 1$$ , 则选择这个表格的图中绿色那一列，注意，那个不是两列，是因为表格太大，分成左右两块写的。那么当 i=16, j=20 时，我们可以得到 $$V_{i=16,j=20}=289$$， 如上图中红色圈圈，再对 289 这个值用 $$Z_c$$ 取模，得到的余数，放到 $$H_{BG}$$ 矩阵的第 i 行 第 j 列那个位置。
 
@@ -229,13 +229,13 @@ $$H_{BG}$$(0,9) , 第 0 行第 9 列的数据是 317 mod $$Z_c$$\\
 
 会得到类似下面两个图中的矩阵，摘自文章[2]：
 
-![BG1.png](/figure/5GNR/pdsch/BG1.png)
+![BG1.png](/img/5GNR/pdsch/BG1.png)
 
-![BG2.png](/figure/5GNR/pdsch/BG2.png)
+![BG2.png](/img/5GNR/pdsch/BG2.png)
 
 展开后得到类似与下面这个矩阵，摘自文章[2]:
 
-![HBG_matrix_example.png](/figure/5GNR/pdsch/HBG_matrix_example.png)
+![HBG_matrix_example.png](/img/5GNR/pdsch/HBG_matrix_example.png)
 
 最终的校验矩阵是对上面这个矩阵再进一步扩展，用一个 $$Z_c \times Z_c$$ 的单位矩阵，来代替上面矩阵中的每个元素，代替的方法为：
 
@@ -288,7 +288,7 @@ $$
 根据上一篇文章，生成的 $$H_{BG}$$ 矩阵，形状如下图：
 
 
-![BG2.png](/figure/5GNR/pdsch/BG2.png)
+![BG2.png](/img/5GNR/pdsch/BG2.png)
 
 
 M 行， N 列的矩阵 $$M \times N$$   
@@ -354,7 +354,7 @@ C_2 = \begin{bmatrix}
 \end{aligned}
 $$
 
-![HBG2_different_blocks.png](/figure/5GNR/pdsch/HBG2_different_blocks.png)
+![HBG2_different_blocks.png](/img/5GNR/pdsch/HBG2_different_blocks.png)
 
 对于子矩阵 B，一共只有四种情况（而对于 A, C1 和 C2 各有 16 种情况，Base Graph 1 有 8 种， Base Graph 2 有 8 种 ) ， 虽然表面看，B 也有 16 种情况，但是，很多情况是得到相同的子矩阵 B.  对于这四种矩阵 B，分别记为 $$H_{BG1\_B1},H_{BG1\_B2},H_{BG2\_B1},H_{BG2\_B2}$$
 
@@ -582,7 +582,7 @@ $$
 而每一块的目标大小为 $$22Zc = 4576$$,  所以，这种情况下，不需要给每一块填 NULL, 这是因为 $$K'$$ 是分块后，每一块的原始数据（包括因为分块而在这个块上增加的 24 bits CRC 数据) 刚好是 $$22 Z_c$$ ， 即$$K-K' = 4576-4576=0$$
 
 
-![分段示意图-01.png](/figure/5GNR/pdsch/分段示意图-01.png)
+![分段示意图-01.png](/img/5GNR/pdsch/分段示意图-01.png)
 
 
 
@@ -600,7 +600,7 @@ $$
 
 而每一块的目标大小为 $$22Zc = 4576$$, 而现在给每一块的数据只有$$K'=4556$$,  这种情况下，**需要**给每一块填充 NULL,  则每一块需要填充 $$K-K' = 4576-4556=20$$ 个 NULL.
 
-![分段示意图-02.png](/figure/5GNR/pdsch/分段示意图-02.png)
+![分段示意图-02.png](/img/5GNR/pdsch/分段示意图-02.png)
 
 
 **例子 3 需要补充 0**
@@ -639,7 +639,7 @@ Redundancy Version 是在 LDPC 编码后的数据中，从不同开始位置来�
 
 下面是一个示意图，摘自 [5G | ShareTechnote](\url{https://www.sharetechnote.com/html/5G/5G_HARQ.html})
 
-![5G_HARQ_rv_01.png](/figure/5GNR/pdsch/5G_HARQ_rv_01.png)
+![5G_HARQ_rv_01.png](/img/5GNR/pdsch/5G_HARQ_rv_01.png)
 
 
 这个整个圆环，就是 LDPC 编码之后的数据，在 Bit selection 之前的，即包含 NULL 数据的。这个在协议 38.212(h50 version) 5.4.2.1节的开始有说明，摘录如下：
@@ -658,7 +658,7 @@ The bit sequence after encoding      $$d_0,d_1,d_2,\dots,d_{N-1}$$    from Claus
 
 38.212 中确定开始点的表格：
 
-![redundancy_version_k0.png](/figure/5GNR/pdsch/redundancy_version_k0.png)
+![redundancy_version_k0.png](/img/5GNR/pdsch/redundancy_version_k0.png)
 
 
 Notes:  For the   $$r$$-th code block, let $$N_{cb}=N$$  if   $$I_{LBRM}=0$$;
@@ -669,12 +669,12 @@ Notes:  For the   $$r$$-th code block, let $$N_{cb}=N$$  if   $$I_{LBRM}=0$$;
 
 38.212 - 5.4.2.1 Bit Selection 过程：
 
-![bit-selection.png](/figure/5GNR/pdsch/bit-selection.png)
+![bit-selection.png](/img/5GNR/pdsch/bit-selection.png)
 
 可以看到，是在 circular buffer 中循环选择，其间如果碰到 NULL ，就跳过不取。
 
 
-![reduancy_construct.png](/figure/5GNR/pdsch/reduancy_construct.png)
+![reduancy_construct.png](/img/5GNR/pdsch/reduancy_construct.png)
 
 ## NR 5G PDSCH TBS 的计算和在重传机制中的使用
 TBS : Transport block size, 是用来告知一次数据传输中，有多少是用户的有效数据，即剔除掉增加的用于校验的冗余数据的部分。 5G NR 中，下行 TBS 是通过一个公式计算出来的，而不是在 DCI(Downlink Control Information) 中直接告知的。
@@ -703,7 +703,7 @@ $$
 
 当 $$N_\text{info}  > 3824$$
 
-![TBS_calculation.png](/figure/5GNR/pdsch/TBS_calculation.png)
+![TBS_calculation.png](/img/5GNR/pdsch/TBS_calculation.png)
 
 这里我们讨论上面这些公式的细节，我们只需要知道， TBS 是根据 PRB 数量，调制阶数，symbol 符号数量以及目标码率（当然还有层数，我们这里都假定是 1 层） 来确定的。
 
@@ -711,11 +711,11 @@ $$
 
 那么如果基站收到了一个 NACK，则基站需要重传，使用不同的 reduancy version(参考另外一篇文章) 来做 NACK 重传，因为 UE 需要把NACK 重传的数据与上一次收到的数据进行叠加，所以，基站侧是不能重新编码的，因此，意味着 NACK 重传的数据，其 TBS 是与第一次的是一样的，UE 收到的 NACK 重传数据，则不再重新计算 TBS. 然而，需要注意的是，NACK 重传时可以用不同数量的 PRB，不同的调制阶数，不同数量的 symbol 符号，甚至不同的层数。
 
-![5G_HARQ_rv_01.png](/figure/5GNR/pdsch/5G_HARQ_rv_01.png)
+![5G_HARQ_rv_01.png](/img/5GNR/pdsch/5G_HARQ_rv_01.png)
 
 在NACK 重传时，DCI 中给的调制阶数是用对应 MCS ( Modulation coding scheme)表格中 28 到 31 来表示的，例如表格
 
-![MCS-table.png](/figure/5GNR/pdsch/MCS-table.png)
+![MCS-table.png](/img/5GNR/pdsch/MCS-table.png)
 
 NACK 重传时用 28，29，30，或者 31，此时，这些值仅仅用于表示调制阶数，而不用来指示目标码率和频谱效率。这在 38.214-5.1.3.2 节中有描述，摘抄如下：
 

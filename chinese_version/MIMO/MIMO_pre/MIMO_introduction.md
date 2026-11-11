@@ -24,7 +24,7 @@ back_url: /index.html?lang=zh
 **1)一发两收的情况** 
 
 
-![1t2.png](/figure/MIMO浅析/1t2.png)
+![1t2.png](/img/MIMO浅析/1t2.png)
 
 设 w11 表示从发射天线1到接收天线1的系数，w12 表示从发射天线1到接收天线2的系数。那么发送一个已知的数据 x， 接收到的数据，接收天线1上接收到的数据是  y1，接收天线2上接收的数据是 y2，则有如下两个方程，其中 x, y1 和 y2 是 已知量，未知的是 w11 和 w12:
 
@@ -62,7 +62,7 @@ $$
 
 **2)两发一收的情况**
 
-![2t1.png](/figure/MIMO浅析/2t1.png)
+![2t1.png](/img/MIMO浅析/2t1.png)
 
 设从发射天线1到接收天线1的系数为 w11，从发射天线2到接收天线1的系数为 w21，同一时刻，可以从两个发射天线上同时发射数据出去，设这两个数据为 x1 和 x2 ，此时接收天线上接收到的数据为  y1.  那么，我们可以列出一个方程出来，同样，这个方程中 w11 和 w21 是未知数：
 
@@ -115,7 +115,7 @@ $$
 
 **3)两发三收的情况**
 
-![2t3.png](/figure/MIMO浅析/2t3.png)
+![2t3.png](/img/MIMO浅析/2t3.png)
 
 
 设：
@@ -329,7 +329,7 @@ $$
 
 **4)三发两收的情况**
 
-![3t2.png](/figure/MIMO浅析/3t2.png)
+![3t2.png](/img/MIMO浅析/3t2.png)
 
 设：
 
@@ -527,7 +527,7 @@ $$
 **1)一发两收**
 
 
-![1t2.png](/figure/MIMO浅析/1t2.png)
+![1t2.png](/img/MIMO浅析/1t2.png)
 
 已知接收到的数据是  y1 和 y2，信道的参数为：
 
@@ -548,7 +548,7 @@ $$
 
 **2) 两发一收**
 
-![2t1.png](/figure/MIMO浅析/2t1.png)
+![2t1.png](/img/MIMO浅析/2t1.png)
 
 已知接收到的数据是  y1，信道的参数为：
 
@@ -633,7 +633,7 @@ $$
 
 **3)两发三收**
 
-![2t3.png](/figure/MIMO浅析/2t3.png)
+![2t3.png](/img/MIMO浅析/2t3.png)
 
 设：
 
@@ -715,7 +715,7 @@ $$
 
 **4)三发两收**
 
-![3t2.png](/figure/MIMO浅析/3t2.png)
+![3t2.png](/img/MIMO浅析/3t2.png)
 
 设：
 
@@ -835,7 +835,7 @@ MIMO 系统中，如果发射天线多于接收天线，那么我们不能做到
 
 系统的示意图如下：
 
-![3t2.png](/figure/MIMO浅析/3t2.png)
+![3t2.png](/img/MIMO浅析/3t2.png)
 
 设：
 
@@ -1028,20 +1028,20 @@ $$
 
 
 
-![XtoY.png](/figure/MIMO浅析/XtoY.png)
+![XtoY.png](/img/MIMO浅析/XtoY.png)
 
 
 作用完 VH 之后，我们已经得到了 C，但是，后面两步的效果，需要在接收端做一次逆左右，即
 
 
-![YtoC.png](/figure/MIMO浅析/YtoC.png)
+![YtoC.png](/img/MIMO浅析/YtoC.png)
 
 
 这是从数学公式的推导上，我们可以得到这个过程。
 
 我们从空间几何的角度，再重新理解一下上面的过程。
 
-![3D.png](/figure/MIMO浅析/3D.png)
+![3D.png](/img/MIMO浅析/3D.png)
 
 我们把 
 
@@ -1627,7 +1627,7 @@ $$
 
 其实这也好理解，如果一个信道比如完全断开了，那一点功率也不应该给他分配。但是，这个投入产出比的合理点，就是我们要寻找的。
 
-![图1：注水算法](/figure/MIMO浅析/WaterFilling_2.jpg)
+![图1：注水算法](/img/MIMO浅析/WaterFilling_2.jpg)
 
 *图1：注水算法*
 
@@ -1693,9 +1693,9 @@ $$
 二分法实现的代码在：
 \url{https://github.com/taichiorange/leba_math/blob/main/MIMO/MIMO%E5%88%9D%E6%AD%A5/%E6%B3%A8%E6%B0%B4%E7%AE%97%E6%B3%95/waterfilling_2Methods_BiSelection.m}
 
-![WaterFilling_2.jpg](/figure/MIMO浅析/WaterFilling_2.jpg)
+![WaterFilling_2.jpg](/img/MIMO浅析/WaterFilling_2.jpg)
 
-![WaterFilling_1.jpg](/figure/MIMO浅析/WaterFilling_1.jpg)
+![WaterFilling_1.jpg](/img/MIMO浅析/WaterFilling_1.jpg)
 
 
 ## 接收分集--最大接收比合并 MRRC
@@ -1704,7 +1704,7 @@ $$
 
 首先对分集这个概念做一下解释，其英文是 Diversity，字面意思是多样性。怎么来理解这个词呢？假如我们做接收分集，那就是有所谓的接收 “多样性”，例如下面这个一个发射天线，两根接收天线的情况
 
-![diversity-receiving.png](/figure/MIMO浅析/diversity-receiving.png)
+![diversity-receiving.png](/img/MIMO浅析/diversity-receiving.png)
 
 
 
@@ -1923,7 +1923,7 @@ $$
 代码：在 gitnub 中.
 
 
-![mrrc_result.png](/figure/MIMO浅析/mrrc_result.png)
+![mrrc_result.png](/img/MIMO浅析/mrrc_result.png)
 
 这里涉及一个理论上 MRRC 的误码率公式，待补充。
 
@@ -1936,7 +1936,7 @@ $$
 第二时刻:    天线1:    $$-s_2^*$$  天线2:   $$s_1^*$$
 
 
-![Alamouti.png](/figure/MIMO浅析/Alamouti.png)
+![Alamouti.png](/img/MIMO浅析/Alamouti.png)
 
 那么
 
@@ -2255,24 +2255,24 @@ $$
 \frac{|h|^2 P/2}{\sigma^2}=\frac{|h|^2 P}{2\sigma^2}
 $$
 
-![rx_diversity_vs_tx_diversity.png](/figure/MIMO浅析/rx_diversity_vs_tx_diversity.png)
+![rx_diversity_vs_tx_diversity.png](/img/MIMO浅析/rx_diversity_vs_tx_diversity.png)
 
 
-![rx_diversity_vs_tx_diversity_same_tx_power.png](/figure/MIMO浅析/rx_diversity_vs_tx_diversity_same_tx_power.png)
+![rx_diversity_vs_tx_diversity_same_tx_power.png](/img/MIMO浅析/rx_diversity_vs_tx_diversity_same_tx_power.png)
 
 
 代码：代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
 ## 发射分集 vs 接收分集 vs 单发单收\ 性能对比
 
-![2x1_vs_1x2_vs_1x1.png](/figure/MIMO浅析/2x1_vs_1x2_vs_1x1.png)
+![2x1_vs_1x2_vs_1x1.png](/img/MIMO浅析/2x1_vs_1x2_vs_1x1.png)
 
 代码：代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
 ## MU-MIMO:UL和 DL 的区别
 MU-MIMO （Multi-User MIMO）由于某个用户很难知道其他用户的所有信道信息，所以，与 SU-MIMO( Single-User) 相比，具有一些关键的区别与挑战。这篇短文先把这两者之间的主要区别提出来，并给出其中的主要挑战在哪里，至于如何具体应对这些挑战，是需要更深入的分析才能得出结论，这个不在本文中叙述。
 
-![MU-MIMO中的 UL和 DL 的区别.png](/figure/MIMO浅析/MU-MIMO中的 UL和 DL 的区别.png)
+![MU-MIMO中的 UL和 DL 的区别.png](/img/MIMO浅析/MU-MIMO中的 UL和 DL 的区别.png)
 
 上图中绿色天线是一个用户，红色天线是一个用户。也就是第一个用户有三根天线，第二个用户有一根天线。
 

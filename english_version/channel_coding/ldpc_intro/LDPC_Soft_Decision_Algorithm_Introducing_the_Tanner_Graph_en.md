@@ -86,7 +86,7 @@ $$
 Then, using a Tanner graph to express these dependency relations, it can be expressed as the figure below:
 
 
-![tanner_graph.png](/figure/LDPC译码浅析/tanner_graph.png)
+![tanner_graph.png](/img/LDPC译码浅析/tanner_graph.png)
 
 
 The relation between the two kinds of variable nodes can be described with this idea: a check node (a parity-check equation) tells some kind of measure information of its own to the variable nodes corresponding to the bits that this parity-check equation contains; similarly, a variable node also sends some kind of measure of the probability information of its own value to the check nodes corresponding to the parity-check equations that contain this bit.

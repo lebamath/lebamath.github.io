@@ -19,14 +19,14 @@ A sine or cosine waveform is periodic. We transmit at one frequency, for example
 
 The first figure is for the cosine
 
-![Frequency offset, cosine](/figure/通信基础/频谱估计_1.png)
+![Frequency offset, cosine](/img/通信基础/频谱估计_1.png)
 
 *Frequency offset, cosine*
 
 
 The second figure is for the sine
 
-![Frequency offset, sine](/figure/通信基础//频谱估计_2.png)
+![Frequency offset, sine](/img/通信基础//频谱估计_2.png)
 
 *Frequency offset, sine*
 
@@ -101,14 +101,14 @@ This short article attempts to analyze how to perform time offset estimation. Th
 
 There are two waveforms, one at 100 Hz and one at 200 Hz, and they are divided according to 0.01 second. If there is no time offset at all, the situation should be as shown in the figure below.
 
-![Frequency offset, sine](/figure/通信基础/时偏估计-1.png)
+![Frequency offset, sine](/img/通信基础/时偏估计-1.png)
 
 *Frequency offset, sine*
 
 
 If, for the vertical lines above, the time interval between the vertical lines is still 0.01 second, but due to various reasons (an offset in the local clock, etc.) the positions of the vertical lines are not at integer multiples of 0.01 second, for example they are all shifted 0.002 second to the right, then the result shown in the figure below appears:
 
-![Frequency offset, sine](/figure/通信基础/时偏估计-2.png)
+![Frequency offset, sine](/img/通信基础/时偏估计-2.png)
 
 *Frequency offset, sine*
 

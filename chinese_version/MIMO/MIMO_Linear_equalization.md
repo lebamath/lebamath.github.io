@@ -14,7 +14,7 @@ back_url: /index.html?lang=zh
 我们的问题是已知接收的信号 Y，以及信道系数矩阵 H，估计发送的数据 X.
 
 
-![System.png](/figure/MIMO检测/System.png)
+![System.png](/img/MIMO检测/System.png)
 
 这里说的线性算法，指的是通过对 Y 的线性组合来估计出发送的数据 X，可以表示为：
 
@@ -129,13 +129,13 @@ $$
 如果满足正交性，则干扰就会都消失掉。
 
 
-![MF_BER_Curve.png](/figure/MIMO检测/MF_BER_Curve.png)
+![MF_BER_Curve.png](/img/MIMO检测/MF_BER_Curve.png)
 
 代码请到 github 下载：\url{https://github.com/taichiorange/leba_math}
 
 
 ## ZeroForcing 和 MMSE
-![System.png](/figure/MIMO检测/System.png)
+![System.png](/img/MIMO检测/System.png)
 ### Zero Forcing
 
 令 
@@ -192,7 +192,7 @@ Y. Jiang, M. K. Varanasi and J. Li, "Performance Analysis of ZF and MMSE Equaliz
 
 
 ## MF ZF LMMSE 对比的代码
-![MIMO_detector_MF_ZF_MMSE.jpg](/figure/MIMO检测/MIMO_detector_MF_ZF_MMSE.jpg)
+![MIMO_detector_MF_ZF_MMSE.jpg](/img/MIMO检测/MIMO_detector_MF_ZF_MMSE.jpg)
 
 见 github   \url{https://github.com/taichiorange/leba_math.git} 
 
@@ -305,7 +305,7 @@ $$
 \hat X = argmin_{X\in \mathcal{X}^{M_t}} ||\tilde X-X||^2   \tag{7}
 $$
 
-![MIMO_detector_MF_ZF_MMSE.jpg](/figure/MIMO检测/MIMO_detector_MF_ZF_MMSE.jpg)
+![MIMO_detector_MF_ZF_MMSE.jpg](/img/MIMO检测/MIMO_detector_MF_ZF_MMSE.jpg)
 
 后续思考： Zero Forcing 算法比 Maximum Likelihood 算法性能差的原因是啥？
 
@@ -434,13 +434,13 @@ $$
 下图蓝色是初始向量，旋转 $$\alpha$$ 后变成绿色向量，然后经过 X 轴放大 三倍， Y 轴缩小 1/2 ，变成右边紫色向量。
 
 
-![MIMO_detection_MaximumLikelihood_vs_ZeroForcing-旋转缩放示意图 1.png](/figure/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing-旋转缩放示意图 1.png)
+![MIMO_detection_MaximumLikelihood_vs_ZeroForcing-旋转缩放示意图 1.png](/img/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing-旋转缩放示意图 1.png)
 
 
 
 用相同的旋转和缩放，对下图蓝色初始向量进行操作，得到右边紫色向量。
 
-![MIMO_detection_MaximumLikelihood_vs_ZeroForcing-旋转缩放示意图 2.png](/figure/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing-旋转缩放示意图 2.png)
+![MIMO_detection_MaximumLikelihood_vs_ZeroForcing-旋转缩放示意图 2.png](/img/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing-旋转缩放示意图 2.png)
 
 从上面两个实例可以看出，旋转缩放前，第一个图的原始向量要比第二个图的原始向量要短，但是做了同样的旋转缩放后，第一个图的结果向量反而比第二个图的结果向量要长，可见，旋转缩放后，会改变向量长度的大小关系，进而影响 Zero Forcing 算法达不到 Maximum Likelihood 算法的效果，即可能找到的不是最优解。
 
@@ -482,27 +482,27 @@ $$
 
 那么，我们发送的向量，在二维空间中，只有四个向量，分别在四个象限的中间点上，以 横坐标为第一个维度，纵坐标为第二个维度，则四个向量在二维空间中的坐标分别为 [+1,+1],  [-1,+1], [-1, -1], [+1, -1]. 如下图所示，以先旋转一个角度，再横坐标放大为原来的 3 倍，纵坐标缩小为原来的 1/2， 然后再做已给旋转。我们来看公式 (12)  和 (13) 对应的效果。
 
-![MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-1.png](/figure/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-1.png)
+![MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-1.png](/img/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-1.png)
 
 
 旋转拉伸之后的
 
-![MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-2.png](/figure/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-2.png)
+![MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-2.png](/img/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-2.png)
 
 原始噪声的分布
 
-![MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-3.png](/figure/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-3.png)
+![MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-3.png](/img/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-3.png)
 
 
 反变换之后的噪声分布
 
 
-![MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-4.png](/figure/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-4.png)
+![MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-4.png](/img/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing_2x2例子-4.png)
 
 
 下图是仿真结果，用 4x4 的 MIMO.
 
-![MIMO_detection_MaximumLikelihood_vs_ZeroForcing.png](/figure/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing.png)
+![MIMO_detection_MaximumLikelihood_vs_ZeroForcing.png](/img/MIMO检测/MIMO_detection_MaximumLikelihood_vs_ZeroForcing.png)
 
 代码 见 github   \url{https://github.com/taichiorange/leba_math.git} 
 
@@ -563,7 +563,7 @@ $$
 下图是 8x8 的 ZF 与 ZF SIC 的误比特率的对比图：
 
 
-![MIMO_ZF_SIC_8x8.png](/figure/MIMO检测/MIMO_ZF_SIC_8x8.png)
+![MIMO_ZF_SIC_8x8.png](/img/MIMO检测/MIMO_ZF_SIC_8x8.png)
 
 代码 见 github   \url{https://github.com/taichiorange/leba_math.git} 
 
@@ -615,7 +615,7 @@ $$
 \end{aligned}
 $$
 
-![MIMO_ZF_SIC_OSIC_4x4.png](/figure/MIMO检测/MIMO_ZF_SIC_OSIC_4x4.png)
+![MIMO_ZF_SIC_OSIC_4x4.png](/img/MIMO检测/MIMO_ZF_SIC_OSIC_4x4.png)
 
 代码 见 github   \url{https://github.com/taichiorange/leba_math.git} 
 
@@ -676,7 +676,7 @@ $$
 
 代码 见 github   \url{https://github.com/taichiorange/leba_math.git} 
 
-![MIMO_MMSE_SIC_4x4.png](/figure/MIMO检测/MIMO_MMSE_SIC_4x4.png)
+![MIMO_MMSE_SIC_4x4.png](/img/MIMO检测/MIMO_MMSE_SIC_4x4.png)
 
 
 ## MMSE OSIC 迫零的优化排序逐次消除检测算法
@@ -727,7 +727,7 @@ $$
 
 代码 见 github   \url{https://github.com/taichiorange/leba_math.git} 
 
-![MIMO_MMSE_OSIC_4x4.png](/figure/MIMO检测/MIMO_MMSE_OSIC_4x4.png)
+![MIMO_MMSE_OSIC_4x4.png](/img/MIMO检测/MIMO_MMSE_OSIC_4x4.png)
 
 ## MMSE 的公式的推导
 

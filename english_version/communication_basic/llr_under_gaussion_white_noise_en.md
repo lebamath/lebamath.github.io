@@ -20,7 +20,7 @@ It is then transmitted through a Gaussian white noise channel. Here we regard th
 Note 2: We call the real part in-phase, using I as the subscript, and we call the imaginary part quadrature, denoted with Q.)
 
 
-![channel.png](/figure/高斯白噪声软信息计算/channel.png)
+![channel.png](/img/高斯白噪声软信息计算/channel.png)
 
 
 In a communication system, what we care about is the probability, given that the signal y has been received, of deciding that the bit sent by the transmitter is 1 or 0, which can be expressed as $$p(b=0\vert y)$$ and $$p(b=1 \vert y)$$.
@@ -91,7 +91,7 @@ Under QPSK, two bits are modulated into one complex number. We denote these two 
 
 The mapping relationship is shown in the figure below:
 
-![QPSK.png](/figure/高斯白噪声软信息计算/QPSK.png)
+![QPSK.png](/img/高斯白噪声软信息计算/QPSK.png)
 
 $$
 \begin{aligned}
@@ -261,7 +261,7 @@ A sequence made up of 0s and 1s becomes a complex number after QPSK encoding, wi
 It is then transmitted through a Gaussian white noise channel. Here we regard the real part and the imaginary part as being transmitted separately and independently, each with independent Gaussian white noise interference added. (Note 1: In reality the real part and the imaginary part are transmitted over the same channel, only that they are sent with mutually orthogonal high-frequency signals as carriers, so they can be regarded as being transmitted separately.
 Note 2: We call the real part in-phase, using I as the subscript, and we call the imaginary part quadrature, denoted with Q.)
 
-![channel.png](/figure/高斯白噪声软信息计算/channel.png)
+![channel.png](/img/高斯白噪声软信息计算/channel.png)
 
 
 In a communication system, what we care about is the probability, given that the signal y has been received, of deciding that the bit sent by the transmitter is 1 or 0, which can be expressed as $$p(b=0\vert y)$$ and $$p(b=1\vert y)$$.
@@ -331,7 +331,7 @@ Under 8-PSK, three bits are modulated into one complex number. We denote these t
 
 The mapping relationship is shown in the figure below:
 
-![8-psk.png](/figure/高斯白噪声软信息计算/8-psk.png)
+![8-psk.png](/img/高斯白噪声软信息计算/8-psk.png)
 Let:
 
 $$

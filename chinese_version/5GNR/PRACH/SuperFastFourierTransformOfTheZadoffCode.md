@@ -71,7 +71,7 @@ $$
 	ax_im.plot(m, np.imag(x),&amp;quot;.--&amp;quot;)
 ```
 
-![zadoff.png](/figure/5GNR/RACH/zadoff.png)
+![zadoff.png](/img/5GNR/RACH/zadoff.png)
 
 
 对 ZC 序列做 DFT:

@@ -11,7 +11,7 @@ back_url: /index.html?lang=zh
 ## 多径传播的典型场景 
 一个典型的多径传播场景
 
-![multi-path.png](/figure/通信基础/无线信道的数学表示/multi-path.png)
+![multi-path.png](/img/通信基础/无线信道的数学表示/multi-path.png)
 
 用$$X_{LP}$$ 表示发送的原始信号（即没有被搬移到高频去 LP: Low Pass），称为低通信号或者基带信号，用$$X_{BP}$$ 表示搬移到高频的信号（BP： Band Pass)，称为带通信号. 则两者之间的关系为：
 
@@ -82,7 +82,7 @@ $$
 
 
 
-![multi-path2.png](/figure/通信基础/无线信道的数学表示/multi-path2.png)
+![multi-path2.png](/img/通信基础/无线信道的数学表示/multi-path2.png)
 
 
 上图上一共有三个不同延时的路径，而每个路径下又有多个不同的子路径组成，每个路径下的各个子路径之间，延时相同（衰减系数和相位，即复衰减系数可能不同）或者延时有微小差别。
@@ -120,7 +120,7 @@ $$
 上式中 $$vt cos(\alpha_n)$$是手机移动的距离在电磁波方向上的分量，如下图所示：
 
 
-![doppler.png](/figure/通信基础/无线信道的数学表示/doppler.png)
+![doppler.png](/img/通信基础/无线信道的数学表示/doppler.png)
 
 
 
@@ -253,7 +253,7 @@ $$
 我们对这个单值的情况进行分析，实际上也就是对下图中某个颜色标注的路径进行分析：
 
 
-![multi-path2.png](/figure/通信基础/无线信道的数学表示/multi-path2.png)
+![multi-path2.png](/img/通信基础/无线信道的数学表示/multi-path2.png)
 
 例如对 $$\tau_1$$进行分析，则公式(9)就变成：
 

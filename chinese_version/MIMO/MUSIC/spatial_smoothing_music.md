@@ -787,7 +787,7 @@ $$
 
 根据之前范德蒙矩阵的证明， b0 和 b1 是不相关的，所以，矩阵 G 的秩是 2， 是满秩的。
 
-![图1：空间平滑的 MUSIC 算法 与 MUSIC 算法比较](/figure//mimo//music//SpatialSmoothingMUSIC.png)
+![图1：空间平滑的 MUSIC 算法 与 MUSIC 算法比较](/img/mimo//music//SpatialSmoothingMUSIC.png)
 
 *图1：空间平滑的 MUSIC 算法 与 MUSIC 算法比较*
 

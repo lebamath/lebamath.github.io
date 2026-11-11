@@ -372,7 +372,7 @@ $$
 
 代码：请到 Github 上下载：\url{https://github.com/taichiorange/leba_math}
 
-![05-有最小值的证明.png](/figure/通信基础/05-有最小值的证明.png)
+![05-有最小值的证明.png](/img/通信基础/05-有最小值的证明.png)
 
 ## Chernoff bounds另外一种推导结果
 

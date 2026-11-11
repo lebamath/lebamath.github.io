@@ -15,7 +15,7 @@ back_url: /index.html?lang=zh
 
 ​	这个会生成幅度为 1 的波形：
 
-![20Hz.png](/figure/通信基础/多径时延对不同频率的影响/20Hz.png)
+![20Hz.png](/img/通信基础/多径时延对不同频率的影响/20Hz.png)
 
 ​	   这个频率的信号，有两个路径传输到接收端，每个路径的时延分别是 0.01秒和 0.015秒，经过两路时延后收到的信号，分别显示在下图中：
 
@@ -32,7 +32,7 @@ back_url: /index.html?lang=zh
 代码请到 github 下载：[github](https://github.com/taichiorange/leba_math)
 
 
-![20hz_two_path.png](/figure/通信基础/多径时延对不同频率的影响/20hz_two_path.png)
+![20hz_two_path.png](/img/通信基础/多径时延对不同频率的影响/20hz_two_path.png)
 
 ​         可以看到，两路信号叠加后，比原始发出的信号幅度要高，即得到了增强。
 
@@ -44,7 +44,7 @@ back_url: /index.html?lang=zh
 
 这个会生成幅度为 1 的 80Hz 波形：
 
-![80Hz.png](/figure/通信基础/多径时延对不同频率的影响/80Hz.png)
+![80Hz.png](/img/通信基础/多径时延对不同频率的影响/80Hz.png)
 
 
 这个频率的信号，有两个路径传输到接收端，每个路径的时延分别是 0.01秒和 0.015秒，经过两路时延后收到的信号，分别显示在下图中：
@@ -61,7 +61,7 @@ back_url: /index.html?lang=zh
 
 代码请到 github 下载：[github](https://github.com/taichiorange/leba_math)
 
-![80hz_two_path.png](/figure/通信基础/多径时延对不同频率的影响/80hz_two_path.png)
+![80hz_two_path.png](/img/通信基础/多径时延对不同频率的影响/80hz_two_path.png)
 红色是原始信号。蓝色和绿色这两个不同延时的信号，相位相差比较大，叠加后信号被减弱了，可以看到黄色叠加后的信号，比红色原始信号弱很多。
 
 
@@ -70,6 +70,6 @@ back_url: /index.html?lang=zh
 
 代码请到 github 下载：[github](https://github.com/taichiorange/leba_math)
 
-![10to1000.png](/figure/通信基础/多径时延对不同频率的影响/10to1000.png)
+![10to1000.png](/img/通信基础/多径时延对不同频率的影响/10to1000.png)
 原始信号的幅度，都是 1. 可以看到，在 10Hz 的时候，接收的信号是比原始信号强，在 100Hz 的时候，接收到的信号已经相互抵消为 0 了。
 

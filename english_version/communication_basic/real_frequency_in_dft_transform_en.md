@@ -91,6 +91,6 @@ $$
 So the frequency $$(\frac{N}{2}+1)\frac{ f_s}{N}$$ corresponds to the frequency $$(-(\frac{N}{2}-1))\frac{ f_s}{N}$$. Let us draw a figure to get an intuitive feel for why this is so.
 
 
-![离散傅里叶变换对应的真实频率.png](/figure/通信基础/离散傅里叶变换对应的真实频率.png)
+![离散傅里叶变换对应的真实频率.png](/img/通信基础/离散傅里叶变换对应的真实频率.png)
 
 For the code please download it from [github](https://github.com/taichiorange/leba_math):[https://github.com/taichiorange/leba_math](https://github.com/taichiorange/leba_math) 

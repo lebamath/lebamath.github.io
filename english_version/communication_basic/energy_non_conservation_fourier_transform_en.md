@@ -39,7 +39,7 @@ Please download the code from github: \url{https://github.com/taichiorange/leba_
 
 The resulting plot is shown below:
 
-![傅里叶变换能量不守恒问题-1.png](/figure/通信基础/傅里叶变换能量不守恒问题/傅里叶变换能量不守恒问题-1.png)
+![傅里叶变换能量不守恒问题-1.png](/img/通信基础/傅里叶变换能量不守恒问题/傅里叶变换能量不守恒问题-1.png)
 
 As can be seen, the maximum amplitude is not 1; the maximum value printed by the program is 0.015625 ! Why is that? Let us examine the ifft formula:
 
@@ -150,7 +150,7 @@ Regard the Fourier transform and inverse transform as the coordinates of a vecto
 
 In the Fourier transform, $$\left \{\frac{e^{-j2\pi \frac{k}{N}n}}{\sqrt N},n=0,1,\cdots,N-1 \right \}$$ forms a valid basis vector, whereas $$\left \{ e^{-j2\pi \frac{k}{N}n}, n=0,1,\cdots,N-1 \right \}$$ is not a basis vector, because its length is $$\sqrt N$$.
 
-![傅里叶变换能量不守恒问题-2.png](/figure/通信基础/傅里叶变换能量不守恒问题/傅里叶变换能量不守恒问题-2.png)
+![傅里叶变换能量不守恒问题-2.png](/img/通信基础/傅里叶变换能量不守恒问题/傅里叶变换能量不守恒问题-2.png)
 Let us look at each vector in the basis of the Fourier transform (listed in the correct way):
 
 The first vector:
