@@ -1,0 +1,233 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CDM8 OC Generation</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: spec table + live computation on top, 8 per-port CDM8 RE blocks (2 subcarriers x 4 symbols) filling below */
+:root{
+  --bg:#eef2f5; --surface:#ffffff; --ink:#15202a; --muted:#5a6876; --line:#d3dbe2;
+  --pos:#0c7f82; --pos-soft:#d6f0ef; --neg:#c9561f; --neg-soft:#fbe3d6;
+  --hl:#fff4c2; --focus:#2f5bd3;
+  --f-display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1318; --surface:#151d24; --ink:#e4ebf0; --muted:#94a2ae; --line:#2a3640;
+  --pos:#3cc2bd; --pos-soft:#123a3a; --neg:#ff8a52; --neg-soft:#43251a;
+  --hl:#3a3418; --focus:#7a9bff; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0d1318; --surface:#151d24; --ink:#e4ebf0; --muted:#94a2ae; --line:#2a3640;
+  --pos:#3cc2bd; --pos-soft:#123a3a; --neg:#ff8a52; --neg-soft:#43251a;
+  --hl:#3a3418; --focus:#7a9bff; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:1120px;margin:0 auto;padding-block:24px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:20px}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,3.4vw,30px);margin:0;letter-spacing:.2px;text-wrap:balance}
+.sub{color:var(--muted);margin:4px 0 0;max-width:70ch}
+.mono{font-family:var(--f-mono)}
+.eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
+
+/* controls */
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+button,select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);
+  border-radius:7px;padding:7px 12px;cursor:pointer}
+button:hover{border-color:var(--muted)}
+button:focus-visible,select:focus-visible,.chip:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+button.primary{background:var(--ink);color:var(--surface);border-color:var(--ink);min-width:84px;font-weight:600}
+.counter{font-family:var(--f-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;margin-left:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--f-mono);font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);color:var(--muted)}
+.chip.on{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.chip.done{color:var(--ink)}
+
+.top{display:grid;grid-template-columns:1fr;gap:20px}
+@media (min-width:880px){.top{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}}
+
+/* spec table */
+.tscroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:5px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{font-weight:500;color:var(--muted);font-size:12.5px}
+th .w{padding:1px 3px;border-radius:4px}
+th .w.on{background:var(--hl);color:var(--ink)}
+tr.on td{background:var(--hl)}
+td .e{display:inline-block;width:2.4em;text-align:center;border-radius:4px;transition:background .2s,color .2s}
+td .e.on{background:var(--ink);color:var(--surface)}
+td .wfv.on{outline:2px solid var(--ink);outline-offset:1px;border-radius:4px}
+.cap{font-size:12.5px;color:var(--muted);margin-top:8px}
+
+/* computation */
+.calc{display:flex;flex-direction:column;gap:14px}
+.calc h2{font-family:var(--f-display);font-weight:600;font-size:19px;margin:0}
+.eq{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-family:var(--f-mono);font-size:clamp(16px,2.4vw,21px)}
+.eq .op{font-size:.8em}
+.eq .lab{font-size:12px;color:var(--muted);width:100%;font-family:var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+.vec{display:inline-flex;align-items:center;gap:4px}
+.vec .br{color:var(--muted);font-weight:300}
+.v{display:inline-block;min-width:2.3em;text-align:center;padding:2px 4px;border-radius:5px;font-weight:600}
+.v.pos{color:var(--pos);background:var(--pos-soft)}
+.v.neg{color:var(--neg);background:var(--neg-soft)}
+.v.bit{min-width:1.5em}
+.op{color:var(--muted)}
+.rule{font-size:13.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+.rule b{color:var(--ink);font-weight:600}
+.pop{animation:pop .45s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--d,0) * 140ms)}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+
+/* port grids */
+.ports{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (min-width:880px){.ports{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.port{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px;transition:border-color .2s,box-shadow .2s}
+.port.on{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+.port h3{margin:0 0 8px;font-family:var(--f-display);font-weight:600;font-size:15px;display:flex;justify-content:space-between;gap:8px}
+.port h3 small{font-family:var(--f-mono);font-weight:400;font-size:11px;color:var(--muted);align-self:center}
+.g{display:grid;grid-template-columns:auto repeat(4,minmax(0,1fr));gap:4px;align-items:center}
+.g .rl,.g .cl{font-family:var(--f-mono);font-size:10.5px;color:var(--muted);text-align:center}
+.g .rl{padding-right:2px}
+.g .cl.on{color:var(--ink);font-weight:600}
+.c{aspect-ratio:1.15;max-width:100%;border:1px dashed var(--line);border-radius:5px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;font-family:var(--f-mono);font-size:16px;font-weight:600;line-height:1.1;
+  transition:background .25s,border-color .25s}
+.c small{font-size:10px;font-weight:400;opacity:.8}
+.c.pos{background:var(--pos-soft);color:var(--pos);border:1px solid var(--pos)}
+.c.neg{background:var(--neg-soft);color:var(--neg);border:1px solid var(--neg)}
+.c.cur{box-shadow:0 0 0 2px var(--ink)}
+.c.cur.fresh{animation:fill .5s ease-out}
+@keyframes fill{from{transform:scale(.7);opacity:.2}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.pop,.c.cur.fresh{animation:none}}
+</style>
+
+</head><body style="margin:0">
+<div class="wrap">
+  <header>
+    <div class="eyebrow">TS 38.211 · Table 7.4.1.5.3-5 · cdm8-FD2-TD4</div>
+    <h1>OC code per RE, symbol by symbol</h1>
+    <p class="sub">Each RE (k′, l′) of a port gets <span class="mono">w<sub>f</sub>(k′) · w<sub>t</sub>(l′)</span>. In bits (+1→0, −1→1), multiplying becomes XOR: ×(+1) = ⊕00, ×(−1) = ⊕11.</p>
+  </header>
+
+  <div class="bar">
+    <button id="reset" type="button">Reset</button>
+    <button id="prev" type="button">Back</button>
+    <button id="play" type="button" class="primary">Play</button>
+    <button id="next" type="button">Next</button>
+    <select id="speed" aria-label="Speed">
+      <option value="1500">Slow</option>
+      <option value="900" selected>Normal</option>
+      <option value="450">Fast</option>
+    </select>
+    <span class="counter" id="counter"></span>
+  </div>
+  <div class="chips" id="chips"></div>
+
+  <div class="top">
+    <section class="panel">
+      <div class="eyebrow" style="margin-bottom:8px">Spec table</div>
+      <div class="tscroll"><table id="tbl"></table></div>
+      <div class="cap">Highlighted: current index row, its w<sub>f</sub> pair, and w<sub>t</sub>(l′) for the current symbol.</div>
+    </section>
+    <section class="panel calc" id="calc" aria-live="polite"></section>
+  </div>
+
+  <div class="legend">
+    <span><span class="v pos">+1</span> bits 00</span>
+    <span><span class="v neg">−1</span> bits 11</span>
+    <span>Each RE carries 2 bits (bit repeated), shown as XOR operating bits: 2 subcarriers (k′) × 4 OFDM symbols (l′)</span>
+  </div>
+  <div class="ports" id="ports"></div>
+</div>
+
+<script>
+const WT=[[1,1,1,1],[1,1,1,1],[1,-1,1,-1],[1,-1,1,-1],[1,1,-1,-1],[1,1,-1,-1],[1,-1,-1,1],[1,-1,-1,1]];
+const WF=p=>p%2?[1,-1]:[1,1];
+const N=32;
+const fmt=v=>v>0?'+1':'−1', bit=v=>v>0?'0':'1', cls=v=>v>0?'pos':'neg';
+let s=1, timer=null, lastCur=-2, prevS=0;
+
+const $=id=>document.getElementById(id);
+// table
+let h='<thead><tr><th>Index</th><th>[w<sub>f</sub>(0) w<sub>f</sub>(1)]</th><th>['+[0,1,2,3].map(j=>`<span class="w" data-j="${j}">w<sub>t</sub>(${j})</span>`).join(' ')+']</th></tr></thead><tbody>';
+for(let i=0;i<8;i++){
+  h+=`<tr data-i="${i}"><td>${i}</td><td><span class="wfv">[${WF(i).map(v=>`<span class="e">${fmt(v)}</span>`).join('')}]</span></td>`+
+     `<td>[${WT[i].map((v,j)=>`<span class="e wt" data-j="${j}">${fmt(v)}</span>`).join('')}]</td></tr>`;
+}
+$('tbl').innerHTML=h+'</tbody>';
+// chips
+$('chips').innerHTML=[0,1,2,3].map(l=>`<button type="button" class="chip" data-l="${l}">Symbol l′=${l}</button>`).join('');
+$('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;stop();s=+b.dataset.l*8+1;render();});
+// port grids
+let ph='';
+for(let i=0;i<8;i++){
+  ph+=`<div class="port" data-i="${i}"><h3>Index ${i} / Port ${i}<small>w<sub>f</sub>=[${WF(i).map(fmt).join(' ')}]</small></h3><div class="g">`;
+  for(const k of [1,0]){
+    ph+=`<span class="rl">k′=${k}</span>`;
+    for(let j=0;j<4;j++) ph+=`<div class="c" id="c${i}${j}${k}"></div>`;
+  }
+  ph+='<span></span>'+[0,1,2,3].map(j=>`<span class="cl" data-j="${j}">l′=${j}</span>`).join('')+'</div></div>';
+}
+$('ports').innerHTML=ph;
+
+function vec(a,bits,d){
+  return `<span class="vec pop" style="--d:${d}"><span class="br">[</span>${a.map(v=>`<span class="v ${cls(v)}${bits?' bit':''}">${bits?bit(v)+bit(v):fmt(v)}</span>`).join('')}<span class="br">]</span></span>`;
+}
+const op=(t,d)=>`<span class="op pop" style="--d:${d}">${t}</span>`;
+
+function calcHTML(cur){
+  if(cur<0) return '<h2>Press Play</h2>';
+  const l=Math.floor(cur/8), p=cur%8, wf=WF(p), t=WT[p][l], r=wf.map(v=>v*t);
+  return `<div class="eyebrow">Symbol l′=${l} · Index ${p}</div>
+  <h2>RE (k′=0,1 ; l′=${l}) for index ${p}</h2>
+  <div class="eq"><span class="lab">Multiply (±1)</span>${vec(wf,0,0)}${op('×',1)}<span class="vec pop" style="--d:1"><span class="br">[</span><span class="v ${cls(t)}">${fmt(t)}</span><span class="br">]</span></span>${op('=',2)}${vec(r,0,3)}</div>
+  <div class="eq"><span class="lab">XOR (bits)</span>${op('XOR operating bits is:',4)}${vec(r,1,5)}</div>
+  <div class="rule pop" style="--d:6">w<sub>t</sub>(${l}) = <b>${fmt(t)}</b> → XOR with <b>${t>0?'00':'11'}</b> → ${t>0?'bits unchanged':'both bits flipped'}.</div>`;
+}
+
+function render(){
+  const cur=s-1, l=cur>=0?Math.floor(cur/8):-1, p=cur>=0?cur%8:-1;
+  document.querySelectorAll('#tbl tbody tr').forEach(tr=>{
+    const i=+tr.dataset.i, on=i===p;
+    tr.classList.toggle('on',on);
+    tr.querySelector('.wfv').classList.toggle('on',on);
+    tr.querySelectorAll('.wt').forEach(e=>e.classList.toggle('on',on&&+e.dataset.j===l));
+  });
+  document.querySelectorAll('#tbl th .w').forEach(e=>e.classList.toggle('on',+e.dataset.j===l));
+  document.querySelectorAll('.chip').forEach(c=>{const x=+c.dataset.l;c.classList.toggle('on',x===l);c.classList.toggle('done',x<l);});
+  document.querySelectorAll('.port').forEach(el=>el.classList.toggle('on',+el.dataset.i===p));
+  document.querySelectorAll('.g .cl').forEach(e=>e.classList.toggle('on',+e.dataset.j===l));
+  for(let i=0;i<8;i++)for(let j=0;j<4;j++)for(const k of [0,1]){
+    const c=$(`c${i}${j}${k}`), idx=j*8+i, v=WF(i)[k]*WT[i][j];
+    if(idx<s){c.className=`c ${cls(v)}${idx===cur?' cur':''}${idx===cur&&s>prevS?' fresh':''}`;c.textContent=bit(v)+bit(v);}
+    else{c.className='c';c.innerHTML='';}
+  }
+  if(cur!==lastCur){$('calc').innerHTML=calcHTML(cur);lastCur=cur;}
+  $('counter').textContent=`Step ${String(s).padStart(2,'0')} / ${N}`;
+  $('play').textContent=timer?'Pause':(s>=N?'Replay':'Play');
+  prevS=s;
+}
+function stop(){clearInterval(timer);timer=null;}
+function play(){
+  if(s>=N){s=0;}
+  const tick=()=>{if(s<N){s++;render();} if(s>=N){stop();render();}};
+  tick(); timer=setInterval(tick,+$('speed').value); render();
+}
+$('play').onclick=()=>{timer?(stop(),render()):play();};
+$('next').onclick=()=>{stop();if(s<N)s++;render();};
+$('prev').onclick=()=>{stop();if(s>1)s--;render();};
+$('reset').onclick=()=>{stop();s=0;render();};
+$('speed').onchange=()=>{if(timer){stop();play();}};
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='SELECT')return;
+  if(e.key==='ArrowRight'){e.preventDefault();$('next').click();}
+  else if(e.key==='ArrowLeft'){e.preventDefault();$('prev').click();}
+  else if(e.key===' '&&e.target.tagName!=='BUTTON'){e.preventDefault();$('play').click();}
+});
+render();
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(()=>{if(!timer&&s===1)play();},900);}
+</script>
+</body></html>
