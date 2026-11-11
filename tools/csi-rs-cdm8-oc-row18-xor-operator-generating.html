@@ -108,42 +108,81 @@ td .wfv.on{outline:2px solid var(--ink);outline-offset:1px;border-radius:4px}
 <div class="wrap">
   <header>
     <div class="eyebrow">TS 38.211 · Table 7.4.1.5.3-5 · cdm8-FD2-TD4</div>
-    <h1>OC code per RE, symbol by symbol</h1>
-    <p class="sub">Each RE (k′, l′) of a port gets <span class="mono">w<sub>f</sub>(k′) · w<sub>t</sub>(l′)</span>. In bits (+1→0, −1→1), multiplying becomes XOR: ×(+1) = ⊕00, ×(−1) = ⊕11.</p>
+    <h1 data-i18n="h1">OC code per RE, symbol by symbol</h1>
+    <p class="sub" data-i18n-html="sub">Each RE (k′, l′) of a port gets <span class="mono">w<sub>f</sub>(k′) · w<sub>t</sub>(l′)</span>. In bits (+1→0, −1→1), multiplying becomes XOR: ×(+1) = ⊕00, ×(−1) = ⊕11.</p>
   </header>
 
   <div class="bar">
-    <button id="reset" type="button">Reset</button>
-    <button id="prev" type="button">Back</button>
+    <button id="reset" type="button" data-i18n="reset">Reset</button>
+    <button id="prev" type="button" data-i18n="back">Back</button>
     <button id="play" type="button" class="primary">Play</button>
-    <button id="next" type="button">Next</button>
+    <button id="next" type="button" data-i18n="next">Next</button>
     <select id="speed" aria-label="Speed">
-      <option value="1500">Slow</option>
-      <option value="900" selected>Normal</option>
-      <option value="450">Fast</option>
+      <option value="1500" data-i18n="slow">Slow</option>
+      <option value="900" selected data-i18n="normal">Normal</option>
+      <option value="450" data-i18n="fast">Fast</option>
     </select>
+    <button id="lang" type="button" title="Switch language / 切换语言"><span id="langlbl">中文</span></button>
     <span class="counter" id="counter"></span>
   </div>
   <div class="chips" id="chips"></div>
 
   <div class="top">
     <section class="panel">
-      <div class="eyebrow" style="margin-bottom:8px">Spec table</div>
+      <div class="eyebrow" style="margin-bottom:8px" data-i18n="spec">Spec table</div>
       <div class="tscroll"><table id="tbl"></table></div>
-      <div class="cap">Highlighted: current index row, its w<sub>f</sub> pair, and w<sub>t</sub>(l′) for the current symbol.</div>
+      <div class="cap" data-i18n-html="cap">Highlighted: current index row, its w<sub>f</sub> pair, and w<sub>t</sub>(l′) for the current symbol.</div>
     </section>
     <section class="panel calc" id="calc" aria-live="polite"></section>
   </div>
 
   <div class="legend">
-    <span><span class="v pos">+1</span> bits 00</span>
-    <span><span class="v neg">−1</span> bits 11</span>
-    <span>Each RE carries 2 bits (bit repeated), shown as XOR operating bits: 2 subcarriers (k′) × 4 OFDM symbols (l′)</span>
+    <span><span class="v pos">+1</span> <span data-i18n="bits00">bits 00</span></span>
+    <span><span class="v neg">−1</span> <span data-i18n="bits11">bits 11</span></span>
+    <span data-i18n="legNote">Each RE carries 2 bits (bit repeated), shown as XOR operating bits: 2 subcarriers (k′) × 4 OFDM symbols (l′)</span>
   </div>
   <div class="ports" id="ports"></div>
 </div>
 
 <script>
+function pickLang(){
+  // 1) explicit ?lang=zh|en in the URL; 2) the page we came from (same site): ?lang=... or /chinese_version, /english_version; 3) default English
+  try{var q=new URLSearchParams(location.search).get('lang');if(q==='zh'||q==='en')return q;}catch(e){}
+  try{
+    var r=document.referrer;
+    if(r){
+      var u=new URL(r);
+      if(u.origin===location.origin){
+        var lq=new URLSearchParams(u.search).get('lang');
+        if(lq==='zh'||lq==='en')return lq;
+        if(/\/chinese_version/.test(u.pathname))return 'zh';
+        if(/\/english_version/.test(u.pathname))return 'en';
+      }
+    }
+  }catch(e){}
+  return 'en';
+}
+const I18N={
+ en:{h1:'OC code per RE, symbol by symbol',
+  sub:'Each RE (k\u2032, l\u2032) of a port gets <span class="mono">w<sub>f</sub>(k\u2032) \u00b7 w<sub>t</sub>(l\u2032)</span>. In bits (+1\u21920, \u22121\u21921), multiplying becomes XOR: \u00d7(+1) = \u229500, \u00d7(\u22121) = \u229511.',
+  reset:'Reset',back:'Back',next:'Next',play:'Play',pause:'Pause',replay:'Replay',slow:'Slow',normal:'Normal',fast:'Fast',
+  spec:'Spec table',cap:'Highlighted: current index row, its w<sub>f</sub> pair, and w<sub>t</sub>(l\u2032) for the current symbol.',
+  bits00:'bits 00',bits11:'bits 11',
+  legNote:'Each RE carries 2 bits (bit repeated), shown as XOR operating bits: 2 subcarriers (k\u2032) \u00d7 4 OFDM symbols (l\u2032)',
+  thIndex:'Index',chip:'Symbol l\u2032=',portH:'Index {i} / Port {i}',pressPlay:'Press Play',
+  sym:'Symbol l\u2032={l} \u00b7 Index {p}',reH:'RE (k\u2032=0,1 ; l\u2032={l}) for index {p}',mul:'Multiply (\u00b11)',xorLab:'XOR (bits)',xorIs:'XOR operating bits is:',
+  ruleXor:'XOR with',unch:'bits unchanged',flip:'both bits flipped',step:'Step',other:'\u4e2d\u6587'},
+ zh:{h1:'\u9010\u4e2a RE\u3001\u9010\u4e2a\u7b26\u53f7\u5730\u770b OC \u7801',
+  sub:'\u7aef\u53e3\u7684\u6bcf\u4e2a RE (k\u2032, l\u2032) \u90fd\u4e58\u4ee5 <span class="mono">w<sub>f</sub>(k\u2032) \u00b7 w<sub>t</sub>(l\u2032)</span>\u3002\u7528\u6bd4\u7279\u8868\u793a\u65f6\uff08+1\u21920\uff0c\u22121\u21921\uff09\uff0c\u4e58\u6cd5\u53d8\u6210\u5f02\u6216\uff1a\u00d7(+1) = \u229500\uff0c\u00d7(\u22121) = \u229511\u3002',
+  reset:'\u91cd\u7f6e',back:'\u4e0a\u4e00\u6b65',next:'\u4e0b\u4e00\u6b65',play:'\u64ad\u653e',pause:'\u6682\u505c',replay:'\u91cd\u64ad',slow:'\u6162\u901f',normal:'\u6b63\u5e38',fast:'\u5feb\u901f',
+  spec:'\u534f\u8bae\u8868\u683c',cap:'\u9ad8\u4eae\uff1a\u5f53\u524d index \u6240\u5728\u7684\u884c\u3001\u5b83\u7684 w<sub>f</sub> \u5bf9\uff0c\u4ee5\u53ca\u5f53\u524d\u7b26\u53f7\u5bf9\u5e94\u7684 w<sub>t</sub>(l\u2032)\u3002',
+  bits00:'\u6bd4\u7279 00',bits11:'\u6bd4\u7279 11',
+  legNote:'\u6bcf\u4e2a RE \u627f\u8f7d 2 \u4e2a\u6bd4\u7279\uff08\u540c\u4e00\u6bd4\u7279\u91cd\u590d\uff09\uff0c\u4ee5\u5f02\u6216\u64cd\u4f5c\u7684\u6bd4\u7279\u663e\u793a\uff1a2 \u4e2a\u5b50\u8f7d\u6ce2 (k\u2032) \u00d7 4 \u4e2a OFDM \u7b26\u53f7 (l\u2032)',
+  thIndex:'Index',chip:'\u7b26\u53f7 l\u2032=',portH:'Index {i} / \u7aef\u53e3 {i}',pressPlay:'\u70b9\u51fb\u201c\u64ad\u653e\u201d',
+  sym:'\u7b26\u53f7 l\u2032={l} \u00b7 Index {p}',reH:'index {p} \u5728 (k\u2032=0,1 ; l\u2032={l}) \u5904\u7684 RE',mul:'\u76f8\u4e58 (\u00b11)',xorLab:'\u5f02\u6216\uff08\u6bd4\u7279\uff09',xorIs:'\u5f02\u6216\u64cd\u4f5c\u540e\u7684\u6bd4\u7279\u4e3a\uff1a',
+  ruleXor:'\u4e0e',unch:'\u6bd4\u7279\u4e0d\u53d8',flip:'\u4e24\u4e2a\u6bd4\u7279\u90fd\u7ffb\u8f6c',step:'\u6b65\u9aa4',other:'English'}};
+let LANG=pickLang();
+const T=(k,v)=>{let t=I18N[LANG][k];if(v)for(const x in v)t=t.split('{'+x+'}').join(v[x]);return t;};
 const WT=[[1,1,1,1],[1,1,1,1],[1,-1,1,-1],[1,-1,1,-1],[1,1,-1,-1],[1,1,-1,-1],[1,-1,-1,1],[1,-1,-1,1]];
 const WF=p=>p%2?[1,-1]:[1,1];
 const N=32;
@@ -151,20 +190,20 @@ const fmt=v=>v>0?'+1':'−1', bit=v=>v>0?'0':'1', cls=v=>v>0?'pos':'neg';
 let s=1, timer=null, lastCur=-2, prevS=0;
 
 const $=id=>document.getElementById(id);
+function buildStatic(){
 // table
-let h='<thead><tr><th>Index</th><th>[w<sub>f</sub>(0) w<sub>f</sub>(1)]</th><th>['+[0,1,2,3].map(j=>`<span class="w" data-j="${j}">w<sub>t</sub>(${j})</span>`).join(' ')+']</th></tr></thead><tbody>';
+let h='<thead><tr><th>'+T('thIndex')+'</th><th>[w<sub>f</sub>(0) w<sub>f</sub>(1)]</th><th>['+[0,1,2,3].map(j=>`<span class="w" data-j="${j}">w<sub>t</sub>(${j})</span>`).join(' ')+']</th></tr></thead><tbody>';
 for(let i=0;i<8;i++){
   h+=`<tr data-i="${i}"><td>${i}</td><td><span class="wfv">[${WF(i).map(v=>`<span class="e">${fmt(v)}</span>`).join('')}]</span></td>`+
      `<td>[${WT[i].map((v,j)=>`<span class="e wt" data-j="${j}">${fmt(v)}</span>`).join('')}]</td></tr>`;
 }
 $('tbl').innerHTML=h+'</tbody>';
 // chips
-$('chips').innerHTML=[0,1,2,3].map(l=>`<button type="button" class="chip" data-l="${l}">Symbol l′=${l}</button>`).join('');
-$('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;stop();s=+b.dataset.l*8+1;render();});
+$('chips').innerHTML=[0,1,2,3].map(l=>`<button type="button" class="chip" data-l="${l}">${T('chip')}${l}</button>`).join('');
 // port grids
 let ph='';
 for(let i=0;i<8;i++){
-  ph+=`<div class="port" data-i="${i}"><h3>Index ${i} / Port ${i}<small>w<sub>f</sub>=[${WF(i).map(fmt).join(' ')}]</small></h3><div class="g">`;
+  ph+=`<div class="port" data-i="${i}"><h3>${T('portH',{i:i})}<small>w<sub>f</sub>=[${WF(i).map(fmt).join(' ')}]</small></h3><div class="g">`;
   for(const k of [1,0]){
     ph+=`<span class="rl">k′=${k}</span>`;
     for(let j=0;j<4;j++) ph+=`<div class="c" id="c${i}${j}${k}"></div>`;
@@ -172,6 +211,8 @@ for(let i=0;i<8;i++){
   ph+='<span></span>'+[0,1,2,3].map(j=>`<span class="cl" data-j="${j}">l′=${j}</span>`).join('')+'</div></div>';
 }
 $('ports').innerHTML=ph;
+}
+$('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;stop();s=+b.dataset.l*8+1;render();});
 
 function vec(a,bits,d){
   return `<span class="vec pop" style="--d:${d}"><span class="br">[</span>${a.map(v=>`<span class="v ${cls(v)}${bits?' bit':''}">${bits?bit(v)+bit(v):fmt(v)}</span>`).join('')}<span class="br">]</span></span>`;
@@ -179,13 +220,13 @@ function vec(a,bits,d){
 const op=(t,d)=>`<span class="op pop" style="--d:${d}">${t}</span>`;
 
 function calcHTML(cur){
-  if(cur<0) return '<h2>Press Play</h2>';
+  if(cur<0) return '<h2>'+T('pressPlay')+'</h2>';
   const l=Math.floor(cur/8), p=cur%8, wf=WF(p), t=WT[p][l], r=wf.map(v=>v*t);
-  return `<div class="eyebrow">Symbol l′=${l} · Index ${p}</div>
-  <h2>RE (k′=0,1 ; l′=${l}) for index ${p}</h2>
-  <div class="eq"><span class="lab">Multiply (±1)</span>${vec(wf,0,0)}${op('×',1)}<span class="vec pop" style="--d:1"><span class="br">[</span><span class="v ${cls(t)}">${fmt(t)}</span><span class="br">]</span></span>${op('=',2)}${vec(r,0,3)}</div>
-  <div class="eq"><span class="lab">XOR (bits)</span>${op('XOR operating bits is:',4)}${vec(r,1,5)}</div>
-  <div class="rule pop" style="--d:6">w<sub>t</sub>(${l}) = <b>${fmt(t)}</b> → XOR with <b>${t>0?'00':'11'}</b> → ${t>0?'bits unchanged':'both bits flipped'}.</div>`;
+  return `<div class="eyebrow">${T('sym',{l:l,p:p})}</div>
+  <h2>${T('reH',{l:l,p:p})}</h2>
+  <div class="eq"><span class="lab">${T('mul')}</span>${vec(wf,0,0)}${op('×',1)}<span class="vec pop" style="--d:1"><span class="br">[</span><span class="v ${cls(t)}">${fmt(t)}</span><span class="br">]</span></span>${op('=',2)}${vec(r,0,3)}</div>
+  <div class="eq"><span class="lab">${T('xorLab')}</span>${op(T('xorIs'),4)}${vec(r,1,5)}</div>
+  <div class="rule pop" style="--d:6">w<sub>t</sub>(${l}) = <b>${fmt(t)}</b> → ${T('ruleXor')} <b>${t>0?'00':'11'}</b>${LANG==='zh'?' 异或':''} → ${t>0?T('unch'):T('flip')}${LANG==='zh'?'。':'.'}</div>`;
 }
 
 function render(){
@@ -206,8 +247,8 @@ function render(){
     else{c.className='c';c.innerHTML='';}
   }
   if(cur!==lastCur){$('calc').innerHTML=calcHTML(cur);lastCur=cur;}
-  $('counter').textContent=`Step ${String(s).padStart(2,'0')} / ${N}`;
-  $('play').textContent=timer?'Pause':(s>=N?'Replay':'Play');
+  $('counter').textContent=`${T('step')} ${String(s).padStart(2,'0')} / ${N}`;
+  $('play').textContent=timer?T('pause'):(s>=N?T('replay'):T('play'));
   prevS=s;
 }
 function stop(){clearInterval(timer);timer=null;}
@@ -227,7 +268,17 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='ArrowLeft'){e.preventDefault();$('prev').click();}
   else if(e.key===' '&&e.target.tagName!=='BUTTON'){e.preventDefault();$('play').click();}
 });
-render();
+function applyLang(){
+  document.documentElement.lang=LANG==='en'?'en':'zh-CN';
+  document.querySelectorAll('[data-i18n]').forEach(e=>{e.textContent=T(e.getAttribute('data-i18n'));});
+  document.querySelectorAll('[data-i18n-html]').forEach(e=>{e.innerHTML=T(e.getAttribute('data-i18n-html'));});
+  $('langlbl').textContent=T('other');
+  buildStatic();
+  lastCur=-2;
+  render();
+}
+$('lang').onclick=()=>{LANG=LANG==='en'?'zh':'en';applyLang();};
+applyLang();
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(()=>{if(!timer&&s===1)play();},900);}
 </script>
 </body></html>

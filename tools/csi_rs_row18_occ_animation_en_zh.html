@@ -3386,7 +3386,7 @@ body{box-sizing:border-box;display:flex;flex-direction:column}
     </defs>
   </svg><div id="vis-container"><h2 class="sr-only">Animation: CSI-RS row 18 sequence on 3 RBs and symbols 4 to 7, multiplied RE by RE with the selected port's OCC, producing that port's transmitted CSI-RS.</h2>
 <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 10px;font-size:14px;color:var(--text-secondary)">
-<label for="port">Port</label>
+<label for="port" data-i18n="port">Port</label>
 <select id="port" style="width:110px">
 <option value="0">3000</option><option value="1">3001</option><option value="2">3002</option><option value="3">3003</option><option value="4">3004</option><option value="5">3005</option><option value="6">3006</option><option value="7">3007</option>
 <option value="8">3008</option><option value="9">3009</option><option value="10">3010</option><option value="11">3011</option><option value="12">3012</option><option value="13">3013</option><option value="14">3014</option><option value="15">3015</option>
@@ -3412,11 +3412,28 @@ body{box-sizing:border-box;display:flex;flex-direction:column}
 const I18N={
  en:{play:'Play',pause:'Pause',step:'Step',reset:'Reset',legSeq:"Sequence in this port's CDM group",legOther:'Other CDM groups / 0',
      seqTitle:"CSI-RS sequence r_l(m')",tx:'transmitted',occode:'OC code',top:'Top row: k′=1',bottom:'Bottom row: k′=0',
-     hint:'Press Play or Step: a = w_f(k′) · w_t(l′) · r_l(m′)',other:'中文'},
+     hint:'Press Play or Step: a = w_f(k′) · w_t(l′) · r_l(m′)',port:'Port',other:'中文'},
  zh:{play:'播放',pause:'暂停',step:'单步',reset:'重置',legSeq:'本端口 CDM 组的序列',legOther:'其他 CDM 组 / 0',
      seqTitle:"CSI-RS 序列 r_l(m')",tx:'发送',occode:'OC 码',top:'上行 k′=1',bottom:'下行 k′=0',
-     hint:'点击播放或单步：a = w_f(k′) · w_t(l′) · r_l(m′)',other:'English'}};
-let LANG='en';
+     hint:'点击播放或单步：a = w_f(k′) · w_t(l′) · r_l(m′)',port:'端口',other:'English'}};
+function pickLang(){
+  // 1) explicit ?lang=zh|en in the URL; 2) the page we came from (same site): ?lang=... or /chinese_version, /english_version; 3) default English
+  try{var q=new URLSearchParams(location.search).get('lang');if(q==='zh'||q==='en')return q;}catch(e){}
+  try{
+    var r=document.referrer;
+    if(r){
+      var u=new URL(r);
+      if(u.origin===location.origin){
+        var lq=new URLSearchParams(u.search).get('lang');
+        if(lq==='zh'||lq==='en')return lq;
+        if(/\/chinese_version/.test(u.pathname))return 'zh';
+        if(/\/english_version/.test(u.pathname))return 'en';
+      }
+    }
+  }catch(e){}
+  return 'en';
+}
+let LANG=pickLang();
 const T=k=>I18N[LANG][k];
 const wf=[[1,1],[1,-1],[1,1],[1,-1],[1,1],[1,-1],[1,1],[1,-1]];
 const wt=[[1,1,1,1],[1,1,1,1],[1,-1,1,-1],[1,-1,1,-1],[1,1,-1,-1],[1,1,-1,-1],[1,-1,-1,1],[1,-1,-1,1]];
