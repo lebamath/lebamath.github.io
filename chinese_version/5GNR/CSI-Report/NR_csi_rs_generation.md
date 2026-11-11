@@ -455,15 +455,7 @@ $$
 	\end{bmatrix}
 $$
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.6]{/img/5GNR/CSI-RS-Alloc/W_cdm4_FD2_TD2.png}
-	\label{fig:csi_rs_cdm_table_cdm4FD2TD2}
-\end{figure} 
-
-
-
-上面这四个向量是用表格 \ref{fig:csi_rs_cdm_table_cdm4FD2TD2} 中的对应行做 Kronecker 积产生的。
+上面这四个向量是用图10 表格 中的对应行做 Kronecker 积产生的。
 
 例如  $$\mathbf{F}$$ 是用表格中的第 3 行产生的：
 
