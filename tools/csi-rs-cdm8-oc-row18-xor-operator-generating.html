@@ -36,6 +36,8 @@ h1{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,3.4vw,30px)
 button,select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);
   border-radius:7px;padding:7px 12px;cursor:pointer}
 button:hover{border-color:var(--muted)}
+.homelink{align-self:flex-start;font-size:14px;color:var(--muted);text-decoration:underline;margin-bottom:-8px}
+.homelink:hover{color:var(--ink)}
 button:focus-visible,select:focus-visible,.chip:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 button.primary{background:var(--ink);color:var(--surface);border-color:var(--ink);min-width:84px;font-weight:600}
 .counter{font-family:var(--f-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;margin-left:auto}
@@ -106,6 +108,7 @@ td .wfv.on{outline:2px solid var(--ink);outline-offset:1px;border-radius:4px}
 
 </head><body style="margin:0">
 <div class="wrap">
+  <a id="home" class="homelink" href="/index.html?lang=en">.back to index</a>
   <header>
     <div class="eyebrow">TS 38.211 · Table 7.4.1.5.3-5 · cdm8-FD2-TD4</div>
     <h1 data-i18n="h1">OC code per RE, symbol by symbol</h1>
@@ -273,6 +276,7 @@ function applyLang(){
   document.querySelectorAll('[data-i18n]').forEach(e=>{e.textContent=T(e.getAttribute('data-i18n'));});
   document.querySelectorAll('[data-i18n-html]').forEach(e=>{e.innerHTML=T(e.getAttribute('data-i18n-html'));});
   $('langlbl').textContent=T('other');
+  var hm=document.getElementById('home');hm.href='/index.html?lang='+LANG;hm.textContent=LANG==='zh'?'.返回主目录':'.back to index';
   buildStatic();
   lastCur=-2;
   render();

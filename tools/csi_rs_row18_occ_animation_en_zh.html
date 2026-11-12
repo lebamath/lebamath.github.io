@@ -3397,6 +3397,7 @@ body{box-sizing:border-box;display:flex;flex-direction:column}
 <button id="stepb"><i class="ti ti-arrow-right" aria-hidden="true"></i> <span data-i18n="step">Step</span></button>
 <button id="reset"><i class="ti ti-refresh" aria-hidden="true"></i> <span data-i18n="reset">Reset</span></button>
 <button id="lang" title="Switch language / 切换语言"><i class="ti ti-language" aria-hidden="true"></i> <span id="langlbl">中文</span></button>
+<a id="home" href="/index.html?lang=en" style="color:var(--text-secondary);text-decoration:underline;white-space:nowrap">.back to index</a>
 <span id="prog" style="margin-left:auto;font-size:13px"></span>
 </div>
 <div id="eq" style="font-size:14px;color:var(--text-primary);min-height:24px;margin:0 0 6px;font-family:var(--font-mono)"></div>
@@ -3527,6 +3528,7 @@ function applyLang(){
   document.documentElement.lang=LANG==='en'?'en':'zh-CN';
   document.querySelectorAll('[data-i18n]').forEach(e=>{e.textContent=T(e.getAttribute('data-i18n'));});
   document.getElementById('langlbl').textContent=T('other');
+  var hm=document.getElementById('home');hm.href='/index.html?lang='+LANG;hm.textContent=LANG==='zh'?'.返回主目录':'.back to index';
   if(idx===0)document.getElementById('eq').textContent=T('hint');
 }
 document.getElementById('lang').onclick=()=>{LANG=LANG==='en'?'zh':'en';applyLang();};
