@@ -101,8 +101,9 @@ lang: en
 [Introduction to GPU Programming (Part 1)](/english_version/GPU/gpu_introduction_1_en)
 
 # tools
-[CSI-RS CDM Demonstration (Row 18)](/tools/csi_rs_row18_occ_animation_en_zh.html?lang=en)
+[CSI-RS CDM Demonstration (Row 18)](/tools/csi_rs_row18_occ_animation_en_zh.html?lang=en)   [video](/csi_rs_row18_oc_animation_en_voice.html)
+
 
 [CSI-RS CDM8 OCC/XOR-bits Generation Demonstration (Row 18)](/tools/csi-rs-cdm8-oc-row18-xor-operator-generating.html?lang=en)
-[test](/csi_rs_row18_oc_animation_en_voice.html)
+
 
