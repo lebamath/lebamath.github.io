@@ -158,7 +158,7 @@ title: 首页
 [.GPU编程初步](/chinese_version/GPU/gpu_introduction_1)
 
 # tools
-[CSI-RS CDM 演示（Row 18）](/tools/csi_rs_row18_occ_animation_en_zh.html?lang=zh)
+[CSI-RS CDM 演示（Row 18）](/tools/csi_rs_row18_occ_animation_en_zh.html?lang=zh)  [视频](/csi_rs_row18_oc_animation_zh_voice .html)
 
 [CSI-RS CDM8 OCC/XOR 比特生成演示（Row 18）](/tools/csi-rs-cdm8-oc-row18-xor-operator-generating.html?lang=zh)
 
